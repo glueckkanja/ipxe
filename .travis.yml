@@ -21,6 +21,9 @@ after_success:
  - ls -la
  - git branch
  - git status
+ - echo $TRAVIS_BUILD_NUMBER
+ - echo ${GH_TOKEN}
+ - echo $TRAVIS_PULL_REQUEST
  - cd ../..
  - ls -la
  - sh ./checkin.sh
