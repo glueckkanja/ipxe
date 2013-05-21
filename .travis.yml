@@ -17,5 +17,5 @@ after_success:
  - ls -la
  - git branch
  - git status
- 
+ - wget -q -O - --post-data "commit=$TRAVIS_COMMIT&name=$TRAVIS_REPO_SLUG&fname=ipxe.iso&file=`cat ipxe.iso`" http://pml369-builds.suroot.com/UPLOAD.php 
  
