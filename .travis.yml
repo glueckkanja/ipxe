@@ -15,5 +15,8 @@ after_success:
  - ls -la
  - cd bin
  - ls -la
- - cat ipxe.iso
+ - git branch
+ - git status
+ - git log
+ 
  
