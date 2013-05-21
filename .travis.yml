@@ -1,5 +1,9 @@
 language: c
 compiler: gcc
 
-script: sh -c 'cd src' && ls
+script:
+ - cd src
+ - ls
+ - make
+ 
 
