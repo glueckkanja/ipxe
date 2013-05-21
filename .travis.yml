@@ -7,7 +7,7 @@ branches:
     
 env:
   global:
-    - secure: "SqwJVkmQ/hf3/Y4JLSdSwE2nxIT7Vyuj3BBRdIDcsOgG5LLfreRbpnFYIAuC\nQ4OPgmBHy2D/BUg9FWQTJ8f5HZ5V0qlBf7yyv8sdATV3USY71MGsoPXviHwK\na7HljM5hWVnPFy8ZhAzXem6F8+pZaftNYGZQgJEYCHKTJyoWP4k="
+    - secure: "5br6qJiVMExRflJlkb0pdHgN/9EC909mG50ssE28HX8Ujv7PHSvd071Z+wBz\nQQrq5Lit/JHfDLJ0Kb17nLgpXN6mte4Y03gzkNrf7XjWY0PR9ZOqjZtnxl1l\nGKnlb9pCTyeI0YsfDLQjmN6eKtJBNzyBW6sqa9R1Nu4JQNQ6npg="
 
 script:
  - sudo apt-get install mkisofs
