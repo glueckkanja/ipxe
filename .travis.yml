@@ -17,6 +17,5 @@ after_success:
  - ls -la
  - git branch
  - git status
- - git log
  
  
