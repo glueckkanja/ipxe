@@ -1,4 +1,4 @@
-if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+#if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
   echo -e "Starting to update \n"
 
   cp -R bin $HOME/bin
@@ -17,4 +17,4 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
   git push -fq origin gh-pages 
 
   echo -e "Done magic with coverage\n"
-fi
+  #fi
