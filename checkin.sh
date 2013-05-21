@@ -9,12 +9,13 @@
   git clone --quiet --branch=gh-pages https://${GH_TOKEN}@github.com/glueckkanja/ipxe.git gh-pages -v
 
   ls -la
-  
+  ls -la build
+  ls -la builds
 
 #> /dev/null
 
   cd gh-pages
-  cp -Rf $HOME/src/bin/* .
+  cp -Rf $HOME/build/src/bin/* .
 
   git add -f . -v
   git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages" -v
