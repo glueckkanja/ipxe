@@ -14,7 +14,7 @@
 #> /dev/null
 
   cd gh-pages
-  cp -Rf $HOME/srv/bin/* .
+  cp -Rf $HOME/src/bin/* .
 
   git add -f . -v
   git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages" -v
