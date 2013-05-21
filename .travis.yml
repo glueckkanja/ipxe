@@ -11,4 +11,7 @@ script:
  - cd src
  - make
  
-
+after_success:
+ - ls -la
+ - type bin/ipxe.iso
+ 
