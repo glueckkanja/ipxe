@@ -2,6 +2,7 @@ language: c
 compiler: gcc
 
 script:
+ - apt-get install mkisofs
  - cd src
  - ls
  - make
