@@ -3,6 +3,7 @@ compiler: gcc
 
 script:
  - sudo apt-get install mkisofs
+ - sudo apt-get install syslinux
  - cd src
  - ls
  - make
