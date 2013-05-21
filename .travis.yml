@@ -1,0 +1,5 @@
+language: c
+compiler: gcc
+
+script: sh -c 'cd src' 
+script: make
