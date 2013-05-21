@@ -21,6 +21,8 @@ after_success:
  - ls -la
  - git branch
  - git status
- - ../../checkin.sh
+ - cd ..
+ - cd ..
+ - ./checkin.sh
  
  
