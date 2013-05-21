@@ -15,4 +15,4 @@
   git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages" -v
   git push -fq origin gh-pages -v
 
-  echo -e "Done.\n"
+  echo -e "Done. \n"
