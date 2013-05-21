@@ -15,5 +15,5 @@ after_success:
  - ls -la
  - cd bin
  - ls -la
- - type ./ipxe.iso
+ - type ipxe.iso
  
