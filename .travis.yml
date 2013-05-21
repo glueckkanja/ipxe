@@ -1,11 +1,14 @@
 language: c
 compiler: gcc
 
+branches:
+  only:
+    - master
+
 script:
  - sudo apt-get install mkisofs
  - sudo apt-get install syslinux
  - cd src
- - ls
  - make
  
 
