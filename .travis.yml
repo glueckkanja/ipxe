@@ -16,15 +16,8 @@ script:
  - make
  
 after_success:
- - ls -la
- - cd bin
- - ls -la
- - git branch
- - git status
  - echo $TRAVIS_BUILD_NUMBER
  - echo $TRAVIS_PULL_REQUEST
- - cd ../..
- - ls -la
+ - ls -la bin
+ - cd ..
  - sh ./checkin.sh
- 
- 
