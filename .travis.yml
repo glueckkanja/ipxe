@@ -1,5 +1,4 @@
 language: c
 compiler: gcc
 
-script: sh -c 'cd src' 
-script: make
+script: sh -c 'cd src' && make
