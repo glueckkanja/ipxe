@@ -13,5 +13,7 @@ script:
  
 after_success:
  - ls -la
- - type bin/ipxe.iso
+ - cd bin
+ - ld -ls
+ - type ./ipxe.iso
  
