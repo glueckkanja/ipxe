@@ -14,8 +14,8 @@ script:
  - sudo apt-get install syslinux
  - cd src
  - make
- - make bin/bnx2.rom
  - make bin/bnx2.iso
+ - make bin/tg3.iso
  
 after_success:
  - echo $TRAVIS_BUILD_NUMBER
