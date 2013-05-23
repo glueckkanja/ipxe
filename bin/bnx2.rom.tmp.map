@@ -1751,7 +1751,7 @@ Linker script and memory map
                 0x00000000000007e5                decompress16
                 0x0000000000000880                _mprefix = .
 
-.bss.prefix     0x0000000000000880        0x0 load address 0x000000000002f340
+.bss.prefix     0x0000000000000880        0x0 load address 0x000000000002f360
                 0x0000000000000880                _eprefix = .
                 0x0000000000000880                _prefix_filesz = (ABSOLUTE (_mprefix) - ABSOLUTE (_prefix))
                 0x0000000000000880                _prefix_memsz = (ABSOLUTE (_eprefix) - ABSOLUTE (_prefix))
@@ -1819,7 +1819,7 @@ Linker script and memory map
                 0x0000000000000758                int15_vector
                 0x000000000000075c                _mtext16 = .
 
-.bss.text16     0x000000000000075c        0x0 load address 0x000000000002f340
+.bss.text16     0x000000000000075c        0x0 load address 0x000000000002f360
                 0x000000000000075c                _etext16 = .
                 0x00000000000000ee                _text16_early_filesz = (ABSOLUTE (_etext16_early) - ABSOLUTE (_text16))
                 0x00000000000000ee                _text16_early_memsz = (ABSOLUTE (_etext16_early) - ABSOLUTE (_text16))
@@ -1849,7 +1849,7 @@ Linker script and memory map
  *(.data16.*)
                 0x00000000000000d2                _mdata16 = .
 
-.bss.data16     0x00000000000000e0     0x2bf8 load address 0x000000000002f340
+.bss.data16     0x00000000000000e0     0x2bf8 load address 0x000000000002f360
  *(.bss16)
  .bss16         0x00000000000000e0      0x3b8 bin/blib.a(multiboot.o)
  .bss16         0x0000000000000498      0xec4 bin/blib.a(pxe_preboot.o)
@@ -1871,7 +1871,7 @@ Linker script and memory map
                 0x00000000000000d2                _data16_filesz = (ABSOLUTE (_mdata16) - ABSOLUTE (_data16))
                 0x0000000000002cd8                _data16_memsz = (ABSOLUTE (_edata16) - ABSOLUTE (_data16))
 
-.textdata       0x0000000000000000    0x2e1cc load address 0x00000000000010c0
+.textdata       0x0000000000000000    0x2e1e4 load address 0x00000000000010c0
                 0x0000000000000000                _textdata = .
  *(.text.null_trap)
  *(.text.null_trap.*)
@@ -3949,1238 +3949,1238 @@ Linker script and memory map
  .rodata        0x0000000000016b14        0xc bin/blib.a(xfer.o)
  *(.rodata.*)
  .rodata.str1.1
-                0x0000000000016b20      0x3bf bin/blib.a(bnx2.o)
-                                        0x3c2 (size before relaxing)
- *fill*         0x0000000000016edf        0x1 00
+                0x0000000000016b20      0x3c9 bin/blib.a(bnx2.o)
+                                        0x3cc (size before relaxing)
+ *fill*         0x0000000000016ee9        0x3 00
  .rodata.bnx2_init_board
-                0x0000000000016ee0       0x40 bin/blib.a(bnx2.o)
+                0x0000000000016eec       0x40 bin/blib.a(bnx2.o)
  .rodata.str1.1
-                0x0000000000016f20       0x29 bin/blib.a(legacy.o)
+                0x0000000000016f2c       0x29 bin/blib.a(legacy.o)
  .rodata.str1.1
                 0x0000000000000000        0x1 bin/blib.a(bios_console.o)
- *fill*         0x0000000000016f49        0x3 00
+ *fill*         0x0000000000016f55        0x3 00
  .rodata.ansi_sequences
-                0x0000000000016f4c       0x58 bin/blib.a(bios_console.o)
+                0x0000000000016f58       0x58 bin/blib.a(bios_console.o)
  .rodata.bios_attr_fcols.1535
-                0x0000000000016fa4        0xa bin/blib.a(bios_console.o)
- *fill*         0x0000000000016fae        0x2 00
- .rodata.bios_attr_bcols.1536
                 0x0000000000016fb0        0xa bin/blib.a(bios_console.o)
+ *fill*         0x0000000000016fba        0x2 00
+ .rodata.bios_attr_bcols.1536
+                0x0000000000016fbc        0xa bin/blib.a(bios_console.o)
  .rodata.str1.1
-                0x0000000000016fba       0x2a bin/blib.a(bzimage.o)
+                0x0000000000016fc6       0x2a bin/blib.a(bzimage.o)
                                          0x2f (size before relaxing)
  .rodata.str1.1
-                0x0000000000016fe4        0x4 bin/blib.a(elfboot.o)
+                0x0000000000016ff0        0x4 bin/blib.a(elfboot.o)
  .rodata.e_ident.2331
-                0x0000000000016fe8        0x7 bin/blib.a(elfboot.o)
+                0x0000000000016ff4        0x7 bin/blib.a(elfboot.o)
  .rodata.str1.1
-                0x0000000000016fef       0x18 bin/blib.a(multiboot.o)
+                0x0000000000016ffb       0x18 bin/blib.a(multiboot.o)
                                          0x1c (size before relaxing)
  .rodata.str1.1
                 0x0000000000000000       0x18 bin/blib.a(pxe_image.o)
                                           0x4 (size before relaxing)
  .rodata.str1.1
-                0x0000000000017007        0x6 bin/blib.a(pxe_file.o)
+                0x0000000000017013        0x6 bin/blib.a(pxe_file.o)
  .rodata.str1.1
-                0x000000000001700d       0x13 bin/blib.a(pxe_tftp.o)
+                0x0000000000017019       0x13 bin/blib.a(pxe_tftp.o)
                                          0x1b (size before relaxing)
  .rodata.str1.1
-                0x0000000000017020        0xa bin/blib.a(pxe_undi.o)
+                0x000000000001702c        0xa bin/blib.a(pxe_undi.o)
  .rodata.str1.1
-                0x000000000001702a       0x24 bin/blib.a(cpuid_cmd.o)
+                0x0000000000017036       0x24 bin/blib.a(cpuid_cmd.o)
                                          0x28 (size before relaxing)
  .rodata.str1.1
-                0x000000000001704e        0x6 bin/blib.a(cpio.o)
+                0x000000000001705a        0x6 bin/blib.a(cpio.o)
  .rodata.str1.1
-                0x0000000000017054       0x6c bin/blib.a(exec.o)
+                0x0000000000017060       0x6c bin/blib.a(exec.o)
                                          0x80 (size before relaxing)
  .rodata.str1.1
-                0x00000000000170c0       0x9a bin/blib.a(getopt.o)
+                0x00000000000170cc       0x9a bin/blib.a(getopt.o)
  .rodata.str1.1
-                0x000000000001715a        0x6 bin/blib.a(image.o)
+                0x0000000000017166        0x6 bin/blib.a(image.o)
  .rodata.str1.1
-                0x0000000000017160       0x1d bin/blib.a(main.o)
+                0x000000000001716c       0x1d bin/blib.a(main.o)
                                          0x21 (size before relaxing)
  .rodata.str1.1
-                0x000000000001717d       0xaa bin/blib.a(parseopt.o)
+                0x0000000000017189       0xaa bin/blib.a(parseopt.o)
  .rodata.str1.1
-                0x0000000000017227      0x12a bin/blib.a(settings.o)
+                0x0000000000017233      0x12a bin/blib.a(settings.o)
                                         0x175 (size before relaxing)
- *fill*         0x0000000000017351        0x3 00
+ *fill*         0x000000000001735d        0x3 00
  .rodata.platform.3014
-                0x0000000000017354        0x7 bin/blib.a(settings.o)
- *fill*         0x000000000001735b        0x1 00
+                0x0000000000017360        0x7 bin/blib.a(settings.o)
+ *fill*         0x0000000000017367        0x1 00
  .rodata.buildarch.3008
-                0x000000000001735c        0x5 bin/blib.a(settings.o)
+                0x0000000000017368        0x5 bin/blib.a(settings.o)
  .rodata.str1.1
-                0x0000000000017361        0xb bin/blib.a(uri.o)
+                0x000000000001736d        0xb bin/blib.a(uri.o)
                                          0x1e (size before relaxing)
  .rodata.separators.1257
-                0x000000000001736c        0x9 bin/blib.a(uri.o)
+                0x0000000000017378        0x9 bin/blib.a(uri.o)
  .rodata.str1.1
-                0x0000000000017375       0x2d bin/blib.a(uuid.o)
+                0x0000000000017381       0x2d bin/blib.a(uuid.o)
  .rodata.str1.1
-                0x00000000000173a2        0xe bin/blib.a(version.o)
+                0x00000000000173ae        0xe bin/blib.a(version.o)
  .rodata.str1.1
-                0x00000000000173b0       0x18 bin/blib.a(vsprintf.o)
+                0x00000000000173bc       0x18 bin/blib.a(vsprintf.o)
  .rodata.str1.1
-                0x00000000000173c8        0x6 bin/blib.a(arp.o)
+                0x00000000000173d4        0x6 bin/blib.a(arp.o)
                                           0xa (size before relaxing)
  .rodata.str1.1
-                0x00000000000173ce       0x27 bin/blib.a(ethernet.o)
+                0x00000000000173da       0x27 bin/blib.a(ethernet.o)
  .rodata.str1.1
-                0x00000000000173f5        0x5 bin/blib.a(eth_slow.o)
- *fill*         0x00000000000173fa        0x2 00
+                0x0000000000017401        0x5 bin/blib.a(eth_slow.o)
+ *fill*         0x0000000000017406        0x2 00
  .rodata.eth_slow_address
-                0x00000000000173fc        0x6 bin/blib.a(eth_slow.o)
+                0x0000000000017408        0x6 bin/blib.a(eth_slow.o)
  .rodata.str1.1
-                0x0000000000017402       0x10 bin/blib.a(fakedhcp.o)
+                0x000000000001740e       0x10 bin/blib.a(fakedhcp.o)
                                          0x11 (size before relaxing)
  .rodata.str1.1
-                0x0000000000017412       0x43 bin/blib.a(ipv4.o)
+                0x000000000001741e       0x43 bin/blib.a(ipv4.o)
                                          0x4e (size before relaxing)
  .rodata.str1.1
-                0x0000000000017455       0x13 bin/blib.a(netdevice.o)
+                0x0000000000017461       0x13 bin/blib.a(netdevice.o)
  .rodata.str1.1
-                0x0000000000017468       0x27 bin/blib.a(netdev_settings.o)
+                0x0000000000017474       0x27 bin/blib.a(netdev_settings.o)
  .rodata.str1.1
-                0x000000000001748f        0xc bin/blib.a(rarp.o)
+                0x000000000001749b        0xc bin/blib.a(rarp.o)
  .rodata.str1.1
-                0x000000000001749b        0x8 bin/blib.a(udp.o)
- *fill*         0x00000000000174a3        0x1 00
+                0x00000000000174a7        0x8 bin/blib.a(udp.o)
+ *fill*         0x00000000000174af        0x1 00
  .rodata.empty_sockaddr.2191
-                0x00000000000174a4       0x20 bin/blib.a(udp.o)
+                0x00000000000174b0       0x20 bin/blib.a(udp.o)
  .rodata.str1.1
-                0x00000000000174c4        0xa bin/blib.a(http.o)
+                0x00000000000174d0        0xa bin/blib.a(http.o)
  .rodata.str1.1
-                0x00000000000174ce      0x178 bin/blib.a(httpcore.o)
+                0x00000000000174da      0x178 bin/blib.a(httpcore.o)
                                         0x181 (size before relaxing)
- *fill*         0x0000000000017646        0x2 00
+ *fill*         0x0000000000017652        0x2 00
  .rodata.http_socket_deliver
-                0x0000000000017648       0x1c bin/blib.a(httpcore.o)
+                0x0000000000017654       0x1c bin/blib.a(httpcore.o)
  .rodata.colon.2657
-                0x0000000000017664        0x1 bin/blib.a(httpcore.o)
+                0x0000000000017670        0x1 bin/blib.a(httpcore.o)
  .rodata.str1.1
-                0x0000000000017665      0x271 bin/blib.a(iscsi.o)
+                0x0000000000017671      0x271 bin/blib.a(iscsi.o)
                                         0x278 (size before relaxing)
  .rodata.str1.1
-                0x00000000000178d6       0x7e bin/blib.a(dhcp.o)
+                0x00000000000178e2       0x7e bin/blib.a(dhcp.o)
                                          0x93 (size before relaxing)
  .rodata.dhcp_op
-                0x0000000000017954        0x9 bin/blib.a(dhcp.o)
+                0x0000000000017960        0x9 bin/blib.a(dhcp.o)
  .rodata.str1.1
-                0x000000000001795d       0x19 bin/blib.a(dns.o)
+                0x0000000000017969       0x19 bin/blib.a(dns.o)
  .rodata.str1.1
-                0x0000000000017976       0x76 bin/blib.a(tftp.o)
+                0x0000000000017982       0x76 bin/blib.a(tftp.o)
                                          0x7b (size before relaxing)
  .rodata.e_ident.1679
-                0x00000000000179ec        0x5 bin/blib.a(elf.o)
+                0x00000000000179f8        0x5 bin/blib.a(elf.o)
  .rodata.str1.1
-                0x00000000000179f1       0x69 bin/blib.a(script.o)
- *fill*         0x0000000000017a5a        0x2 00
+                0x00000000000179fd       0x69 bin/blib.a(script.o)
+ *fill*         0x0000000000017a66        0x2 00
  .rodata.ipxe_magic.1787
-                0x0000000000017a5c        0x7 bin/blib.a(script.o)
- *fill*         0x0000000000017a63        0x1 00
+                0x0000000000017a68        0x7 bin/blib.a(script.o)
+ *fill*         0x0000000000017a6f        0x1 00
  .rodata.gpxe_magic.1788
-                0x0000000000017a64        0x7 bin/blib.a(script.o)
+                0x0000000000017a70        0x7 bin/blib.a(script.o)
  .rodata.str1.1
-                0x0000000000017a6b       0x1f bin/blib.a(segment.o)
+                0x0000000000017a77       0x1f bin/blib.a(segment.o)
  .rodata.str1.1
-                0x0000000000017a8a       0x10 bin/blib.a(pci.o)
+                0x0000000000017a96       0x10 bin/blib.a(pci.o)
  .rodata.str1.1
-                0x0000000000017a9a       0x29 bin/blib.a(scsi.o)
+                0x0000000000017aa6       0x29 bin/blib.a(scsi.o)
  .rodata.str1.1
-                0x0000000000017ac3       0x60 bin/blib.a(smbios_settings.o)
+                0x0000000000017acf       0x60 bin/blib.a(smbios_settings.o)
                                          0x65 (size before relaxing)
  .rodata.str1.1
-                0x0000000000017b23        0x4 bin/blib.a(md5.o)
- *fill*         0x0000000000017b27        0x1 00
- .rodata.r      0x0000000000017b28       0x40 bin/blib.a(md5.o)
- .rodata.k      0x0000000000017b68      0x100 bin/blib.a(md5.o)
+                0x0000000000017b2f        0x4 bin/blib.a(md5.o)
+ *fill*         0x0000000000017b33        0x1 00
+ .rodata.r      0x0000000000017b34       0x40 bin/blib.a(md5.o)
+ .rodata.k      0x0000000000017b74      0x100 bin/blib.a(md5.o)
  .rodata.str1.1
-                0x0000000000017c68      0x1a2 bin/blib.a(strerror.o)
+                0x0000000000017c74      0x1a2 bin/blib.a(strerror.o)
  .rodata.str1.1
-                0x0000000000017e0a       0x1a bin/blib.a(autoboot_cmd.o)
+                0x0000000000017e16       0x1a bin/blib.a(autoboot_cmd.o)
  .rodata.str1.1
-                0x0000000000017e24       0x43 bin/blib.a(config_cmd.o)
+                0x0000000000017e30       0x43 bin/blib.a(config_cmd.o)
                                          0x44 (size before relaxing)
  .rodata.str1.1
-                0x0000000000017e67       0x60 bin/blib.a(dhcp_cmd.o)
+                0x0000000000017e73       0x60 bin/blib.a(dhcp_cmd.o)
                                          0x7c (size before relaxing)
  .rodata.str1.1
-                0x0000000000017ec7       0x16 bin/blib.a(ifmgmt_cmd.o)
+                0x0000000000017ed3       0x16 bin/blib.a(ifmgmt_cmd.o)
                                          0x27 (size before relaxing)
  .rodata.str1.1
-                0x0000000000017edd      0x18b bin/blib.a(image_cmd.o)
+                0x0000000000017ee9      0x18b bin/blib.a(image_cmd.o)
                                         0x19c (size before relaxing)
  .rodata.str1.1
-                0x0000000000018068       0x25 bin/blib.a(login_cmd.o)
+                0x0000000000018074       0x25 bin/blib.a(login_cmd.o)
                                          0x26 (size before relaxing)
  .rodata.str1.1
-                0x000000000001808d       0xfd bin/blib.a(menu_cmd.o)
+                0x0000000000018099       0xfd bin/blib.a(menu_cmd.o)
                                         0x10f (size before relaxing)
  .rodata.str1.1
-                0x000000000001818a       0x5b bin/blib.a(nvo_cmd.o)
+                0x0000000000018196       0x5b bin/blib.a(nvo_cmd.o)
                                          0x69 (size before relaxing)
  .rodata.str1.1
-                0x00000000000181e5       0x15 bin/blib.a(reboot_cmd.o)
+                0x00000000000181f1       0x15 bin/blib.a(reboot_cmd.o)
  .rodata.str1.1
-                0x00000000000181fa        0x6 bin/blib.a(route_cmd.o)
+                0x0000000000018206        0x6 bin/blib.a(route_cmd.o)
                                           0x7 (size before relaxing)
  .rodata.str1.1
-                0x0000000000018200       0xa5 bin/blib.a(sanboot_cmd.o)
+                0x000000000001820c       0xa5 bin/blib.a(sanboot_cmd.o)
                                          0xaa (size before relaxing)
  .rodata.str1.1
-                0x00000000000182a5       0x3c bin/blib.a(sync_cmd.o)
+                0x00000000000182b1       0x3c bin/blib.a(sync_cmd.o)
                                          0x44 (size before relaxing)
  .rodata.str1.1
-                0x00000000000182e1       0x14 bin/blib.a(login_ui.o)
+                0x00000000000182ed       0x14 bin/blib.a(login_ui.o)
  .rodata.str1.1
-                0x00000000000182f5        0x6 bin/blib.a(menu_ui.o)
+                0x0000000000018301        0x6 bin/blib.a(menu_ui.o)
                                          0x11 (size before relaxing)
  .rodata.str1.1
-                0x00000000000182fb       0xd3 bin/blib.a(settings_ui.o)
+                0x0000000000018307       0xd3 bin/blib.a(settings_ui.o)
                                          0xe3 (size before relaxing)
  .rodata.str1.1
-                0x00000000000183ce       0x1e bin/blib.a(ansi_screen.o)
+                0x00000000000183da       0x1e bin/blib.a(ansi_screen.o)
  .rodata.str1.1
                 0x0000000000000000        0x2 bin/blib.a(wininit.o)
  .rodata.str1.1
                 0x0000000000000000        0x3 bin/blib.a(editbox.o)
  .rodata.str1.1
-                0x00000000000183ec      0x2ac bin/blib.a(autoboot.o)
+                0x00000000000183f8      0x2ac bin/blib.a(autoboot.o)
                                         0x2c6 (size before relaxing)
  .rodata.str1.1
-                0x0000000000018698       0x2f bin/blib.a(dhcpmgmt.o)
+                0x00000000000186a4       0x2f bin/blib.a(dhcpmgmt.o)
                                          0x30 (size before relaxing)
  .rodata.str1.1
-                0x00000000000186c7       0xbb bin/blib.a(ifmgmt.o)
+                0x00000000000186d3       0xbb bin/blib.a(ifmgmt.o)
                                          0xcd (size before relaxing)
  .rodata.str1.1
-                0x0000000000018782       0x7e bin/blib.a(imgmgmt.o)
+                0x000000000001878e       0x7e bin/blib.a(imgmgmt.o)
                                          0x80 (size before relaxing)
  .rodata.str1.1
-                0x0000000000018800        0x4 bin/blib.a(prompt.o)
+                0x000000000001880c        0x4 bin/blib.a(prompt.o)
                                           0x7 (size before relaxing)
  .rodata.str1.1
-                0x0000000000018804        0xe bin/blib.a(pxemenu.o)
+                0x0000000000018810        0xe bin/blib.a(pxemenu.o)
                                          0x21 (size before relaxing)
  .rodata.str1.1
-                0x0000000000018812       0x1f bin/blib.a(route.o)
+                0x000000000001881e       0x1f bin/blib.a(route.o)
                                          0x24 (size before relaxing)
  .rodata.str1.1
-                0x0000000000018831        0xc bin/blib.a(int13.o)
- *fill*         0x000000000001883d        0x3 00
+                0x000000000001883d        0xc bin/blib.a(int13.o)
+ *fill*         0x0000000000018849        0x3 00
  .rodata.primary_check.2940
-                0x0000000000018840        0x6 bin/blib.a(int13.o)
- *fill*         0x0000000000018846        0x2 00
+                0x000000000001884c        0x6 bin/blib.a(int13.o)
+ *fill*         0x0000000000018852        0x2 00
  .rodata.boot_check.2942
-                0x0000000000018848       0x27 bin/blib.a(int13.o)
- *fill*         0x000000000001886f        0x1 00
+                0x0000000000018854       0x27 bin/blib.a(int13.o)
+ *fill*         0x000000000001887b        0x1 00
  .rodata.int13_fdd_geometries
-                0x0000000000018870       0x28 bin/blib.a(int13.o)
+                0x000000000001887c       0x28 bin/blib.a(int13.o)
  .rodata.str1.1
                 0x0000000000000000        0xc bin/blib.a(base16.o)
                                           0x5 (size before relaxing)
  .rodata.base64
-                0x0000000000018898       0x40 bin/blib.a(base64.o)
+                0x00000000000188a4       0x40 bin/blib.a(base64.o)
  .rodata.str1.1
                 0x0000000000000000        0xc bin/blib.a(basename.o)
                                           0x4 (size before relaxing)
  .rodata.str1.1
                 0x0000000000000000        0x1 bin/blib.a(menu.o)
  .rodata.str1.1
-                0x00000000000188d8       0x13 bin/blib.a(monojob.o)
+                0x00000000000188e4       0x13 bin/blib.a(monojob.o)
                                          0x25 (size before relaxing)
  .rodata.str1.1
-                0x00000000000188eb        0x8 bin/blib.a(resolv.o)
+                0x00000000000188f7        0x8 bin/blib.a(resolv.o)
  .rodata.str1.1
-                0x00000000000188f3        0x8 bin/blib.a(aoe.o)
+                0x00000000000188ff        0x8 bin/blib.a(aoe.o)
  .rodata.str1.1
-                0x00000000000188fb        0x5 bin/blib.a(icmp.o)
+                0x0000000000018907        0x5 bin/blib.a(icmp.o)
  .rodata.str1.1
-                0x0000000000018900        0x8 bin/blib.a(tcp.o)
+                0x000000000001890c        0x8 bin/blib.a(tcp.o)
  .rodata.str1.1
-                0x0000000000018908        0x9 bin/blib.a(ata.o)
+                0x0000000000018914        0x9 bin/blib.a(ata.o)
                                          0x14 (size before relaxing)
  .rodata.str1.1
                 0x0000000000000000        0x3 bin/blib.a(readline.o)
  .rodata.str1.1
-                0x0000000000018911       0x56 bin/blib.a(shell.o)
+                0x000000000001891d       0x56 bin/blib.a(shell.o)
                                          0x60 (size before relaxing)
- *fill*         0x0000000000018967        0x1 00
+ *fill*         0x0000000000018973        0x1 00
  .rodata.shell_prompt
-                0x0000000000018968        0x7 bin/blib.a(shell.o)
+                0x0000000000018974        0x7 bin/blib.a(shell.o)
  .rodata.empty_encap.2322
-                0x000000000001896f        0x1 bin/blib.a(dhcpopts.o)
+                0x000000000001897b        0x1 bin/blib.a(dhcpopts.o)
  *(.data)
- .data          0x0000000000018970       0x14 bin/blib.a(librm.o)
-                0x0000000000018970                rm_sp
-                0x0000000000018972                rm_ss
-                0x0000000000018978                virt_offset
-                0x000000000001897c                text16
-                0x0000000000018980                data16
+ .data          0x000000000001897c       0x14 bin/blib.a(librm.o)
+                0x000000000001897c                rm_sp
+                0x000000000001897e                rm_ss
+                0x0000000000018984                virt_offset
+                0x0000000000018988                text16
+                0x000000000001898c                data16
  *(.data.*)
  .data.bnx2_operations
-                0x0000000000018984       0x10 bin/blib.a(bnx2.o)
+                0x0000000000018990       0x10 bin/blib.a(bnx2.o)
  .data.flash_table
-                0x0000000000018994      0x2c0 bin/blib.a(bnx2.o)
+                0x00000000000189a0      0x2c0 bin/blib.a(bnx2.o)
  .data.bnx2_rv2p_proc1
-                0x0000000000018c54      0xb80 bin/blib.a(bnx2.o)
+                0x0000000000018c60      0xb80 bin/blib.a(bnx2.o)
  .data.bnx2_rv2p_proc2
-                0x00000000000197d4     0x17d8 bin/blib.a(bnx2.o)
+                0x00000000000197e0     0x17d8 bin/blib.a(bnx2.o)
  .data.bnx2_RXP_b06FwText
-                0x000000000001afac     0x5890 bin/blib.a(bnx2.o)
+                0x000000000001afb8     0x5890 bin/blib.a(bnx2.o)
  .data.bnx2_RXP_b06FwRodata
-                0x000000000002083c       0x2c bin/blib.a(bnx2.o)
+                0x0000000000020848       0x2c bin/blib.a(bnx2.o)
  .data.bnx2_TXP_b06FwText
-                0x0000000000020868     0x574c bin/blib.a(bnx2.o)
+                0x0000000000020874     0x574c bin/blib.a(bnx2.o)
  .data.bnx2_TPAT_b06FwText
-                0x0000000000025fb4     0x1230 bin/blib.a(bnx2.o)
+                0x0000000000025fc0     0x1230 bin/blib.a(bnx2.o)
  .data.bnx2_COM_b06FwText
-                0x00000000000271e4     0x57c0 bin/blib.a(bnx2.o)
+                0x00000000000271f0     0x57c0 bin/blib.a(bnx2.o)
  .data.bnx2_COM_b06FwRodata
-                0x000000000002c9a4       0x5c bin/blib.a(bnx2.o)
+                0x000000000002c9b0       0x5c bin/blib.a(bnx2.o)
  .data.bnx2_nics
-                0x000000000002ca00       0x30 bin/blib.a(bnx2.o)
+                0x000000000002ca0c       0x3c bin/blib.a(bnx2.o)
  .data.legacy_operations
-                0x000000000002ca30       0x14 bin/blib.a(legacy.o)
+                0x000000000002ca48       0x14 bin/blib.a(legacy.o)
  .data.ansi_input
-                0x000000000002ca44        0x4 bin/blib.a(bios_console.o)
+                0x000000000002ca5c        0x4 bin/blib.a(bios_console.o)
  .data.bios_ansiesc_ctx
-                0x000000000002ca48       0x1c bin/blib.a(bios_console.o)
+                0x000000000002ca60       0x1c bin/blib.a(bios_console.o)
  .data.bios_attr
-                0x000000000002ca64        0x4 bin/blib.a(bios_console.o)
+                0x000000000002ca7c        0x4 bin/blib.a(bios_console.o)
  .data.bios_ansiesc_handlers
-                0x000000000002ca68       0x20 bin/blib.a(bios_console.o)
+                0x000000000002ca80       0x20 bin/blib.a(bios_console.o)
  .data.pxe_dhcp_packet_creators
-                0x000000000002ca88        0xc bin/blib.a(pxe_preboot.o)
+                0x000000000002caa0        0xc bin/blib.a(pxe_preboot.o)
  .data.pxe_tftp
-                0x000000000002ca94       0x2c bin/blib.a(pxe_tftp.o)
+                0x000000000002caac       0x2c bin/blib.a(pxe_tftp.o)
  .data.pxe_tftp_xfer_desc
-                0x000000000002cac0       0x10 bin/blib.a(pxe_tftp.o)
+                0x000000000002cad8       0x10 bin/blib.a(pxe_tftp.o)
  .data.pxe_tftp_xfer_ops
-                0x000000000002cad0       0x18 bin/blib.a(pxe_tftp.o)
- .data.pxe_udp  0x000000000002cae8       0x30 bin/blib.a(pxe_udp.o)
+                0x000000000002cae8       0x18 bin/blib.a(pxe_tftp.o)
+ .data.pxe_udp  0x000000000002cb00       0x30 bin/blib.a(pxe_udp.o)
  .data.pxe_udp_xfer_desc
-                0x000000000002cb18       0x10 bin/blib.a(pxe_udp.o)
+                0x000000000002cb30       0x10 bin/blib.a(pxe_udp.o)
  .data.pxe_udp_xfer_operations
-                0x000000000002cb28        0x8 bin/blib.a(pxe_udp.o)
+                0x000000000002cb40        0x8 bin/blib.a(pxe_udp.o)
  .data.cpuid_cmd
-                0x000000000002cb30        0xc bin/blib.a(cpuid_cmd.o)
+                0x000000000002cb48        0xc bin/blib.a(cpuid_cmd.o)
  .data.cpuid_opts
-                0x000000000002cb3c       0x24 bin/blib.a(cpuid_cmd.o)
- .data.devices  0x000000000002cb60        0x8 bin/blib.a(device.o)
+                0x000000000002cb54       0x24 bin/blib.a(cpuid_cmd.o)
+ .data.devices  0x000000000002cb78        0x8 bin/blib.a(device.o)
  .data.echo_cmd
-                0x000000000002cb68        0xc bin/blib.a(exec.o)
- .data.exit_cmd
-                0x000000000002cb74        0xc bin/blib.a(exec.o)
- .data.isset_cmd
                 0x000000000002cb80        0xc bin/blib.a(exec.o)
- .data.iseq_cmd
+ .data.exit_cmd
                 0x000000000002cb8c        0xc bin/blib.a(exec.o)
- .data.sleep_cmd
+ .data.isset_cmd
                 0x000000000002cb98        0xc bin/blib.a(exec.o)
- .data.echo_opts
+ .data.iseq_cmd
                 0x000000000002cba4        0xc bin/blib.a(exec.o)
- .data.images   0x000000000002cbb0        0x8 bin/blib.a(image.o)
-                0x000000000002cbb0                images
+ .data.sleep_cmd
+                0x000000000002cbb0        0xc bin/blib.a(exec.o)
+ .data.echo_opts
+                0x000000000002cbbc        0xc bin/blib.a(exec.o)
+ .data.images   0x000000000002cbc8        0x8 bin/blib.a(image.o)
+                0x000000000002cbc8                images
  .data.null_intf
-                0x000000000002cbb8        0xc bin/blib.a(interface.o)
-                0x000000000002cbb8                null_intf
+                0x000000000002cbd0        0xc bin/blib.a(interface.o)
+                0x000000000002cbd0                null_intf
  .data.null_intf_desc
-                0x000000000002cbc4       0x10 bin/blib.a(interface.o)
-                0x000000000002cbc4                null_intf_desc
+                0x000000000002cbdc       0x10 bin/blib.a(interface.o)
+                0x000000000002cbdc                null_intf_desc
  .data.free_blocks
-                0x000000000002cbd4        0x8 bin/blib.a(malloc.o)
+                0x000000000002cbec        0x8 bin/blib.a(malloc.o)
  .data.posix_file_xfer_desc
-                0x000000000002cbdc       0x10 bin/blib.a(posix_io.o)
- .data.posix_files
-                0x000000000002cbec        0x8 bin/blib.a(posix_io.o)
- .data.posix_file_xfer_operations
                 0x000000000002cbf4       0x10 bin/blib.a(posix_io.o)
+ .data.posix_files
+                0x000000000002cc04        0x8 bin/blib.a(posix_io.o)
+ .data.posix_file_xfer_operations
+                0x000000000002cc0c       0x10 bin/blib.a(posix_io.o)
  .data.run_queue
-                0x000000000002cc04        0x8 bin/blib.a(process.o)
+                0x000000000002cc1c        0x8 bin/blib.a(process.o)
  .data.generic_settings_root
-                0x000000000002cc0c       0x2c bin/blib.a(settings.o)
-                0x000000000002cc0c                generic_settings_root
+                0x000000000002cc24       0x2c bin/blib.a(settings.o)
+                0x000000000002cc24                generic_settings_root
  .data.generic_settings_operations
-                0x000000000002cc38       0x10 bin/blib.a(settings.o)
-                0x000000000002cc38                generic_settings_operations
+                0x000000000002cc50       0x10 bin/blib.a(settings.o)
+                0x000000000002cc50                generic_settings_operations
  .data.builtin_settings
-                0x000000000002cc48       0x24 bin/blib.a(settings.o)
+                0x000000000002cc60       0x24 bin/blib.a(settings.o)
  .data.builtin_setting_operations
-                0x000000000002cc6c       0x18 bin/blib.a(settings.o)
+                0x000000000002cc84       0x18 bin/blib.a(settings.o)
  .data.builtin_settings_operations
-                0x000000000002cc84       0x10 bin/blib.a(settings.o)
+                0x000000000002cc9c       0x10 bin/blib.a(settings.o)
  .data.product_version
-                0x000000000002cc94        0x4 bin/blib.a(version.o)
-                0x000000000002cc94                product_version
+                0x000000000002ccac        0x4 bin/blib.a(version.o)
+                0x000000000002ccac                product_version
  .data.type_sizes
-                0x000000000002cc98        0x6 bin/blib.a(vsprintf.o)
- *fill*         0x000000000002cc9e        0x2 00
+                0x000000000002ccb0        0x6 bin/blib.a(vsprintf.o)
+ *fill*         0x000000000002ccb6        0x2 00
  .data.arp_entries
-                0x000000000002cca0        0x8 bin/blib.a(arp.o)
+                0x000000000002ccb8        0x8 bin/blib.a(arp.o)
  .data.eth_broadcast
-                0x000000000002cca8        0x6 bin/blib.a(ethernet.o)
-                0x000000000002cca8                eth_broadcast
- *fill*         0x000000000002ccae        0x2 00
+                0x000000000002ccc0        0x6 bin/blib.a(ethernet.o)
+                0x000000000002ccc0                eth_broadcast
+ *fill*         0x000000000002ccc6        0x2 00
  .data.ipv4_miniroutes
-                0x000000000002ccb0        0x8 bin/blib.a(ipv4.o)
-                0x000000000002ccb0                ipv4_miniroutes
+                0x000000000002ccc8        0x8 bin/blib.a(ipv4.o)
+                0x000000000002ccc8                ipv4_miniroutes
  .data.ipv4_fragments
-                0x000000000002ccb8        0x8 bin/blib.a(ipv4.o)
+                0x000000000002ccd0        0x8 bin/blib.a(ipv4.o)
  .data.net_devices
-                0x000000000002ccc0        0x8 bin/blib.a(netdevice.o)
-                0x000000000002ccc0                net_devices
+                0x000000000002ccd8        0x8 bin/blib.a(netdevice.o)
+                0x000000000002ccd8                net_devices
  .data.open_net_devices
-                0x000000000002ccc8        0x8 bin/blib.a(netdevice.o)
+                0x000000000002cce0        0x8 bin/blib.a(netdevice.o)
  .data.net_process_desc
-                0x000000000002ccd0        0xc bin/blib.a(netdevice.o)
+                0x000000000002cce8        0xc bin/blib.a(netdevice.o)
  .data.netdev_settings_operations
-                0x000000000002ccdc       0x10 bin/blib.a(netdev_settings.o)
-                0x000000000002ccdc                netdev_settings_operations
+                0x000000000002ccf4       0x10 bin/blib.a(netdev_settings.o)
+                0x000000000002ccf4                netdev_settings_operations
  .data.netdev_setting_operations
-                0x000000000002ccec       0x24 bin/blib.a(netdev_settings.o)
+                0x000000000002cd04       0x24 bin/blib.a(netdev_settings.o)
  .data.null_netdev_operations
-                0x000000000002cd10       0x14 bin/blib.a(nullnet.o)
-                0x000000000002cd10                null_netdev_operations
- .data.timers   0x000000000002cd24        0x8 bin/blib.a(retry.o)
+                0x000000000002cd28       0x14 bin/blib.a(nullnet.o)
+                0x000000000002cd28                null_netdev_operations
+ .data.timers   0x000000000002cd3c        0x8 bin/blib.a(retry.o)
  .data.retry_process_desc
-                0x000000000002cd2c        0xc bin/blib.a(retry.o)
+                0x000000000002cd44        0xc bin/blib.a(retry.o)
  .data.udp_sock_dgram
-                0x000000000002cd38        0x4 bin/blib.a(udp.o)
-                0x000000000002cd38                udp_sock_dgram
+                0x000000000002cd50        0x4 bin/blib.a(udp.o)
+                0x000000000002cd50                udp_sock_dgram
  .data.udp_xfer_desc
-                0x000000000002cd3c       0x10 bin/blib.a(udp.o)
+                0x000000000002cd54       0x10 bin/blib.a(udp.o)
  .data.udp_conns
-                0x000000000002cd4c        0x8 bin/blib.a(udp.o)
+                0x000000000002cd64        0x8 bin/blib.a(udp.o)
  .data.try_port.2113
-                0x000000000002cd54        0x2 bin/blib.a(udp.o)
- *fill*         0x000000000002cd56        0x2 00
+                0x000000000002cd6c        0x2 bin/blib.a(udp.o)
+ *fill*         0x000000000002cd6e        0x2 00
  .data.udp_xfer_operations
-                0x000000000002cd58       0x18 bin/blib.a(udp.o)
+                0x000000000002cd70       0x18 bin/blib.a(udp.o)
  .data.http_xfer_desc
-                0x000000000002cd70       0x10 bin/blib.a(httpcore.o)
+                0x000000000002cd88       0x10 bin/blib.a(httpcore.o)
  .data.http_partial_desc
-                0x000000000002cd80       0x10 bin/blib.a(httpcore.o)
+                0x000000000002cd98       0x10 bin/blib.a(httpcore.o)
  .data.http_socket_desc
-                0x000000000002cd90       0x10 bin/blib.a(httpcore.o)
+                0x000000000002cda8       0x10 bin/blib.a(httpcore.o)
  .data.http_process_desc
-                0x000000000002cda0        0xc bin/blib.a(httpcore.o)
+                0x000000000002cdb8        0xc bin/blib.a(httpcore.o)
  .data.http_line_handlers
-                0x000000000002cdac       0x14 bin/blib.a(httpcore.o)
+                0x000000000002cdc4       0x14 bin/blib.a(httpcore.o)
  .data.http_header_handlers
-                0x000000000002cdc0       0x30 bin/blib.a(httpcore.o)
+                0x000000000002cdd8       0x30 bin/blib.a(httpcore.o)
  .data.http_auth_header_handlers
-                0x000000000002cdf0       0x18 bin/blib.a(httpcore.o)
+                0x000000000002ce08       0x18 bin/blib.a(httpcore.o)
  .data.http_xfer_operations
-                0x000000000002ce08       0x28 bin/blib.a(httpcore.o)
+                0x000000000002ce20       0x28 bin/blib.a(httpcore.o)
  .data.http_partial_operations
-                0x000000000002ce30        0x8 bin/blib.a(httpcore.o)
+                0x000000000002ce48        0x8 bin/blib.a(httpcore.o)
  .data.http_socket_operations
-                0x000000000002ce38       0x20 bin/blib.a(httpcore.o)
+                0x000000000002ce50       0x20 bin/blib.a(httpcore.o)
  .data.iscsi_control_desc
-                0x000000000002ce58       0x10 bin/blib.a(iscsi.o)
+                0x000000000002ce70       0x10 bin/blib.a(iscsi.o)
  .data.iscsi_data_desc
-                0x000000000002ce68       0x10 bin/blib.a(iscsi.o)
+                0x000000000002ce80       0x10 bin/blib.a(iscsi.o)
  .data.iscsi_socket_desc
-                0x000000000002ce78       0x10 bin/blib.a(iscsi.o)
+                0x000000000002ce90       0x10 bin/blib.a(iscsi.o)
  .data.iscsi_process_desc
-                0x000000000002ce88        0xc bin/blib.a(iscsi.o)
+                0x000000000002cea0        0xc bin/blib.a(iscsi.o)
  .data.iscsi_string_types
-                0x000000000002ce94       0x40 bin/blib.a(iscsi.o)
+                0x000000000002ceac       0x40 bin/blib.a(iscsi.o)
  .data.iscsi_control_op
-                0x000000000002ced4       0x20 bin/blib.a(iscsi.o)
+                0x000000000002ceec       0x20 bin/blib.a(iscsi.o)
  .data.iscsi_data_op
-                0x000000000002cef4        0x8 bin/blib.a(iscsi.o)
+                0x000000000002cf0c        0x8 bin/blib.a(iscsi.o)
  .data.iscsi_socket_operations
-                0x000000000002cefc       0x20 bin/blib.a(iscsi.o)
+                0x000000000002cf14       0x20 bin/blib.a(iscsi.o)
  .data.dhcp_request_options_data
-                0x000000000002cf1c       0x50 bin/blib.a(dhcp.o)
+                0x000000000002cf34       0x50 bin/blib.a(dhcp.o)
  .data.dhcp_job_desc
-                0x000000000002cf6c       0x10 bin/blib.a(dhcp.o)
+                0x000000000002cf84       0x10 bin/blib.a(dhcp.o)
  .data.dhcp_xfer_desc
-                0x000000000002cf7c       0x10 bin/blib.a(dhcp.o)
+                0x000000000002cf94       0x10 bin/blib.a(dhcp.o)
  .data.dhcp_peer
-                0x000000000002cf8c       0x20 bin/blib.a(dhcp.o)
+                0x000000000002cfa4       0x20 bin/blib.a(dhcp.o)
  .data.dhcp_state_discover
-                0x000000000002cfac       0x14 bin/blib.a(dhcp.o)
+                0x000000000002cfc4       0x14 bin/blib.a(dhcp.o)
  .data.dhcp_state_request
-                0x000000000002cfc0       0x14 bin/blib.a(dhcp.o)
+                0x000000000002cfd8       0x14 bin/blib.a(dhcp.o)
  .data.dhcp_state_proxy
-                0x000000000002cfd4       0x14 bin/blib.a(dhcp.o)
+                0x000000000002cfec       0x14 bin/blib.a(dhcp.o)
  .data.peer.3040
-                0x000000000002cfe8       0x20 bin/blib.a(dhcp.o)
+                0x000000000002d000       0x20 bin/blib.a(dhcp.o)
  .data.dhcp_state_pxebs
-                0x000000000002d008       0x14 bin/blib.a(dhcp.o)
+                0x000000000002d020       0x14 bin/blib.a(dhcp.o)
  .data.dhcp_job_op
-                0x000000000002d01c        0x8 bin/blib.a(dhcp.o)
+                0x000000000002d034        0x8 bin/blib.a(dhcp.o)
  .data.dhcp_xfer_operations
-                0x000000000002d024        0x8 bin/blib.a(dhcp.o)
+                0x000000000002d03c        0x8 bin/blib.a(dhcp.o)
  .data.nameserver
-                0x000000000002d02c       0x20 bin/blib.a(dns.o)
+                0x000000000002d044       0x20 bin/blib.a(dns.o)
  .data.dns_resolv_desc
-                0x000000000002d04c       0x10 bin/blib.a(dns.o)
+                0x000000000002d064       0x10 bin/blib.a(dns.o)
  .data.dns_socket_desc
-                0x000000000002d05c       0x10 bin/blib.a(dns.o)
- .data.dns_resolv_op
-                0x000000000002d06c        0x8 bin/blib.a(dns.o)
- .data.dns_socket_operations
                 0x000000000002d074       0x10 bin/blib.a(dns.o)
+ .data.dns_resolv_op
+                0x000000000002d084        0x8 bin/blib.a(dns.o)
+ .data.dns_socket_operations
+                0x000000000002d08c       0x10 bin/blib.a(dns.o)
  .data.tftp_mtftp_socket
-                0x000000000002d084       0x20 bin/blib.a(tftp.o)
+                0x000000000002d09c       0x20 bin/blib.a(tftp.o)
  .data.tftp_xfer_desc
-                0x000000000002d0a4       0x10 bin/blib.a(tftp.o)
+                0x000000000002d0bc       0x10 bin/blib.a(tftp.o)
  .data.tftp_socket_desc
-                0x000000000002d0b4       0x10 bin/blib.a(tftp.o)
+                0x000000000002d0cc       0x10 bin/blib.a(tftp.o)
  .data.tftp_mc_socket_desc
-                0x000000000002d0c4       0x10 bin/blib.a(tftp.o)
+                0x000000000002d0dc       0x10 bin/blib.a(tftp.o)
  .data.tftp_options
-                0x000000000002d0d4       0x20 bin/blib.a(tftp.o)
+                0x000000000002d0ec       0x20 bin/blib.a(tftp.o)
  .data.tftp_xfer_operations
-                0x000000000002d0f4       0x10 bin/blib.a(tftp.o)
+                0x000000000002d10c       0x10 bin/blib.a(tftp.o)
  .data.tftp_socket_operations
-                0x000000000002d104        0x8 bin/blib.a(tftp.o)
+                0x000000000002d11c        0x8 bin/blib.a(tftp.o)
  .data.tftp_mc_socket_operations
-                0x000000000002d10c        0x8 bin/blib.a(tftp.o)
+                0x000000000002d124        0x8 bin/blib.a(tftp.o)
  .data.goto_cmd
-                0x000000000002d114        0xc bin/blib.a(script.o)
+                0x000000000002d12c        0xc bin/blib.a(script.o)
  .data.prompt_cmd
-                0x000000000002d120        0xc bin/blib.a(script.o)
+                0x000000000002d138        0xc bin/blib.a(script.o)
  .data.prompt_opts
-                0x000000000002d12c       0x18 bin/blib.a(script.o)
+                0x000000000002d144       0x18 bin/blib.a(script.o)
  .data.pci_root_driver
-                0x000000000002d144        0x8 bin/blib.a(pci.o)
+                0x000000000002d15c        0x8 bin/blib.a(pci.o)
  .data.scsidev_block_desc
-                0x000000000002d14c       0x10 bin/blib.a(scsi.o)
+                0x000000000002d164       0x10 bin/blib.a(scsi.o)
  .data.scsidev_scsi_desc
-                0x000000000002d15c       0x10 bin/blib.a(scsi.o)
+                0x000000000002d174       0x10 bin/blib.a(scsi.o)
  .data.scsidev_ready_desc
-                0x000000000002d16c       0x10 bin/blib.a(scsi.o)
+                0x000000000002d184       0x10 bin/blib.a(scsi.o)
  .data.scsidev_process_desc
-                0x000000000002d17c        0xc bin/blib.a(scsi.o)
+                0x000000000002d194        0xc bin/blib.a(scsi.o)
  .data.scsicmd_read_capacity
-                0x000000000002d188       0x10 bin/blib.a(scsi.o)
+                0x000000000002d1a0       0x10 bin/blib.a(scsi.o)
  .data.scsicmd_block_desc
-                0x000000000002d198       0x10 bin/blib.a(scsi.o)
+                0x000000000002d1b0       0x10 bin/blib.a(scsi.o)
  .data.scsicmd_scsi_desc
-                0x000000000002d1a8       0x10 bin/blib.a(scsi.o)
+                0x000000000002d1c0       0x10 bin/blib.a(scsi.o)
  .data.scsicmd_write
-                0x000000000002d1b8       0x10 bin/blib.a(scsi.o)
+                0x000000000002d1d0       0x10 bin/blib.a(scsi.o)
  .data.scsicmd_read
-                0x000000000002d1c8       0x10 bin/blib.a(scsi.o)
+                0x000000000002d1e0       0x10 bin/blib.a(scsi.o)
  .data.scsicmd_test_unit_ready
-                0x000000000002d1d8       0x10 bin/blib.a(scsi.o)
+                0x000000000002d1f0       0x10 bin/blib.a(scsi.o)
  .data.scsidev_block_op
-                0x000000000002d1e8       0x28 bin/blib.a(scsi.o)
+                0x000000000002d200       0x28 bin/blib.a(scsi.o)
  .data.scsidev_scsi_op
-                0x000000000002d210       0x10 bin/blib.a(scsi.o)
+                0x000000000002d228       0x10 bin/blib.a(scsi.o)
  .data.scsidev_ready_op
-                0x000000000002d220        0x8 bin/blib.a(scsi.o)
+                0x000000000002d238        0x8 bin/blib.a(scsi.o)
  .data.scsicmd_block_op
-                0x000000000002d228        0x8 bin/blib.a(scsi.o)
+                0x000000000002d240        0x8 bin/blib.a(scsi.o)
  .data.scsicmd_scsi_op
-                0x000000000002d230       0x10 bin/blib.a(scsi.o)
+                0x000000000002d248       0x10 bin/blib.a(scsi.o)
  .data.smbios_settings
-                0x000000000002d240       0x24 bin/blib.a(smbios_settings.o)
+                0x000000000002d258       0x24 bin/blib.a(smbios_settings.o)
  .data.smbios_settings_operations
-                0x000000000002d264       0x10 bin/blib.a(smbios_settings.o)
+                0x000000000002d27c       0x10 bin/blib.a(smbios_settings.o)
  .data.md5_algorithm
-                0x000000000002d274       0x1c bin/blib.a(md5.o)
-                0x000000000002d274                md5_algorithm
+                0x000000000002d28c       0x1c bin/blib.a(md5.o)
+                0x000000000002d28c                md5_algorithm
  .data.md5_steps
-                0x000000000002d290       0x20 bin/blib.a(md5.o)
- .data.oid_md5  0x000000000002d2b0        0x8 bin/blib.a(md5.o)
+                0x000000000002d2a8       0x20 bin/blib.a(md5.o)
+ .data.oid_md5  0x000000000002d2c8        0x8 bin/blib.a(md5.o)
  .data.autoboot_cmd
-                0x000000000002d2b8        0xc bin/blib.a(autoboot_cmd.o)
+                0x000000000002d2d0        0xc bin/blib.a(autoboot_cmd.o)
  .data.config_cmd
-                0x000000000002d2c4        0xc bin/blib.a(config_cmd.o)
+                0x000000000002d2dc        0xc bin/blib.a(config_cmd.o)
  .data.pxebs_cmd
-                0x000000000002d2d0        0xc bin/blib.a(dhcp_cmd.o)
+                0x000000000002d2e8        0xc bin/blib.a(dhcp_cmd.o)
  .data.dhcp_cmd
-                0x000000000002d2dc        0xc bin/blib.a(dhcp_cmd.o)
+                0x000000000002d2f4        0xc bin/blib.a(dhcp_cmd.o)
  .data.ifstat_cmd
-                0x000000000002d2e8        0xc bin/blib.a(ifmgmt_cmd.o)
- .data.ifclose_cmd
-                0x000000000002d2f4        0xc bin/blib.a(ifmgmt_cmd.o)
- .data.ifopen_cmd
                 0x000000000002d300        0xc bin/blib.a(ifmgmt_cmd.o)
+ .data.ifclose_cmd
+                0x000000000002d30c        0xc bin/blib.a(ifmgmt_cmd.o)
+ .data.ifopen_cmd
+                0x000000000002d318        0xc bin/blib.a(ifmgmt_cmd.o)
  .data.imgargs_desc
-                0x000000000002d30c       0x14 bin/blib.a(image_cmd.o)
-                0x000000000002d30c                imgargs_desc
+                0x000000000002d324       0x14 bin/blib.a(image_cmd.o)
+                0x000000000002d324                imgargs_desc
  .data.imgexec_desc
-                0x000000000002d320       0x14 bin/blib.a(image_cmd.o)
-                0x000000000002d320                imgexec_desc
+                0x000000000002d338       0x14 bin/blib.a(image_cmd.o)
+                0x000000000002d338                imgexec_desc
  .data.imgselect_desc
-                0x000000000002d334       0x14 bin/blib.a(image_cmd.o)
-                0x000000000002d334                imgselect_desc
+                0x000000000002d34c       0x14 bin/blib.a(image_cmd.o)
+                0x000000000002d34c                imgselect_desc
  .data.imgfetch_desc
-                0x000000000002d348       0x14 bin/blib.a(image_cmd.o)
-                0x000000000002d348                imgfetch_desc
+                0x000000000002d360       0x14 bin/blib.a(image_cmd.o)
+                0x000000000002d360                imgfetch_desc
  .data.imgmulti_cmd
-                0x000000000002d35c        0xc bin/blib.a(image_cmd.o)
- .data.imgsingle_cmd
-                0x000000000002d368        0xc bin/blib.a(image_cmd.o)
- .data.imgexec_cmd
                 0x000000000002d374        0xc bin/blib.a(image_cmd.o)
- .data.imgfetch_cmd
+ .data.imgsingle_cmd
                 0x000000000002d380        0xc bin/blib.a(image_cmd.o)
+ .data.imgexec_cmd
+                0x000000000002d38c        0xc bin/blib.a(image_cmd.o)
+ .data.imgfetch_cmd
+                0x000000000002d398        0xc bin/blib.a(image_cmd.o)
  .data.imgsingle_opts
-                0x000000000002d38c       0x24 bin/blib.a(image_cmd.o)
+                0x000000000002d3a4       0x24 bin/blib.a(image_cmd.o)
  .data.login_cmd
-                0x000000000002d3b0        0xc bin/blib.a(login_cmd.o)
+                0x000000000002d3c8        0xc bin/blib.a(login_cmd.o)
  .data.choose_cmd
-                0x000000000002d3bc        0xc bin/blib.a(menu_cmd.o)
- .data.item_cmd
-                0x000000000002d3c8        0xc bin/blib.a(menu_cmd.o)
- .data.menu_cmd
                 0x000000000002d3d4        0xc bin/blib.a(menu_cmd.o)
+ .data.item_cmd
+                0x000000000002d3e0        0xc bin/blib.a(menu_cmd.o)
+ .data.menu_cmd
+                0x000000000002d3ec        0xc bin/blib.a(menu_cmd.o)
  .data.choose_opts
-                0x000000000002d3e0       0x30 bin/blib.a(menu_cmd.o)
+                0x000000000002d3f8       0x30 bin/blib.a(menu_cmd.o)
  .data.item_opts
-                0x000000000002d410       0x30 bin/blib.a(menu_cmd.o)
+                0x000000000002d428       0x30 bin/blib.a(menu_cmd.o)
  .data.menu_opts
-                0x000000000002d440       0x18 bin/blib.a(menu_cmd.o)
+                0x000000000002d458       0x18 bin/blib.a(menu_cmd.o)
  .data.clear_read_cmd
-                0x000000000002d458        0xc bin/blib.a(nvo_cmd.o)
- .data.set_cmd  0x000000000002d464        0xc bin/blib.a(nvo_cmd.o)
- .data.show_cmd
                 0x000000000002d470        0xc bin/blib.a(nvo_cmd.o)
+ .data.set_cmd  0x000000000002d47c        0xc bin/blib.a(nvo_cmd.o)
+ .data.show_cmd
+                0x000000000002d488        0xc bin/blib.a(nvo_cmd.o)
  .data.reboot_cmd
-                0x000000000002d47c        0xc bin/blib.a(reboot_cmd.o)
+                0x000000000002d494        0xc bin/blib.a(reboot_cmd.o)
  .data.reboot_opts
-                0x000000000002d488        0xc bin/blib.a(reboot_cmd.o)
+                0x000000000002d4a0        0xc bin/blib.a(reboot_cmd.o)
  .data.route_cmd
-                0x000000000002d494        0xc bin/blib.a(route_cmd.o)
+                0x000000000002d4ac        0xc bin/blib.a(route_cmd.o)
  .data.sanunhook_cmd
-                0x000000000002d4a0        0xc bin/blib.a(sanboot_cmd.o)
- .data.sanboot_cmd
-                0x000000000002d4ac        0xc bin/blib.a(sanboot_cmd.o)
- .data.sanhook_cmd
                 0x000000000002d4b8        0xc bin/blib.a(sanboot_cmd.o)
+ .data.sanboot_cmd
+                0x000000000002d4c4        0xc bin/blib.a(sanboot_cmd.o)
+ .data.sanhook_cmd
+                0x000000000002d4d0        0xc bin/blib.a(sanboot_cmd.o)
  .data.sanboot_opts
-                0x000000000002d4c4       0x24 bin/blib.a(sanboot_cmd.o)
+                0x000000000002d4dc       0x24 bin/blib.a(sanboot_cmd.o)
  .data.sync_cmd
-                0x000000000002d4e8        0xc bin/blib.a(sync_cmd.o)
+                0x000000000002d500        0xc bin/blib.a(sync_cmd.o)
  .data.sync_opts
-                0x000000000002d4f4        0xc bin/blib.a(sync_cmd.o)
+                0x000000000002d50c        0xc bin/blib.a(sync_cmd.o)
  .data._ansi_screen
-                0x000000000002d500       0x24 bin/blib.a(ansi_screen.o)
-                0x000000000002d500                _ansi_screen
- .data._LINES   0x000000000002d524        0x2 bin/blib.a(ansi_screen.o)
-                0x000000000002d524                _LINES
- .data._COLS    0x000000000002d526        0x2 bin/blib.a(ansi_screen.o)
-                0x000000000002d526                _COLS
- .data.cpairs   0x000000000002d528       0x20 bin/blib.a(colour.o)
- .data._stdscr  0x000000000002d548       0x24 bin/blib.a(mucurses.o)
-                0x000000000002d548                _stdscr
- .data.int13s   0x000000000002d56c        0x8 bin/blib.a(int13.o)
+                0x000000000002d518       0x24 bin/blib.a(ansi_screen.o)
+                0x000000000002d518                _ansi_screen
+ .data._LINES   0x000000000002d53c        0x2 bin/blib.a(ansi_screen.o)
+                0x000000000002d53c                _LINES
+ .data._COLS    0x000000000002d53e        0x2 bin/blib.a(ansi_screen.o)
+                0x000000000002d53e                _COLS
+ .data.cpairs   0x000000000002d540       0x20 bin/blib.a(colour.o)
+ .data._stdscr  0x000000000002d560       0x24 bin/blib.a(mucurses.o)
+                0x000000000002d560                _stdscr
+ .data.int13s   0x000000000002d584        0x8 bin/blib.a(int13.o)
  .data.int13_block_desc
-                0x000000000002d574       0x10 bin/blib.a(int13.o)
+                0x000000000002d58c       0x10 bin/blib.a(int13.o)
  .data.int13_command
-                0x000000000002d584       0x3c bin/blib.a(int13.o)
+                0x000000000002d59c       0x3c bin/blib.a(int13.o)
  .data.int13_block_op
-                0x000000000002d5c0       0x10 bin/blib.a(int13.o)
+                0x000000000002d5d8       0x10 bin/blib.a(int13.o)
  .data.int13_command_desc
-                0x000000000002d5d0       0x10 bin/blib.a(int13.o)
+                0x000000000002d5e8       0x10 bin/blib.a(int13.o)
  .data.int13_command_op
-                0x000000000002d5e0       0x10 bin/blib.a(int13.o)
+                0x000000000002d5f8       0x10 bin/blib.a(int13.o)
  .data.console_usage
-                0x000000000002d5f0        0x4 bin/blib.a(console.o)
-                0x000000000002d5f0                console_usage
+                0x000000000002d608        0x4 bin/blib.a(console.o)
+                0x000000000002d608                console_usage
  .data.downloader_job_desc
-                0x000000000002d5f4       0x10 bin/blib.a(downloader.o)
+                0x000000000002d60c       0x10 bin/blib.a(downloader.o)
  .data.downloader_xfer_desc
-                0x000000000002d604       0x10 bin/blib.a(downloader.o)
+                0x000000000002d61c       0x10 bin/blib.a(downloader.o)
  .data.downloader_job_op
-                0x000000000002d614       0x10 bin/blib.a(downloader.o)
+                0x000000000002d62c       0x10 bin/blib.a(downloader.o)
  .data.downloader_xfer_operations
-                0x000000000002d624       0x10 bin/blib.a(downloader.o)
- .data.menus    0x000000000002d634        0x8 bin/blib.a(menu.o)
- .data.monojob  0x000000000002d63c        0xc bin/blib.a(monojob.o)
-                0x000000000002d63c                monojob
+                0x000000000002d63c       0x10 bin/blib.a(downloader.o)
+ .data.menus    0x000000000002d64c        0x8 bin/blib.a(menu.o)
+ .data.monojob  0x000000000002d654        0xc bin/blib.a(monojob.o)
+                0x000000000002d654                monojob
  .data.monojob_intf_desc
-                0x000000000002d648       0x10 bin/blib.a(monojob.o)
+                0x000000000002d660       0x10 bin/blib.a(monojob.o)
  .data.monojob_intf_op
-                0x000000000002d658        0x8 bin/blib.a(monojob.o)
+                0x000000000002d670        0x8 bin/blib.a(monojob.o)
  .data.numeric_process_desc
-                0x000000000002d660        0xc bin/blib.a(resolv.o)
+                0x000000000002d678        0xc bin/blib.a(resolv.o)
  .data.resmux_child_desc
-                0x000000000002d66c       0x10 bin/blib.a(resolv.o)
+                0x000000000002d684       0x10 bin/blib.a(resolv.o)
  .data.named_xfer_desc
-                0x000000000002d67c       0x10 bin/blib.a(resolv.o)
+                0x000000000002d694       0x10 bin/blib.a(resolv.o)
  .data.named_resolv_desc
-                0x000000000002d68c       0x10 bin/blib.a(resolv.o)
+                0x000000000002d6a4       0x10 bin/blib.a(resolv.o)
  .data.resmux_child_op
-                0x000000000002d69c       0x10 bin/blib.a(resolv.o)
+                0x000000000002d6b4       0x10 bin/blib.a(resolv.o)
  .data.named_xfer_ops
-                0x000000000002d6ac       0x10 bin/blib.a(resolv.o)
+                0x000000000002d6c4       0x10 bin/blib.a(resolv.o)
  .data.named_resolv_op
-                0x000000000002d6bc       0x10 bin/blib.a(resolv.o)
+                0x000000000002d6d4       0x10 bin/blib.a(resolv.o)
  .data.aoedev_ata_desc
-                0x000000000002d6cc       0x10 bin/blib.a(aoe.o)
+                0x000000000002d6e4       0x10 bin/blib.a(aoe.o)
  .data.aoedev_config_desc
-                0x000000000002d6dc       0x10 bin/blib.a(aoe.o)
+                0x000000000002d6f4       0x10 bin/blib.a(aoe.o)
  .data.aoecmd_cfg
-                0x000000000002d6ec        0xc bin/blib.a(aoe.o)
+                0x000000000002d704        0xc bin/blib.a(aoe.o)
  .data.aoecmd_ata
-                0x000000000002d6f8        0xc bin/blib.a(aoe.o)
+                0x000000000002d710        0xc bin/blib.a(aoe.o)
  .data.aoe_commands
-                0x000000000002d704        0x8 bin/blib.a(aoe.o)
+                0x000000000002d71c        0x8 bin/blib.a(aoe.o)
  .data.aoecmd_ata_desc
-                0x000000000002d70c       0x10 bin/blib.a(aoe.o)
+                0x000000000002d724       0x10 bin/blib.a(aoe.o)
  .data.aoedev_ata_op
-                0x000000000002d71c       0x28 bin/blib.a(aoe.o)
+                0x000000000002d734       0x28 bin/blib.a(aoe.o)
  .data.aoedev_config_op
-                0x000000000002d744        0x8 bin/blib.a(aoe.o)
+                0x000000000002d75c        0x8 bin/blib.a(aoe.o)
  .data.aoecmd_ata_op
-                0x000000000002d74c        0x8 bin/blib.a(aoe.o)
+                0x000000000002d764        0x8 bin/blib.a(aoe.o)
  .data.dhcp_packet_fields
-                0x000000000002d754       0x30 bin/blib.a(dhcppkt.o)
+                0x000000000002d76c       0x30 bin/blib.a(dhcppkt.o)
  .data.dhcppkt_settings_operations
-                0x000000000002d784       0x10 bin/blib.a(dhcppkt.o)
+                0x000000000002d79c       0x10 bin/blib.a(dhcppkt.o)
  .data.tcp_sock_stream
-                0x000000000002d794        0x4 bin/blib.a(tcp.o)
-                0x000000000002d794                tcp_sock_stream
+                0x000000000002d7ac        0x4 bin/blib.a(tcp.o)
+                0x000000000002d7ac                tcp_sock_stream
  .data.tcp_conns
-                0x000000000002d798        0x8 bin/blib.a(tcp.o)
+                0x000000000002d7b0        0x8 bin/blib.a(tcp.o)
  .data.tcp_xfer_desc
-                0x000000000002d7a0       0x10 bin/blib.a(tcp.o)
+                0x000000000002d7b8       0x10 bin/blib.a(tcp.o)
  .data.tcp_xfer_operations
-                0x000000000002d7b0       0x18 bin/blib.a(tcp.o)
+                0x000000000002d7c8       0x18 bin/blib.a(tcp.o)
  .data.atadev_block_desc
-                0x000000000002d7c8       0x10 bin/blib.a(ata.o)
+                0x000000000002d7e0       0x10 bin/blib.a(ata.o)
  .data.atadev_ata_desc
-                0x000000000002d7d8       0x10 bin/blib.a(ata.o)
+                0x000000000002d7f0       0x10 bin/blib.a(ata.o)
  .data.ata_commands
-                0x000000000002d7e8        0x8 bin/blib.a(ata.o)
+                0x000000000002d800        0x8 bin/blib.a(ata.o)
  .data.atacmd_identify
-                0x000000000002d7f0       0x18 bin/blib.a(ata.o)
+                0x000000000002d808       0x18 bin/blib.a(ata.o)
  .data.atacmd_block_desc
-                0x000000000002d808       0x10 bin/blib.a(ata.o)
+                0x000000000002d820       0x10 bin/blib.a(ata.o)
  .data.atacmd_ata_desc
-                0x000000000002d818       0x10 bin/blib.a(ata.o)
+                0x000000000002d830       0x10 bin/blib.a(ata.o)
  .data.atacmd_write
-                0x000000000002d828       0x18 bin/blib.a(ata.o)
- .data.atacmd_read
                 0x000000000002d840       0x18 bin/blib.a(ata.o)
+ .data.atacmd_read
+                0x000000000002d858       0x18 bin/blib.a(ata.o)
  .data.atadev_block_op
-                0x000000000002d858       0x28 bin/blib.a(ata.o)
+                0x000000000002d870       0x28 bin/blib.a(ata.o)
  .data.atadev_ata_op
-                0x000000000002d880        0x8 bin/blib.a(ata.o)
+                0x000000000002d898        0x8 bin/blib.a(ata.o)
  .data.atacmd_block_op
-                0x000000000002d888        0x8 bin/blib.a(ata.o)
+                0x000000000002d8a0        0x8 bin/blib.a(ata.o)
  .data.atacmd_ata_op
-                0x000000000002d890        0x8 bin/blib.a(ata.o)
+                0x000000000002d8a8        0x8 bin/blib.a(ata.o)
  .data.shell_cmd
-                0x000000000002d898        0xc bin/blib.a(shell.o)
+                0x000000000002d8b0        0xc bin/blib.a(shell.o)
  *(SORT(.tbl.*))
  .tbl.arp_net_protocols.00
-                0x000000000002d8a4        0x0 bin/blib.a(arp.o)
+                0x000000000002d8bc        0x0 bin/blib.a(arp.o)
  .tbl.arp_net_protocols.01
-                0x000000000002d8a4        0x8 bin/blib.a(ipv4.o)
-                0x000000000002d8a4                ipv4_arp_protocol
+                0x000000000002d8bc        0x8 bin/blib.a(ipv4.o)
+                0x000000000002d8bc                ipv4_arp_protocol
  .tbl.arp_net_protocols.99
-                0x000000000002d8ac        0x0 bin/blib.a(arp.o)
+                0x000000000002d8c4        0x0 bin/blib.a(arp.o)
  .tbl.asn1_algorithms.01
-                0x000000000002d8ac       0x14 bin/blib.a(md5.o)
-                0x000000000002d8ac                oid_md5_algorithm
+                0x000000000002d8c4       0x14 bin/blib.a(md5.o)
+                0x000000000002d8c4                oid_md5_algorithm
  .tbl.cache_discarders.00
-                0x000000000002d8c0        0x0 bin/blib.a(malloc.o)
+                0x000000000002d8d8        0x0 bin/blib.a(malloc.o)
  .tbl.cache_discarders.02
-                0x000000000002d8c0        0x4 bin/blib.a(netdevice.o)
-                0x000000000002d8c0                net_discarder
+                0x000000000002d8d8        0x4 bin/blib.a(netdevice.o)
+                0x000000000002d8d8                net_discarder
  .tbl.cache_discarders.02
-                0x000000000002d8c4        0x4 bin/blib.a(tcp.o)
-                0x000000000002d8c4                tcp_discarder
+                0x000000000002d8dc        0x4 bin/blib.a(tcp.o)
+                0x000000000002d8dc                tcp_discarder
  .tbl.cache_discarders.03
-                0x000000000002d8c8        0x4 bin/blib.a(arp.o)
-                0x000000000002d8c8                arp_discarder
+                0x000000000002d8e0        0x4 bin/blib.a(arp.o)
+                0x000000000002d8e0                arp_discarder
  .tbl.cache_discarders.99
-                0x000000000002d8cc        0x0 bin/blib.a(malloc.o)
+                0x000000000002d8e4        0x0 bin/blib.a(malloc.o)
  .tbl.commands.00
-                0x000000000002d8cc        0x0 bin/blib.a(exec.o)
+                0x000000000002d8e4        0x0 bin/blib.a(exec.o)
  .tbl.commands.00
-                0x000000000002d8cc        0x0 bin/blib.a(shell.o)
+                0x000000000002d8e4        0x0 bin/blib.a(shell.o)
  .tbl.commands.01
-                0x000000000002d8cc        0x8 bin/blib.a(cpuid_cmd.o)
-                0x000000000002d8cc                cpuid_command
+                0x000000000002d8e4        0x8 bin/blib.a(cpuid_cmd.o)
+                0x000000000002d8e4                cpuid_command
  .tbl.commands.01
-                0x000000000002d8d4       0x28 bin/blib.a(exec.o)
-                0x000000000002d8d4                sleep_command
-                0x000000000002d8dc                iseq_command
-                0x000000000002d8e4                isset_command
-                0x000000000002d8ec                exit_command
-                0x000000000002d8f4                echo_command
+                0x000000000002d8ec       0x28 bin/blib.a(exec.o)
+                0x000000000002d8ec                sleep_command
+                0x000000000002d8f4                iseq_command
+                0x000000000002d8fc                isset_command
+                0x000000000002d904                exit_command
+                0x000000000002d90c                echo_command
  .tbl.commands.01
-                0x000000000002d8fc       0x10 bin/blib.a(script.o)
-                0x000000000002d8fc                prompt_command
-                0x000000000002d904                goto_command
+                0x000000000002d914       0x10 bin/blib.a(script.o)
+                0x000000000002d914                prompt_command
+                0x000000000002d91c                goto_command
  .tbl.commands.01
-                0x000000000002d90c        0x8 bin/blib.a(autoboot_cmd.o)
-                0x000000000002d90c                autoboot_commands
+                0x000000000002d924        0x8 bin/blib.a(autoboot_cmd.o)
+                0x000000000002d924                autoboot_commands
  .tbl.commands.01
-                0x000000000002d914        0x8 bin/blib.a(config_cmd.o)
-                0x000000000002d914                config_command
+                0x000000000002d92c        0x8 bin/blib.a(config_cmd.o)
+                0x000000000002d92c                config_command
  .tbl.commands.01
-                0x000000000002d91c       0x10 bin/blib.a(dhcp_cmd.o)
-                0x000000000002d91c                dhcp_commands
+                0x000000000002d934       0x10 bin/blib.a(dhcp_cmd.o)
+                0x000000000002d934                dhcp_commands
  .tbl.commands.01
-                0x000000000002d92c       0x18 bin/blib.a(ifmgmt_cmd.o)
-                0x000000000002d92c                ifmgmt_commands
+                0x000000000002d944       0x18 bin/blib.a(ifmgmt_cmd.o)
+                0x000000000002d944                ifmgmt_commands
  .tbl.commands.01
-                0x000000000002d944       0x60 bin/blib.a(image_cmd.o)
-                0x000000000002d944                image_commands
+                0x000000000002d95c       0x60 bin/blib.a(image_cmd.o)
+                0x000000000002d95c                image_commands
  .tbl.commands.01
-                0x000000000002d9a4        0x8 bin/blib.a(login_cmd.o)
-                0x000000000002d9a4                login_command
+                0x000000000002d9bc        0x8 bin/blib.a(login_cmd.o)
+                0x000000000002d9bc                login_command
  .tbl.commands.01
-                0x000000000002d9ac       0x18 bin/blib.a(menu_cmd.o)
-                0x000000000002d9ac                menu_commands
+                0x000000000002d9c4       0x18 bin/blib.a(menu_cmd.o)
+                0x000000000002d9c4                menu_commands
  .tbl.commands.01
-                0x000000000002d9c4       0x20 bin/blib.a(nvo_cmd.o)
-                0x000000000002d9c4                nvo_commands
+                0x000000000002d9dc       0x20 bin/blib.a(nvo_cmd.o)
+                0x000000000002d9dc                nvo_commands
  .tbl.commands.01
-                0x000000000002d9e4        0x8 bin/blib.a(reboot_cmd.o)
-                0x000000000002d9e4                reboot_command
+                0x000000000002d9fc        0x8 bin/blib.a(reboot_cmd.o)
+                0x000000000002d9fc                reboot_command
  .tbl.commands.01
-                0x000000000002d9ec        0x8 bin/blib.a(route_cmd.o)
-                0x000000000002d9ec                route_commands
+                0x000000000002da04        0x8 bin/blib.a(route_cmd.o)
+                0x000000000002da04                route_commands
  .tbl.commands.01
-                0x000000000002d9f4       0x18 bin/blib.a(sanboot_cmd.o)
-                0x000000000002d9f4                sanboot_commands
+                0x000000000002da0c       0x18 bin/blib.a(sanboot_cmd.o)
+                0x000000000002da0c                sanboot_commands
  .tbl.commands.01
-                0x000000000002da0c        0x8 bin/blib.a(sync_cmd.o)
-                0x000000000002da0c                sync_command
+                0x000000000002da24        0x8 bin/blib.a(sync_cmd.o)
+                0x000000000002da24                sync_command
  .tbl.commands.01
-                0x000000000002da14       0x10 bin/blib.a(shell.o)
-                0x000000000002da14                shell_command
-                0x000000000002da1c                help_command
+                0x000000000002da2c       0x10 bin/blib.a(shell.o)
+                0x000000000002da2c                shell_command
+                0x000000000002da34                help_command
  .tbl.commands.99
-                0x000000000002da24        0x0 bin/blib.a(exec.o)
+                0x000000000002da3c        0x0 bin/blib.a(exec.o)
  .tbl.commands.99
-                0x000000000002da24        0x0 bin/blib.a(shell.o)
+                0x000000000002da3c        0x0 bin/blib.a(shell.o)
  .tbl.consoles.00
-                0x000000000002da24        0x0 bin/blib.a(console.o)
+                0x000000000002da3c        0x0 bin/blib.a(console.o)
  .tbl.consoles.01
-                0x000000000002da24       0x14 bin/blib.a(bios_console.o)
-                0x000000000002da24                bios_console
+                0x000000000002da3c       0x14 bin/blib.a(bios_console.o)
+                0x000000000002da3c                bios_console
  .tbl.consoles.99
-                0x000000000002da38        0x0 bin/blib.a(console.o)
+                0x000000000002da50        0x0 bin/blib.a(console.o)
  .tbl.dhcp_features.00
-                0x000000000002da38        0x0 bin/blib.a(dhcp.o)
+                0x000000000002da50        0x0 bin/blib.a(dhcp.o)
  .tbl.dhcp_features.01
-                0x000000000002da38        0x3 bin/blib.a(bzimage.o)
-                0x000000000002da38                __dhcp_feature_bzimage
+                0x000000000002da50        0x3 bin/blib.a(bzimage.o)
+                0x000000000002da50                __dhcp_feature_bzimage
  .tbl.dhcp_features.01
-                0x000000000002da3b        0x3 bin/blib.a(elfboot.o)
-                0x000000000002da3b                __dhcp_feature_elfboot
+                0x000000000002da53        0x3 bin/blib.a(elfboot.o)
+                0x000000000002da53                __dhcp_feature_elfboot
  .tbl.dhcp_features.01
-                0x000000000002da3e        0x3 bin/blib.a(multiboot.o)
-                0x000000000002da3e                __dhcp_feature_multiboot
+                0x000000000002da56        0x3 bin/blib.a(multiboot.o)
+                0x000000000002da56                __dhcp_feature_multiboot
  .tbl.dhcp_features.01
-                0x000000000002da41        0x3 bin/blib.a(pxe_image.o)
-                0x000000000002da41                __dhcp_feature_pxe_image
+                0x000000000002da59        0x3 bin/blib.a(pxe_image.o)
+                0x000000000002da59                __dhcp_feature_pxe_image
  .tbl.dhcp_features.01
-                0x000000000002da44        0x3 bin/blib.a(pxe_file.o)
-                0x000000000002da44                __dhcp_feature_pxe_file
+                0x000000000002da5c        0x3 bin/blib.a(pxe_file.o)
+                0x000000000002da5c                __dhcp_feature_pxe_file
  .tbl.dhcp_features.01
-                0x000000000002da47        0x5 bin/blib.a(version.o)
-                0x000000000002da47                __dhcp_feature_version
+                0x000000000002da5f        0x5 bin/blib.a(version.o)
+                0x000000000002da5f                __dhcp_feature_version
  .tbl.dhcp_features.01
-                0x000000000002da4c        0x3 bin/blib.a(http.o)
-                0x000000000002da4c                __dhcp_feature_http
+                0x000000000002da64        0x3 bin/blib.a(http.o)
+                0x000000000002da64                __dhcp_feature_http
  .tbl.dhcp_features.01
-                0x000000000002da4f        0x3 bin/blib.a(iscsi.o)
-                0x000000000002da4f                __dhcp_feature_iscsi
+                0x000000000002da67        0x3 bin/blib.a(iscsi.o)
+                0x000000000002da67                __dhcp_feature_iscsi
  .tbl.dhcp_features.01
-                0x000000000002da52        0x3 bin/blib.a(dns.o)
-                0x000000000002da52                __dhcp_feature_dns
+                0x000000000002da6a        0x3 bin/blib.a(dns.o)
+                0x000000000002da6a                __dhcp_feature_dns
  .tbl.dhcp_features.01
-                0x000000000002da55        0x3 bin/blib.a(tftp.o)
-                0x000000000002da55                __dhcp_feature_tftp
+                0x000000000002da6d        0x3 bin/blib.a(tftp.o)
+                0x000000000002da6d                __dhcp_feature_tftp
  .tbl.dhcp_features.01
-                0x000000000002da58        0x3 bin/blib.a(menu_cmd.o)
-                0x000000000002da58                __dhcp_feature_menu_cmd
+                0x000000000002da70        0x3 bin/blib.a(menu_cmd.o)
+                0x000000000002da70                __dhcp_feature_menu_cmd
  .tbl.dhcp_features.01
-                0x000000000002da5b        0x3 bin/blib.a(aoe.o)
-                0x000000000002da5b                __dhcp_feature_aoe
+                0x000000000002da73        0x3 bin/blib.a(aoe.o)
+                0x000000000002da73                __dhcp_feature_aoe
  .tbl.dhcp_features.99
-                0x000000000002da5e        0x0 bin/blib.a(dhcp.o)
- *fill*         0x000000000002da5e        0x2 00
+                0x000000000002da76        0x0 bin/blib.a(dhcp.o)
+ *fill*         0x000000000002da76        0x2 00
  .tbl.errortab.00
-                0x000000000002da60        0x0 bin/blib.a(strerror.o)
+                0x000000000002da78        0x0 bin/blib.a(strerror.o)
  .tbl.errortab.01
-                0x000000000002da60       0x10 bin/blib.a(netdevice.o)
-                0x000000000002da60                netdev_errors
+                0x000000000002da78       0x10 bin/blib.a(netdevice.o)
+                0x000000000002da78                netdev_errors
  .tbl.errortab.01
-                0x000000000002da70        0x8 bin/blib.a(segment.o)
-                0x000000000002da70                segment_errors
+                0x000000000002da88        0x8 bin/blib.a(segment.o)
+                0x000000000002da88                segment_errors
  .tbl.errortab.01
-                0x000000000002da78       0x88 bin/blib.a(strerror.o)
-                0x000000000002da78                common_errors
+                0x000000000002da90       0x88 bin/blib.a(strerror.o)
+                0x000000000002da90                common_errors
  .tbl.errortab.99
-                0x000000000002db00        0x0 bin/blib.a(strerror.o)
+                0x000000000002db18        0x0 bin/blib.a(strerror.o)
  .tbl.features.00
-                0x000000000002db00        0x0 bin/blib.a(autoboot.o)
+                0x000000000002db18        0x0 bin/blib.a(autoboot.o)
  .tbl.features.01
-                0x000000000002db00        0x4 bin/blib.a(http.o)
-                0x000000000002db00                __feature_http
+                0x000000000002db18        0x4 bin/blib.a(http.o)
+                0x000000000002db18                __feature_http
  .tbl.features.01
-                0x000000000002db04        0x4 bin/blib.a(iscsi.o)
-                0x000000000002db04                __feature_iscsi
+                0x000000000002db1c        0x4 bin/blib.a(iscsi.o)
+                0x000000000002db1c                __feature_iscsi
  .tbl.features.01
-                0x000000000002db08        0x4 bin/blib.a(dns.o)
-                0x000000000002db08                __feature_dns
+                0x000000000002db20        0x4 bin/blib.a(dns.o)
+                0x000000000002db20                __feature_dns
  .tbl.features.01
-                0x000000000002db0c        0x4 bin/blib.a(tftp.o)
-                0x000000000002db0c                __feature_tftp
+                0x000000000002db24        0x4 bin/blib.a(tftp.o)
+                0x000000000002db24                __feature_tftp
  .tbl.features.01
-                0x000000000002db10        0x4 bin/blib.a(aoe.o)
-                0x000000000002db10                __feature_aoe
+                0x000000000002db28        0x4 bin/blib.a(aoe.o)
+                0x000000000002db28                __feature_aoe
  .tbl.features.02
-                0x000000000002db14        0x4 bin/blib.a(bzimage.o)
-                0x000000000002db14                __feature_bzimage
+                0x000000000002db2c        0x4 bin/blib.a(bzimage.o)
+                0x000000000002db2c                __feature_bzimage
  .tbl.features.02
-                0x000000000002db18        0x4 bin/blib.a(elfboot.o)
-                0x000000000002db18                __feature_elfboot
+                0x000000000002db30        0x4 bin/blib.a(elfboot.o)
+                0x000000000002db30                __feature_elfboot
  .tbl.features.02
-                0x000000000002db1c        0x4 bin/blib.a(multiboot.o)
-                0x000000000002db1c                __feature_multiboot
+                0x000000000002db34        0x4 bin/blib.a(multiboot.o)
+                0x000000000002db34                __feature_multiboot
  .tbl.features.02
-                0x000000000002db20        0x4 bin/blib.a(pxe_image.o)
-                0x000000000002db20                __feature_pxe_image
+                0x000000000002db38        0x4 bin/blib.a(pxe_image.o)
+                0x000000000002db38                __feature_pxe_image
  .tbl.features.03
-                0x000000000002db24        0x4 bin/blib.a(pxe_file.o)
-                0x000000000002db24                __feature_pxe_file
+                0x000000000002db3c        0x4 bin/blib.a(pxe_file.o)
+                0x000000000002db3c                __feature_pxe_file
  .tbl.features.03
-                0x000000000002db28        0x4 bin/blib.a(menu_cmd.o)
-                0x000000000002db28                __feature_menu_cmd
+                0x000000000002db40        0x4 bin/blib.a(menu_cmd.o)
+                0x000000000002db40                __feature_menu_cmd
  .tbl.features.99
-                0x000000000002db2c        0x0 bin/blib.a(autoboot.o)
+                0x000000000002db44        0x0 bin/blib.a(autoboot.o)
  .tbl.image_types.00
-                0x000000000002db2c        0x0 bin/blib.a(image.o)
+                0x000000000002db44        0x0 bin/blib.a(image.o)
  .tbl.image_types.01
-                0x000000000002db2c        0xc bin/blib.a(multiboot.o)
-                0x000000000002db2c                multiboot_image_type
+                0x000000000002db44        0xc bin/blib.a(multiboot.o)
+                0x000000000002db44                multiboot_image_type
  .tbl.image_types.02
-                0x000000000002db38        0xc bin/blib.a(bzimage.o)
-                0x000000000002db38                bzimage_image_type
+                0x000000000002db50        0xc bin/blib.a(bzimage.o)
+                0x000000000002db50                bzimage_image_type
  .tbl.image_types.02
-                0x000000000002db44        0xc bin/blib.a(elfboot.o)
-                0x000000000002db44                elfboot_image_type
+                0x000000000002db5c        0xc bin/blib.a(elfboot.o)
+                0x000000000002db5c                elfboot_image_type
  .tbl.image_types.02
-                0x000000000002db50        0xc bin/blib.a(script.o)
-                0x000000000002db50                script_image_type
+                0x000000000002db68        0xc bin/blib.a(script.o)
+                0x000000000002db68                script_image_type
  .tbl.image_types.03
-                0x000000000002db5c        0xc bin/blib.a(pxe_image.o)
-                0x000000000002db5c                pxe_image_type
+                0x000000000002db74        0xc bin/blib.a(pxe_image.o)
+                0x000000000002db74                pxe_image_type
  .tbl.image_types.99
-                0x000000000002db68        0x0 bin/blib.a(image.o)
+                0x000000000002db80        0x0 bin/blib.a(image.o)
  .tbl.init_fns.00
-                0x000000000002db68        0x0 bin/blib.a(init.o)
- .tbl.init_fns.01
-                0x000000000002db68        0x4 bin/blib.a(malloc.o)
-                0x000000000002db68                heap_init_fn
- .tbl.init_fns.04
-                0x000000000002db6c        0x4 bin/blib.a(pxe_call.o)
-                0x000000000002db6c                pxe_init_fn
- .tbl.init_fns.04
-                0x000000000002db70        0x4 bin/blib.a(process.o)
-                0x000000000002db70                process_init_fn
- .tbl.init_fns.04
-                0x000000000002db74        0x4 bin/blib.a(settings.o)
-                0x000000000002db74                builtin_init_fn
- .tbl.init_fns.04
-                0x000000000002db78        0x4 bin/blib.a(smbios_settings.o)
-                0x000000000002db78                smbios_init_fn
- .tbl.init_fns.05
-                0x000000000002db7c        0x4 bin/blib.a(embedded.o)
-                0x000000000002db7c                embedded_init_fn
- .tbl.init_fns.99
                 0x000000000002db80        0x0 bin/blib.a(init.o)
+ .tbl.init_fns.01
+                0x000000000002db80        0x4 bin/blib.a(malloc.o)
+                0x000000000002db80                heap_init_fn
+ .tbl.init_fns.04
+                0x000000000002db84        0x4 bin/blib.a(pxe_call.o)
+                0x000000000002db84                pxe_init_fn
+ .tbl.init_fns.04
+                0x000000000002db88        0x4 bin/blib.a(process.o)
+                0x000000000002db88                process_init_fn
+ .tbl.init_fns.04
+                0x000000000002db8c        0x4 bin/blib.a(settings.o)
+                0x000000000002db8c                builtin_init_fn
+ .tbl.init_fns.04
+                0x000000000002db90        0x4 bin/blib.a(smbios_settings.o)
+                0x000000000002db90                smbios_init_fn
+ .tbl.init_fns.05
+                0x000000000002db94        0x4 bin/blib.a(embedded.o)
+                0x000000000002db94                embedded_init_fn
+ .tbl.init_fns.99
+                0x000000000002db98        0x0 bin/blib.a(init.o)
  .tbl.keymap.00
-                0x000000000002db80        0x0 bin/blib.a(bios_console.o)
+                0x000000000002db98        0x0 bin/blib.a(bios_console.o)
  .tbl.keymap.01
-                0x000000000002db80        0x0 bin/blib.a(keymap_us.o)
-                0x000000000002db80                us_mapping
+                0x000000000002db98        0x0 bin/blib.a(keymap_us.o)
+                0x000000000002db98                us_mapping
  .tbl.keymap.99
-                0x000000000002db80        0x0 bin/blib.a(bios_console.o)
+                0x000000000002db98        0x0 bin/blib.a(bios_console.o)
  .tbl.ll_protocols.01
-                0x000000000002db80       0x28 bin/blib.a(ethernet.o)
-                0x000000000002db80                ethernet_protocol
+                0x000000000002db98       0x28 bin/blib.a(ethernet.o)
+                0x000000000002db98                ethernet_protocol
  .tbl.net_drivers.00
-                0x000000000002dba8        0x0 bin/blib.a(netdevice.o)
+                0x000000000002dbc0        0x0 bin/blib.a(netdevice.o)
  .tbl.net_drivers.01
-                0x000000000002dba8       0x10 bin/blib.a(arp.o)
-                0x000000000002dba8                arp_net_driver
+                0x000000000002dbc0       0x10 bin/blib.a(arp.o)
+                0x000000000002dbc0                arp_net_driver
  .tbl.net_drivers.99
-                0x000000000002dbb8        0x0 bin/blib.a(netdevice.o)
+                0x000000000002dbd0        0x0 bin/blib.a(netdevice.o)
  .tbl.net_protocols.00
-                0x000000000002dbb8        0x0 bin/blib.a(netdevice.o)
+                0x000000000002dbd0        0x0 bin/blib.a(netdevice.o)
  .tbl.net_protocols.01
-                0x000000000002dbb8       0x10 bin/blib.a(arp.o)
-                0x000000000002dbb8                arp_protocol
+                0x000000000002dbd0       0x10 bin/blib.a(arp.o)
+                0x000000000002dbd0                arp_protocol
  .tbl.net_protocols.01
-                0x000000000002dbc8       0x10 bin/blib.a(eth_slow.o)
-                0x000000000002dbc8                eth_slow_protocol
+                0x000000000002dbe0       0x10 bin/blib.a(eth_slow.o)
+                0x000000000002dbe0                eth_slow_protocol
  .tbl.net_protocols.01
-                0x000000000002dbd8       0x10 bin/blib.a(ipv4.o)
-                0x000000000002dbd8                ipv4_protocol
+                0x000000000002dbf0       0x10 bin/blib.a(ipv4.o)
+                0x000000000002dbf0                ipv4_protocol
  .tbl.net_protocols.01
-                0x000000000002dbe8       0x10 bin/blib.a(rarp.o)
-                0x000000000002dbe8                rarp_protocol
+                0x000000000002dc00       0x10 bin/blib.a(rarp.o)
+                0x000000000002dc00                rarp_protocol
  .tbl.net_protocols.01
-                0x000000000002dbf8       0x10 bin/blib.a(aoe.o)
-                0x000000000002dbf8                aoe_protocol
+                0x000000000002dc10       0x10 bin/blib.a(aoe.o)
+                0x000000000002dc10                aoe_protocol
  .tbl.net_protocols.99
-                0x000000000002dc08        0x0 bin/blib.a(netdevice.o)
+                0x000000000002dc20        0x0 bin/blib.a(netdevice.o)
  .tbl.pci_drivers.00
-                0x000000000002dc08        0x0 bin/blib.a(pci.o)
+                0x000000000002dc20        0x0 bin/blib.a(pci.o)
  .tbl.pci_drivers.01
-                0x000000000002dc08       0x10 bin/blib.a(bnx2.o)
-                0x000000000002dc08                bnx2_driver
+                0x000000000002dc20       0x10 bin/blib.a(bnx2.o)
+                0x000000000002dc20                bnx2_driver
  .tbl.pci_drivers.99
-                0x000000000002dc18        0x0 bin/blib.a(pci.o)
+                0x000000000002dc30        0x0 bin/blib.a(pci.o)
  .tbl.processes.00
-                0x000000000002dc18        0x0 bin/blib.a(process.o)
+                0x000000000002dc30        0x0 bin/blib.a(process.o)
  .tbl.processes.01
-                0x000000000002dc18       0x10 bin/blib.a(netdevice.o)
-                0x000000000002dc18                net_process
+                0x000000000002dc30       0x10 bin/blib.a(netdevice.o)
+                0x000000000002dc30                net_process
  .tbl.processes.01
-                0x000000000002dc28       0x10 bin/blib.a(retry.o)
-                0x000000000002dc28                retry_process
+                0x000000000002dc40       0x10 bin/blib.a(retry.o)
+                0x000000000002dc40                retry_process
  .tbl.processes.99
-                0x000000000002dc38        0x0 bin/blib.a(process.o)
+                0x000000000002dc50        0x0 bin/blib.a(process.o)
  .tbl.pxe_api_calls.00
-                0x000000000002dc38        0x0 bin/blib.a(pxe_call.o)
+                0x000000000002dc50        0x0 bin/blib.a(pxe_call.o)
  .tbl.pxe_api_calls.00
-                0x000000000002dc38        0x0 bin/blib.a(pxe_file.o)
+                0x000000000002dc50        0x0 bin/blib.a(pxe_file.o)
  .tbl.pxe_api_calls.01
-                0x000000000002dc38        0x8 bin/blib.a(pxe_call.o)
-                0x000000000002dc38                pxenv_unknown_api
+                0x000000000002dc50        0x8 bin/blib.a(pxe_call.o)
+                0x000000000002dc50                pxenv_unknown_api
  .tbl.pxe_api_calls.01
-                0x000000000002dc40       0x40 bin/blib.a(pxe_file.o)
-                0x000000000002dc40                pxe_file_api
+                0x000000000002dc58       0x40 bin/blib.a(pxe_file.o)
+                0x000000000002dc58                pxe_file_api
  .tbl.pxe_api_calls.01
-                0x000000000002dc80       0x38 bin/blib.a(pxe_preboot.o)
-                0x000000000002dc80                pxe_preboot_api
+                0x000000000002dc98       0x38 bin/blib.a(pxe_preboot.o)
+                0x000000000002dc98                pxe_preboot_api
  .tbl.pxe_api_calls.01
-                0x000000000002dcb8       0x28 bin/blib.a(pxe_tftp.o)
-                0x000000000002dcb8                pxe_tftp_api
+                0x000000000002dcd0       0x28 bin/blib.a(pxe_tftp.o)
+                0x000000000002dcd0                pxe_tftp_api
  .tbl.pxe_api_calls.01
-                0x000000000002dce0       0x20 bin/blib.a(pxe_udp.o)
-                0x000000000002dce0                pxe_udp_api
+                0x000000000002dcf8       0x20 bin/blib.a(pxe_udp.o)
+                0x000000000002dcf8                pxe_udp_api
  .tbl.pxe_api_calls.01
-                0x000000000002dd00       0xa0 bin/blib.a(pxe_undi.o)
-                0x000000000002dd00                pxe_undi_api
+                0x000000000002dd18       0xa0 bin/blib.a(pxe_undi.o)
+                0x000000000002dd18                pxe_undi_api
  .tbl.pxe_api_calls.99
-                0x000000000002dda0        0x0 bin/blib.a(pxe_call.o)
+                0x000000000002ddb8        0x0 bin/blib.a(pxe_call.o)
  .tbl.pxe_api_calls.99
-                0x000000000002dda0        0x0 bin/blib.a(pxe_file.o)
+                0x000000000002ddb8        0x0 bin/blib.a(pxe_file.o)
  .tbl.resolvers.00
-                0x000000000002dda0        0x0 bin/blib.a(resolv.o)
+                0x000000000002ddb8        0x0 bin/blib.a(resolv.o)
  .tbl.resolvers.01
-                0x000000000002dda0        0x8 bin/blib.a(resolv.o)
-                0x000000000002dda0                numeric_resolver
+                0x000000000002ddb8        0x8 bin/blib.a(resolv.o)
+                0x000000000002ddb8                numeric_resolver
  .tbl.resolvers.02
-                0x000000000002dda8        0x8 bin/blib.a(dns.o)
-                0x000000000002dda8                dns_resolver
+                0x000000000002ddc0        0x8 bin/blib.a(dns.o)
+                0x000000000002ddc0                dns_resolver
  .tbl.resolvers.99
-                0x000000000002ddb0        0x0 bin/blib.a(resolv.o)
+                0x000000000002ddc8        0x0 bin/blib.a(resolv.o)
  .tbl.root_devices.00
-                0x000000000002ddb0        0x0 bin/blib.a(device.o)
+                0x000000000002ddc8        0x0 bin/blib.a(device.o)
  .tbl.root_devices.01
-                0x000000000002ddb0       0x48 bin/blib.a(pci.o)
-                0x000000000002ddb0                pci_root_device
+                0x000000000002ddc8       0x48 bin/blib.a(pci.o)
+                0x000000000002ddc8                pci_root_device
  .tbl.root_devices.99
-                0x000000000002ddf8        0x0 bin/blib.a(device.o)
+                0x000000000002de10        0x0 bin/blib.a(device.o)
  .tbl.setting_types.00
-                0x000000000002ddf8        0x0 bin/blib.a(settings.o)
+                0x000000000002de10        0x0 bin/blib.a(settings.o)
  .tbl.setting_types.01
-                0x000000000002ddf8       0x90 bin/blib.a(settings.o)
-                0x000000000002ddf8                setting_type_uuid
-                0x000000000002de04                setting_type_hexhyp
-                0x000000000002de10                setting_type_hex
-                0x000000000002de1c                setting_type_uint32
-                0x000000000002de28                setting_type_uint16
-                0x000000000002de34                setting_type_uint8
-                0x000000000002de40                setting_type_int32
-                0x000000000002de4c                setting_type_int16
-                0x000000000002de58                setting_type_int8
-                0x000000000002de64                setting_type_ipv4
-                0x000000000002de70                setting_type_uristring
-                0x000000000002de7c                setting_type_string
+                0x000000000002de10       0x90 bin/blib.a(settings.o)
+                0x000000000002de10                setting_type_uuid
+                0x000000000002de1c                setting_type_hexhyp
+                0x000000000002de28                setting_type_hex
+                0x000000000002de34                setting_type_uint32
+                0x000000000002de40                setting_type_uint16
+                0x000000000002de4c                setting_type_uint8
+                0x000000000002de58                setting_type_int32
+                0x000000000002de64                setting_type_int16
+                0x000000000002de70                setting_type_int8
+                0x000000000002de7c                setting_type_ipv4
+                0x000000000002de88                setting_type_uristring
+                0x000000000002de94                setting_type_string
  .tbl.setting_types.99
-                0x000000000002de88        0x0 bin/blib.a(settings.o)
+                0x000000000002dea0        0x0 bin/blib.a(settings.o)
  .tbl.settings.00
-                0x000000000002de88        0x0 bin/blib.a(settings.o)
+                0x000000000002dea0        0x0 bin/blib.a(settings.o)
  .tbl.settings.00
-                0x000000000002de88        0x0 bin/blib.a(settings_ui.o)
+                0x000000000002dea0        0x0 bin/blib.a(settings_ui.o)
  .tbl.settings.01
-                0x000000000002de88       0x3c bin/blib.a(netdev_settings.o)
-                0x000000000002de88                chip_setting
-                0x000000000002de9c                busid_setting
-                0x000000000002deb0                mac_setting
+                0x000000000002dea0       0x3c bin/blib.a(netdev_settings.o)
+                0x000000000002dea0                chip_setting
+                0x000000000002deb4                busid_setting
+                0x000000000002dec8                mac_setting
  .tbl.settings.03
-                0x000000000002dec4       0x3c bin/blib.a(ipv4.o)
-                0x000000000002dec4                gateway_setting
-                0x000000000002ded8                netmask_setting
-                0x000000000002deec                ip_setting
+                0x000000000002dedc       0x3c bin/blib.a(ipv4.o)
+                0x000000000002dedc                gateway_setting
+                0x000000000002def0                netmask_setting
+                0x000000000002df04                ip_setting
  .tbl.settings.04
-                0x000000000002df00       0x14 bin/blib.a(settings.o)
-                0x000000000002df00                domain_setting
+                0x000000000002df18       0x14 bin/blib.a(settings.o)
+                0x000000000002df18                domain_setting
  .tbl.settings.04
-                0x000000000002df14       0x14 bin/blib.a(dns.o)
-                0x000000000002df14                dns_setting
+                0x000000000002df2c       0x14 bin/blib.a(dns.o)
+                0x000000000002df2c                dns_setting
  .tbl.settings.05
-                0x000000000002df28       0x28 bin/blib.a(settings.o)
-                0x000000000002df28                filename_setting
-                0x000000000002df3c                next_server_setting
+                0x000000000002df40       0x28 bin/blib.a(settings.o)
+                0x000000000002df40                filename_setting
+                0x000000000002df54                next_server_setting
  .tbl.settings.07
-                0x000000000002df50       0x14 bin/blib.a(settings.o)
-                0x000000000002df50                root_path_setting
+                0x000000000002df68       0x14 bin/blib.a(settings.o)
+                0x000000000002df68                root_path_setting
  .tbl.settings.08
-                0x000000000002df64       0x14 bin/blib.a(iscsi.o)
-                0x000000000002df64                initiator_iqn_setting
+                0x000000000002df7c       0x14 bin/blib.a(iscsi.o)
+                0x000000000002df7c                initiator_iqn_setting
  .tbl.settings.08
-                0x000000000002df78       0x28 bin/blib.a(autoboot.o)
-                0x000000000002df78                skip_san_boot_setting
-                0x000000000002df8c                keep_san_setting
+                0x000000000002df90       0x28 bin/blib.a(autoboot.o)
+                0x000000000002df90                skip_san_boot_setting
+                0x000000000002dfa4                keep_san_setting
  .tbl.settings.09
-                0x000000000002dfa0       0x14 bin/blib.a(settings.o)
-                0x000000000002dfa0                hostname_setting
+                0x000000000002dfb8       0x14 bin/blib.a(settings.o)
+                0x000000000002dfb8                hostname_setting
  .tbl.settings.09
-                0x000000000002dfb4       0x14 bin/blib.a(smbios_settings.o)
-                0x000000000002dfb4                uuid_setting
+                0x000000000002dfcc       0x14 bin/blib.a(smbios_settings.o)
+                0x000000000002dfcc                uuid_setting
  .tbl.settings.10
-                0x000000000002dfc8       0x14 bin/blib.a(dhcp.o)
-                0x000000000002dfc8                user_class_setting
+                0x000000000002dfe0       0x14 bin/blib.a(dhcp.o)
+                0x000000000002dfe0                user_class_setting
  .tbl.settings.10
-                0x000000000002dfdc       0x50 bin/blib.a(smbios_settings.o)
-                0x000000000002dfdc                smbios_named_settings
+                0x000000000002dff4       0x50 bin/blib.a(smbios_settings.o)
+                0x000000000002dff4                smbios_named_settings
  .tbl.settings.11
-                0x000000000002e02c       0x28 bin/blib.a(settings.o)
-                0x000000000002e02c                password_setting
-                0x000000000002e040                username_setting
+                0x000000000002e044       0x28 bin/blib.a(settings.o)
+                0x000000000002e044                password_setting
+                0x000000000002e058                username_setting
  .tbl.settings.12
-                0x000000000002e054       0x28 bin/blib.a(iscsi.o)
-                0x000000000002e054                reverse_password_setting
-                0x000000000002e068                reverse_username_setting
+                0x000000000002e06c       0x28 bin/blib.a(iscsi.o)
+                0x000000000002e06c                reverse_password_setting
+                0x000000000002e080                reverse_username_setting
  .tbl.settings.14
-                0x000000000002e07c       0x50 bin/blib.a(settings.o)
-                0x000000000002e07c                platform_setting
-                0x000000000002e090                buildarch_setting
-                0x000000000002e0a4                errno_setting
-                0x000000000002e0b8                priority_setting
+                0x000000000002e094       0x50 bin/blib.a(settings.o)
+                0x000000000002e094                platform_setting
+                0x000000000002e0a8                buildarch_setting
+                0x000000000002e0bc                errno_setting
+                0x000000000002e0d0                priority_setting
  .tbl.settings.14
-                0x000000000002e0cc       0x28 bin/blib.a(dhcp.o)
-                0x000000000002e0cc                use_cached_setting
-                0x000000000002e0e0                dhcp_server_setting
+                0x000000000002e0e4       0x28 bin/blib.a(dhcp.o)
+                0x000000000002e0e4                use_cached_setting
+                0x000000000002e0f8                dhcp_server_setting
  .tbl.settings.14
-                0x000000000002e0f4       0x14 bin/blib.a(autoboot.o)
-                0x000000000002e0f4                scriptlet_setting
+                0x000000000002e10c       0x14 bin/blib.a(autoboot.o)
+                0x000000000002e10c                scriptlet_setting
  .tbl.settings.99
-                0x000000000002e108        0x0 bin/blib.a(settings.o)
+                0x000000000002e120        0x0 bin/blib.a(settings.o)
  .tbl.settings.99
-                0x000000000002e108        0x0 bin/blib.a(settings_ui.o)
+                0x000000000002e120        0x0 bin/blib.a(settings_ui.o)
  .tbl.settings_applicators.00
-                0x000000000002e108        0x0 bin/blib.a(settings.o)
+                0x000000000002e120        0x0 bin/blib.a(settings.o)
  .tbl.settings_applicators.01
-                0x000000000002e108        0x4 bin/blib.a(ipv4.o)
-                0x000000000002e108                ipv4_settings_applicator
+                0x000000000002e120        0x4 bin/blib.a(ipv4.o)
+                0x000000000002e120                ipv4_settings_applicator
  .tbl.settings_applicators.01
-                0x000000000002e10c        0x4 bin/blib.a(dns.o)
-                0x000000000002e10c                dns_applicator
+                0x000000000002e124        0x4 bin/blib.a(dns.o)
+                0x000000000002e124                dns_applicator
  .tbl.settings_applicators.01
-                0x000000000002e110        0x4 bin/blib.a(tftp.o)
-                0x000000000002e110                tftp_settings_applicator
+                0x000000000002e128        0x4 bin/blib.a(tftp.o)
+                0x000000000002e128                tftp_settings_applicator
  .tbl.settings_applicators.99
-                0x000000000002e114        0x0 bin/blib.a(settings.o)
+                0x000000000002e12c        0x0 bin/blib.a(settings.o)
  .tbl.socket_openers.00
-                0x000000000002e114        0x0 bin/blib.a(open.o)
- .tbl.socket_openers.01
-                0x000000000002e114        0xc bin/blib.a(udp.o)
-                0x000000000002e114                udp_socket_opener
- .tbl.socket_openers.01
-                0x000000000002e120        0xc bin/blib.a(tcp.o)
-                0x000000000002e120                tcp_socket_opener
- .tbl.socket_openers.99
                 0x000000000002e12c        0x0 bin/blib.a(open.o)
+ .tbl.socket_openers.01
+                0x000000000002e12c        0xc bin/blib.a(udp.o)
+                0x000000000002e12c                udp_socket_opener
+ .tbl.socket_openers.01
+                0x000000000002e138        0xc bin/blib.a(tcp.o)
+                0x000000000002e138                tcp_socket_opener
+ .tbl.socket_openers.99
+                0x000000000002e144        0x0 bin/blib.a(open.o)
  .tbl.startup_fns.00
-                0x000000000002e12c        0x0 bin/blib.a(init.o)
+                0x000000000002e144        0x0 bin/blib.a(init.o)
  .tbl.startup_fns.01
-                0x000000000002e12c        0x8 bin/blib.a(malloc.o)
-                0x000000000002e12c                heap_startup_fn
+                0x000000000002e144        0x8 bin/blib.a(malloc.o)
+                0x000000000002e144                heap_startup_fn
  .tbl.startup_fns.01
-                0x000000000002e134        0x8 bin/blib.a(tcp.o)
-                0x000000000002e134                tcp_startup_fn
+                0x000000000002e14c        0x8 bin/blib.a(tcp.o)
+                0x000000000002e14c                tcp_startup_fn
  .tbl.startup_fns.01
-                0x000000000002e13c        0x8 bin/blib.a(hidemem.o)
-                0x000000000002e13c                hide_etherboot_startup_fn
+                0x000000000002e154        0x8 bin/blib.a(hidemem.o)
+                0x000000000002e154                hide_etherboot_startup_fn
  .tbl.startup_fns.02
-                0x000000000002e144        0x8 bin/blib.a(device.o)
-                0x000000000002e144                startup_devices
+                0x000000000002e15c        0x8 bin/blib.a(device.o)
+                0x000000000002e15c                startup_devices
  .tbl.startup_fns.03
-                0x000000000002e14c        0x8 bin/blib.a(initrd.o)
-                0x000000000002e14c                startup_initrd
+                0x000000000002e164        0x8 bin/blib.a(initrd.o)
+                0x000000000002e164                startup_initrd
  .tbl.startup_fns.99
-                0x000000000002e154        0x0 bin/blib.a(init.o)
+                0x000000000002e16c        0x0 bin/blib.a(init.o)
  .tbl.tcpip_net_protocols.00
-                0x000000000002e154        0x0 bin/blib.a(tcpip.o)
+                0x000000000002e16c        0x0 bin/blib.a(tcpip.o)
  .tbl.tcpip_net_protocols.01
-                0x000000000002e154        0xc bin/blib.a(ipv4.o)
-                0x000000000002e154                ipv4_tcpip_protocol
+                0x000000000002e16c        0xc bin/blib.a(ipv4.o)
+                0x000000000002e16c                ipv4_tcpip_protocol
  .tbl.tcpip_net_protocols.99
-                0x000000000002e160        0x0 bin/blib.a(tcpip.o)
+                0x000000000002e178        0x0 bin/blib.a(tcpip.o)
  .tbl.tcpip_protocols.00
-                0x000000000002e160        0x0 bin/blib.a(tcpip.o)
+                0x000000000002e178        0x0 bin/blib.a(tcpip.o)
  .tbl.tcpip_protocols.01
-                0x000000000002e160        0xc bin/blib.a(udp.o)
-                0x000000000002e160                udp_protocol
+                0x000000000002e178        0xc bin/blib.a(udp.o)
+                0x000000000002e178                udp_protocol
  .tbl.tcpip_protocols.01
-                0x000000000002e16c        0xc bin/blib.a(icmp.o)
-                0x000000000002e16c                icmp_protocol
+                0x000000000002e184        0xc bin/blib.a(icmp.o)
+                0x000000000002e184                icmp_protocol
  .tbl.tcpip_protocols.01
-                0x000000000002e178        0xc bin/blib.a(tcp.o)
-                0x000000000002e178                tcp_protocol
+                0x000000000002e190        0xc bin/blib.a(tcp.o)
+                0x000000000002e190                tcp_protocol
  .tbl.tcpip_protocols.99
-                0x000000000002e184        0x0 bin/blib.a(tcpip.o)
+                0x000000000002e19c        0x0 bin/blib.a(tcpip.o)
  .tbl.uri_openers.00
-                0x000000000002e184        0x0 bin/blib.a(open.o)
+                0x000000000002e19c        0x0 bin/blib.a(open.o)
  .tbl.uri_openers.01
-                0x000000000002e184        0x8 bin/blib.a(udp.o)
-                0x000000000002e184                udp_uri_opener
+                0x000000000002e19c        0x8 bin/blib.a(udp.o)
+                0x000000000002e19c                udp_uri_opener
  .tbl.uri_openers.01
-                0x000000000002e18c        0x8 bin/blib.a(http.o)
-                0x000000000002e18c                http_uri_opener
+                0x000000000002e1a4        0x8 bin/blib.a(http.o)
+                0x000000000002e1a4                http_uri_opener
  .tbl.uri_openers.01
-                0x000000000002e194        0x8 bin/blib.a(iscsi.o)
-                0x000000000002e194                iscsi_uri_opener
+                0x000000000002e1ac        0x8 bin/blib.a(iscsi.o)
+                0x000000000002e1ac                iscsi_uri_opener
  .tbl.uri_openers.01
-                0x000000000002e19c       0x20 bin/blib.a(tftp.o)
-                0x000000000002e19c                mtftp_uri_opener
-                0x000000000002e1a4                tftm_uri_opener
-                0x000000000002e1ac                tftpsize_uri_opener
-                0x000000000002e1b4                tftp_uri_opener
+                0x000000000002e1b4       0x20 bin/blib.a(tftp.o)
+                0x000000000002e1b4                mtftp_uri_opener
+                0x000000000002e1bc                tftm_uri_opener
+                0x000000000002e1c4                tftpsize_uri_opener
+                0x000000000002e1cc                tftp_uri_opener
  .tbl.uri_openers.01
-                0x000000000002e1bc        0x8 bin/blib.a(aoe.o)
-                0x000000000002e1bc                aoe_uri_opener
+                0x000000000002e1d4        0x8 bin/blib.a(aoe.o)
+                0x000000000002e1d4                aoe_uri_opener
  .tbl.uri_openers.01
-                0x000000000002e1c4        0x8 bin/blib.a(tcp.o)
-                0x000000000002e1c4                tcp_uri_opener
+                0x000000000002e1dc        0x8 bin/blib.a(tcp.o)
+                0x000000000002e1dc                tcp_uri_opener
  .tbl.uri_openers.99
-                0x000000000002e1cc        0x0 bin/blib.a(open.o)
-                0x000000000002e1cc                _mtextdata = .
+                0x000000000002e1e4        0x0 bin/blib.a(open.o)
+                0x000000000002e1e4                _mtextdata = .
 
-.iplt           0x000000000002e1d0        0x0 load address 0x000000000002f290
+.iplt           0x000000000002e1f0        0x0 load address 0x000000000002f2b0
  .iplt          0x0000000000000000        0x0 bin/blib.a(bnx2.o)
 
-.igot.plt       0x000000000002e1cc        0x0 load address 0x000000000002f28c
+.igot.plt       0x000000000002e1e4        0x0 load address 0x000000000002f2a4
  .igot.plt      0x0000000000000000        0x0 bin/blib.a(bnx2.o)
 
-.bss.textdata   0x000000000002e200    0x8dc28 load address 0x000000000002f340
+.bss.textdata   0x000000000002e200    0x8dc28 load address 0x000000000002f360
  *(.bss)
  *(.bss.*)
  .bss.bnx2      0x000000000002e200      0x200 bin/blib.a(bnx2.o)
@@ -5373,7 +5373,7 @@ Linker script and memory map
                 0x00000000000bbe28                _estack
  *(.stack.*)
                 0x00000000000bbe28                _etextdata = .
-                0x000000000002e1cc                _textdata_filesz = (ABSOLUTE (_mtextdata) - ABSOLUTE (_textdata))
+                0x000000000002e1e4                _textdata_filesz = (ABSOLUTE (_mtextdata) - ABSOLUTE (_textdata))
                 0x00000000000bbe28                _textdata_memsz = (ABSOLUTE (_etextdata) - ABSOLUTE (_textdata))
 
 .pprefix        0x0000000000000000        0x0 load address 0x0000000000000970
@@ -5382,12 +5382,12 @@ Linker script and memory map
  *(.pprefix.*)
                 0x0000000000000000                _mpprefix = .
 
-.bss.pprefix    0x00000000000bbe28        0x0 load address 0x000000000002f340
+.bss.pprefix    0x00000000000bbe28        0x0 load address 0x000000000002f360
                 0x00000000000bbe28                _epprefix = .
                 0x0000000000000000                _pprefix_filesz = (ABSOLUTE (_mpprefix) - ABSOLUTE (_pprefix))
                 0x00000000000bbe28                _pprefix_memsz = (ABSOLUTE (_epprefix) - ABSOLUTE (_pprefix))
 
-.zinfo          0x0000000000000000       0xb0 load address 0x000000000002f290
+.zinfo          0x0000000000000000       0xb0 load address 0x000000000002f2b0
                 0x0000000000000000                _zinfo = .
  *(.zinfo)
  .zinfo         0x0000000000000000       0x70 bin/blib.a(libprefix.o)
@@ -5395,12 +5395,12 @@ Linker script and memory map
  .zinfo.fixup   0x0000000000000070       0x40 bin/blib.a(romprefix.o)
                 0x00000000000000b0                _mzinfo = .
 
-.bss.zinfo      0x00000000000000b0        0x0 load address 0x000000000002f340
+.bss.zinfo      0x00000000000000b0        0x0 load address 0x000000000002f360
                 0x00000000000000b0                _ezinfo = .
                 0x00000000000000b0                _zinfo_filesz = (ABSOLUTE (_mzinfo) - ABSOLUTE (_zinfo))
                 0x00000000000000b0                _zinfo_memsz = (ABSOLUTE (_ezinfo) - ABSOLUTE (_zinfo))
 
-.weak           0x0000000000000000        0x0 load address 0x000000000002f340
+.weak           0x0000000000000000        0x0 load address 0x000000000002f360
                 0x0000000000000000                _weak = .
  *(.weak)
  *(.weak.*)
@@ -5441,13 +5441,13 @@ Linker script and memory map
                 0x00000000000010b2                . = (. + _data16_filesz)
                 0x00000000000010c0                . = ALIGN (_max_align)
                 0x00000000000010c0                _textdata_lma = .
-                0x000000000002f28c                . = (. + _textdata_filesz)
-                0x000000000002f28c                _filesz = .
-                0x000000000002f290                . = ALIGN (_max_align)
-                0x000000000002f290                _zinfo_lma = .
-                0x000000000002f340                . = (. + _zinfo_filesz)
-                0x000000000002f340                . = ALIGN (_max_align)
-                0x000000000002f340                _end_lma = .
+                0x000000000002f2a4                . = (. + _textdata_filesz)
+                0x000000000002f2a4                _filesz = .
+                0x000000000002f2b0                . = ALIGN (_max_align)
+                0x000000000002f2b0                _zinfo_lma = .
+                0x000000000002f360                . = (. + _zinfo_filesz)
+                0x000000000002f360                . = ALIGN (_max_align)
+                0x000000000002f360                _end_lma = .
                 0x0000000000000076                _text16_memsz_pgh = ((_text16_memsz + 0xf) / 0x10)
                 0x00000000000002ce                _data16_memsz_pgh = ((_data16_memsz + 0xf) / 0x10)
                 0x000000000000bbe3                _textdata_memsz_pgh = ((_textdata_memsz + 0xf) / 0x10)
@@ -5458,7 +5458,7 @@ Linker script and memory map
                 0x0000000000000000                pci_vendor_id = 0x0
                 0x0000000000000000                pci_device_id = 0x0
 LOAD bin/blib.a
-                0x000000008077dfb5                _build_id = 0x8077dfb5
+                0x0000000062f5ea6d                _build_id = 0x62f5ea6d
 OUTPUT(bin/bnx2.rom.tmp elf32-i386)
 
 .debug_frame    0x0000000000000000     0xa0c8
@@ -7007,29 +7007,29 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, CODE
   3 .data16       000000d2  00000000  00000fe0  00001120  2**4
                   CONTENTS, ALLOC, LOAD, DATA
-  4 .bss.data16   00002bf8  000000e0  000011a0  0002f470  2**4
+  4 .bss.data16   00002bf8  000000e0  000011a0  0002f490  2**4
                   ALLOC
-  5 .textdata     0002e1cc  00000000  000010c0  000011f4  2**2
+  5 .textdata     0002e1e4  00000000  000010c0  000011f4  2**2
                   CONTENTS, ALLOC, LOAD, CODE
-  6 .bss.textdata 0008dc28  0002e200  0002f340  0002f480  2**7
+  6 .bss.textdata 0008dc28  0002e200  0002f360  0002f500  2**7
                   ALLOC
-  7 .zinfo        000000b0  00000000  0002f290  0002f3c0  2**0
+  7 .zinfo        000000b0  00000000  0002f2b0  0002f3d8  2**0
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  8 .debug_frame  0000a0c8  00000000  00000000  0002f470  2**2
+  8 .debug_frame  0000a0c8  00000000  00000000  0002f488  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_info   00080b2d  00000000  00000000  00039538  2**0
+  9 .debug_info   00080b2d  00000000  00000000  00039550  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_abbrev 0001563a  00000000  00000000  000ba065  2**0
+ 10 .debug_abbrev 0001563a  00000000  00000000  000ba07d  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    0003ab49  00000000  00000000  000cf69f  2**0
+ 11 .debug_loc    0003ab49  00000000  00000000  000cf6b7  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_aranges 00002b08  00000000  00000000  0010a1e8  2**0
+ 12 .debug_aranges 00002b08  00000000  00000000  0010a200  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_ranges 000034d8  00000000  00000000  0010ccf0  2**0
+ 13 .debug_ranges 000034d8  00000000  00000000  0010cd08  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_line   00014690  00000000  00000000  001101c8  2**0
+ 14 .debug_line   00014690  00000000  00000000  001101e0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_str    0000e02f  00000000  00000000  00124858  2**0
+ 15 .debug_str    0000e02f  00000000  00000000  00124870  2**0
                   CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 
@@ -7231,13 +7231,13 @@ SYMBOL TABLE:
 000010c0 g       *ABS*	00000000 _textdata_lma
 00002cd8 g       *ABS*	00000000 .hidden _data16_memsz
 0000bbe3 g       *ABS*	00000000 _textdata_memsz_pgh
-0002e1cc g       *ABS*	00000000 _textdata_filesz
-0002f28c g       *ABS*	00000000 _filesz
-0002f290 g       *ABS*	00000000 _zinfo_lma
-0002f340 g       *ABS*	00000000 _end_lma
+0002e1e4 g       *ABS*	00000000 _textdata_filesz
+0002f2a4 g       *ABS*	00000000 _filesz
+0002f2b0 g       *ABS*	00000000 _zinfo_lma
+0002f360 g       *ABS*	00000000 _end_lma
 000bbe28 g       *ABS*	00000000 _textdata_memsz
 000bbe28 g       *ABS*	00000000 _pprefix_memsz
-8077dfb5 g       *ABS*	00000000 _build_id
+62f5ea6d g       *ABS*	00000000 _build_id
 00000000 l    d  .prefix	00000000 .prefix
 00000000 g       .prefix	00000000 _rom_start
 00000000 g       .prefix	00000000 check__rom_start
@@ -8346,472 +8346,472 @@ SYMBOL TABLE:
 00016a7a g     F .textdata	00000036 .hidden dhcpopt_fetch
 00016ab0 g     F .textdata	00000050 .hidden dhcpopt_update_used_len
 00016b00 g     F .textdata	00000014 .hidden dhcpopt_init
-00016f4c l     O .textdata	00000058 ansi_sequences
-00016fa4 l     O .textdata	0000000a bios_attr_fcols.1535
-00016fb0 l     O .textdata	0000000a bios_attr_bcols.1536
-00016fe8 l     O .textdata	00000007 e_ident.2331
-00017354 l     O .textdata	00000007 platform.3014
-0001735c l     O .textdata	00000005 buildarch.3008
-0001736c l     O .textdata	00000009 separators.1257
-000173fc l     O .textdata	00000006 eth_slow_address
-000174a4 l     O .textdata	00000020 empty_sockaddr.2191
-00017664 l     O .textdata	00000001 colon.2657
-00017954 l     O .textdata	00000009 dhcp_op
-000179ec l     O .textdata	00000005 e_ident.1679
-00017a5c l     O .textdata	00000007 ipxe_magic.1787
-00017a64 l     O .textdata	00000007 gpxe_magic.1788
-00017b28 l     O .textdata	00000040 r
-00017b68 l     O .textdata	00000100 k
-00018840 l     O .textdata	00000006 primary_check.2940
-00018848 l     O .textdata	00000027 boot_check.2942
-00018870 l     O .textdata	00000028 int13_fdd_geometries
-00018898 l     O .textdata	00000040 base64
-00018968 l     O .textdata	00000007 shell_prompt
-0001896f l     O .textdata	00000001 empty_encap.2322
-00018970 g       .textdata	00000000 .hidden rm_sp
-00018972 g       .textdata	00000000 .hidden rm_ss
-00018974 l       .textdata	00000000 pm_esp
-00018978 g       .textdata	00000000 .hidden virt_offset
-0001897c g       .textdata	00000000 .hidden text16
-00018980 g       .textdata	00000000 .hidden data16
-00018984 l     O .textdata	00000010 bnx2_operations
-00018994 l     O .textdata	000002c0 flash_table
-00018c54 l     O .textdata	00000b80 bnx2_rv2p_proc1
-000197d4 l     O .textdata	000017d8 bnx2_rv2p_proc2
-0001afac l     O .textdata	00005890 bnx2_RXP_b06FwText
-0002083c l     O .textdata	0000002c bnx2_RXP_b06FwRodata
-00020868 l     O .textdata	0000574c bnx2_TXP_b06FwText
-00025fb4 l     O .textdata	00001230 bnx2_TPAT_b06FwText
-000271e4 l     O .textdata	000057c0 bnx2_COM_b06FwText
-0002c9a4 l     O .textdata	0000005c bnx2_COM_b06FwRodata
-0002ca00 l     O .textdata	00000030 bnx2_nics
-0002ca30 l     O .textdata	00000014 legacy_operations
-0002ca44 l     O .textdata	00000004 ansi_input
-0002ca48 l     O .textdata	0000001c bios_ansiesc_ctx
-0002ca64 l     O .textdata	00000004 bios_attr
-0002ca68 l     O .textdata	00000020 bios_ansiesc_handlers
-0002ca88 l     O .textdata	0000000c pxe_dhcp_packet_creators
-0002ca94 l     O .textdata	0000002c pxe_tftp
-0002cac0 l     O .textdata	00000010 pxe_tftp_xfer_desc
-0002cad0 l     O .textdata	00000018 pxe_tftp_xfer_ops
-0002cae8 l     O .textdata	00000030 pxe_udp
-0002cb18 l     O .textdata	00000010 pxe_udp_xfer_desc
-0002cb28 l     O .textdata	00000008 pxe_udp_xfer_operations
-0002cb30 l     O .textdata	0000000c cpuid_cmd
-0002cb3c l     O .textdata	00000024 cpuid_opts
-0002cb60 l     O .textdata	00000008 devices
-0002cb68 l     O .textdata	0000000c echo_cmd
-0002cb74 l     O .textdata	0000000c exit_cmd
-0002cb80 l     O .textdata	0000000c isset_cmd
-0002cb8c l     O .textdata	0000000c iseq_cmd
-0002cb98 l     O .textdata	0000000c sleep_cmd
-0002cba4 l     O .textdata	0000000c echo_opts
-0002cbb0 g     O .textdata	00000008 .hidden images
-0002cbb8 g     O .textdata	0000000c .hidden null_intf
-0002cbc4 g     O .textdata	00000010 .hidden null_intf_desc
-0002cbd4 l     O .textdata	00000008 free_blocks
-0002cbdc l     O .textdata	00000010 posix_file_xfer_desc
-0002cbec l     O .textdata	00000008 posix_files
-0002cbf4 l     O .textdata	00000010 posix_file_xfer_operations
-0002cc04 l     O .textdata	00000008 run_queue
-0002cc0c g     O .textdata	0000002c .hidden generic_settings_root
-0002cc38 g     O .textdata	00000010 .hidden generic_settings_operations
-0002cc48 l     O .textdata	00000024 builtin_settings
-0002cc6c l     O .textdata	00000018 builtin_setting_operations
-0002cc84 l     O .textdata	00000010 builtin_settings_operations
-0002cc94 g     O .textdata	00000004 .hidden product_version
-0002cc98 l     O .textdata	00000006 type_sizes
-0002cca0 l     O .textdata	00000008 arp_entries
-0002cca8 g     O .textdata	00000006 .hidden eth_broadcast
-0002ccb0 g     O .textdata	00000008 .hidden ipv4_miniroutes
-0002ccb8 l     O .textdata	00000008 ipv4_fragments
-0002ccc0 g     O .textdata	00000008 .hidden net_devices
-0002ccc8 l     O .textdata	00000008 open_net_devices
-0002ccd0 l     O .textdata	0000000c net_process_desc
-0002ccdc g     O .textdata	00000010 .hidden netdev_settings_operations
-0002ccec l     O .textdata	00000024 netdev_setting_operations
-0002cd10 g     O .textdata	00000014 .hidden null_netdev_operations
-0002cd24 l     O .textdata	00000008 timers
-0002cd2c l     O .textdata	0000000c retry_process_desc
-0002cd38 g     O .textdata	00000004 .hidden udp_sock_dgram
-0002cd3c l     O .textdata	00000010 udp_xfer_desc
-0002cd4c l     O .textdata	00000008 udp_conns
-0002cd54 l     O .textdata	00000002 try_port.2113
-0002cd58 l     O .textdata	00000018 udp_xfer_operations
-0002cd70 l     O .textdata	00000010 http_xfer_desc
-0002cd80 l     O .textdata	00000010 http_partial_desc
-0002cd90 l     O .textdata	00000010 http_socket_desc
-0002cda0 l     O .textdata	0000000c http_process_desc
-0002cdac l     O .textdata	00000014 http_line_handlers
-0002cdc0 l     O .textdata	00000030 http_header_handlers
-0002cdf0 l     O .textdata	00000018 http_auth_header_handlers
-0002ce08 l     O .textdata	00000028 http_xfer_operations
-0002ce30 l     O .textdata	00000008 http_partial_operations
-0002ce38 l     O .textdata	00000020 http_socket_operations
-0002ce58 l     O .textdata	00000010 iscsi_control_desc
-0002ce68 l     O .textdata	00000010 iscsi_data_desc
-0002ce78 l     O .textdata	00000010 iscsi_socket_desc
-0002ce88 l     O .textdata	0000000c iscsi_process_desc
-0002ce94 l     O .textdata	00000040 iscsi_string_types
-0002ced4 l     O .textdata	00000020 iscsi_control_op
-0002cef4 l     O .textdata	00000008 iscsi_data_op
-0002cefc l     O .textdata	00000020 iscsi_socket_operations
-0002cf1c l     O .textdata	00000050 dhcp_request_options_data
-0002cf6c l     O .textdata	00000010 dhcp_job_desc
-0002cf7c l     O .textdata	00000010 dhcp_xfer_desc
-0002cf8c l     O .textdata	00000020 dhcp_peer
-0002cfac l     O .textdata	00000014 dhcp_state_discover
-0002cfc0 l     O .textdata	00000014 dhcp_state_request
-0002cfd4 l     O .textdata	00000014 dhcp_state_proxy
-0002cfe8 l     O .textdata	00000020 peer.3040
-0002d008 l     O .textdata	00000014 dhcp_state_pxebs
-0002d01c l     O .textdata	00000008 dhcp_job_op
-0002d024 l     O .textdata	00000008 dhcp_xfer_operations
-0002d02c l     O .textdata	00000020 nameserver
-0002d04c l     O .textdata	00000010 dns_resolv_desc
-0002d05c l     O .textdata	00000010 dns_socket_desc
-0002d06c l     O .textdata	00000008 dns_resolv_op
-0002d074 l     O .textdata	00000010 dns_socket_operations
-0002d084 l     O .textdata	00000020 tftp_mtftp_socket
-0002d0a4 l     O .textdata	00000010 tftp_xfer_desc
-0002d0b4 l     O .textdata	00000010 tftp_socket_desc
-0002d0c4 l     O .textdata	00000010 tftp_mc_socket_desc
-0002d0d4 l     O .textdata	00000020 tftp_options
-0002d0f4 l     O .textdata	00000010 tftp_xfer_operations
-0002d104 l     O .textdata	00000008 tftp_socket_operations
-0002d10c l     O .textdata	00000008 tftp_mc_socket_operations
-0002d114 l     O .textdata	0000000c goto_cmd
-0002d120 l     O .textdata	0000000c prompt_cmd
-0002d12c l     O .textdata	00000018 prompt_opts
-0002d144 l     O .textdata	00000008 pci_root_driver
-0002d14c l     O .textdata	00000010 scsidev_block_desc
-0002d15c l     O .textdata	00000010 scsidev_scsi_desc
-0002d16c l     O .textdata	00000010 scsidev_ready_desc
-0002d17c l     O .textdata	0000000c scsidev_process_desc
-0002d188 l     O .textdata	00000010 scsicmd_read_capacity
-0002d198 l     O .textdata	00000010 scsicmd_block_desc
-0002d1a8 l     O .textdata	00000010 scsicmd_scsi_desc
-0002d1b8 l     O .textdata	00000010 scsicmd_write
-0002d1c8 l     O .textdata	00000010 scsicmd_read
-0002d1d8 l     O .textdata	00000010 scsicmd_test_unit_ready
-0002d1e8 l     O .textdata	00000028 scsidev_block_op
-0002d210 l     O .textdata	00000010 scsidev_scsi_op
-0002d220 l     O .textdata	00000008 scsidev_ready_op
-0002d228 l     O .textdata	00000008 scsicmd_block_op
-0002d230 l     O .textdata	00000010 scsicmd_scsi_op
-0002d240 l     O .textdata	00000024 smbios_settings
-0002d264 l     O .textdata	00000010 smbios_settings_operations
-0002d274 g     O .textdata	0000001c .hidden md5_algorithm
-0002d290 l     O .textdata	00000020 md5_steps
-0002d2b0 l     O .textdata	00000008 oid_md5
-0002d2b8 l     O .textdata	0000000c autoboot_cmd
-0002d2c4 l     O .textdata	0000000c config_cmd
-0002d2d0 l     O .textdata	0000000c pxebs_cmd
-0002d2dc l     O .textdata	0000000c dhcp_cmd
-0002d2e8 l     O .textdata	0000000c ifstat_cmd
-0002d2f4 l     O .textdata	0000000c ifclose_cmd
-0002d300 l     O .textdata	0000000c ifopen_cmd
-0002d30c g     O .textdata	00000014 .hidden imgargs_desc
-0002d320 g     O .textdata	00000014 .hidden imgexec_desc
-0002d334 g     O .textdata	00000014 .hidden imgselect_desc
-0002d348 g     O .textdata	00000014 .hidden imgfetch_desc
-0002d35c l     O .textdata	0000000c imgmulti_cmd
-0002d368 l     O .textdata	0000000c imgsingle_cmd
-0002d374 l     O .textdata	0000000c imgexec_cmd
-0002d380 l     O .textdata	0000000c imgfetch_cmd
-0002d38c l     O .textdata	00000024 imgsingle_opts
-0002d3b0 l     O .textdata	0000000c login_cmd
-0002d3bc l     O .textdata	0000000c choose_cmd
-0002d3c8 l     O .textdata	0000000c item_cmd
-0002d3d4 l     O .textdata	0000000c menu_cmd
-0002d3e0 l     O .textdata	00000030 choose_opts
-0002d410 l     O .textdata	00000030 item_opts
-0002d440 l     O .textdata	00000018 menu_opts
-0002d458 l     O .textdata	0000000c clear_read_cmd
-0002d464 l     O .textdata	0000000c set_cmd
-0002d470 l     O .textdata	0000000c show_cmd
-0002d47c l     O .textdata	0000000c reboot_cmd
-0002d488 l     O .textdata	0000000c reboot_opts
-0002d494 l     O .textdata	0000000c route_cmd
-0002d4a0 l     O .textdata	0000000c sanunhook_cmd
-0002d4ac l     O .textdata	0000000c sanboot_cmd
-0002d4b8 l     O .textdata	0000000c sanhook_cmd
-0002d4c4 l     O .textdata	00000024 sanboot_opts
-0002d4e8 l     O .textdata	0000000c sync_cmd
-0002d4f4 l     O .textdata	0000000c sync_opts
-0002d500 g     O .textdata	00000024 .hidden _ansi_screen
-0002d524 g     O .textdata	00000002 .hidden _LINES
-0002d526 g     O .textdata	00000002 .hidden _COLS
-0002d528 l     O .textdata	00000020 cpairs
-0002d548 g     O .textdata	00000024 .hidden _stdscr
-0002d56c l     O .textdata	00000008 int13s
-0002d574 l     O .textdata	00000010 int13_block_desc
-0002d584 l     O .textdata	0000003c int13_command
-0002d5c0 l     O .textdata	00000010 int13_block_op
-0002d5d0 l     O .textdata	00000010 int13_command_desc
-0002d5e0 l     O .textdata	00000010 int13_command_op
-0002d5f0 g     O .textdata	00000004 .hidden console_usage
-0002d5f4 l     O .textdata	00000010 downloader_job_desc
-0002d604 l     O .textdata	00000010 downloader_xfer_desc
-0002d614 l     O .textdata	00000010 downloader_job_op
-0002d624 l     O .textdata	00000010 downloader_xfer_operations
-0002d634 l     O .textdata	00000008 menus
-0002d63c g     O .textdata	0000000c .hidden monojob
-0002d648 l     O .textdata	00000010 monojob_intf_desc
-0002d658 l     O .textdata	00000008 monojob_intf_op
-0002d660 l     O .textdata	0000000c numeric_process_desc
-0002d66c l     O .textdata	00000010 resmux_child_desc
-0002d67c l     O .textdata	00000010 named_xfer_desc
-0002d68c l     O .textdata	00000010 named_resolv_desc
-0002d69c l     O .textdata	00000010 resmux_child_op
-0002d6ac l     O .textdata	00000010 named_xfer_ops
-0002d6bc l     O .textdata	00000010 named_resolv_op
-0002d6cc l     O .textdata	00000010 aoedev_ata_desc
-0002d6dc l     O .textdata	00000010 aoedev_config_desc
-0002d6ec l     O .textdata	0000000c aoecmd_cfg
-0002d6f8 l     O .textdata	0000000c aoecmd_ata
-0002d704 l     O .textdata	00000008 aoe_commands
-0002d70c l     O .textdata	00000010 aoecmd_ata_desc
-0002d71c l     O .textdata	00000028 aoedev_ata_op
-0002d744 l     O .textdata	00000008 aoedev_config_op
-0002d74c l     O .textdata	00000008 aoecmd_ata_op
-0002d754 l     O .textdata	00000030 dhcp_packet_fields
-0002d784 l     O .textdata	00000010 dhcppkt_settings_operations
-0002d794 g     O .textdata	00000004 .hidden tcp_sock_stream
-0002d798 l     O .textdata	00000008 tcp_conns
-0002d7a0 l     O .textdata	00000010 tcp_xfer_desc
-0002d7b0 l     O .textdata	00000018 tcp_xfer_operations
-0002d7c8 l     O .textdata	00000010 atadev_block_desc
-0002d7d8 l     O .textdata	00000010 atadev_ata_desc
-0002d7e8 l     O .textdata	00000008 ata_commands
-0002d7f0 l     O .textdata	00000018 atacmd_identify
-0002d808 l     O .textdata	00000010 atacmd_block_desc
-0002d818 l     O .textdata	00000010 atacmd_ata_desc
-0002d828 l     O .textdata	00000018 atacmd_write
-0002d840 l     O .textdata	00000018 atacmd_read
-0002d858 l     O .textdata	00000028 atadev_block_op
-0002d880 l     O .textdata	00000008 atadev_ata_op
-0002d888 l     O .textdata	00000008 atacmd_block_op
-0002d890 l     O .textdata	00000008 atacmd_ata_op
-0002d898 l     O .textdata	0000000c shell_cmd
-0002d8a4 l     O .textdata	00000000 __table_entries.2101
-0002d8a4 g     O .textdata	00000008 .hidden ipv4_arp_protocol
-0002d8ac l     O .textdata	00000000 __table_entries.2103
-0002d8ac g     O .textdata	00000014 .hidden oid_md5_algorithm
-0002d8c0 l     O .textdata	00000000 __table_entries.1944
-0002d8c0 g     O .textdata	00000004 .hidden net_discarder
-0002d8c4 g     O .textdata	00000004 .hidden tcp_discarder
-0002d8c8 g     O .textdata	00000004 .hidden arp_discarder
-0002d8cc l     O .textdata	00000000 __table_entries.1710
-0002d8cc l     O .textdata	00000000 __table_entries.1946
-0002d8cc l     O .textdata	00000000 __table_entries.1221
-0002d8cc g     O .textdata	00000008 .hidden cpuid_command
-0002d8d4 g     O .textdata	00000008 .hidden sleep_command
-0002d8dc g     O .textdata	00000008 .hidden iseq_command
-0002d8e4 g     O .textdata	00000008 .hidden isset_command
-0002d8ec g     O .textdata	00000008 .hidden exit_command
-0002d8f4 g     O .textdata	00000008 .hidden echo_command
-0002d8fc g     O .textdata	00000008 .hidden prompt_command
-0002d904 g     O .textdata	00000008 .hidden goto_command
-0002d90c g     O .textdata	00000008 .hidden autoboot_commands
-0002d914 g     O .textdata	00000008 .hidden config_command
-0002d91c g     O .textdata	00000010 .hidden dhcp_commands
-0002d92c g     O .textdata	00000018 .hidden ifmgmt_commands
-0002d944 g     O .textdata	00000060 .hidden image_commands
-0002d9a4 g     O .textdata	00000008 .hidden login_command
-0002d9ac g     O .textdata	00000018 .hidden menu_commands
-0002d9c4 g     O .textdata	00000020 .hidden nvo_commands
-0002d9e4 g     O .textdata	00000008 .hidden reboot_command
-0002d9ec g     O .textdata	00000008 .hidden route_commands
-0002d9f4 g     O .textdata	00000018 .hidden sanboot_commands
-0002da0c g     O .textdata	00000008 .hidden sync_command
-0002da14 g     O .textdata	00000008 .hidden shell_command
-0002da1c g     O .textdata	00000008 .hidden help_command
-0002da24 l     O .textdata	00000000 __table_entries.1712
-0002da24 l     O .textdata	00000000 __table_entries.1101
-0002da24 l     O .textdata	00000000 __table_entries.1090
-0002da24 l     O .textdata	00000000 __table_entries.1223
-0002da24 g     O .textdata	00000014 .hidden bios_console
-0002da38 l     O .textdata	00000000 __table_entries.3034
-0002da38 l     O .textdata	00000000 __table_entries.3030
-0002da38 l     O .textdata	00000000 __table_entries.1103
-0002da38 l     O .textdata	00000000 __table_entries.1092
-0002da38 g     O .textdata	00000003 .hidden __dhcp_feature_bzimage
-0002da3b g     O .textdata	00000003 .hidden __dhcp_feature_elfboot
-0002da3e g     O .textdata	00000003 .hidden __dhcp_feature_multiboot
-0002da41 g     O .textdata	00000003 .hidden __dhcp_feature_pxe_image
-0002da44 g     O .textdata	00000003 .hidden __dhcp_feature_pxe_file
-0002da47 g     O .textdata	00000005 .hidden __dhcp_feature_version
-0002da4c g     O .textdata	00000003 .hidden __dhcp_feature_http
-0002da4f g     O .textdata	00000003 .hidden __dhcp_feature_iscsi
-0002da52 g     O .textdata	00000003 .hidden __dhcp_feature_dns
-0002da55 g     O .textdata	00000003 .hidden __dhcp_feature_tftp
-0002da58 g     O .textdata	00000003 .hidden __dhcp_feature_menu_cmd
-0002da5b g     O .textdata	00000003 .hidden __dhcp_feature_aoe
-0002da5e l     O .textdata	00000000 __table_entries.3032
-0002da60 l     O .textdata	00000000 __table_entries.1072
-0002da60 g     O .textdata	00000010 .hidden netdev_errors
-0002da70 g     O .textdata	00000008 .hidden segment_errors
-0002da78 g     O .textdata	00000088 .hidden common_errors
-0002db00 l     O .textdata	00000000 __table_entries.1074
-0002db00 l     O .textdata	00000000 __table_entries.2653
-0002db00 g     O .textdata	00000004 .hidden __feature_http
-0002db04 g     O .textdata	00000004 .hidden __feature_iscsi
-0002db08 g     O .textdata	00000004 .hidden __feature_dns
-0002db0c g     O .textdata	00000004 .hidden __feature_tftp
-0002db10 g     O .textdata	00000004 .hidden __feature_aoe
-0002db14 g     O .textdata	00000004 .hidden __feature_bzimage
-0002db18 g     O .textdata	00000004 .hidden __feature_elfboot
-0002db1c g     O .textdata	00000004 .hidden __feature_multiboot
-0002db20 g     O .textdata	00000004 .hidden __feature_pxe_image
-0002db24 g     O .textdata	00000004 .hidden __feature_pxe_file
-0002db28 g     O .textdata	00000004 .hidden __feature_menu_cmd
-0002db2c l     O .textdata	00000000 __table_entries.1838
-0002db2c l     O .textdata	00000000 __table_entries.2655
-0002db2c g     O .textdata	0000000c .hidden multiboot_image_type
-0002db38 g     O .textdata	0000000c .hidden bzimage_image_type
-0002db44 g     O .textdata	0000000c .hidden elfboot_image_type
-0002db50 g     O .textdata	0000000c .hidden script_image_type
-0002db5c g     O .textdata	0000000c .hidden pxe_image_type
-0002db68 l     O .textdata	00000000 __table_entries.1840
-0002db68 l     O .textdata	00000000 __table_entries.1017
-0002db68 g     O .textdata	00000004 .hidden heap_init_fn
-0002db6c g     O .textdata	00000004 .hidden pxe_init_fn
-0002db70 g     O .textdata	00000004 .hidden process_init_fn
-0002db74 g     O .textdata	00000004 .hidden builtin_init_fn
-0002db78 g     O .textdata	00000004 .hidden smbios_init_fn
-0002db7c g     O .textdata	00000004 .hidden embedded_init_fn
-0002db80 l     O .textdata	00000000 __table_entries.1563
-0002db80 l     O .textdata	00000000 __table_entries.1565
-0002db80 l     O .textdata	00000000 __table_entries.1019
-0002db80 g     O .textdata	00000000 .hidden us_mapping
-0002db80 g     O .textdata	00000028 .hidden ethernet_protocol
-0002dba8 l     O .textdata	00000000 __table_entries.2003
-0002dba8 l     O .textdata	00000000 __table_entries.2163
-0002dba8 l     O .textdata	00000000 __table_entries.2175
-0002dba8 l     O .textdata	00000000 __table_entries.2201
-0002dba8 g     O .textdata	00000010 .hidden arp_net_driver
-0002dbb8 l     O .textdata	00000000 __table_entries.2005
-0002dbb8 l     O .textdata	00000000 __table_entries.2165
-0002dbb8 l     O .textdata	00000000 __table_entries.2199
-0002dbb8 l     O .textdata	00000000 __table_entries.2267
-0002dbb8 g     O .textdata	00000010 .hidden arp_protocol
-0002dbc8 g     O .textdata	00000010 .hidden eth_slow_protocol
-0002dbd8 g     O .textdata	00000010 .hidden ipv4_protocol
-0002dbe8 g     O .textdata	00000010 .hidden rarp_protocol
-0002dbf8 g     O .textdata	00000010 .hidden aoe_protocol
-0002dc08 l     O .textdata	00000000 __table_entries.2269
-0002dc08 l     O .textdata	00000000 __table_entries.2119
-0002dc08 g     O .textdata	00000010 .hidden bnx2_driver
-0002dc18 l     O .textdata	00000000 __table_entries.1077
-0002dc18 l     O .textdata	00000000 __table_entries.2121
-0002dc18 g     O .textdata	00000010 .hidden net_process
-0002dc28 g     O .textdata	00000010 .hidden retry_process
-0002dc38 l     O .textdata	00000000 __table_entries.2152
-0002dc38 l     O .textdata	00000000 __table_entries.2899
-0002dc38 l     O .textdata	00000000 __table_entries.1079
-0002dc38 g     O .textdata	00000008 .hidden pxenv_unknown_api
-0002dc40 g     O .textdata	00000040 .hidden pxe_file_api
-0002dc80 g     O .textdata	00000038 .hidden pxe_preboot_api
-0002dcb8 g     O .textdata	00000028 .hidden pxe_tftp_api
-0002dce0 g     O .textdata	00000020 .hidden pxe_udp_api
-0002dd00 g     O .textdata	000000a0 .hidden pxe_undi_api
-0002dda0 l     O .textdata	00000000 __table_entries.2154
-0002dda0 l     O .textdata	00000000 __table_entries.2901
-0002dda0 l     O .textdata	00000000 __table_entries.1545
-0002dda0 g     O .textdata	00000008 .hidden numeric_resolver
-0002dda8 g     O .textdata	00000008 .hidden dns_resolver
-0002ddb0 l     O .textdata	00000000 __table_entries.1259
-0002ddb0 l     O .textdata	00000000 __table_entries.1524
-0002ddb0 g     O .textdata	00000048 .hidden pci_root_device
-0002ddf8 l     O .textdata	00000000 __table_entries.1261
-0002ddf8 l     O .textdata	00000000 __table_entries.2736
-0002ddf8 g     O .textdata	0000000c .hidden setting_type_uuid
-0002de04 g     O .textdata	0000000c .hidden setting_type_hexhyp
-0002de10 g     O .textdata	0000000c .hidden setting_type_hex
-0002de1c g     O .textdata	0000000c .hidden setting_type_uint32
-0002de28 g     O .textdata	0000000c .hidden setting_type_uint16
-0002de34 g     O .textdata	0000000c .hidden setting_type_uint8
-0002de40 g     O .textdata	0000000c .hidden setting_type_int32
-0002de4c g     O .textdata	0000000c .hidden setting_type_int16
-0002de58 g     O .textdata	0000000c .hidden setting_type_int8
-0002de64 g     O .textdata	0000000c .hidden setting_type_ipv4
-0002de70 g     O .textdata	0000000c .hidden setting_type_uristring
-0002de7c g     O .textdata	0000000c .hidden setting_type_string
-0002de88 l     O .textdata	00000000 __table_entries.2758
-0002de88 l     O .textdata	00000000 __table_entries.2738
-0002de88 l     O .textdata	00000000 __table_entries.2719
-0002de88 l     O .textdata	00000000 __table_entries.2244
-0002de88 g     O .textdata	00000014 .hidden chip_setting
-0002de9c g     O .textdata	00000014 .hidden busid_setting
-0002deb0 g     O .textdata	00000014 .hidden mac_setting
-0002dec4 g     O .textdata	00000014 .hidden gateway_setting
-0002ded8 g     O .textdata	00000014 .hidden netmask_setting
-0002deec g     O .textdata	00000014 .hidden ip_setting
-0002df00 g     O .textdata	00000014 .hidden domain_setting
-0002df14 g     O .textdata	00000014 .hidden dns_setting
-0002df28 g     O .textdata	00000014 .hidden filename_setting
-0002df3c g     O .textdata	00000014 .hidden next_server_setting
-0002df50 g     O .textdata	00000014 .hidden root_path_setting
-0002df64 g     O .textdata	00000014 .hidden initiator_iqn_setting
-0002df78 g     O .textdata	00000014 .hidden skip_san_boot_setting
-0002df8c g     O .textdata	00000014 .hidden keep_san_setting
-0002dfa0 g     O .textdata	00000014 .hidden hostname_setting
-0002dfb4 g     O .textdata	00000014 .hidden uuid_setting
-0002dfc8 g     O .textdata	00000014 .hidden user_class_setting
-0002dfdc g     O .textdata	00000050 .hidden smbios_named_settings
-0002e02c g     O .textdata	00000014 .hidden password_setting
-0002e040 g     O .textdata	00000014 .hidden username_setting
-0002e054 g     O .textdata	00000014 .hidden reverse_password_setting
-0002e068 g     O .textdata	00000014 .hidden reverse_username_setting
-0002e07c g     O .textdata	00000014 .hidden platform_setting
-0002e090 g     O .textdata	00000014 .hidden buildarch_setting
-0002e0a4 g     O .textdata	00000014 .hidden errno_setting
-0002e0b8 g     O .textdata	00000014 .hidden priority_setting
-0002e0cc g     O .textdata	00000014 .hidden use_cached_setting
-0002e0e0 g     O .textdata	00000014 .hidden dhcp_server_setting
-0002e0f4 g     O .textdata	00000014 .hidden scriptlet_setting
-0002e108 l     O .textdata	00000000 __table_entries.2499
-0002e108 l     O .textdata	00000000 __table_entries.2760
-0002e108 l     O .textdata	00000000 __table_entries.2721
-0002e108 l     O .textdata	00000000 __table_entries.2246
-0002e108 g     O .textdata	00000004 .hidden ipv4_settings_applicator
-0002e10c g     O .textdata	00000004 .hidden dns_applicator
-0002e110 g     O .textdata	00000004 .hidden tftp_settings_applicator
-0002e114 l     O .textdata	00000000 __table_entries.1406
-0002e114 l     O .textdata	00000000 __table_entries.2501
-0002e114 g     O .textdata	0000000c .hidden udp_socket_opener
-0002e120 g     O .textdata	0000000c .hidden tcp_socket_opener
-0002e12c l     O .textdata	00000000 __table_entries.1028
-0002e12c l     O .textdata	00000000 __table_entries.1041
-0002e12c l     O .textdata	00000000 __table_entries.1408
-0002e12c g     O .textdata	00000008 .hidden heap_startup_fn
-0002e134 g     O .textdata	00000008 .hidden tcp_startup_fn
-0002e13c g     O .textdata	00000008 .hidden hide_etherboot_startup_fn
-0002e144 g     O .textdata	00000008 .hidden startup_devices
-0002e14c g     O .textdata	00000008 .hidden startup_initrd
-0002e154 l     O .textdata	00000000 __table_entries.1030
-0002e154 l     O .textdata	00000000 __table_entries.1039
-0002e154 l     O .textdata	00000000 __table_entries.1355
-0002e154 g     O .textdata	0000000c .hidden ipv4_tcpip_protocol
-0002e160 l     O .textdata	00000000 __table_entries.1338
-0002e160 l     O .textdata	00000000 __table_entries.1357
-0002e160 g     O .textdata	0000000c .hidden udp_protocol
-0002e16c g     O .textdata	0000000c .hidden icmp_protocol
-0002e178 g     O .textdata	0000000c .hidden tcp_protocol
-0002e184 l     O .textdata	00000000 __table_entries.1353
-0002e184 l     O .textdata	00000000 __table_entries.1340
-0002e184 g     O .textdata	00000008 .hidden udp_uri_opener
-0002e18c g     O .textdata	00000008 .hidden http_uri_opener
-0002e194 g     O .textdata	00000008 .hidden iscsi_uri_opener
-0002e19c g     O .textdata	00000008 .hidden mtftp_uri_opener
-0002e1a4 g     O .textdata	00000008 .hidden tftm_uri_opener
-0002e1ac g     O .textdata	00000008 .hidden tftpsize_uri_opener
-0002e1b4 g     O .textdata	00000008 .hidden tftp_uri_opener
-0002e1bc g     O .textdata	00000008 .hidden aoe_uri_opener
-0002e1c4 g     O .textdata	00000008 .hidden tcp_uri_opener
-0002e1cc l     O .textdata	00000000 __table_entries.1355
-0002e1cc g       .textdata	00000000 _mtextdata
+00016f58 l     O .textdata	00000058 ansi_sequences
+00016fb0 l     O .textdata	0000000a bios_attr_fcols.1535
+00016fbc l     O .textdata	0000000a bios_attr_bcols.1536
+00016ff4 l     O .textdata	00000007 e_ident.2331
+00017360 l     O .textdata	00000007 platform.3014
+00017368 l     O .textdata	00000005 buildarch.3008
+00017378 l     O .textdata	00000009 separators.1257
+00017408 l     O .textdata	00000006 eth_slow_address
+000174b0 l     O .textdata	00000020 empty_sockaddr.2191
+00017670 l     O .textdata	00000001 colon.2657
+00017960 l     O .textdata	00000009 dhcp_op
+000179f8 l     O .textdata	00000005 e_ident.1679
+00017a68 l     O .textdata	00000007 ipxe_magic.1787
+00017a70 l     O .textdata	00000007 gpxe_magic.1788
+00017b34 l     O .textdata	00000040 r
+00017b74 l     O .textdata	00000100 k
+0001884c l     O .textdata	00000006 primary_check.2940
+00018854 l     O .textdata	00000027 boot_check.2942
+0001887c l     O .textdata	00000028 int13_fdd_geometries
+000188a4 l     O .textdata	00000040 base64
+00018974 l     O .textdata	00000007 shell_prompt
+0001897b l     O .textdata	00000001 empty_encap.2322
+0001897c g       .textdata	00000000 .hidden rm_sp
+0001897e g       .textdata	00000000 .hidden rm_ss
+00018980 l       .textdata	00000000 pm_esp
+00018984 g       .textdata	00000000 .hidden virt_offset
+00018988 g       .textdata	00000000 .hidden text16
+0001898c g       .textdata	00000000 .hidden data16
+00018990 l     O .textdata	00000010 bnx2_operations
+000189a0 l     O .textdata	000002c0 flash_table
+00018c60 l     O .textdata	00000b80 bnx2_rv2p_proc1
+000197e0 l     O .textdata	000017d8 bnx2_rv2p_proc2
+0001afb8 l     O .textdata	00005890 bnx2_RXP_b06FwText
+00020848 l     O .textdata	0000002c bnx2_RXP_b06FwRodata
+00020874 l     O .textdata	0000574c bnx2_TXP_b06FwText
+00025fc0 l     O .textdata	00001230 bnx2_TPAT_b06FwText
+000271f0 l     O .textdata	000057c0 bnx2_COM_b06FwText
+0002c9b0 l     O .textdata	0000005c bnx2_COM_b06FwRodata
+0002ca0c l     O .textdata	0000003c bnx2_nics
+0002ca48 l     O .textdata	00000014 legacy_operations
+0002ca5c l     O .textdata	00000004 ansi_input
+0002ca60 l     O .textdata	0000001c bios_ansiesc_ctx
+0002ca7c l     O .textdata	00000004 bios_attr
+0002ca80 l     O .textdata	00000020 bios_ansiesc_handlers
+0002caa0 l     O .textdata	0000000c pxe_dhcp_packet_creators
+0002caac l     O .textdata	0000002c pxe_tftp
+0002cad8 l     O .textdata	00000010 pxe_tftp_xfer_desc
+0002cae8 l     O .textdata	00000018 pxe_tftp_xfer_ops
+0002cb00 l     O .textdata	00000030 pxe_udp
+0002cb30 l     O .textdata	00000010 pxe_udp_xfer_desc
+0002cb40 l     O .textdata	00000008 pxe_udp_xfer_operations
+0002cb48 l     O .textdata	0000000c cpuid_cmd
+0002cb54 l     O .textdata	00000024 cpuid_opts
+0002cb78 l     O .textdata	00000008 devices
+0002cb80 l     O .textdata	0000000c echo_cmd
+0002cb8c l     O .textdata	0000000c exit_cmd
+0002cb98 l     O .textdata	0000000c isset_cmd
+0002cba4 l     O .textdata	0000000c iseq_cmd
+0002cbb0 l     O .textdata	0000000c sleep_cmd
+0002cbbc l     O .textdata	0000000c echo_opts
+0002cbc8 g     O .textdata	00000008 .hidden images
+0002cbd0 g     O .textdata	0000000c .hidden null_intf
+0002cbdc g     O .textdata	00000010 .hidden null_intf_desc
+0002cbec l     O .textdata	00000008 free_blocks
+0002cbf4 l     O .textdata	00000010 posix_file_xfer_desc
+0002cc04 l     O .textdata	00000008 posix_files
+0002cc0c l     O .textdata	00000010 posix_file_xfer_operations
+0002cc1c l     O .textdata	00000008 run_queue
+0002cc24 g     O .textdata	0000002c .hidden generic_settings_root
+0002cc50 g     O .textdata	00000010 .hidden generic_settings_operations
+0002cc60 l     O .textdata	00000024 builtin_settings
+0002cc84 l     O .textdata	00000018 builtin_setting_operations
+0002cc9c l     O .textdata	00000010 builtin_settings_operations
+0002ccac g     O .textdata	00000004 .hidden product_version
+0002ccb0 l     O .textdata	00000006 type_sizes
+0002ccb8 l     O .textdata	00000008 arp_entries
+0002ccc0 g     O .textdata	00000006 .hidden eth_broadcast
+0002ccc8 g     O .textdata	00000008 .hidden ipv4_miniroutes
+0002ccd0 l     O .textdata	00000008 ipv4_fragments
+0002ccd8 g     O .textdata	00000008 .hidden net_devices
+0002cce0 l     O .textdata	00000008 open_net_devices
+0002cce8 l     O .textdata	0000000c net_process_desc
+0002ccf4 g     O .textdata	00000010 .hidden netdev_settings_operations
+0002cd04 l     O .textdata	00000024 netdev_setting_operations
+0002cd28 g     O .textdata	00000014 .hidden null_netdev_operations
+0002cd3c l     O .textdata	00000008 timers
+0002cd44 l     O .textdata	0000000c retry_process_desc
+0002cd50 g     O .textdata	00000004 .hidden udp_sock_dgram
+0002cd54 l     O .textdata	00000010 udp_xfer_desc
+0002cd64 l     O .textdata	00000008 udp_conns
+0002cd6c l     O .textdata	00000002 try_port.2113
+0002cd70 l     O .textdata	00000018 udp_xfer_operations
+0002cd88 l     O .textdata	00000010 http_xfer_desc
+0002cd98 l     O .textdata	00000010 http_partial_desc
+0002cda8 l     O .textdata	00000010 http_socket_desc
+0002cdb8 l     O .textdata	0000000c http_process_desc
+0002cdc4 l     O .textdata	00000014 http_line_handlers
+0002cdd8 l     O .textdata	00000030 http_header_handlers
+0002ce08 l     O .textdata	00000018 http_auth_header_handlers
+0002ce20 l     O .textdata	00000028 http_xfer_operations
+0002ce48 l     O .textdata	00000008 http_partial_operations
+0002ce50 l     O .textdata	00000020 http_socket_operations
+0002ce70 l     O .textdata	00000010 iscsi_control_desc
+0002ce80 l     O .textdata	00000010 iscsi_data_desc
+0002ce90 l     O .textdata	00000010 iscsi_socket_desc
+0002cea0 l     O .textdata	0000000c iscsi_process_desc
+0002ceac l     O .textdata	00000040 iscsi_string_types
+0002ceec l     O .textdata	00000020 iscsi_control_op
+0002cf0c l     O .textdata	00000008 iscsi_data_op
+0002cf14 l     O .textdata	00000020 iscsi_socket_operations
+0002cf34 l     O .textdata	00000050 dhcp_request_options_data
+0002cf84 l     O .textdata	00000010 dhcp_job_desc
+0002cf94 l     O .textdata	00000010 dhcp_xfer_desc
+0002cfa4 l     O .textdata	00000020 dhcp_peer
+0002cfc4 l     O .textdata	00000014 dhcp_state_discover
+0002cfd8 l     O .textdata	00000014 dhcp_state_request
+0002cfec l     O .textdata	00000014 dhcp_state_proxy
+0002d000 l     O .textdata	00000020 peer.3040
+0002d020 l     O .textdata	00000014 dhcp_state_pxebs
+0002d034 l     O .textdata	00000008 dhcp_job_op
+0002d03c l     O .textdata	00000008 dhcp_xfer_operations
+0002d044 l     O .textdata	00000020 nameserver
+0002d064 l     O .textdata	00000010 dns_resolv_desc
+0002d074 l     O .textdata	00000010 dns_socket_desc
+0002d084 l     O .textdata	00000008 dns_resolv_op
+0002d08c l     O .textdata	00000010 dns_socket_operations
+0002d09c l     O .textdata	00000020 tftp_mtftp_socket
+0002d0bc l     O .textdata	00000010 tftp_xfer_desc
+0002d0cc l     O .textdata	00000010 tftp_socket_desc
+0002d0dc l     O .textdata	00000010 tftp_mc_socket_desc
+0002d0ec l     O .textdata	00000020 tftp_options
+0002d10c l     O .textdata	00000010 tftp_xfer_operations
+0002d11c l     O .textdata	00000008 tftp_socket_operations
+0002d124 l     O .textdata	00000008 tftp_mc_socket_operations
+0002d12c l     O .textdata	0000000c goto_cmd
+0002d138 l     O .textdata	0000000c prompt_cmd
+0002d144 l     O .textdata	00000018 prompt_opts
+0002d15c l     O .textdata	00000008 pci_root_driver
+0002d164 l     O .textdata	00000010 scsidev_block_desc
+0002d174 l     O .textdata	00000010 scsidev_scsi_desc
+0002d184 l     O .textdata	00000010 scsidev_ready_desc
+0002d194 l     O .textdata	0000000c scsidev_process_desc
+0002d1a0 l     O .textdata	00000010 scsicmd_read_capacity
+0002d1b0 l     O .textdata	00000010 scsicmd_block_desc
+0002d1c0 l     O .textdata	00000010 scsicmd_scsi_desc
+0002d1d0 l     O .textdata	00000010 scsicmd_write
+0002d1e0 l     O .textdata	00000010 scsicmd_read
+0002d1f0 l     O .textdata	00000010 scsicmd_test_unit_ready
+0002d200 l     O .textdata	00000028 scsidev_block_op
+0002d228 l     O .textdata	00000010 scsidev_scsi_op
+0002d238 l     O .textdata	00000008 scsidev_ready_op
+0002d240 l     O .textdata	00000008 scsicmd_block_op
+0002d248 l     O .textdata	00000010 scsicmd_scsi_op
+0002d258 l     O .textdata	00000024 smbios_settings
+0002d27c l     O .textdata	00000010 smbios_settings_operations
+0002d28c g     O .textdata	0000001c .hidden md5_algorithm
+0002d2a8 l     O .textdata	00000020 md5_steps
+0002d2c8 l     O .textdata	00000008 oid_md5
+0002d2d0 l     O .textdata	0000000c autoboot_cmd
+0002d2dc l     O .textdata	0000000c config_cmd
+0002d2e8 l     O .textdata	0000000c pxebs_cmd
+0002d2f4 l     O .textdata	0000000c dhcp_cmd
+0002d300 l     O .textdata	0000000c ifstat_cmd
+0002d30c l     O .textdata	0000000c ifclose_cmd
+0002d318 l     O .textdata	0000000c ifopen_cmd
+0002d324 g     O .textdata	00000014 .hidden imgargs_desc
+0002d338 g     O .textdata	00000014 .hidden imgexec_desc
+0002d34c g     O .textdata	00000014 .hidden imgselect_desc
+0002d360 g     O .textdata	00000014 .hidden imgfetch_desc
+0002d374 l     O .textdata	0000000c imgmulti_cmd
+0002d380 l     O .textdata	0000000c imgsingle_cmd
+0002d38c l     O .textdata	0000000c imgexec_cmd
+0002d398 l     O .textdata	0000000c imgfetch_cmd
+0002d3a4 l     O .textdata	00000024 imgsingle_opts
+0002d3c8 l     O .textdata	0000000c login_cmd
+0002d3d4 l     O .textdata	0000000c choose_cmd
+0002d3e0 l     O .textdata	0000000c item_cmd
+0002d3ec l     O .textdata	0000000c menu_cmd
+0002d3f8 l     O .textdata	00000030 choose_opts
+0002d428 l     O .textdata	00000030 item_opts
+0002d458 l     O .textdata	00000018 menu_opts
+0002d470 l     O .textdata	0000000c clear_read_cmd
+0002d47c l     O .textdata	0000000c set_cmd
+0002d488 l     O .textdata	0000000c show_cmd
+0002d494 l     O .textdata	0000000c reboot_cmd
+0002d4a0 l     O .textdata	0000000c reboot_opts
+0002d4ac l     O .textdata	0000000c route_cmd
+0002d4b8 l     O .textdata	0000000c sanunhook_cmd
+0002d4c4 l     O .textdata	0000000c sanboot_cmd
+0002d4d0 l     O .textdata	0000000c sanhook_cmd
+0002d4dc l     O .textdata	00000024 sanboot_opts
+0002d500 l     O .textdata	0000000c sync_cmd
+0002d50c l     O .textdata	0000000c sync_opts
+0002d518 g     O .textdata	00000024 .hidden _ansi_screen
+0002d53c g     O .textdata	00000002 .hidden _LINES
+0002d53e g     O .textdata	00000002 .hidden _COLS
+0002d540 l     O .textdata	00000020 cpairs
+0002d560 g     O .textdata	00000024 .hidden _stdscr
+0002d584 l     O .textdata	00000008 int13s
+0002d58c l     O .textdata	00000010 int13_block_desc
+0002d59c l     O .textdata	0000003c int13_command
+0002d5d8 l     O .textdata	00000010 int13_block_op
+0002d5e8 l     O .textdata	00000010 int13_command_desc
+0002d5f8 l     O .textdata	00000010 int13_command_op
+0002d608 g     O .textdata	00000004 .hidden console_usage
+0002d60c l     O .textdata	00000010 downloader_job_desc
+0002d61c l     O .textdata	00000010 downloader_xfer_desc
+0002d62c l     O .textdata	00000010 downloader_job_op
+0002d63c l     O .textdata	00000010 downloader_xfer_operations
+0002d64c l     O .textdata	00000008 menus
+0002d654 g     O .textdata	0000000c .hidden monojob
+0002d660 l     O .textdata	00000010 monojob_intf_desc
+0002d670 l     O .textdata	00000008 monojob_intf_op
+0002d678 l     O .textdata	0000000c numeric_process_desc
+0002d684 l     O .textdata	00000010 resmux_child_desc
+0002d694 l     O .textdata	00000010 named_xfer_desc
+0002d6a4 l     O .textdata	00000010 named_resolv_desc
+0002d6b4 l     O .textdata	00000010 resmux_child_op
+0002d6c4 l     O .textdata	00000010 named_xfer_ops
+0002d6d4 l     O .textdata	00000010 named_resolv_op
+0002d6e4 l     O .textdata	00000010 aoedev_ata_desc
+0002d6f4 l     O .textdata	00000010 aoedev_config_desc
+0002d704 l     O .textdata	0000000c aoecmd_cfg
+0002d710 l     O .textdata	0000000c aoecmd_ata
+0002d71c l     O .textdata	00000008 aoe_commands
+0002d724 l     O .textdata	00000010 aoecmd_ata_desc
+0002d734 l     O .textdata	00000028 aoedev_ata_op
+0002d75c l     O .textdata	00000008 aoedev_config_op
+0002d764 l     O .textdata	00000008 aoecmd_ata_op
+0002d76c l     O .textdata	00000030 dhcp_packet_fields
+0002d79c l     O .textdata	00000010 dhcppkt_settings_operations
+0002d7ac g     O .textdata	00000004 .hidden tcp_sock_stream
+0002d7b0 l     O .textdata	00000008 tcp_conns
+0002d7b8 l     O .textdata	00000010 tcp_xfer_desc
+0002d7c8 l     O .textdata	00000018 tcp_xfer_operations
+0002d7e0 l     O .textdata	00000010 atadev_block_desc
+0002d7f0 l     O .textdata	00000010 atadev_ata_desc
+0002d800 l     O .textdata	00000008 ata_commands
+0002d808 l     O .textdata	00000018 atacmd_identify
+0002d820 l     O .textdata	00000010 atacmd_block_desc
+0002d830 l     O .textdata	00000010 atacmd_ata_desc
+0002d840 l     O .textdata	00000018 atacmd_write
+0002d858 l     O .textdata	00000018 atacmd_read
+0002d870 l     O .textdata	00000028 atadev_block_op
+0002d898 l     O .textdata	00000008 atadev_ata_op
+0002d8a0 l     O .textdata	00000008 atacmd_block_op
+0002d8a8 l     O .textdata	00000008 atacmd_ata_op
+0002d8b0 l     O .textdata	0000000c shell_cmd
+0002d8bc l     O .textdata	00000000 __table_entries.2101
+0002d8bc g     O .textdata	00000008 .hidden ipv4_arp_protocol
+0002d8c4 l     O .textdata	00000000 __table_entries.2103
+0002d8c4 g     O .textdata	00000014 .hidden oid_md5_algorithm
+0002d8d8 l     O .textdata	00000000 __table_entries.1944
+0002d8d8 g     O .textdata	00000004 .hidden net_discarder
+0002d8dc g     O .textdata	00000004 .hidden tcp_discarder
+0002d8e0 g     O .textdata	00000004 .hidden arp_discarder
+0002d8e4 l     O .textdata	00000000 __table_entries.1710
+0002d8e4 l     O .textdata	00000000 __table_entries.1946
+0002d8e4 l     O .textdata	00000000 __table_entries.1221
+0002d8e4 g     O .textdata	00000008 .hidden cpuid_command
+0002d8ec g     O .textdata	00000008 .hidden sleep_command
+0002d8f4 g     O .textdata	00000008 .hidden iseq_command
+0002d8fc g     O .textdata	00000008 .hidden isset_command
+0002d904 g     O .textdata	00000008 .hidden exit_command
+0002d90c g     O .textdata	00000008 .hidden echo_command
+0002d914 g     O .textdata	00000008 .hidden prompt_command
+0002d91c g     O .textdata	00000008 .hidden goto_command
+0002d924 g     O .textdata	00000008 .hidden autoboot_commands
+0002d92c g     O .textdata	00000008 .hidden config_command
+0002d934 g     O .textdata	00000010 .hidden dhcp_commands
+0002d944 g     O .textdata	00000018 .hidden ifmgmt_commands
+0002d95c g     O .textdata	00000060 .hidden image_commands
+0002d9bc g     O .textdata	00000008 .hidden login_command
+0002d9c4 g     O .textdata	00000018 .hidden menu_commands
+0002d9dc g     O .textdata	00000020 .hidden nvo_commands
+0002d9fc g     O .textdata	00000008 .hidden reboot_command
+0002da04 g     O .textdata	00000008 .hidden route_commands
+0002da0c g     O .textdata	00000018 .hidden sanboot_commands
+0002da24 g     O .textdata	00000008 .hidden sync_command
+0002da2c g     O .textdata	00000008 .hidden shell_command
+0002da34 g     O .textdata	00000008 .hidden help_command
+0002da3c l     O .textdata	00000000 __table_entries.1712
+0002da3c l     O .textdata	00000000 __table_entries.1101
+0002da3c l     O .textdata	00000000 __table_entries.1090
+0002da3c l     O .textdata	00000000 __table_entries.1223
+0002da3c g     O .textdata	00000014 .hidden bios_console
+0002da50 l     O .textdata	00000000 __table_entries.3034
+0002da50 l     O .textdata	00000000 __table_entries.3030
+0002da50 l     O .textdata	00000000 __table_entries.1103
+0002da50 l     O .textdata	00000000 __table_entries.1092
+0002da50 g     O .textdata	00000003 .hidden __dhcp_feature_bzimage
+0002da53 g     O .textdata	00000003 .hidden __dhcp_feature_elfboot
+0002da56 g     O .textdata	00000003 .hidden __dhcp_feature_multiboot
+0002da59 g     O .textdata	00000003 .hidden __dhcp_feature_pxe_image
+0002da5c g     O .textdata	00000003 .hidden __dhcp_feature_pxe_file
+0002da5f g     O .textdata	00000005 .hidden __dhcp_feature_version
+0002da64 g     O .textdata	00000003 .hidden __dhcp_feature_http
+0002da67 g     O .textdata	00000003 .hidden __dhcp_feature_iscsi
+0002da6a g     O .textdata	00000003 .hidden __dhcp_feature_dns
+0002da6d g     O .textdata	00000003 .hidden __dhcp_feature_tftp
+0002da70 g     O .textdata	00000003 .hidden __dhcp_feature_menu_cmd
+0002da73 g     O .textdata	00000003 .hidden __dhcp_feature_aoe
+0002da76 l     O .textdata	00000000 __table_entries.3032
+0002da78 l     O .textdata	00000000 __table_entries.1072
+0002da78 g     O .textdata	00000010 .hidden netdev_errors
+0002da88 g     O .textdata	00000008 .hidden segment_errors
+0002da90 g     O .textdata	00000088 .hidden common_errors
+0002db18 l     O .textdata	00000000 __table_entries.1074
+0002db18 l     O .textdata	00000000 __table_entries.2653
+0002db18 g     O .textdata	00000004 .hidden __feature_http
+0002db1c g     O .textdata	00000004 .hidden __feature_iscsi
+0002db20 g     O .textdata	00000004 .hidden __feature_dns
+0002db24 g     O .textdata	00000004 .hidden __feature_tftp
+0002db28 g     O .textdata	00000004 .hidden __feature_aoe
+0002db2c g     O .textdata	00000004 .hidden __feature_bzimage
+0002db30 g     O .textdata	00000004 .hidden __feature_elfboot
+0002db34 g     O .textdata	00000004 .hidden __feature_multiboot
+0002db38 g     O .textdata	00000004 .hidden __feature_pxe_image
+0002db3c g     O .textdata	00000004 .hidden __feature_pxe_file
+0002db40 g     O .textdata	00000004 .hidden __feature_menu_cmd
+0002db44 l     O .textdata	00000000 __table_entries.1838
+0002db44 l     O .textdata	00000000 __table_entries.2655
+0002db44 g     O .textdata	0000000c .hidden multiboot_image_type
+0002db50 g     O .textdata	0000000c .hidden bzimage_image_type
+0002db5c g     O .textdata	0000000c .hidden elfboot_image_type
+0002db68 g     O .textdata	0000000c .hidden script_image_type
+0002db74 g     O .textdata	0000000c .hidden pxe_image_type
+0002db80 l     O .textdata	00000000 __table_entries.1840
+0002db80 l     O .textdata	00000000 __table_entries.1017
+0002db80 g     O .textdata	00000004 .hidden heap_init_fn
+0002db84 g     O .textdata	00000004 .hidden pxe_init_fn
+0002db88 g     O .textdata	00000004 .hidden process_init_fn
+0002db8c g     O .textdata	00000004 .hidden builtin_init_fn
+0002db90 g     O .textdata	00000004 .hidden smbios_init_fn
+0002db94 g     O .textdata	00000004 .hidden embedded_init_fn
+0002db98 l     O .textdata	00000000 __table_entries.1563
+0002db98 l     O .textdata	00000000 __table_entries.1565
+0002db98 l     O .textdata	00000000 __table_entries.1019
+0002db98 g     O .textdata	00000000 .hidden us_mapping
+0002db98 g     O .textdata	00000028 .hidden ethernet_protocol
+0002dbc0 l     O .textdata	00000000 __table_entries.2003
+0002dbc0 l     O .textdata	00000000 __table_entries.2163
+0002dbc0 l     O .textdata	00000000 __table_entries.2175
+0002dbc0 l     O .textdata	00000000 __table_entries.2201
+0002dbc0 g     O .textdata	00000010 .hidden arp_net_driver
+0002dbd0 l     O .textdata	00000000 __table_entries.2005
+0002dbd0 l     O .textdata	00000000 __table_entries.2165
+0002dbd0 l     O .textdata	00000000 __table_entries.2199
+0002dbd0 l     O .textdata	00000000 __table_entries.2267
+0002dbd0 g     O .textdata	00000010 .hidden arp_protocol
+0002dbe0 g     O .textdata	00000010 .hidden eth_slow_protocol
+0002dbf0 g     O .textdata	00000010 .hidden ipv4_protocol
+0002dc00 g     O .textdata	00000010 .hidden rarp_protocol
+0002dc10 g     O .textdata	00000010 .hidden aoe_protocol
+0002dc20 l     O .textdata	00000000 __table_entries.2269
+0002dc20 l     O .textdata	00000000 __table_entries.2119
+0002dc20 g     O .textdata	00000010 .hidden bnx2_driver
+0002dc30 l     O .textdata	00000000 __table_entries.1077
+0002dc30 l     O .textdata	00000000 __table_entries.2121
+0002dc30 g     O .textdata	00000010 .hidden net_process
+0002dc40 g     O .textdata	00000010 .hidden retry_process
+0002dc50 l     O .textdata	00000000 __table_entries.2152
+0002dc50 l     O .textdata	00000000 __table_entries.2899
+0002dc50 l     O .textdata	00000000 __table_entries.1079
+0002dc50 g     O .textdata	00000008 .hidden pxenv_unknown_api
+0002dc58 g     O .textdata	00000040 .hidden pxe_file_api
+0002dc98 g     O .textdata	00000038 .hidden pxe_preboot_api
+0002dcd0 g     O .textdata	00000028 .hidden pxe_tftp_api
+0002dcf8 g     O .textdata	00000020 .hidden pxe_udp_api
+0002dd18 g     O .textdata	000000a0 .hidden pxe_undi_api
+0002ddb8 l     O .textdata	00000000 __table_entries.2154
+0002ddb8 l     O .textdata	00000000 __table_entries.2901
+0002ddb8 l     O .textdata	00000000 __table_entries.1545
+0002ddb8 g     O .textdata	00000008 .hidden numeric_resolver
+0002ddc0 g     O .textdata	00000008 .hidden dns_resolver
+0002ddc8 l     O .textdata	00000000 __table_entries.1259
+0002ddc8 l     O .textdata	00000000 __table_entries.1524
+0002ddc8 g     O .textdata	00000048 .hidden pci_root_device
+0002de10 l     O .textdata	00000000 __table_entries.1261
+0002de10 l     O .textdata	00000000 __table_entries.2736
+0002de10 g     O .textdata	0000000c .hidden setting_type_uuid
+0002de1c g     O .textdata	0000000c .hidden setting_type_hexhyp
+0002de28 g     O .textdata	0000000c .hidden setting_type_hex
+0002de34 g     O .textdata	0000000c .hidden setting_type_uint32
+0002de40 g     O .textdata	0000000c .hidden setting_type_uint16
+0002de4c g     O .textdata	0000000c .hidden setting_type_uint8
+0002de58 g     O .textdata	0000000c .hidden setting_type_int32
+0002de64 g     O .textdata	0000000c .hidden setting_type_int16
+0002de70 g     O .textdata	0000000c .hidden setting_type_int8
+0002de7c g     O .textdata	0000000c .hidden setting_type_ipv4
+0002de88 g     O .textdata	0000000c .hidden setting_type_uristring
+0002de94 g     O .textdata	0000000c .hidden setting_type_string
+0002dea0 l     O .textdata	00000000 __table_entries.2758
+0002dea0 l     O .textdata	00000000 __table_entries.2738
+0002dea0 l     O .textdata	00000000 __table_entries.2719
+0002dea0 l     O .textdata	00000000 __table_entries.2244
+0002dea0 g     O .textdata	00000014 .hidden chip_setting
+0002deb4 g     O .textdata	00000014 .hidden busid_setting
+0002dec8 g     O .textdata	00000014 .hidden mac_setting
+0002dedc g     O .textdata	00000014 .hidden gateway_setting
+0002def0 g     O .textdata	00000014 .hidden netmask_setting
+0002df04 g     O .textdata	00000014 .hidden ip_setting
+0002df18 g     O .textdata	00000014 .hidden domain_setting
+0002df2c g     O .textdata	00000014 .hidden dns_setting
+0002df40 g     O .textdata	00000014 .hidden filename_setting
+0002df54 g     O .textdata	00000014 .hidden next_server_setting
+0002df68 g     O .textdata	00000014 .hidden root_path_setting
+0002df7c g     O .textdata	00000014 .hidden initiator_iqn_setting
+0002df90 g     O .textdata	00000014 .hidden skip_san_boot_setting
+0002dfa4 g     O .textdata	00000014 .hidden keep_san_setting
+0002dfb8 g     O .textdata	00000014 .hidden hostname_setting
+0002dfcc g     O .textdata	00000014 .hidden uuid_setting
+0002dfe0 g     O .textdata	00000014 .hidden user_class_setting
+0002dff4 g     O .textdata	00000050 .hidden smbios_named_settings
+0002e044 g     O .textdata	00000014 .hidden password_setting
+0002e058 g     O .textdata	00000014 .hidden username_setting
+0002e06c g     O .textdata	00000014 .hidden reverse_password_setting
+0002e080 g     O .textdata	00000014 .hidden reverse_username_setting
+0002e094 g     O .textdata	00000014 .hidden platform_setting
+0002e0a8 g     O .textdata	00000014 .hidden buildarch_setting
+0002e0bc g     O .textdata	00000014 .hidden errno_setting
+0002e0d0 g     O .textdata	00000014 .hidden priority_setting
+0002e0e4 g     O .textdata	00000014 .hidden use_cached_setting
+0002e0f8 g     O .textdata	00000014 .hidden dhcp_server_setting
+0002e10c g     O .textdata	00000014 .hidden scriptlet_setting
+0002e120 l     O .textdata	00000000 __table_entries.2499
+0002e120 l     O .textdata	00000000 __table_entries.2760
+0002e120 l     O .textdata	00000000 __table_entries.2721
+0002e120 l     O .textdata	00000000 __table_entries.2246
+0002e120 g     O .textdata	00000004 .hidden ipv4_settings_applicator
+0002e124 g     O .textdata	00000004 .hidden dns_applicator
+0002e128 g     O .textdata	00000004 .hidden tftp_settings_applicator
+0002e12c l     O .textdata	00000000 __table_entries.1406
+0002e12c l     O .textdata	00000000 __table_entries.2501
+0002e12c g     O .textdata	0000000c .hidden udp_socket_opener
+0002e138 g     O .textdata	0000000c .hidden tcp_socket_opener
+0002e144 l     O .textdata	00000000 __table_entries.1028
+0002e144 l     O .textdata	00000000 __table_entries.1041
+0002e144 l     O .textdata	00000000 __table_entries.1408
+0002e144 g     O .textdata	00000008 .hidden heap_startup_fn
+0002e14c g     O .textdata	00000008 .hidden tcp_startup_fn
+0002e154 g     O .textdata	00000008 .hidden hide_etherboot_startup_fn
+0002e15c g     O .textdata	00000008 .hidden startup_devices
+0002e164 g     O .textdata	00000008 .hidden startup_initrd
+0002e16c l     O .textdata	00000000 __table_entries.1030
+0002e16c l     O .textdata	00000000 __table_entries.1039
+0002e16c l     O .textdata	00000000 __table_entries.1355
+0002e16c g     O .textdata	0000000c .hidden ipv4_tcpip_protocol
+0002e178 l     O .textdata	00000000 __table_entries.1338
+0002e178 l     O .textdata	00000000 __table_entries.1357
+0002e178 g     O .textdata	0000000c .hidden udp_protocol
+0002e184 g     O .textdata	0000000c .hidden icmp_protocol
+0002e190 g     O .textdata	0000000c .hidden tcp_protocol
+0002e19c l     O .textdata	00000000 __table_entries.1353
+0002e19c l     O .textdata	00000000 __table_entries.1340
+0002e19c g     O .textdata	00000008 .hidden udp_uri_opener
+0002e1a4 g     O .textdata	00000008 .hidden http_uri_opener
+0002e1ac g     O .textdata	00000008 .hidden iscsi_uri_opener
+0002e1b4 g     O .textdata	00000008 .hidden mtftp_uri_opener
+0002e1bc g     O .textdata	00000008 .hidden tftm_uri_opener
+0002e1c4 g     O .textdata	00000008 .hidden tftpsize_uri_opener
+0002e1cc g     O .textdata	00000008 .hidden tftp_uri_opener
+0002e1d4 g     O .textdata	00000008 .hidden aoe_uri_opener
+0002e1dc g     O .textdata	00000008 .hidden tcp_uri_opener
+0002e1e4 l     O .textdata	00000000 __table_entries.1355
+0002e1e4 g       .textdata	00000000 _mtextdata
 00000000 g       .bss.textdata	00000000 _pprefix
 00000000 g       .bss.textdata	00000000 _mpprefix
 0002e200 l    d  .bss.textdata	00000000 .bss.textdata
