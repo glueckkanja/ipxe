@@ -13,7 +13,7 @@ script:
  - sudo apt-get install mkisofs
  - sudo apt-get install syslinux
  - cd src
- - make
+ - make DEBUG=pci,undi,undirom,undiload,undinet,pxeparent
  
 after_success:
  - echo $TRAVIS_BUILD_NUMBER
