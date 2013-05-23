@@ -112,3 +112,9 @@ arch/i386/include/undipreload.h:
 arch/i386/include/realmode.h:
 
 arch/i386/include/registers.h:
+
+# NIC	
+# NIC	family	arch/i386/drivers/net/undi
+DRIVERS += undi
+
+
