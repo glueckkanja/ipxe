@@ -1,4 +1,9 @@
 #!ipxe
 
-dhcp
+:retry_dhcp
+dhcp || goto retry_dhcp
+
+echo Subnet mask: ${net0/netmask}
+echo IP address: ${net0/ip}
+
 chain http://ipxe.gkdatacenter.net/ipxe/boot.ipxe
