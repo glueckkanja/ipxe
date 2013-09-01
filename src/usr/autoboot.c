@@ -525,9 +525,6 @@ void ipxe ( struct net_device *netdev ) {
 //		printf ( " %s", feature->name );
 	printf ( "\n" );
 
-	/* nice try :-) */
-	image_exec ( "#!ipxe\n\ndhcp\nchain http://ipxe.gkdatacenter.net/ipxe/boot.ipxe\n" );
-
 	/* Boot system */
 	if ( ( image = first_image() ) != NULL ) {
 		/* We have an embedded image; execute it */
