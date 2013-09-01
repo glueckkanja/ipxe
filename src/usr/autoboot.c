@@ -57,6 +57,7 @@ FILE_LICENCE ( GPL2_OR_LATER );
 #define NORMAL	"\033[0m"
 #define BOLD	"\033[1m"
 #define CYAN	"\033[36m"
+#define GREEN	"\033[32m"
 
 /** The "scriptlet" setting */
 struct setting scriptlet_setting __setting ( SETTING_MISC ) = {
@@ -493,8 +494,31 @@ void ipxe ( struct net_device *netdev ) {
 	 * do so.
 	 *
 	 */
-	printf ( NORMAL "\n\n" PRODUCT_NAME "\n" BOLD "iPXE %s"
-		 NORMAL " -- xOpen Source Network Boot Firmware -- "
+	printf ( GREEN "\n" 
+		"\n" 
+		"\n" 
+		"\n" 
+		"\n" 
+		"\n" 
+		"\n" 
+		"\n" 
+		"\n" 
+		"\n" 
+		"\n" 
+		GREEN
+		".....0000...00......0000...00..00..00000...00000....0000....0000..000000...\n"
+		"....00..00..00.....00..00..00..00..00..00..00..00..00..00..00..00...00.....\n"
+		"....00......00.....00..00..00..00..00..00..00000...00..00..00..00...00.....\n"
+		"....00..00..00.....00..00..00..00..00..00..00..00..00..00..00..00...00.....\n"
+		".....0000...000000..0000....0000...00000...00000....0000....0000....00.....\n"
+		"\n" NORMAL BOLD
+		"... Cloudboot Internet Boot System / Setup Anywhere - www.cloudboot.de ...\n"
+		NORMAL
+		"\n" 
+		);
+
+	printf ( BOLD "\n\n" PRODUCT_NAME "\n" NORMAL BOLD "iPXE %s"
+		 NORMAL " -- Open Source Network Boot Firmware -- "
 		 CYAN "http://ipxe.org" NORMAL "\n"
 		 "Featureset:", product_version );
 	for_each_table_entry ( feature, FEATURES )
