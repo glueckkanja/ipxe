@@ -1,9 +1,10 @@
 #!ipxe
 
+prompt --key 0x02 --timeout 2000 Press Ctrl-B for the iPXE command line... && shell ||
+
+echo Requesting DHCP
+
 :retry_dhcp
 dhcp || goto retry_dhcp
-
-echo IP address: ${net0/ip}
-echo Subnet mask: ${net0/netmask}
 
 chain http://ipxe.gkdatacenter.net/ipxe/boot.ipxe
