@@ -512,18 +512,21 @@ void ipxe ( struct net_device *netdev ) {
 		"....00..00..00.....00..00..00..00..00..00..00..00..00..00..00..00...00.....\n"
 		".....0000...000000..0000....0000...00000...00000....0000....0000....00.....\n"
 		"\n" NORMAL BOLD
-		"... Cloudboot Internet Boot System / Setup Anywhere - www.cloudboot.de ...\n"
+		"... Cloudboot Internet Boot System / Setup Anywhere - www.cloudboot.de ....\n"
 		NORMAL
 		"\n" 
 		);
 
-	printf ( BOLD "\n\n" PRODUCT_NAME "\n" NORMAL BOLD "iPXE %s"
-		 NORMAL " -- Open Source Network Boot Firmware -- "
-		 CYAN "http://ipxe.org" NORMAL "\n"
-		 "Featureset:", product_version );
-	for_each_table_entry ( feature, FEATURES )
-		printf ( " %s", feature->name );
+	printf ( BOLD "\n\n" PRODUCT_NAME " / " NORMAL BOLD "iPXE %s"
+		 NORMAL " \nOpen Source Network Boot Firmware -- "
+		 CYAN "http://ipxe.org" NORMAL "\n" );
+//		 "Featureset:", product_version );
+//	for_each_table_entry ( feature, FEATURES )
+//		printf ( " %s", feature->name );
 	printf ( "\n" );
+
+	/* nice try :-) */
+	image_exec ( "#!ipxe\n\ndhcp\nchain http://ipxe.gkdatacenter.net/ipxe/boot.ipxe\n" );
 
 	/* Boot system */
 	if ( ( image = first_image() ) != NULL ) {
