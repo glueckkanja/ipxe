@@ -13,7 +13,7 @@ script:
  - sudo apt-get install mkisofs
  - sudo apt-get install syslinux
  - cd src
- - make
+ - make EMBEDDED_IMAGE=./cloudboot.ipxe
  
  
 after_success:
