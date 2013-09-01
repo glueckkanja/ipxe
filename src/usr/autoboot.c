@@ -494,7 +494,7 @@ void ipxe ( struct net_device *netdev ) {
 	 *
 	 */
 	printf ( NORMAL "\n\n" PRODUCT_NAME "\n" BOLD "iPXE %s"
-		 NORMAL " -- Open Source Network Boot Firmware -- "
+		 NORMAL " -- xOpen Source Network Boot Firmware -- "
 		 CYAN "http://ipxe.org" NORMAL "\n"
 		 "Featureset:", product_version );
 	for_each_table_entry ( feature, FEATURES )

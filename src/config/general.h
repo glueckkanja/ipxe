@@ -24,7 +24,7 @@ FILE_LICENCE ( GPL2_OR_LATER );
  * "iPXE".
  *
  */
-#define PRODUCT_NAME ""
+#define PRODUCT_NAME "CloudBoot iPXE Image"
 #define PRODUCT_SHORT_NAME "iPXE"
 
 /*
