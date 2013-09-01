@@ -25,9 +25,9 @@ int13_DEPS += arch/i386/interface/pcbios/int13.c include/compiler.h \
  include/ipxe/null_sanboot.h arch/i386/include/bits/sanboot.h \
  arch/i386/include/ipxe/bios_sanboot.h include/ipxe/device.h \
  include/ipxe/pci.h include/ipxe/pci_io.h include/ipxe/efi/efi_pci_api.h \
- arch/x86/include/bits/pci_io.h arch/x86/include/ipxe/pcibios.h \
- arch/x86/include/ipxe/pcidirect.h include/ipxe/pci_ids.h \
- include/ipxe/iso9660.h include/ipxe/eltorito.h \
+ include/ipxe/linux/linux_pci.h arch/x86/include/bits/pci_io.h \
+ arch/x86/include/ipxe/pcibios.h arch/x86/include/ipxe/pcidirect.h \
+ include/ipxe/pci_ids.h include/ipxe/iso9660.h include/ipxe/eltorito.h \
  arch/i386/include/realmode.h arch/i386/include/registers.h \
  arch/i386/include/bios.h arch/i386/include/biosint.h \
  arch/i386/include/bootsector.h arch/i386/include/int13.h \
@@ -162,6 +162,8 @@ include/ipxe/pci.h:
 include/ipxe/pci_io.h:
 
 include/ipxe/efi/efi_pci_api.h:
+
+include/ipxe/linux/linux_pci.h:
 
 arch/x86/include/bits/pci_io.h:
 

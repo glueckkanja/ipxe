@@ -5,6 +5,8 @@ nvo_cmd_DEPS += hci/commands/nvo_cmd.c include/compiler.h \
  arch/x86/include/bits/string.h include/errno.h \
  arch/i386/include/ipxe/errno/pcbios.h arch/i386/include/pxe_error.h \
  include/ipxe/errfile.h arch/x86/include/bits/errfile.h include/getopt.h \
+ include/byteswap.h include/endian.h arch/i386/include/bits/endian.h \
+ arch/i386/include/bits/byteswap.h include/little_bswap.h \
  include/ipxe/settings.h include/ipxe/tables.h include/ipxe/list.h \
  include/ipxe/refcnt.h include/ipxe/command.h include/ipxe/parseopt.h \
  include/readline/readline.h
@@ -42,6 +44,16 @@ include/ipxe/errfile.h:
 arch/x86/include/bits/errfile.h:
 
 include/getopt.h:
+
+include/byteswap.h:
+
+include/endian.h:
+
+arch/i386/include/bits/endian.h:
+
+arch/i386/include/bits/byteswap.h:
+
+include/little_bswap.h:
 
 include/ipxe/settings.h:
 

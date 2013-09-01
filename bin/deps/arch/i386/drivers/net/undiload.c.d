@@ -14,12 +14,13 @@ undiload_DEPS += arch/i386/drivers/net/undiload.c include/compiler.h \
  arch/i386/include/bits/uaccess.h arch/i386/include/librm.h \
  arch/i386/include/bios.h arch/i386/include/pnpbios.h \
  arch/i386/include/basemem.h include/ipxe/pci.h include/ipxe/pci_io.h \
- include/ipxe/efi/efi_pci_api.h arch/x86/include/bits/pci_io.h \
- arch/x86/include/ipxe/pcibios.h arch/x86/include/ipxe/pcidirect.h \
- include/ipxe/io.h arch/x86/include/bits/io.h \
- arch/x86/include/ipxe/x86_io.h include/ipxe/pci_ids.h \
- arch/i386/include/undi.h arch/i386/include/pxe_types.h \
- arch/i386/include/undirom.h arch/i386/include/undiload.h
+ include/ipxe/efi/efi_pci_api.h include/ipxe/linux/linux_pci.h \
+ arch/x86/include/bits/pci_io.h arch/x86/include/ipxe/pcibios.h \
+ arch/x86/include/ipxe/pcidirect.h include/ipxe/io.h \
+ arch/x86/include/bits/io.h arch/x86/include/ipxe/x86_io.h \
+ include/ipxe/pci_ids.h arch/i386/include/undi.h \
+ arch/i386/include/pxe_types.h arch/i386/include/undirom.h \
+ arch/i386/include/undiload.h
 
 include/compiler.h:
 
@@ -98,6 +99,8 @@ include/ipxe/pci.h:
 include/ipxe/pci_io.h:
 
 include/ipxe/efi/efi_pci_api.h:
+
+include/ipxe/linux/linux_pci.h:
 
 arch/x86/include/bits/pci_io.h:
 

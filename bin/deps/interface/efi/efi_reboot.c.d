@@ -1,9 +1,11 @@
 efi_reboot_DEPS += interface/efi/efi_reboot.c include/compiler.h \
- arch/i386/include/bits/compiler.h include/ipxe/efi/efi.h \
- include/ipxe/efi/Uefi.h include/ipxe/efi/Uefi/UefiBaseType.h \
- include/ipxe/efi/Base.h include/ipxe/efi/ProcessorBind.h \
- include/ipxe/efi/Ia32/ProcessorBind.h include/ipxe/efi/Uefi/UefiSpec.h \
- include/ipxe/efi/Uefi/UefiMultiPhase.h \
+ arch/i386/include/bits/compiler.h include/errno.h \
+ arch/i386/include/ipxe/errno/pcbios.h arch/i386/include/pxe_error.h \
+ include/ipxe/errfile.h arch/x86/include/bits/errfile.h \
+ include/ipxe/efi/efi.h include/ipxe/efi/Uefi.h \
+ include/ipxe/efi/Uefi/UefiBaseType.h include/ipxe/efi/Base.h \
+ include/ipxe/efi/ProcessorBind.h include/ipxe/efi/Ia32/ProcessorBind.h \
+ include/ipxe/efi/Uefi/UefiSpec.h include/ipxe/efi/Uefi/UefiMultiPhase.h \
  include/ipxe/efi/Guid/WinCertificate.h \
  include/ipxe/efi/Protocol/DevicePath.h include/ipxe/efi/Guid/PcAnsi.h \
  include/ipxe/efi/Protocol/SimpleTextIn.h \
@@ -32,6 +34,16 @@ efi_reboot_DEPS += interface/efi/efi_reboot.c include/compiler.h \
 include/compiler.h:
 
 arch/i386/include/bits/compiler.h:
+
+include/errno.h:
+
+arch/i386/include/ipxe/errno/pcbios.h:
+
+arch/i386/include/pxe_error.h:
+
+include/ipxe/errfile.h:
+
+arch/x86/include/bits/errfile.h:
 
 include/ipxe/efi/efi.h:
 

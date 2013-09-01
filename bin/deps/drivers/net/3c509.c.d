@@ -20,9 +20,10 @@
  arch/i386/include/bits/endian.h arch/i386/include/bits/byteswap.h \
  include/little_bswap.h drivers/net/3c509.h include/nic.h include/stdio.h \
  include/ipxe/pci.h include/ipxe/pci_io.h include/ipxe/efi/efi_pci_api.h \
- arch/x86/include/bits/pci_io.h arch/x86/include/ipxe/pcibios.h \
- arch/x86/include/ipxe/pcidirect.h include/ipxe/pci_ids.h \
- include/ipxe/isapnp.h include/ipxe/eisa.h include/ipxe/mca.h
+ include/ipxe/linux/linux_pci.h arch/x86/include/bits/pci_io.h \
+ arch/x86/include/ipxe/pcibios.h arch/x86/include/ipxe/pcidirect.h \
+ include/ipxe/pci_ids.h include/ipxe/isapnp.h include/ipxe/eisa.h \
+ include/ipxe/mca.h
 
 include/compiler.h:
 
@@ -131,6 +132,8 @@ include/ipxe/pci.h:
 include/ipxe/pci_io.h:
 
 include/ipxe/efi/efi_pci_api.h:
+
+include/ipxe/linux/linux_pci.h:
 
 arch/x86/include/bits/pci_io.h:
 

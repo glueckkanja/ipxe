@@ -7,7 +7,7 @@ parseopt_DEPS += core/parseopt.c include/compiler.h \
  include/ipxe/errfile.h arch/x86/include/bits/errfile.h include/getopt.h \
  include/ipxe/netdevice.h include/ipxe/list.h include/ipxe/tables.h \
  include/ipxe/refcnt.h include/ipxe/settings.h include/ipxe/menu.h \
- include/ipxe/parseopt.h
+ include/ipxe/params.h include/ipxe/parseopt.h
 
 include/compiler.h:
 
@@ -54,5 +54,7 @@ include/ipxe/refcnt.h:
 include/ipxe/settings.h:
 
 include/ipxe/menu.h:
+
+include/ipxe/params.h:
 
 include/ipxe/parseopt.h:

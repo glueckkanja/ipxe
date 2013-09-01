@@ -16,12 +16,12 @@ linda_DEPS += drivers/infiniband/linda.c include/compiler.h \
  arch/x86/include/bits/io.h arch/x86/include/ipxe/x86_io.h \
  include/ipxe/pci.h include/ipxe/device.h include/ipxe/list.h \
  include/ipxe/tables.h include/ipxe/pci_io.h \
- include/ipxe/efi/efi_pci_api.h arch/x86/include/bits/pci_io.h \
- arch/x86/include/ipxe/pcibios.h arch/x86/include/ipxe/pcidirect.h \
- include/ipxe/pci_ids.h include/ipxe/infiniband.h include/ipxe/refcnt.h \
- include/ipxe/ib_packet.h include/ipxe/ib_mad.h include/ipxe/i2c.h \
- include/ipxe/bitbash.h include/ipxe/malloc.h \
- arch/x86/include/valgrind/memcheck.h \
+ include/ipxe/efi/efi_pci_api.h include/ipxe/linux/linux_pci.h \
+ arch/x86/include/bits/pci_io.h arch/x86/include/ipxe/pcibios.h \
+ arch/x86/include/ipxe/pcidirect.h include/ipxe/pci_ids.h \
+ include/ipxe/infiniband.h include/ipxe/refcnt.h include/ipxe/ib_packet.h \
+ include/ipxe/ib_mad.h include/ipxe/i2c.h include/ipxe/bitbash.h \
+ include/ipxe/malloc.h arch/x86/include/valgrind/memcheck.h \
  arch/x86/include/valgrind/valgrind.h include/ipxe/iobuf.h \
  drivers/infiniband/linda.h include/ipxe/bitops.h include/byteswap.h \
  include/endian.h arch/i386/include/bits/endian.h \
@@ -115,6 +115,8 @@ include/ipxe/tables.h:
 include/ipxe/pci_io.h:
 
 include/ipxe/efi/efi_pci_api.h:
+
+include/ipxe/linux/linux_pci.h:
 
 arch/x86/include/bits/pci_io.h:
 

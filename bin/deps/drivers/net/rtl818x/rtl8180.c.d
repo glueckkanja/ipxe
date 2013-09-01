@@ -5,13 +5,13 @@ rtl8180_DEPS += drivers/net/rtl818x/rtl8180.c include/compiler.h \
  include/ipxe/tables.h include/ipxe/pci_io.h include/ipxe/api.h \
  config/ioapi.h config/defaults.h config/defaults/pcbios.h \
  config/local/ioapi.h include/ipxe/efi/efi_pci_api.h \
- arch/x86/include/bits/pci_io.h arch/x86/include/ipxe/pcibios.h \
- arch/x86/include/ipxe/pcidirect.h include/ipxe/io.h \
- include/ipxe/uaccess.h include/string.h arch/x86/include/bits/string.h \
- include/ipxe/efi/efi_uaccess.h include/ipxe/linux/linux_uaccess.h \
- arch/i386/include/bits/uaccess.h arch/i386/include/librm.h \
- arch/x86/include/bits/io.h arch/x86/include/ipxe/x86_io.h \
- include/ipxe/pci_ids.h
+ include/ipxe/linux/linux_pci.h arch/x86/include/bits/pci_io.h \
+ arch/x86/include/ipxe/pcibios.h arch/x86/include/ipxe/pcidirect.h \
+ include/ipxe/io.h include/ipxe/uaccess.h include/string.h \
+ arch/x86/include/bits/string.h include/ipxe/efi/efi_uaccess.h \
+ include/ipxe/linux/linux_uaccess.h arch/i386/include/bits/uaccess.h \
+ arch/i386/include/librm.h arch/x86/include/bits/io.h \
+ arch/x86/include/ipxe/x86_io.h include/ipxe/pci_ids.h
 
 include/compiler.h:
 
@@ -46,6 +46,8 @@ config/defaults/pcbios.h:
 config/local/ioapi.h:
 
 include/ipxe/efi/efi_pci_api.h:
+
+include/ipxe/linux/linux_pci.h:
 
 arch/x86/include/bits/pci_io.h:
 

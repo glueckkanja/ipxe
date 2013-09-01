@@ -16,10 +16,7 @@ ipv4_DEPS += net/ipv4.c include/compiler.h arch/i386/include/bits/compiler.h \
  config/defaults/pcbios.h config/local/ioapi.h \
  include/ipxe/efi/efi_uaccess.h include/ipxe/linux/linux_uaccess.h \
  arch/i386/include/bits/uaccess.h arch/i386/include/librm.h \
- include/ipxe/timer.h config/timer.h config/local/timer.h \
- include/ipxe/efi/efi_timer.h include/ipxe/linux/linux_timer.h \
- arch/i386/include/bits/timer.h arch/i386/include/ipxe/bios_timer.h \
- arch/i386/include/ipxe/timer2.h arch/i386/include/ipxe/rdtsc_timer.h
+ include/ipxe/fragment.h
 
 include/compiler.h:
 
@@ -115,20 +112,4 @@ arch/i386/include/bits/uaccess.h:
 
 arch/i386/include/librm.h:
 
-include/ipxe/timer.h:
-
-config/timer.h:
-
-config/local/timer.h:
-
-include/ipxe/efi/efi_timer.h:
-
-include/ipxe/linux/linux_timer.h:
-
-arch/i386/include/bits/timer.h:
-
-arch/i386/include/ipxe/bios_timer.h:
-
-arch/i386/include/ipxe/timer2.h:
-
-arch/i386/include/ipxe/rdtsc_timer.h:
+include/ipxe/fragment.h:

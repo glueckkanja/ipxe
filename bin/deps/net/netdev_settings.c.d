@@ -14,7 +14,7 @@ netdev_settings_DEPS += net/netdev_settings.c include/compiler.h \
  config/defaults/pcbios.h config/local/ioapi.h \
  include/ipxe/efi/efi_uaccess.h include/ipxe/linux/linux_uaccess.h \
  arch/i386/include/bits/uaccess.h arch/i386/include/librm.h \
- include/ipxe/dhcpopts.h include/ipxe/device.h
+ include/ipxe/dhcpopts.h include/ipxe/device.h include/ipxe/init.h
 
 include/compiler.h:
 
@@ -95,3 +95,5 @@ arch/i386/include/librm.h:
 include/ipxe/dhcpopts.h:
 
 include/ipxe/device.h:
+
+include/ipxe/init.h:

@@ -7,17 +7,18 @@ efi_pci_DEPS += interface/efi/efi_pci.c include/compiler.h \
  include/stddef.h include/ipxe/tables.h include/ipxe/pci_io.h \
  include/ipxe/api.h config/ioapi.h config/defaults.h \
  config/defaults/pcbios.h config/local/ioapi.h \
- include/ipxe/efi/efi_pci_api.h arch/x86/include/bits/pci_io.h \
- arch/x86/include/ipxe/pcibios.h arch/x86/include/ipxe/pcidirect.h \
- include/ipxe/io.h include/ipxe/uaccess.h include/string.h \
- arch/x86/include/bits/string.h include/ipxe/efi/efi_uaccess.h \
- include/ipxe/linux/linux_uaccess.h arch/i386/include/bits/uaccess.h \
- arch/i386/include/librm.h arch/x86/include/bits/io.h \
- arch/x86/include/ipxe/x86_io.h include/ipxe/pci_ids.h \
- include/ipxe/init.h include/ipxe/efi/efi.h include/ipxe/efi/Uefi.h \
- include/ipxe/efi/Uefi/UefiBaseType.h include/ipxe/efi/Base.h \
- include/ipxe/efi/ProcessorBind.h include/ipxe/efi/Ia32/ProcessorBind.h \
- include/ipxe/efi/Uefi/UefiSpec.h include/ipxe/efi/Uefi/UefiMultiPhase.h \
+ include/ipxe/efi/efi_pci_api.h include/ipxe/linux/linux_pci.h \
+ arch/x86/include/bits/pci_io.h arch/x86/include/ipxe/pcibios.h \
+ arch/x86/include/ipxe/pcidirect.h include/ipxe/io.h \
+ include/ipxe/uaccess.h include/string.h arch/x86/include/bits/string.h \
+ include/ipxe/efi/efi_uaccess.h include/ipxe/linux/linux_uaccess.h \
+ arch/i386/include/bits/uaccess.h arch/i386/include/librm.h \
+ arch/x86/include/bits/io.h arch/x86/include/ipxe/x86_io.h \
+ include/ipxe/pci_ids.h include/ipxe/init.h include/ipxe/efi/efi.h \
+ include/ipxe/efi/Uefi.h include/ipxe/efi/Uefi/UefiBaseType.h \
+ include/ipxe/efi/Base.h include/ipxe/efi/ProcessorBind.h \
+ include/ipxe/efi/Ia32/ProcessorBind.h include/ipxe/efi/Uefi/UefiSpec.h \
+ include/ipxe/efi/Uefi/UefiMultiPhase.h \
  include/ipxe/efi/Guid/WinCertificate.h \
  include/ipxe/efi/Protocol/DevicePath.h include/ipxe/efi/Guid/PcAnsi.h \
  include/ipxe/efi/Protocol/SimpleTextIn.h \
@@ -88,6 +89,8 @@ config/defaults/pcbios.h:
 config/local/ioapi.h:
 
 include/ipxe/efi/efi_pci_api.h:
+
+include/ipxe/linux/linux_pci.h:
 
 arch/x86/include/bits/pci_io.h:
 

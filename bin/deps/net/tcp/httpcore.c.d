@@ -19,7 +19,7 @@ httpcore_DEPS += net/tcp/httpcore.c include/compiler.h \
  config/local/ioapi.h include/ipxe/efi/efi_uaccess.h \
  include/ipxe/linux/linux_uaccess.h arch/i386/include/bits/uaccess.h \
  arch/i386/include/librm.h include/ipxe/acpi.h include/ipxe/version.h \
- include/ipxe/http.h
+ include/ipxe/params.h include/ipxe/http.h
 
 include/compiler.h:
 
@@ -128,5 +128,7 @@ arch/i386/include/librm.h:
 include/ipxe/acpi.h:
 
 include/ipxe/version.h:
+
+include/ipxe/params.h:
 
 include/ipxe/http.h:

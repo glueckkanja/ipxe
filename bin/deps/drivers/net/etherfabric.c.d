@@ -18,10 +18,10 @@ etherfabric_DEPS += drivers/net/etherfabric.c include/compiler.h \
  arch/i386/include/librm.h arch/x86/include/bits/io.h \
  arch/x86/include/ipxe/x86_io.h include/ipxe/pci.h include/ipxe/device.h \
  include/ipxe/list.h include/ipxe/tables.h include/ipxe/pci_io.h \
- include/ipxe/efi/efi_pci_api.h arch/x86/include/bits/pci_io.h \
- arch/x86/include/ipxe/pcibios.h arch/x86/include/ipxe/pcidirect.h \
- include/ipxe/pci_ids.h include/ipxe/malloc.h \
- arch/x86/include/valgrind/memcheck.h \
+ include/ipxe/efi/efi_pci_api.h include/ipxe/linux/linux_pci.h \
+ arch/x86/include/bits/pci_io.h arch/x86/include/ipxe/pcibios.h \
+ arch/x86/include/ipxe/pcidirect.h include/ipxe/pci_ids.h \
+ include/ipxe/malloc.h arch/x86/include/valgrind/memcheck.h \
  arch/x86/include/valgrind/valgrind.h include/ipxe/ethernet.h \
  include/ipxe/netdevice.h include/ipxe/refcnt.h include/ipxe/settings.h \
  include/ipxe/iobuf.h include/mii.h drivers/net/etherfabric.h \
@@ -128,6 +128,8 @@ include/ipxe/tables.h:
 include/ipxe/pci_io.h:
 
 include/ipxe/efi/efi_pci_api.h:
+
+include/ipxe/linux/linux_pci.h:
 
 arch/x86/include/bits/pci_io.h:
 

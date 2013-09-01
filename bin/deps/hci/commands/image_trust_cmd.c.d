@@ -9,7 +9,7 @@ image_trust_cmd_DEPS += hci/commands/image_trust_cmd.c include/compiler.h \
  include/ipxe/efi/efi_uaccess.h include/ipxe/linux/linux_uaccess.h \
  arch/i386/include/bits/uaccess.h arch/i386/include/librm.h \
  include/ipxe/refcnt.h include/ipxe/command.h include/ipxe/parseopt.h \
- include/usr/imgmgmt.h include/usr/imgtrust.h
+ include/ipxe/settings.h include/usr/imgmgmt.h include/usr/imgtrust.h
 
 include/compiler.h:
 
@@ -64,6 +64,8 @@ include/ipxe/refcnt.h:
 include/ipxe/command.h:
 
 include/ipxe/parseopt.h:
+
+include/ipxe/settings.h:
 
 include/usr/imgmgmt.h:
 

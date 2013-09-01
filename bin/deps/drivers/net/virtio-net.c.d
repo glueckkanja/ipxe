@@ -8,14 +8,14 @@ virtio-net_DEPS += drivers/net/virtio-net.c include/compiler.h \
  include/ipxe/settings.h include/ipxe/pci.h include/ipxe/device.h \
  include/ipxe/pci_io.h include/ipxe/api.h config/ioapi.h \
  config/defaults.h config/defaults/pcbios.h config/local/ioapi.h \
- include/ipxe/efi/efi_pci_api.h arch/x86/include/bits/pci_io.h \
- arch/x86/include/ipxe/pcibios.h arch/x86/include/ipxe/pcidirect.h \
- include/ipxe/io.h include/ipxe/uaccess.h include/string.h \
- arch/x86/include/bits/string.h include/ipxe/efi/efi_uaccess.h \
- include/ipxe/linux/linux_uaccess.h arch/i386/include/bits/uaccess.h \
- arch/i386/include/librm.h arch/x86/include/bits/io.h \
- arch/x86/include/ipxe/x86_io.h include/ipxe/pci_ids.h \
- include/ipxe/if_ether.h include/ipxe/ethernet.h \
+ include/ipxe/efi/efi_pci_api.h include/ipxe/linux/linux_pci.h \
+ arch/x86/include/bits/pci_io.h arch/x86/include/ipxe/pcibios.h \
+ arch/x86/include/ipxe/pcidirect.h include/ipxe/io.h \
+ include/ipxe/uaccess.h include/string.h arch/x86/include/bits/string.h \
+ include/ipxe/efi/efi_uaccess.h include/ipxe/linux/linux_uaccess.h \
+ arch/i386/include/bits/uaccess.h arch/i386/include/librm.h \
+ arch/x86/include/bits/io.h arch/x86/include/ipxe/x86_io.h \
+ include/ipxe/pci_ids.h include/ipxe/if_ether.h include/ipxe/ethernet.h \
  include/ipxe/virtio-ring.h include/ipxe/virtio-pci.h \
  drivers/net/virtio-net.h
 
@@ -72,6 +72,8 @@ config/defaults/pcbios.h:
 config/local/ioapi.h:
 
 include/ipxe/efi/efi_pci_api.h:
+
+include/ipxe/linux/linux_pci.h:
 
 arch/x86/include/bits/pci_io.h:
 

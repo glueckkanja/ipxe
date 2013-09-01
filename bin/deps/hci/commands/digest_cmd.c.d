@@ -8,12 +8,13 @@ digest_cmd_DEPS += hci/commands/digest_cmd.c include/compiler.h \
  arch/i386/include/bits/timer.h arch/i386/include/ipxe/bios_timer.h \
  arch/i386/include/ipxe/timer2.h arch/i386/include/ipxe/rdtsc_timer.h \
  include/getopt.h include/ipxe/command.h include/ipxe/tables.h \
- include/ipxe/parseopt.h include/ipxe/image.h include/ipxe/list.h \
- include/assert.h include/ipxe/uaccess.h config/ioapi.h \
- config/local/ioapi.h include/ipxe/efi/efi_uaccess.h \
- include/ipxe/linux/linux_uaccess.h arch/i386/include/bits/uaccess.h \
- arch/i386/include/librm.h include/ipxe/refcnt.h include/ipxe/crypto.h \
- include/ipxe/md5.h include/ipxe/sha1.h include/usr/imgmgmt.h
+ include/ipxe/parseopt.h include/ipxe/settings.h include/ipxe/list.h \
+ include/assert.h include/ipxe/refcnt.h include/ipxe/image.h \
+ include/ipxe/uaccess.h config/ioapi.h config/local/ioapi.h \
+ include/ipxe/efi/efi_uaccess.h include/ipxe/linux/linux_uaccess.h \
+ arch/i386/include/bits/uaccess.h arch/i386/include/librm.h \
+ include/ipxe/crypto.h include/ipxe/md5.h include/ipxe/sha1.h \
+ include/usr/imgmgmt.h
 
 include/compiler.h:
 
@@ -67,11 +68,15 @@ include/ipxe/tables.h:
 
 include/ipxe/parseopt.h:
 
-include/ipxe/image.h:
+include/ipxe/settings.h:
 
 include/ipxe/list.h:
 
 include/assert.h:
+
+include/ipxe/refcnt.h:
+
+include/ipxe/image.h:
 
 include/ipxe/uaccess.h:
 
@@ -86,8 +91,6 @@ include/ipxe/linux/linux_uaccess.h:
 arch/i386/include/bits/uaccess.h:
 
 arch/i386/include/librm.h:
-
-include/ipxe/refcnt.h:
 
 include/ipxe/crypto.h:
 
