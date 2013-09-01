@@ -13,11 +13,7 @@ script:
  - sudo apt-get install mkisofs
  - sudo apt-get install syslinux
  - cd src
- - make
- - ls -la .
- - make bin/ipxe.krn EMBED=cloudboot.ipxe
- - ls -la .
- - make bin/ipxe.iso EMBED=cloudboot.ipxe
+ - make EMBED=~/cloudboot.ipxe
  
  
 after_success:
