@@ -10349,29 +10349,29 @@ Linker script and memory map
  .rodata.str1.1
                 0x0000000000000000        0x3 bin/blib.a(editbox.o)
  .rodata.str1.1
-                0x000000000009d0c4      0x2ac bin/blib.a(autoboot.o)
-                                        0x2c7 (size before relaxing)
+                0x000000000009d0c4      0x2ae bin/blib.a(autoboot.o)
+                                        0x2c9 (size before relaxing)
  .rodata.str1.1
-                0x000000000009d370       0x2f bin/blib.a(dhcpmgmt.o)
+                0x000000000009d372       0x2f bin/blib.a(dhcpmgmt.o)
                                          0x30 (size before relaxing)
  .rodata.str1.1
-                0x000000000009d39f       0xbb bin/blib.a(ifmgmt.o)
+                0x000000000009d3a1       0xbb bin/blib.a(ifmgmt.o)
                                          0xcd (size before relaxing)
  .rodata.str1.1
-                0x000000000009d45a       0x7e bin/blib.a(imgmgmt.o)
+                0x000000000009d45c       0x7e bin/blib.a(imgmgmt.o)
                                          0x80 (size before relaxing)
  .rodata.str1.1
-                0x000000000009d4d8        0x4 bin/blib.a(prompt.o)
+                0x000000000009d4da        0x4 bin/blib.a(prompt.o)
                                           0x7 (size before relaxing)
  .rodata.str1.1
-                0x000000000009d4dc        0xe bin/blib.a(pxemenu.o)
+                0x000000000009d4de        0xe bin/blib.a(pxemenu.o)
                                          0x21 (size before relaxing)
  .rodata.str1.1
-                0x000000000009d4ea       0x1f bin/blib.a(route.o)
+                0x000000000009d4ec       0x1f bin/blib.a(route.o)
                                          0x24 (size before relaxing)
  .rodata.str1.1
-                0x000000000009d509        0xc bin/blib.a(int13.o)
- *fill*         0x000000000009d515        0x3 00
+                0x000000000009d50b        0xc bin/blib.a(int13.o)
+ *fill*         0x000000000009d517        0x1 00
  .rodata.primary_check.2917
                 0x000000000009d518        0x6 bin/blib.a(int13.o)
  *fill*         0x000000000009d51e        0x2 00
@@ -14372,7 +14372,7 @@ Linker script and memory map
                 0x0000000000000000                pci_vendor_id = 0x0
                 0x0000000000000000                pci_device_id = 0x0
 LOAD bin/blib.a
-                0x0000000018f5c0df                _build_id = 0x18f5c0df
+                0x00000000c2649af5                _build_id = 0xc2649af5
 OUTPUT(bin/ipxe.hd.tmp elf32-i386)
 
 .debug_frame    0x0000000000000000    0x220a8
@@ -18119,7 +18119,7 @@ SYMBOL TABLE:
 000bb1e0 g       *ABS*	00000000 _end_lma
 0015d630 g       *ABS*	00000000 _textdata_memsz
 0015d630 g       *ABS*	00000000 _pprefix_memsz
-18f5c0df g       *ABS*	00000000 _build_id
+c2649af5 g       *ABS*	00000000 _build_id
 00000000 l    d  .prefix	00000000 .prefix
 00000000 g       .prefix	00000000 check__hd_start
 00000000 g       .prefix	00000000 _prefix
