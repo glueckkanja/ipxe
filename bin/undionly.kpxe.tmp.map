@@ -3854,31 +3854,31 @@ Linker script and memory map
  .rodata.str1.1
                 0x0000000000000000        0x3 bin/blib.a(editbox.o)
  .rodata.str1.1
-                0x0000000000015f78      0x4a5 bin/blib.a(autoboot.o)
-                                        0x4bc (size before relaxing)
+                0x0000000000015f78      0x4a6 bin/blib.a(autoboot.o)
+                                        0x4bd (size before relaxing)
  .rodata.str1.1
-                0x000000000001641d       0x2f bin/blib.a(dhcpmgmt.o)
+                0x000000000001641e       0x2f bin/blib.a(dhcpmgmt.o)
                                          0x30 (size before relaxing)
  .rodata.str1.1
-                0x000000000001644c       0xbb bin/blib.a(ifmgmt.o)
+                0x000000000001644d       0xbb bin/blib.a(ifmgmt.o)
                                          0xcd (size before relaxing)
  .rodata.str1.1
-                0x0000000000016507       0x7e bin/blib.a(imgmgmt.o)
+                0x0000000000016508       0x7e bin/blib.a(imgmgmt.o)
                                          0x80 (size before relaxing)
  .rodata.str1.1
-                0x0000000000016585        0x4 bin/blib.a(prompt.o)
+                0x0000000000016586        0x4 bin/blib.a(prompt.o)
                                           0x7 (size before relaxing)
  .rodata.str1.1
-                0x0000000000016589        0xe bin/blib.a(pxemenu.o)
+                0x000000000001658a        0xe bin/blib.a(pxemenu.o)
                                          0x21 (size before relaxing)
  .rodata.str1.1
-                0x0000000000016597       0x1f bin/blib.a(route.o)
+                0x0000000000016598       0x1f bin/blib.a(route.o)
                                          0x24 (size before relaxing)
  .rodata.str1.1
-                0x00000000000165b6       0x27 bin/blib.a(runtime.o)
+                0x00000000000165b7       0x27 bin/blib.a(runtime.o)
  .rodata.str1.1
-                0x00000000000165dd        0xc bin/blib.a(int13.o)
- *fill*         0x00000000000165e9        0x3 00
+                0x00000000000165de        0xc bin/blib.a(int13.o)
+ *fill*         0x00000000000165ea        0x2 00
  .rodata.primary_check.2917
                 0x00000000000165ec        0x6 bin/blib.a(int13.o)
  *fill*         0x00000000000165f2        0x2 00
@@ -5822,7 +5822,7 @@ Linker script and memory map
                 0x0000000000000000                pci_vendor_id = 0x0
                 0x0000000000000000                pci_device_id = 0x0
 LOAD bin/blib.a
-                0x00000000b359dd11                _build_id = 0xb359dd11
+                0x000000006cc04c64                _build_id = 0x6cc04c64
 OUTPUT(bin/undionly.kpxe.tmp elf32-i386)
 
 .debug_info     0x0000000000000000    0x81f8b
@@ -7660,7 +7660,7 @@ SYMBOL TABLE:
 00019430 g       *ABS*	00000000 _end_lma
 000992b0 g       *ABS*	00000000 _textdata_memsz
 000992b0 g       *ABS*	00000000 _pprefix_memsz
-b359dd11 g       *ABS*	00000000 _build_id
+6cc04c64 g       *ABS*	00000000 _build_id
 00000000 l    d  .prefix	00000000 .prefix
 00000000 g       .prefix	00000000 _kpxe_start
 00000000 g       .prefix	00000000 check__kpxe_start

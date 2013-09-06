@@ -3966,29 +3966,29 @@ Linker script and memory map
  .rodata.str1.1
                 0x0000000000000000        0x3 bin/blib.a(editbox.o)
  .rodata.str1.1
-                0x0000000000016928      0x4a5 bin/blib.a(autoboot.o)
-                                        0x4bc (size before relaxing)
+                0x0000000000016928      0x4a6 bin/blib.a(autoboot.o)
+                                        0x4bd (size before relaxing)
  .rodata.str1.1
-                0x0000000000016dcd       0x2f bin/blib.a(dhcpmgmt.o)
+                0x0000000000016dce       0x2f bin/blib.a(dhcpmgmt.o)
                                          0x30 (size before relaxing)
  .rodata.str1.1
-                0x0000000000016dfc       0xbb bin/blib.a(ifmgmt.o)
+                0x0000000000016dfd       0xbb bin/blib.a(ifmgmt.o)
                                          0xcd (size before relaxing)
  .rodata.str1.1
-                0x0000000000016eb7       0x7e bin/blib.a(imgmgmt.o)
+                0x0000000000016eb8       0x7e bin/blib.a(imgmgmt.o)
                                          0x80 (size before relaxing)
  .rodata.str1.1
-                0x0000000000016f35        0x4 bin/blib.a(prompt.o)
+                0x0000000000016f36        0x4 bin/blib.a(prompt.o)
                                           0x7 (size before relaxing)
  .rodata.str1.1
-                0x0000000000016f39        0xe bin/blib.a(pxemenu.o)
+                0x0000000000016f3a        0xe bin/blib.a(pxemenu.o)
                                          0x21 (size before relaxing)
  .rodata.str1.1
-                0x0000000000016f47       0x1f bin/blib.a(route.o)
+                0x0000000000016f48       0x1f bin/blib.a(route.o)
                                          0x24 (size before relaxing)
  .rodata.str1.1
-                0x0000000000016f66        0xc bin/blib.a(int13.o)
- *fill*         0x0000000000016f72        0x2 00
+                0x0000000000016f67        0xc bin/blib.a(int13.o)
+ *fill*         0x0000000000016f73        0x1 00
  .rodata.primary_check.2917
                 0x0000000000016f74        0x6 bin/blib.a(int13.o)
  *fill*         0x0000000000016f7a        0x2 00
@@ -5931,7 +5931,7 @@ Linker script and memory map
                 0x00000000000010ec                pci_vendor_id = 0x10ec
                 0x0000000000008139                pci_device_id = 0x8139
 LOAD bin/blib.a
-                0x000000000e8ca0da                _build_id = 0xe8ca0da
+                0x00000000fc616de0                _build_id = 0xfc616de0
 OUTPUT(bin/rtl8139.rom.tmp elf32-i386)
 
 .debug_frame    0x0000000000000000     0xa6a4
@@ -7805,7 +7805,7 @@ SYMBOL TABLE:
 00019d60 g       *ABS*	00000000 _end_lma
 00099d60 g       *ABS*	00000000 _textdata_memsz
 00099d60 g       *ABS*	00000000 _pprefix_memsz
-0e8ca0da g       *ABS*	00000000 _build_id
+fc616de0 g       *ABS*	00000000 _build_id
 00000000 l    d  .prefix	00000000 .prefix
 00000000 g       .prefix	00000000 _rom_start
 00000000 g       .prefix	00000000 check__rom_start
