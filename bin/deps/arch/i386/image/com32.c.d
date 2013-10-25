@@ -12,7 +12,7 @@ com32_DEPS += arch/i386/image/com32.c include/compiler.h \
  arch/i386/include/bits/uaccess.h arch/i386/include/librm.h \
  arch/i386/include/basemem.h arch/i386/include/bios.h \
  arch/i386/include/comboot.h arch/i386/include/setjmp.h include/ipxe/in.h \
- include/ipxe/socket.h include/ipxe/image.h include/ipxe/tables.h \
+ include/ipxe/socket.h include/ipxe/tables.h include/ipxe/image.h \
  include/ipxe/list.h include/ipxe/refcnt.h include/ipxe/segment.h \
  include/ipxe/init.h include/ipxe/io.h arch/x86/include/bits/io.h \
  arch/x86/include/ipxe/x86_io.h
@@ -85,9 +85,9 @@ include/ipxe/in.h:
 
 include/ipxe/socket.h:
 
-include/ipxe/image.h:
-
 include/ipxe/tables.h:
+
+include/ipxe/image.h:
 
 include/ipxe/list.h:
 

@@ -8,7 +8,7 @@ com32_call_DEPS += arch/i386/interface/syslinux/com32_call.c \
  include/ipxe/linux/linux_uaccess.h arch/i386/include/bits/uaccess.h \
  arch/i386/include/librm.h arch/i386/include/comboot.h \
  arch/i386/include/setjmp.h include/ipxe/in.h include/ipxe/socket.h \
- include/assert.h
+ include/ipxe/tables.h include/assert.h
 
 include/compiler.h:
 
@@ -55,5 +55,7 @@ arch/i386/include/setjmp.h:
 include/ipxe/in.h:
 
 include/ipxe/socket.h:
+
+include/ipxe/tables.h:
 
 include/assert.h:

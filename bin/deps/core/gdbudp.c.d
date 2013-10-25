@@ -5,9 +5,9 @@ gdbudp_DEPS += core/gdbudp.c include/compiler.h \
  include/endian.h arch/i386/include/bits/endian.h \
  arch/i386/include/bits/byteswap.h include/little_bswap.h \
  include/ipxe/iobuf.h include/assert.h include/ipxe/list.h \
- include/ipxe/in.h include/ipxe/socket.h include/ipxe/if_arp.h \
- include/ipxe/if_ether.h include/ipxe/ip.h include/ipxe/retry.h \
- include/ipxe/netdevice.h include/ipxe/tables.h include/ipxe/refcnt.h \
+ include/ipxe/in.h include/ipxe/socket.h include/ipxe/tables.h \
+ include/ipxe/if_arp.h include/ipxe/if_ether.h include/ipxe/ip.h \
+ include/ipxe/retry.h include/ipxe/netdevice.h include/ipxe/refcnt.h \
  include/ipxe/settings.h include/ipxe/udp.h include/ipxe/tcpip.h \
  arch/x86/include/bits/tcpip.h include/ipxe/nap.h include/ipxe/api.h \
  config/nap.h config/defaults.h config/defaults/pcbios.h \
@@ -54,6 +54,8 @@ include/ipxe/in.h:
 
 include/ipxe/socket.h:
 
+include/ipxe/tables.h:
+
 include/ipxe/if_arp.h:
 
 include/ipxe/if_ether.h:
@@ -63,8 +65,6 @@ include/ipxe/ip.h:
 include/ipxe/retry.h:
 
 include/ipxe/netdevice.h:
-
-include/ipxe/tables.h:
 
 include/ipxe/refcnt.h:
 

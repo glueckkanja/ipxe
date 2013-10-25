@@ -8,8 +8,8 @@ settings_DEPS += core/settings.c include/compiler.h \
  include/little_bswap.h include/errno.h \
  arch/i386/include/ipxe/errno/pcbios.h arch/i386/include/pxe_error.h \
  include/ipxe/errfile.h arch/x86/include/bits/errfile.h include/ipxe/in.h \
- include/ipxe/socket.h include/ipxe/vsprintf.h include/ipxe/dhcp.h \
- include/ipxe/list.h include/ipxe/refcnt.h include/ipxe/tables.h \
+ include/ipxe/socket.h include/ipxe/tables.h include/ipxe/vsprintf.h \
+ include/ipxe/dhcp.h include/ipxe/list.h include/ipxe/refcnt.h \
  include/ipxe/uuid.h include/ipxe/netdevice.h include/ipxe/settings.h \
  include/ipxe/uaccess.h include/ipxe/api.h config/ioapi.h \
  config/defaults.h config/defaults/pcbios.h config/local/ioapi.h \
@@ -73,6 +73,8 @@ include/ipxe/in.h:
 
 include/ipxe/socket.h:
 
+include/ipxe/tables.h:
+
 include/ipxe/vsprintf.h:
 
 include/ipxe/dhcp.h:
@@ -80,8 +82,6 @@ include/ipxe/dhcp.h:
 include/ipxe/list.h:
 
 include/ipxe/refcnt.h:
-
-include/ipxe/tables.h:
 
 include/ipxe/uuid.h:
 

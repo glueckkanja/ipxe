@@ -7,10 +7,10 @@ iscsi_DEPS += net/tcp/iscsi.c include/compiler.h \
  include/ipxe/errfile.h arch/x86/include/bits/errfile.h \
  include/byteswap.h include/endian.h arch/i386/include/bits/endian.h \
  arch/i386/include/bits/byteswap.h include/little_bswap.h \
- include/ipxe/vsprintf.h include/ipxe/socket.h include/ipxe/iobuf.h \
- include/ipxe/list.h include/ipxe/uri.h include/ipxe/refcnt.h \
- include/ipxe/xfer.h include/ipxe/interface.h include/ipxe/open.h \
- include/ipxe/tables.h include/ipxe/scsi.h include/ipxe/uaccess.h \
+ include/ipxe/vsprintf.h include/ipxe/socket.h include/ipxe/tables.h \
+ include/ipxe/iobuf.h include/ipxe/list.h include/ipxe/uri.h \
+ include/ipxe/refcnt.h include/ipxe/xfer.h include/ipxe/interface.h \
+ include/ipxe/open.h include/ipxe/scsi.h include/ipxe/uaccess.h \
  include/ipxe/api.h config/ioapi.h config/defaults.h \
  config/defaults/pcbios.h config/local/ioapi.h \
  include/ipxe/efi/efi_uaccess.h include/ipxe/linux/linux_uaccess.h \
@@ -68,6 +68,8 @@ include/ipxe/vsprintf.h:
 
 include/ipxe/socket.h:
 
+include/ipxe/tables.h:
+
 include/ipxe/iobuf.h:
 
 include/ipxe/list.h:
@@ -81,8 +83,6 @@ include/ipxe/xfer.h:
 include/ipxe/interface.h:
 
 include/ipxe/open.h:
-
-include/ipxe/tables.h:
 
 include/ipxe/scsi.h:
 

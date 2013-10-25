@@ -19,7 +19,7 @@ pxe_undi_DEPS += arch/i386/interface/pxe/pxe_undi.c include/compiler.h \
  arch/x86/include/ipxe/x86_io.h include/ipxe/pci_ids.h \
  include/ipxe/if_ether.h include/ipxe/ip.h include/ipxe/in.h \
  include/ipxe/socket.h include/ipxe/retry.h include/ipxe/arp.h \
- include/ipxe/rarp.h arch/i386/include/pxe.h \
+ include/ipxe/neighbour.h include/ipxe/rarp.h arch/i386/include/pxe.h \
  arch/i386/include/pxe_types.h include/errno.h \
  arch/i386/include/ipxe/errno/pcbios.h arch/i386/include/pxe_error.h \
  include/ipxe/errfile.h arch/x86/include/bits/errfile.h \
@@ -128,6 +128,8 @@ include/ipxe/socket.h:
 include/ipxe/retry.h:
 
 include/ipxe/arp.h:
+
+include/ipxe/neighbour.h:
 
 include/ipxe/rarp.h:
 

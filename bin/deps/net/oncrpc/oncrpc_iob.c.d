@@ -7,8 +7,8 @@ oncrpc_iob_DEPS += net/oncrpc/oncrpc_iob.c include/compiler.h \
  include/ipxe/errfile.h arch/x86/include/bits/errfile.h \
  include/byteswap.h include/endian.h arch/i386/include/bits/endian.h \
  arch/i386/include/bits/byteswap.h include/little_bswap.h \
- include/ipxe/socket.h include/ipxe/tcpip.h include/ipxe/in.h \
- include/ipxe/tables.h arch/x86/include/bits/tcpip.h include/ipxe/iobuf.h \
+ include/ipxe/socket.h include/ipxe/tables.h include/ipxe/tcpip.h \
+ include/ipxe/in.h arch/x86/include/bits/tcpip.h include/ipxe/iobuf.h \
  include/ipxe/list.h include/ipxe/xfer.h include/ipxe/interface.h \
  include/ipxe/refcnt.h include/ipxe/open.h include/ipxe/uri.h \
  include/ipxe/features.h include/ipxe/dhcp.h include/ipxe/uuid.h \
@@ -63,11 +63,11 @@ include/little_bswap.h:
 
 include/ipxe/socket.h:
 
+include/ipxe/tables.h:
+
 include/ipxe/tcpip.h:
 
 include/ipxe/in.h:
-
-include/ipxe/tables.h:
 
 arch/x86/include/bits/tcpip.h:
 

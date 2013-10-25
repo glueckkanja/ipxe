@@ -11,8 +11,8 @@ nfs_open_DEPS += net/oncrpc/nfs_open.c include/compiler.h \
  config/defaults.h config/defaults/pcbios.h config/local/time.h \
  include/ipxe/null_time.h include/ipxe/linux/linux_time.h \
  arch/i386/include/bits/time.h arch/i386/include/ipxe/rtc_time.h \
- include/ipxe/socket.h include/ipxe/tcpip.h include/ipxe/in.h \
- include/ipxe/tables.h arch/x86/include/bits/tcpip.h include/ipxe/iobuf.h \
+ include/ipxe/socket.h include/ipxe/tables.h include/ipxe/tcpip.h \
+ include/ipxe/in.h arch/x86/include/bits/tcpip.h include/ipxe/iobuf.h \
  include/ipxe/list.h include/ipxe/xfer.h include/ipxe/interface.h \
  include/ipxe/refcnt.h include/ipxe/open.h include/ipxe/uri.h \
  include/ipxe/features.h include/ipxe/dhcp.h include/ipxe/uuid.h \
@@ -91,11 +91,11 @@ arch/i386/include/ipxe/rtc_time.h:
 
 include/ipxe/socket.h:
 
+include/ipxe/tables.h:
+
 include/ipxe/tcpip.h:
 
 include/ipxe/in.h:
-
-include/ipxe/tables.h:
 
 arch/x86/include/bits/tcpip.h:
 

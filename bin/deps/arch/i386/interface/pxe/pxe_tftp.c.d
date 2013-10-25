@@ -11,9 +11,9 @@ pxe_tftp_DEPS += arch/i386/interface/pxe/pxe_tftp.c include/compiler.h \
  config/local/ioapi.h include/ipxe/efi/efi_uaccess.h \
  include/ipxe/linux/linux_uaccess.h arch/i386/include/bits/uaccess.h \
  arch/i386/include/librm.h include/ipxe/in.h include/ipxe/socket.h \
- include/ipxe/tftp.h include/ipxe/iobuf.h include/ipxe/list.h \
- include/ipxe/xfer.h include/ipxe/interface.h include/ipxe/refcnt.h \
- include/ipxe/open.h include/ipxe/tables.h include/ipxe/process.h \
+ include/ipxe/tables.h include/ipxe/tftp.h include/ipxe/iobuf.h \
+ include/ipxe/list.h include/ipxe/xfer.h include/ipxe/interface.h \
+ include/ipxe/refcnt.h include/ipxe/open.h include/ipxe/process.h \
  arch/i386/include/pxe.h arch/i386/include/pxe_types.h \
  arch/i386/include/pxe_error.h arch/i386/include/pxe_api.h \
  include/ipxe/device.h
@@ -84,6 +84,8 @@ include/ipxe/in.h:
 
 include/ipxe/socket.h:
 
+include/ipxe/tables.h:
+
 include/ipxe/tftp.h:
 
 include/ipxe/iobuf.h:
@@ -97,8 +99,6 @@ include/ipxe/interface.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/open.h:
-
-include/ipxe/tables.h:
 
 include/ipxe/process.h:
 

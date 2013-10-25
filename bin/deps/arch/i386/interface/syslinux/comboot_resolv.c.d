@@ -10,9 +10,9 @@ comboot_resolv_DEPS += arch/i386/interface/syslinux/comboot_resolv.c \
  config/defaults.h config/defaults/pcbios.h config/local/ioapi.h \
  include/ipxe/efi/efi_uaccess.h include/ipxe/linux/linux_uaccess.h \
  arch/i386/include/bits/uaccess.h arch/i386/include/librm.h \
- include/ipxe/in.h include/ipxe/socket.h include/ipxe/list.h \
- include/assert.h include/ipxe/process.h include/ipxe/refcnt.h \
- include/ipxe/tables.h include/ipxe/resolv.h include/ipxe/interface.h
+ include/ipxe/in.h include/ipxe/socket.h include/ipxe/tables.h \
+ include/ipxe/list.h include/assert.h include/ipxe/process.h \
+ include/ipxe/refcnt.h include/ipxe/resolv.h include/ipxe/interface.h
 
 include/compiler.h:
 
@@ -70,6 +70,8 @@ include/ipxe/in.h:
 
 include/ipxe/socket.h:
 
+include/ipxe/tables.h:
+
 include/ipxe/list.h:
 
 include/assert.h:
@@ -77,8 +79,6 @@ include/assert.h:
 include/ipxe/process.h:
 
 include/ipxe/refcnt.h:
-
-include/ipxe/tables.h:
 
 include/ipxe/resolv.h:
 

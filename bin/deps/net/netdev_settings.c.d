@@ -7,8 +7,8 @@ netdev_settings_DEPS += net/netdev_settings.c include/compiler.h \
  include/byteswap.h include/endian.h arch/i386/include/bits/endian.h \
  arch/i386/include/bits/byteswap.h include/little_bswap.h \
  include/ipxe/dhcp.h include/stdarg.h include/ipxe/in.h \
- include/ipxe/socket.h include/ipxe/list.h include/assert.h \
- include/ipxe/refcnt.h include/ipxe/tables.h include/ipxe/uuid.h \
+ include/ipxe/socket.h include/ipxe/tables.h include/ipxe/list.h \
+ include/assert.h include/ipxe/refcnt.h include/ipxe/uuid.h \
  include/ipxe/netdevice.h include/ipxe/settings.h include/ipxe/uaccess.h \
  include/ipxe/api.h config/ioapi.h config/defaults.h \
  config/defaults/pcbios.h config/local/ioapi.h \
@@ -58,13 +58,13 @@ include/ipxe/in.h:
 
 include/ipxe/socket.h:
 
+include/ipxe/tables.h:
+
 include/ipxe/list.h:
 
 include/assert.h:
 
 include/ipxe/refcnt.h:
-
-include/ipxe/tables.h:
 
 include/ipxe/uuid.h:
 
