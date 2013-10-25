@@ -252,42 +252,31 @@ static void close_all_netdevs ( void ) {
  * @ret uri		URI, or NULL on failure
  */
 struct uri * fetch_next_server_and_filename ( struct settings *settings ) {
-	struct in_addr next_server = { 0 };
-	char *raw_filename = NULL;
-	struct uri *uri = NULL;
+	struct in_addr next_server;
+	char buf[256];
 	char *filename;
+	struct uri *uri;
 
-	/* Determine settings block containing the filename, if any */
-	settings = fetch_setting_origin ( settings, &filename_setting );
-
-	/* If we have a filename, fetch it along with next-server */
-	if ( settings ) {
-		fetch_ipv4_setting ( settings, &next_server_setting,
-				     &next_server );
-		if ( fetch_string_setting_copy ( settings, &filename_setting,
-						 &raw_filename ) < 0 )
-			goto err_fetch;
-	}
-
-	/* Expand filename setting */
-	filename = expand_settings ( raw_filename ? raw_filename : "" );
-	if ( ! filename )
-		goto err_expand;
-
-	/* Parse next server and filename */
+	/* Fetch next-server setting */
+	fetch_ipv4_setting ( settings, &next_server_setting, &next_server );
 	if ( next_server.s_addr )
 		printf ( "Next server: %s\n", inet_ntoa ( next_server ) );
-	if ( filename[0] )
-		printf ( "Filename: %s\n", filename );
-	uri = parse_next_server_and_filename ( next_server, filename );
-	if ( ! uri )
-		goto err_parse;
 
- err_parse:
+	/* Fetch filename setting */
+	fetch_string_setting ( settings, &filename_setting,
+			       buf, sizeof ( buf ) );
+	if ( buf[0] )
+		printf ( "Filename: %s\n", buf );
+
+	/* Expand filename setting */
+	filename = expand_settings ( buf );
+	if ( ! filename )
+		return NULL;
+
+	/* Parse next server and filename */
+	uri = parse_next_server_and_filename ( next_server, filename );
+
 	free ( filename );
- err_expand:
-	free ( raw_filename );
- err_fetch:
 	return uri;
 }
 

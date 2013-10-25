@@ -13,8 +13,6 @@ FILE_LICENCE ( GPL2_OR_LATER );
 #include <stdlib.h>
 #include <ipxe/refcnt.h>
 
-struct parameters;
-
 /** A Uniform Resource Identifier
  *
  * Terminology for this data structure is as per uri(7), except that
@@ -67,8 +65,6 @@ struct uri {
 	const char *query;
 	/** Fragment */
 	const char *fragment;
-	/** Form parameters */
-	struct parameters *params;
 } __attribute__ (( packed ));
 
 /** A field in a URI
@@ -113,27 +109,17 @@ enum {
  * Note that this is a separate concept from a URI with an absolute
  * path.
  */
-static inline int uri_is_absolute ( const struct uri *uri ) {
+static inline int uri_is_absolute ( struct uri *uri ) {
 	return ( uri->scheme != NULL );
 }
 
-/**
- * URI has an opaque part
- *
- * @v uri			URI
- * @ret has_opaque		URI has an opaque part
- */
-static inline int uri_has_opaque ( const struct uri *uri ) {
-	return ( uri->opaque && ( uri->opaque[0] != '\0' ) );
-
-}
 /**
  * URI has a path
  *
  * @v uri			URI
  * @ret has_path		URI has a path
  */
-static inline int uri_has_path ( const struct uri *uri ) {
+static inline int uri_has_path ( struct uri *uri ) {
 	return ( uri->path && ( uri->path[0] != '\0' ) );
 }
 
@@ -147,7 +133,7 @@ static inline int uri_has_path ( const struct uri *uri ) {
  * concept from an absolute URI.  Note also that a URI may not have a
  * path at all.
  */
-static inline int uri_has_absolute_path ( const struct uri *uri ) {
+static inline int uri_has_absolute_path ( struct uri *uri ) {
 	return ( uri->path && ( uri->path[0] == '/' ) );
 }
 
@@ -161,7 +147,7 @@ static inline int uri_has_absolute_path ( const struct uri *uri ) {
  * this is a separate concept from a relative URI.  Note also that a
  * URI may not have a path at all.
  */
-static inline int uri_has_relative_path ( const struct uri *uri ) {
+static inline int uri_has_relative_path ( struct uri *uri ) {
 	return ( uri->path && ( uri->path[0] != '/' ) );
 }
 

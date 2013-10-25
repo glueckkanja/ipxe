@@ -24,16 +24,6 @@ struct net_device;
  */
 #define TCPIP_EMPTY_CSUM 0xffff
 
-/** TCP/IP address flags */
-enum tcpip_st_flags {
-	/** Bind to a privileged port (less than 1024)
-	 *
-	 * This value is chosen as 1024 to optimise the calculations
-	 * in tcpip_bind().
-	 */
-	TCPIP_BIND_PRIVILEGED = 0x0400,
-};
-
 /**
  * TCP/IP socket address
  *
@@ -43,8 +33,6 @@ enum tcpip_st_flags {
 struct sockaddr_tcpip {
 	/** Socket address family (part of struct @c sockaddr) */
 	sa_family_t st_family;
-	/** Flags */
-	uint16_t st_flags;
 	/** TCP/IP port */
 	uint16_t st_port;
 	/** Padding
@@ -54,9 +42,7 @@ struct sockaddr_tcpip {
 	 * family.
 	 */
 	char pad[ sizeof ( struct sockaddr ) -
-		  ( sizeof ( sa_family_t ) /* st_family */ +
-		    sizeof ( uint16_t ) /* st_flags */ +
-		    sizeof ( uint16_t ) /* st_port */ ) ];
+		  ( sizeof ( sa_family_t ) + sizeof ( uint16_t ) ) ];
 } __attribute__ (( may_alias ));
 
 /** 
@@ -139,8 +125,6 @@ extern int tcpip_tx ( struct io_buffer *iobuf, struct tcpip_protocol *tcpip,
 extern uint16_t generic_tcpip_continue_chksum ( uint16_t partial,
 						const void *data, size_t len );
 extern uint16_t tcpip_chksum ( const void *data, size_t len );
-extern int tcpip_bind ( struct sockaddr_tcpip *st_local,
-			int ( * available ) ( int port ) );
 
 /* Use generic_tcpip_continue_chksum() if no architecture-specific
  * version is available

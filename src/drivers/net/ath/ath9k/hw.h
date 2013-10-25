@@ -20,8 +20,6 @@
 #ifndef HW_H
 #define HW_H
 
-FILE_LICENCE ( BSD2 );
-
 #include <errno.h>
 
 #include "mac.h"

@@ -17,8 +17,6 @@
 #ifndef REG_H
 #define REG_H
 
-FILE_LICENCE ( BSD2 );
-
 #include "../reg.h"
 
 #define AR_CR                0x0008

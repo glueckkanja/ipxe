@@ -53,8 +53,6 @@ SECTIONS {
 		*(.data)
 		*(.data.*)
 		KEEP(*(SORT(.tbl.*)))
-		KEEP(*(.provided))
-		KEEP(*(.provided.*))
 		_edata = .;
 	}
 

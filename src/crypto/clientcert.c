@@ -116,6 +116,7 @@ static int clientcert_apply_settings ( void ) {
 	static void *cert = NULL;
 	static void *key = NULL;
 	int len;
+	int rc;
 
 	/* Allow client certificate to be overridden only if
 	 * not explicitly specified at build time.
@@ -128,8 +129,14 @@ static int clientcert_apply_settings ( void ) {
 
 		/* Fetch new client certificate, if any */
 		free ( cert );
-		if ( ( len = fetch_setting_copy ( NULL, &cert_setting,
-						  &cert ) ) >= 0 ) {
+		len = fetch_setting_copy ( NULL, &cert_setting, &cert );
+		if ( len < 0 ) {
+			rc = len;
+			DBGC ( &client_certificate, "CLIENTCERT cannot fetch "
+			       "client certificate: %s\n", strerror ( rc ) );
+			return rc;
+		}
+		if ( cert ) {
 			client_certificate.data = cert;
 			client_certificate.len = len;
 		}
@@ -140,8 +147,14 @@ static int clientcert_apply_settings ( void ) {
 
 		/* Fetch new client private key, if any */
 		free ( key );
-		if ( ( len = fetch_setting_copy ( NULL, &privkey_setting,
-						  &key ) ) >= 0 ) {
+		len = fetch_setting_copy ( NULL, &privkey_setting, &key );
+		if ( len < 0 ) {
+			rc = len;
+			DBGC ( &client_certificate, "CLIENTCERT cannot fetch "
+			       "client private key: %s\n", strerror ( rc ) );
+			return rc;
+		}
+		if ( key ) {
 			client_private_key.data = key;
 			client_private_key.len = len;
 		}

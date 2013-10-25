@@ -46,7 +46,7 @@ struct nslookup {
 	struct interface resolver;
 
 	/** Setting name */
-	char *setting_name;
+	const char *setting_name;
 };
 
 /**
@@ -71,9 +71,7 @@ static void nslookup_close ( struct nslookup *nslookup, int rc ) {
 static void nslookup_resolv_done ( struct nslookup *nslookup,
 				   struct sockaddr *sa ) {
 	struct sockaddr_in *sin;
-	struct setting_type *default_type;
-	struct settings *settings;
-	struct setting setting;
+	struct setting_type *type;
 	void *data;
 	size_t len;
 	int rc;
@@ -84,25 +82,16 @@ static void nslookup_resolv_done ( struct nslookup *nslookup,
 		sin = ( ( struct sockaddr_in * ) sa );
 		data = &sin->sin_addr;
 		len = sizeof ( sin->sin_addr );
-		default_type = &setting_type_ipv4;
+		type = &setting_type_ipv4;
 		break;
 	default:
 		rc = -ENOTSUP;
 		goto err;
 	}
 
-	/* Parse specified setting name */
-	if ( ( rc = parse_setting_name ( nslookup->setting_name,
-					 autovivify_child_settings, &settings,
-					 &setting ) ) != 0 )
-		goto err;
-
-	/* Apply default type if necessary */
-	if ( ! setting.type )
-		setting.type = default_type;
-
-	/* Store in specified setting */
-	if ( ( rc = store_setting ( settings, &setting, data, len ) ) != 0 )
+	/* Save in specified setting */
+	if ( ( rc = store_named_setting ( nslookup->setting_name, type,
+					  data, len ) ) != 0 )
 		goto err;
 
  err:

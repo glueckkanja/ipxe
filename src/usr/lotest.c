@@ -175,8 +175,7 @@ static int loopback_wait ( struct net_device *receiver, void *data,
  */
 int loopback_test ( struct net_device *sender, struct net_device *receiver,
 		    size_t mtu ) {
-	uint8_t *buf;
-	uint32_t *seq;
+	uint8_t buf[mtu];
 	struct io_buffer *iobuf;
 	unsigned int i;
 	unsigned int successes;
@@ -193,14 +192,6 @@ int loopback_test ( struct net_device *sender, struct net_device *receiver,
 		return rc;
 	if ( ( rc = iflinkwait ( receiver, LINK_WAIT_MS ) ) != 0 )
 		return rc;
-
-	/* Allocate data buffer */
-	if ( mtu < sizeof ( *seq ) )
-		mtu = sizeof ( *seq );
-	buf = malloc ( mtu );
-	if ( ! buf )
-		return -ENOMEM;
-	seq = ( ( void * ) buf );
 
 	/* Print initial statistics */
 	printf ( "Performing loopback test from %s to %s with %zd byte MTU\n",
@@ -220,17 +211,17 @@ int loopback_test ( struct net_device *sender, struct net_device *receiver,
 		printf ( "\r%d", successes );
 
 		/* Generate random packet */
-		*seq = htonl ( successes );
-		for ( i = sizeof ( *seq ) ; i < mtu ; i++ )
+		for ( i = 0 ; i < sizeof ( buf ) ; i++ )
 			buf[i] = random();
-		iobuf = alloc_iob ( MAX_LL_HEADER_LEN + mtu );
+		iobuf = alloc_iob ( MAX_LL_HEADER_LEN + sizeof ( buf ) );
 		if ( ! iobuf ) {
 			printf ( "\nFailed to allocate I/O buffer" );
 			rc = -ENOMEM;
 			break;
 		}
 		iob_reserve ( iobuf, MAX_LL_HEADER_LEN );
-		memcpy ( iob_put ( iobuf, mtu ), buf, mtu );
+		memcpy ( iob_put ( iobuf, sizeof ( buf ) ),
+			 buf, sizeof ( buf ) );
 
 		/* Transmit packet */
 		if ( ( rc = net_tx ( iob_disown ( iobuf ), sender,
@@ -242,8 +233,10 @@ int loopback_test ( struct net_device *sender, struct net_device *receiver,
 		}
 
 		/* Wait for received packet */
-		if ( ( rc = loopback_wait ( receiver, buf, mtu ) ) != 0 )
+		if ( ( rc = loopback_wait ( receiver, buf,
+					    sizeof ( buf ) ) ) != 0 ) {
 			break;
+		}
 	}
 
 	printf ( "\n");
@@ -252,9 +245,6 @@ int loopback_test ( struct net_device *sender, struct net_device *receiver,
 	/* Dump final statistics */
 	ifstat ( sender );
 	ifstat ( receiver );
-
-	/* Free buffer */
-	free ( buf );
 
 	return 0;
 }

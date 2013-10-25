@@ -34,7 +34,19 @@ static inline int strtoul_base ( const char **pp, int base )
 	return base;
 }
 
-extern unsigned int strtoul_charval ( unsigned int charval );
+static inline unsigned int strtoul_charval ( unsigned int charval )
+{
+	if ( charval >= 'a' ) {
+		charval = ( charval - 'a' + 10 );
+	} else if ( charval >= 'A' ) {
+		charval = ( charval - 'A' + 10 );
+	} else if ( charval <= '9' ) {
+		charval = ( charval - '0' );
+	}
+
+	return charval;
+}
+
 extern unsigned long strtoul ( const char *p, char **endp, int base );
 extern unsigned long long strtoull ( const char *p, char **endp, int base );
 

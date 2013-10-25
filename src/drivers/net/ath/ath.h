@@ -20,8 +20,6 @@
 #ifndef ATH_H
 #define ATH_H
 
-FILE_LICENCE ( BSD2 );
-
 #include <unistd.h>
 #include <ipxe/net80211.h>
 

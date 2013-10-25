@@ -20,8 +20,6 @@
 #ifndef ATH9K_H
 #define ATH9K_H
 
-FILE_LICENCE ( BSD2 );
-
 #include "common.h"
 
 /*

@@ -55,8 +55,6 @@ SECTIONS {
 	*(.data)
 	*(.data.*)
 	KEEP(*(SORT(.tbl.*)))	/* Various tables.  See include/tables.h */
-	KEEP(*(.provided))
-	KEEP(*(.provided.*))
 	_edata = .;
     }
 

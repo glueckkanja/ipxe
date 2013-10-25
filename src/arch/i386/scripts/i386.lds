@@ -109,8 +109,6 @@ SECTIONS {
 	*(.data)
 	*(.data.*)
 	KEEP(*(SORT(.tbl.*)))	/* Various tables.  See include/tables.h */
-	KEEP(*(.provided))
-	KEEP(*(.provided.*))
 	_mtextdata = .;
     } .bss.textdata (NOLOAD) : AT ( _end_lma ) {
 	*(.bss)

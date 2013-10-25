@@ -26,7 +26,6 @@ FILE_LICENCE ( GPL2_OR_LATER );
  *
  */
 
-#include <errno.h>
 #include <ipxe/efi/efi.h>
 #include <ipxe/reboot.h>
 
@@ -42,20 +41,4 @@ static void efi_reboot ( int warm ) {
 	rs->ResetSystem ( ( warm ? EfiResetWarm : EfiResetCold ), 0, 0, NULL );
 }
 
-/**
- * Power off system
- *
- * @ret rc		Return status code
- */
-static int efi_poweroff ( void ) {
-	EFI_RUNTIME_SERVICES *rs = efi_systab->RuntimeServices;
-
-	/* Use runtime services to power off system */
-	rs->ResetSystem ( EfiResetShutdown, 0, 0, NULL );
-
-	/* Should never happen */
-	return -ECANCELED;
-}
-
 PROVIDE_REBOOT ( efi, reboot, efi_reboot );
-PROVIDE_REBOOT ( efi, poweroff, efi_poweroff );

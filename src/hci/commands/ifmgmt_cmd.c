@@ -53,7 +53,6 @@ int ifcommon_exec ( int argc, char **argv,
 		    int stop_on_first_success ) {
 	struct ifcommon_options opts;
 	struct net_device *netdev;
-	int i;
 	int rc;
 
 	/* Parse options */
@@ -62,9 +61,11 @@ int ifcommon_exec ( int argc, char **argv,
 
 	if ( optind != argc ) {
 		/* Treat arguments as a list of interfaces to try */
-		for ( i = optind ; i < argc ; i++ ) {
-			if ( ( rc = parse_netdev ( argv[i], &netdev ) ) != 0 )
+		while ( optind != argc ) {
+			if ( ( rc = parse_netdev ( argv[optind++],
+						   &netdev ) ) != 0 ) {
 				continue;
+			}
 			if ( ( ( rc = payload ( netdev ) ) == 0 ) &&
 			     stop_on_first_success ) {
 				return 0;

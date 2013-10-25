@@ -21,8 +21,6 @@
  * trailing whitespace.
  */
 
-FILE_LICENCE ( GPL2_OR_LATER );
-
 /* EFI headers rudely redefine NULL */
 #undef NULL
 

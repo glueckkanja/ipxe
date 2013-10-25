@@ -39,7 +39,7 @@ FILE_LICENCE ( GPL2_OR_LATER );
 /** "img{single}" options */
 struct imgsingle_options {
 	/** Image name */
-	char *name;
+	const char *name;
 	/** Replace image */
 	int replace;
 	/** Free image after execution */

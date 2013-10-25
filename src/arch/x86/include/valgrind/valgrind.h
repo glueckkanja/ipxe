@@ -73,8 +73,6 @@
 #ifndef __VALGRIND_H
 #define __VALGRIND_H
 
-FILE_LICENCE ( BSD3 );
-
 
 /* ------------------------------------------------------------------ */
 /* VERSION NUMBER OF VALGRIND                                         */

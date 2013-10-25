@@ -7,8 +7,6 @@
  *
  */
 
-FILE_LICENCE ( GPL2_OR_LATER );
-
 #define UACCESS_EFI
 #define IOAPI_X86
 #define PCIAPI_EFI

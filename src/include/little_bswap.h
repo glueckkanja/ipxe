@@ -3,8 +3,6 @@
 
 FILE_LICENCE ( GPL2_OR_LATER );
 
-#define htonll(x)	__bswap_64(x)
-#define ntohll(x)	__bswap_64(x)
 #define ntohl(x)	__bswap_32(x)
 #define htonl(x) 	__bswap_32(x)
 #define ntohs(x) 	__bswap_16(x)
