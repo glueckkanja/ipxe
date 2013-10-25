@@ -44,7 +44,7 @@ struct device;
 #define MAX_LL_HEADER_LEN 36
 
 /** Maximum length of a network-layer address */
-#define MAX_NET_ADDR_LEN 4
+#define MAX_NET_ADDR_LEN 16
 
 /** Maximum length of a network-layer header
  *
@@ -175,8 +175,17 @@ struct ll_protocol {
 	 *
 	 * @v ll_addr		Link-layer address
 	 * @v eth_addr		Ethernet-compatible address to fill in
+	 * @ret rc		Return status code
 	 */
 	int ( * eth_addr ) ( const void *ll_addr, void *eth_addr );
+	/**
+	 * Generate EUI-64 address
+	 *
+	 * @v ll_addr		Link-layer address
+	 * @v eui64		EUI-64 address to fill in
+	 * @ret rc		Return status code
+	 */
+	int ( * eui64 ) ( const void *ll_addr, void *eui64 );
 	/** Link-layer protocol
 	 *
 	 * This is an ARPHRD_XXX constant, in network byte order.
@@ -283,6 +292,9 @@ struct net_device_stats {
 	struct net_device_error errors[NETDEV_MAX_UNIQUE_ERRORS];
 };
 
+/** Maximum length of a network device name */
+#define NETDEV_NAME_LEN 12
+
 /**
  * A network device
  *
@@ -300,8 +312,10 @@ struct net_device {
 	struct list_head list;
 	/** List of open network devices */
 	struct list_head open_list;
+	/** Index of this network device */
+	unsigned int index;
 	/** Name of this network device */
-	char name[12];
+	char name[NETDEV_NAME_LEN];
 	/** Underlying hardware device */
 	struct device *dev;
 
@@ -594,6 +608,7 @@ extern void netdev_close ( struct net_device *netdev );
 extern void unregister_netdev ( struct net_device *netdev );
 extern void netdev_irq ( struct net_device *netdev, int enable );
 extern struct net_device * find_netdev ( const char *name );
+extern struct net_device * find_netdev_by_index ( unsigned int index );
 extern struct net_device * find_netdev_by_location ( unsigned int bus_type,
 						     unsigned int location );
 extern struct net_device * last_opened_netdev ( void );

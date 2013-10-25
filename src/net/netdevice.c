@@ -498,10 +498,11 @@ int register_netdev ( struct net_device *netdev ) {
 	uint32_t seed;
 	int rc;
 
-	/* Create device name */
+	/* Record device index and create device name */
+	netdev->index = ifindex++;
 	if ( netdev->name[0] == '\0' ) {
 		snprintf ( netdev->name, sizeof ( netdev->name ), "net%d",
-			   ifindex++ );
+			   netdev->index );
 	}
 
 	/* Set initial link-layer address, if not already set */
@@ -670,8 +671,31 @@ void netdev_irq ( struct net_device *netdev, int enable ) {
 struct net_device * find_netdev ( const char *name ) {
 	struct net_device *netdev;
 
+	/* Allow "netX" shortcut */
+	if ( strcmp ( name, "netX" ) == 0 )
+		return last_opened_netdev();
+
+	/* Identify network device by name */
 	list_for_each_entry ( netdev, &net_devices, list ) {
 		if ( strcmp ( netdev->name, name ) == 0 )
+			return netdev;
+	}
+
+	return NULL;
+}
+
+/**
+ * Get network device by index
+ *
+ * @v index		Network device index
+ * @ret netdev		Network device, or NULL
+ */
+struct net_device * find_netdev_by_index ( unsigned int index ) {
+	struct net_device *netdev;
+
+	/* Identify network device by index */
+	list_for_each_entry ( netdev, &net_devices, list ) {
+		if ( netdev->index == index )
 			return netdev;
 	}
 
