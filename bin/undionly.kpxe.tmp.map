@@ -5948,7 +5948,7 @@ Linker script and memory map
                 0x0000000000000000                pci_vendor_id = 0x0
                 0x0000000000000000                pci_device_id = 0x0
 LOAD bin/blib.a
-                0x00000000493a9cd0                _build_id = 0x493a9cd0
+                0x00000000a86da203                _build_id = 0xa86da203
 OUTPUT(bin/undionly.kpxe.tmp elf32-i386)
 
 .debug_info     0x0000000000000000    0x84c77
@@ -7836,7 +7836,7 @@ SYMBOL TABLE:
 00019620 g       *ABS*	00000000 _end_lma
 00099488 g       *ABS*	00000000 _textdata_memsz
 00099488 g       *ABS*	00000000 _pprefix_memsz
-493a9cd0 g       *ABS*	00000000 _build_id
+a86da203 g       *ABS*	00000000 _build_id
 00000000 l    d  .prefix	00000000 .prefix
 00000000 g       .prefix	00000000 _kpxe_start
 00000000 g       .prefix	00000000 check__kpxe_start

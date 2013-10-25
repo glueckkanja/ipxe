@@ -6059,7 +6059,7 @@ Linker script and memory map
                 0x00000000000010ec                pci_vendor_id = 0x10ec
                 0x0000000000008139                pci_device_id = 0x8139
 LOAD bin/blib.a
-                0x0000000039028f8f                _build_id = 0x39028f8f
+                0x00000000ec0028b7                _build_id = 0xec0028b7
 OUTPUT(bin/rtl8139.rom.tmp elf32-i386)
 
 .debug_frame    0x0000000000000000     0xa950
@@ -7983,7 +7983,7 @@ SYMBOL TABLE:
 00019f50 g       *ABS*	00000000 _end_lma
 00099f40 g       *ABS*	00000000 _textdata_memsz
 00099f40 g       *ABS*	00000000 _pprefix_memsz
-39028f8f g       *ABS*	00000000 _build_id
+ec0028b7 g       *ABS*	00000000 _build_id
 00000000 l    d  .prefix	00000000 .prefix
 00000000 g       .prefix	00000000 _rom_start
 00000000 g       .prefix	00000000 check__rom_start
