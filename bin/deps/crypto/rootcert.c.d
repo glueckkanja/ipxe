@@ -12,11 +12,11 @@ rootcert_DEPS += crypto/rootcert.c include/compiler.h \
  include/ipxe/in.h include/ipxe/socket.h include/ipxe/uuid.h \
  include/byteswap.h include/endian.h arch/i386/include/bits/endian.h \
  arch/i386/include/bits/byteswap.h include/little_bswap.h \
- include/ipxe/netdevice.h include/ipxe/uaccess.h include/string.h \
- arch/x86/include/bits/string.h config/ioapi.h config/local/ioapi.h \
- include/ipxe/efi/efi_uaccess.h include/ipxe/linux/linux_uaccess.h \
- arch/i386/include/bits/uaccess.h arch/i386/include/librm.h \
- include/ipxe/init.h include/ipxe/rootcert.h
+ include/ipxe/netdevice.h include/ipxe/interface.h include/ipxe/uaccess.h \
+ include/string.h arch/x86/include/bits/string.h config/ioapi.h \
+ config/local/ioapi.h include/ipxe/efi/efi_uaccess.h \
+ include/ipxe/linux/linux_uaccess.h arch/i386/include/bits/uaccess.h \
+ arch/i386/include/librm.h include/ipxe/init.h include/ipxe/rootcert.h
 
 include/compiler.h:
 
@@ -93,6 +93,8 @@ arch/i386/include/bits/byteswap.h:
 include/little_bswap.h:
 
 include/ipxe/netdevice.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/uaccess.h:
 

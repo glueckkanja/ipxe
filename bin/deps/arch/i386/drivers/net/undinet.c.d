@@ -23,9 +23,10 @@ undinet_DEPS += arch/i386/drivers/net/undinet.c include/compiler.h \
  arch/i386/include/realmode.h arch/i386/include/biosint.h \
  arch/i386/include/pnpbios.h arch/i386/include/basemem_packet.h \
  include/ipxe/iobuf.h include/ipxe/netdevice.h include/ipxe/refcnt.h \
- include/ipxe/settings.h include/ipxe/if_ether.h include/ipxe/ethernet.h \
- arch/i386/include/undi.h arch/i386/include/pxe_types.h \
- arch/i386/include/undinet.h arch/i386/include/pxeparent.h
+ include/ipxe/settings.h include/ipxe/interface.h include/ipxe/if_ether.h \
+ include/ipxe/ethernet.h arch/i386/include/undi.h \
+ arch/i386/include/pxe_types.h arch/i386/include/undinet.h \
+ arch/i386/include/pxeparent.h
 
 include/compiler.h:
 
@@ -146,6 +147,8 @@ include/ipxe/netdevice.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/if_ether.h:
 

@@ -12,7 +12,11 @@ ifmgmt_DEPS += usr/ifmgmt.c include/compiler.h \
  arch/x86/include/bits/errfile.h include/ipxe/console.h \
  include/ipxe/tables.h include/ipxe/netdevice.h include/ipxe/list.h \
  include/assert.h include/ipxe/refcnt.h include/ipxe/settings.h \
- include/ipxe/device.h include/ipxe/process.h include/ipxe/keys.h \
+ include/ipxe/interface.h include/ipxe/device.h include/ipxe/job.h \
+ include/ipxe/monojob.h include/ipxe/nap.h config/nap.h \
+ config/local/nap.h include/ipxe/null_nap.h \
+ include/ipxe/linux/linux_nap.h arch/i386/include/bits/nap.h \
+ arch/i386/include/ipxe/bios_nap.h arch/x86/include/ipxe/efi/efix86_nap.h \
  include/usr/ifmgmt.h
 
 include/compiler.h:
@@ -83,10 +87,28 @@ include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
 
+include/ipxe/interface.h:
+
 include/ipxe/device.h:
 
-include/ipxe/process.h:
+include/ipxe/job.h:
 
-include/ipxe/keys.h:
+include/ipxe/monojob.h:
+
+include/ipxe/nap.h:
+
+config/nap.h:
+
+config/local/nap.h:
+
+include/ipxe/null_nap.h:
+
+include/ipxe/linux/linux_nap.h:
+
+arch/i386/include/bits/nap.h:
+
+arch/i386/include/ipxe/bios_nap.h:
+
+arch/x86/include/ipxe/efi/efix86_nap.h:
 
 include/usr/ifmgmt.h:

@@ -16,13 +16,13 @@ vxge_config_DEPS += drivers/net/vxge/vxge_config.c include/compiler.h \
  arch/x86/include/bits/io.h arch/x86/include/ipxe/x86_io.h \
  include/ipxe/pci_ids.h include/ipxe/iobuf.h include/ipxe/ethernet.h \
  include/ipxe/netdevice.h include/ipxe/refcnt.h include/ipxe/settings.h \
- include/byteswap.h include/endian.h arch/i386/include/bits/endian.h \
- arch/i386/include/bits/byteswap.h include/little_bswap.h \
- drivers/net/vxge/vxge_traffic.h include/ipxe/if_ether.h \
- drivers/net/vxge/vxge_reg.h drivers/net/vxge/vxge_version.h \
- drivers/net/vxge/vxge_config.h drivers/net/vxge/vxge_main.h \
- include/unistd.h include/ipxe/timer.h config/timer.h \
- config/local/timer.h include/ipxe/efi/efi_timer.h \
+ include/ipxe/interface.h include/byteswap.h include/endian.h \
+ arch/i386/include/bits/endian.h arch/i386/include/bits/byteswap.h \
+ include/little_bswap.h drivers/net/vxge/vxge_traffic.h \
+ include/ipxe/if_ether.h drivers/net/vxge/vxge_reg.h \
+ drivers/net/vxge/vxge_version.h drivers/net/vxge/vxge_config.h \
+ drivers/net/vxge/vxge_main.h include/unistd.h include/ipxe/timer.h \
+ config/timer.h config/local/timer.h include/ipxe/efi/efi_timer.h \
  include/ipxe/linux/linux_timer.h arch/i386/include/bits/timer.h \
  arch/i386/include/ipxe/bios_timer.h arch/i386/include/ipxe/timer2.h \
  arch/i386/include/ipxe/rdtsc_timer.h
@@ -112,6 +112,8 @@ include/ipxe/netdevice.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/byteswap.h:
 

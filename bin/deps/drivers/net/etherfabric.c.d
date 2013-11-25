@@ -24,10 +24,11 @@ etherfabric_DEPS += drivers/net/etherfabric.c include/compiler.h \
  include/ipxe/malloc.h arch/x86/include/valgrind/memcheck.h \
  arch/x86/include/valgrind/valgrind.h include/ipxe/ethernet.h \
  include/ipxe/netdevice.h include/ipxe/refcnt.h include/ipxe/settings.h \
- include/ipxe/iobuf.h include/mii.h drivers/net/etherfabric.h \
- drivers/net/etherfabric_nic.h include/ipxe/bitbash.h include/ipxe/i2c.h \
- include/ipxe/spi.h include/ipxe/nvs.h include/ipxe/nvo.h \
- include/ipxe/dhcpopts.h include/ipxe/if_ether.h
+ include/ipxe/interface.h include/ipxe/iobuf.h include/mii.h \
+ drivers/net/etherfabric.h drivers/net/etherfabric_nic.h \
+ include/ipxe/bitbash.h include/ipxe/i2c.h include/ipxe/spi.h \
+ include/ipxe/nvs.h include/ipxe/nvo.h include/ipxe/dhcpopts.h \
+ include/ipxe/if_ether.h
 
 include/compiler.h:
 
@@ -152,6 +153,8 @@ include/ipxe/netdevice.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/iobuf.h:
 

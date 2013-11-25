@@ -13,12 +13,12 @@ nbi_DEPS += arch/i386/image/nbi.c include/compiler.h \
  arch/i386/include/bios.h arch/i386/include/basemem_packet.h \
  include/ipxe/segment.h include/ipxe/init.h include/ipxe/tables.h \
  include/ipxe/netdevice.h include/ipxe/list.h include/ipxe/refcnt.h \
- include/ipxe/settings.h include/ipxe/fakedhcp.h include/ipxe/image.h \
- include/ipxe/features.h include/ipxe/dhcp.h include/stdarg.h \
- include/ipxe/in.h include/ipxe/socket.h include/ipxe/uuid.h \
- include/byteswap.h include/endian.h arch/i386/include/bits/endian.h \
- arch/i386/include/bits/byteswap.h include/little_bswap.h \
- include/ipxe/version.h
+ include/ipxe/settings.h include/ipxe/interface.h include/ipxe/fakedhcp.h \
+ include/ipxe/image.h include/ipxe/features.h include/ipxe/dhcp.h \
+ include/stdarg.h include/ipxe/in.h include/ipxe/socket.h \
+ include/ipxe/uuid.h include/byteswap.h include/endian.h \
+ arch/i386/include/bits/endian.h arch/i386/include/bits/byteswap.h \
+ include/little_bswap.h include/ipxe/version.h
 
 include/compiler.h:
 
@@ -91,6 +91,8 @@ include/ipxe/list.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/fakedhcp.h:
 

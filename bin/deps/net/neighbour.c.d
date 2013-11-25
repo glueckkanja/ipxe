@@ -14,7 +14,7 @@ neighbour_DEPS += net/neighbour.c include/compiler.h \
  include/ipxe/tables.h arch/x86/include/valgrind/memcheck.h \
  arch/x86/include/valgrind/valgrind.h include/stdarg.h \
  include/ipxe/neighbour.h include/ipxe/refcnt.h include/ipxe/netdevice.h \
- include/ipxe/settings.h
+ include/ipxe/settings.h include/ipxe/interface.h
 
 include/compiler.h:
 
@@ -91,3 +91,5 @@ include/ipxe/refcnt.h:
 include/ipxe/netdevice.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:

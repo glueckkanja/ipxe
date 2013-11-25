@@ -2,11 +2,11 @@ vxge_traffic_DEPS += drivers/net/vxge/vxge_traffic.c include/compiler.h \
  arch/i386/include/bits/compiler.h include/ipxe/netdevice.h \
  include/stdint.h arch/i386/include/bits/stdint.h include/ipxe/list.h \
  include/stddef.h include/assert.h include/ipxe/tables.h \
- include/ipxe/refcnt.h include/ipxe/settings.h include/errno.h \
- arch/i386/include/ipxe/errno/pcbios.h arch/i386/include/pxe_error.h \
- include/ipxe/errfile.h arch/x86/include/bits/errfile.h \
- drivers/net/vxge/vxge_traffic.h include/ipxe/if_ether.h \
- include/ipxe/iobuf.h drivers/net/vxge/vxge_reg.h \
+ include/ipxe/refcnt.h include/ipxe/settings.h include/ipxe/interface.h \
+ include/errno.h arch/i386/include/ipxe/errno/pcbios.h \
+ arch/i386/include/pxe_error.h include/ipxe/errfile.h \
+ arch/x86/include/bits/errfile.h drivers/net/vxge/vxge_traffic.h \
+ include/ipxe/if_ether.h include/ipxe/iobuf.h drivers/net/vxge/vxge_reg.h \
  drivers/net/vxge/vxge_version.h drivers/net/vxge/vxge_config.h \
  include/ipxe/pci.h include/ipxe/device.h include/ipxe/pci_io.h \
  include/ipxe/api.h config/ioapi.h config/defaults.h \
@@ -46,6 +46,8 @@ include/ipxe/tables.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/errno.h:
 

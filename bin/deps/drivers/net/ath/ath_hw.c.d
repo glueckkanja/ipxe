@@ -16,7 +16,7 @@ ath_hw_DEPS += drivers/net/ath/ath_hw.c include/compiler.h \
  include/ipxe/refcnt.h include/ipxe/tables.h include/ipxe/ieee80211.h \
  include/ipxe/if_ether.h include/endian.h arch/i386/include/bits/endian.h \
  include/ipxe/iobuf.h include/ipxe/netdevice.h include/ipxe/settings.h \
- include/ipxe/rc80211.h drivers/net/ath/reg.h
+ include/ipxe/interface.h include/ipxe/rc80211.h drivers/net/ath/reg.h
 
 include/compiler.h:
 
@@ -107,6 +107,8 @@ include/ipxe/iobuf.h:
 include/ipxe/netdevice.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/rc80211.h:
 

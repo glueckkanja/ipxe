@@ -9,9 +9,9 @@ ath5k_DEPS += drivers/net/ath/ath5k/ath5k.c include/compiler.h \
  arch/i386/include/bits/timer.h arch/i386/include/ipxe/bios_timer.h \
  arch/i386/include/ipxe/timer2.h arch/i386/include/ipxe/rdtsc_timer.h \
  include/ipxe/netdevice.h include/ipxe/list.h include/stddef.h \
- include/ipxe/refcnt.h include/ipxe/settings.h include/ipxe/pci.h \
- include/ipxe/device.h include/ipxe/pci_io.h config/ioapi.h \
- config/local/ioapi.h include/ipxe/efi/efi_pci_api.h \
+ include/ipxe/refcnt.h include/ipxe/settings.h include/ipxe/interface.h \
+ include/ipxe/pci.h include/ipxe/device.h include/ipxe/pci_io.h \
+ config/ioapi.h config/local/ioapi.h include/ipxe/efi/efi_pci_api.h \
  include/ipxe/linux/linux_pci.h arch/x86/include/bits/pci_io.h \
  arch/x86/include/ipxe/pcibios.h arch/x86/include/ipxe/pcidirect.h \
  include/ipxe/io.h include/ipxe/uaccess.h include/string.h \
@@ -85,6 +85,8 @@ include/stddef.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/pci.h:
 

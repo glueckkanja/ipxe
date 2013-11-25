@@ -14,12 +14,13 @@ forcedeth_DEPS += drivers/net/forcedeth.c include/compiler.h \
  include/ipxe/errfile.h arch/x86/include/bits/errfile.h \
  include/ipxe/ethernet.h include/ipxe/netdevice.h include/ipxe/list.h \
  include/ipxe/tables.h include/ipxe/refcnt.h include/ipxe/settings.h \
- include/ipxe/iobuf.h include/ipxe/if_ether.h include/ipxe/io.h \
- config/ioapi.h config/local/ioapi.h include/ipxe/uaccess.h \
- include/ipxe/efi/efi_uaccess.h include/ipxe/linux/linux_uaccess.h \
- arch/i386/include/bits/uaccess.h arch/i386/include/librm.h \
- arch/x86/include/bits/io.h arch/x86/include/ipxe/x86_io.h \
- include/ipxe/malloc.h arch/x86/include/valgrind/memcheck.h \
+ include/ipxe/interface.h include/ipxe/iobuf.h include/ipxe/if_ether.h \
+ include/ipxe/io.h config/ioapi.h config/local/ioapi.h \
+ include/ipxe/uaccess.h include/ipxe/efi/efi_uaccess.h \
+ include/ipxe/linux/linux_uaccess.h arch/i386/include/bits/uaccess.h \
+ arch/i386/include/librm.h arch/x86/include/bits/io.h \
+ arch/x86/include/ipxe/x86_io.h include/ipxe/malloc.h \
+ arch/x86/include/valgrind/memcheck.h \
  arch/x86/include/valgrind/valgrind.h include/ipxe/crypto.h \
  include/ipxe/pci.h include/ipxe/device.h include/ipxe/pci_io.h \
  include/ipxe/efi/efi_pci_api.h include/ipxe/linux/linux_pci.h \
@@ -106,6 +107,8 @@ include/ipxe/tables.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/iobuf.h:
 

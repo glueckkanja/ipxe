@@ -24,7 +24,8 @@ amd8111e_DEPS += drivers/net/amd8111e.c include/compiler.h \
  include/ipxe/isapnp.h include/ipxe/isa_ids.h include/ipxe/isa.h \
  include/ipxe/eisa.h include/ipxe/mca.h include/mii.h \
  include/ipxe/netdevice.h include/ipxe/refcnt.h include/ipxe/settings.h \
- include/ipxe/ethernet.h include/ipxe/iobuf.h drivers/net/amd8111e.h
+ include/ipxe/interface.h include/ipxe/ethernet.h include/ipxe/iobuf.h \
+ drivers/net/amd8111e.h
 
 include/compiler.h:
 
@@ -155,6 +156,8 @@ include/ipxe/netdevice.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/ethernet.h:
 

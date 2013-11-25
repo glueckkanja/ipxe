@@ -16,11 +16,11 @@ ath9k_ar9003_hw_DEPS += drivers/net/ath/ath9k/ath9k_ar9003_hw.c \
  include/ipxe/refcnt.h include/ipxe/tables.h include/ipxe/ieee80211.h \
  include/ipxe/if_ether.h include/endian.h arch/i386/include/bits/endian.h \
  include/ipxe/iobuf.h include/ipxe/netdevice.h include/ipxe/settings.h \
- include/ipxe/rc80211.h drivers/net/ath/ath9k/ar9003_eeprom.h \
- drivers/net/ath/ath9k/calib.h drivers/net/ath/ath9k/reg.h \
- drivers/net/ath/ath9k/../reg.h drivers/net/ath/ath9k/phy.h \
- drivers/net/ath/ath9k/../regd.h drivers/net/ath/ath9k/../ath.h \
- drivers/net/ath/ath9k/ar9003_mac.h \
+ include/ipxe/interface.h include/ipxe/rc80211.h \
+ drivers/net/ath/ath9k/ar9003_eeprom.h drivers/net/ath/ath9k/calib.h \
+ drivers/net/ath/ath9k/reg.h drivers/net/ath/ath9k/../reg.h \
+ drivers/net/ath/ath9k/phy.h drivers/net/ath/ath9k/../regd.h \
+ drivers/net/ath/ath9k/../ath.h drivers/net/ath/ath9k/ar9003_mac.h \
  drivers/net/ath/ath9k/ar9003_2p2_initvals.h \
  drivers/net/ath/ath9k/ar9485_initvals.h \
  drivers/net/ath/ath9k/ar9340_initvals.h
@@ -108,6 +108,8 @@ include/ipxe/iobuf.h:
 include/ipxe/netdevice.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/rc80211.h:
 

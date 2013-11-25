@@ -11,7 +11,8 @@ mii_DEPS += drivers/net/mii.c include/compiler.h \
  arch/i386/include/pxe_error.h include/ipxe/errfile.h \
  arch/x86/include/bits/errfile.h include/ipxe/mii.h include/mii.h \
  include/ipxe/netdevice.h include/ipxe/list.h include/assert.h \
- include/ipxe/tables.h include/ipxe/refcnt.h include/ipxe/settings.h
+ include/ipxe/tables.h include/ipxe/refcnt.h include/ipxe/settings.h \
+ include/ipxe/interface.h
 
 include/compiler.h:
 
@@ -80,3 +81,5 @@ include/ipxe/tables.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:

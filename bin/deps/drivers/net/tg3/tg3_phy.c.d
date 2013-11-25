@@ -2,11 +2,11 @@ tg3_phy_DEPS += drivers/net/tg3/tg3_phy.c include/compiler.h \
  arch/i386/include/bits/compiler.h include/mii.h include/ipxe/netdevice.h \
  include/stdint.h arch/i386/include/bits/stdint.h include/ipxe/list.h \
  include/stddef.h include/assert.h include/ipxe/tables.h \
- include/ipxe/refcnt.h include/ipxe/settings.h include/stdio.h \
- include/stdarg.h include/errno.h arch/i386/include/ipxe/errno/pcbios.h \
- arch/i386/include/pxe_error.h include/ipxe/errfile.h \
- arch/x86/include/bits/errfile.h include/unistd.h include/ipxe/timer.h \
- include/ipxe/api.h config/timer.h config/defaults.h \
+ include/ipxe/refcnt.h include/ipxe/settings.h include/ipxe/interface.h \
+ include/stdio.h include/stdarg.h include/errno.h \
+ arch/i386/include/ipxe/errno/pcbios.h arch/i386/include/pxe_error.h \
+ include/ipxe/errfile.h arch/x86/include/bits/errfile.h include/unistd.h \
+ include/ipxe/timer.h include/ipxe/api.h config/timer.h config/defaults.h \
  config/defaults/pcbios.h config/local/timer.h \
  include/ipxe/efi/efi_timer.h include/ipxe/linux/linux_timer.h \
  arch/i386/include/bits/timer.h arch/i386/include/ipxe/bios_timer.h \
@@ -47,6 +47,8 @@ include/ipxe/tables.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/stdio.h:
 

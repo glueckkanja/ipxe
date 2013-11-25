@@ -5,7 +5,7 @@ rc80211_DEPS += net/80211/rc80211.c include/compiler.h \
  include/ipxe/refcnt.h include/ipxe/tables.h include/ipxe/ieee80211.h \
  include/ipxe/if_ether.h include/endian.h arch/i386/include/bits/endian.h \
  include/ipxe/iobuf.h include/ipxe/netdevice.h include/ipxe/settings.h \
- include/ipxe/rc80211.h
+ include/ipxe/interface.h include/ipxe/rc80211.h
 
 include/compiler.h:
 
@@ -44,5 +44,7 @@ include/ipxe/iobuf.h:
 include/ipxe/netdevice.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/rc80211.h:

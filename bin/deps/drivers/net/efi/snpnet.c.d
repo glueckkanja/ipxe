@@ -11,8 +11,8 @@ snpnet_DEPS += drivers/net/efi/snpnet.c include/compiler.h \
  arch/x86/include/bits/io.h arch/x86/include/ipxe/x86_io.h \
  include/ipxe/iobuf.h include/assert.h include/ipxe/list.h \
  include/ipxe/netdevice.h include/ipxe/tables.h include/ipxe/refcnt.h \
- include/ipxe/settings.h include/ipxe/if_ether.h include/ipxe/ethernet.h \
- include/ipxe/efi/efi.h include/ipxe/efi/Uefi.h \
+ include/ipxe/settings.h include/ipxe/interface.h include/ipxe/if_ether.h \
+ include/ipxe/ethernet.h include/ipxe/efi/efi.h include/ipxe/efi/Uefi.h \
  include/ipxe/efi/Uefi/UefiBaseType.h include/ipxe/efi/Base.h \
  include/ipxe/efi/ProcessorBind.h include/ipxe/efi/Ia32/ProcessorBind.h \
  include/ipxe/efi/Uefi/UefiSpec.h include/ipxe/efi/Uefi/UefiMultiPhase.h \
@@ -101,6 +101,8 @@ include/ipxe/tables.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/if_ether.h:
 

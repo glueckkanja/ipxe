@@ -23,7 +23,8 @@ ath9k_init_DEPS += drivers/net/ath/ath9k/ath9k_init.c include/compiler.h \
  include/ipxe/process.h include/ipxe/refcnt.h include/ipxe/ieee80211.h \
  include/ipxe/if_ether.h include/endian.h arch/i386/include/bits/endian.h \
  include/ipxe/iobuf.h include/ipxe/netdevice.h include/ipxe/settings.h \
- include/ipxe/rc80211.h drivers/net/ath/ath9k/hw.h include/errno.h \
+ include/ipxe/interface.h include/ipxe/rc80211.h \
+ drivers/net/ath/ath9k/hw.h include/errno.h \
  arch/i386/include/ipxe/errno/pcbios.h arch/i386/include/pxe_error.h \
  include/ipxe/errfile.h arch/x86/include/bits/errfile.h \
  drivers/net/ath/ath9k/mac.h drivers/net/ath/ath9k/ani.h \
@@ -152,6 +153,8 @@ include/ipxe/iobuf.h:
 include/ipxe/netdevice.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/rc80211.h:
 

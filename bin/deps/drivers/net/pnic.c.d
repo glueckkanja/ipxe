@@ -16,7 +16,7 @@ pnic_DEPS += drivers/net/pnic.c include/compiler.h \
  arch/x86/include/ipxe/pcibios.h arch/x86/include/ipxe/pcidirect.h \
  include/ipxe/pci_ids.h include/ipxe/if_ether.h include/ipxe/ethernet.h \
  include/ipxe/netdevice.h include/ipxe/refcnt.h include/ipxe/settings.h \
- include/ipxe/iobuf.h drivers/net/pnic_api.h
+ include/ipxe/interface.h include/ipxe/iobuf.h drivers/net/pnic_api.h
 
 include/compiler.h:
 
@@ -105,6 +105,8 @@ include/ipxe/netdevice.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/iobuf.h:
 

@@ -8,7 +8,8 @@ eth_slow_DEPS += net/eth_slow.c include/compiler.h \
  include/ipxe/errfile.h arch/x86/include/bits/errfile.h \
  include/ipxe/iobuf.h include/ipxe/list.h include/ipxe/netdevice.h \
  include/ipxe/tables.h include/ipxe/refcnt.h include/ipxe/settings.h \
- include/ipxe/if_ether.h include/ipxe/ethernet.h include/ipxe/eth_slow.h
+ include/ipxe/interface.h include/ipxe/if_ether.h include/ipxe/ethernet.h \
+ include/ipxe/eth_slow.h
 
 include/compiler.h:
 
@@ -59,6 +60,8 @@ include/ipxe/tables.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/if_ether.h:
 

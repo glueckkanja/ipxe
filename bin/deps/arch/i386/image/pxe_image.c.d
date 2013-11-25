@@ -15,10 +15,11 @@ pxe_image_DEPS += arch/i386/image/pxe_image.c include/compiler.h \
  arch/i386/include/bits/uaccess.h arch/i386/include/librm.h \
  arch/i386/include/setjmp.h include/ipxe/image.h include/ipxe/refcnt.h \
  include/ipxe/segment.h include/ipxe/netdevice.h include/ipxe/settings.h \
- include/ipxe/features.h include/ipxe/dhcp.h include/stdarg.h \
- include/ipxe/in.h include/ipxe/socket.h include/ipxe/uuid.h \
- include/byteswap.h include/endian.h arch/i386/include/bits/endian.h \
- arch/i386/include/bits/byteswap.h include/little_bswap.h
+ include/ipxe/interface.h include/ipxe/features.h include/ipxe/dhcp.h \
+ include/stdarg.h include/ipxe/in.h include/ipxe/socket.h \
+ include/ipxe/uuid.h include/byteswap.h include/endian.h \
+ arch/i386/include/bits/endian.h arch/i386/include/bits/byteswap.h \
+ include/little_bswap.h
 
 include/compiler.h:
 
@@ -99,6 +100,8 @@ include/ipxe/segment.h:
 include/ipxe/netdevice.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/features.h:
 

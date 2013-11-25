@@ -17,8 +17,8 @@ b44_DEPS += drivers/net/b44.c include/compiler.h \
  arch/i386/include/bits/uaccess.h arch/i386/include/librm.h \
  arch/x86/include/bits/io.h arch/x86/include/ipxe/x86_io.h include/mii.h \
  include/ipxe/netdevice.h include/ipxe/list.h include/ipxe/tables.h \
- include/ipxe/refcnt.h include/ipxe/settings.h include/ipxe/iobuf.h \
- include/ipxe/malloc.h include/stdlib.h \
+ include/ipxe/refcnt.h include/ipxe/settings.h include/ipxe/interface.h \
+ include/ipxe/iobuf.h include/ipxe/malloc.h include/stdlib.h \
  arch/x86/include/valgrind/memcheck.h \
  arch/x86/include/valgrind/valgrind.h include/ipxe/pci.h \
  include/ipxe/device.h include/ipxe/pci_io.h \
@@ -124,6 +124,8 @@ include/ipxe/tables.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/iobuf.h:
 

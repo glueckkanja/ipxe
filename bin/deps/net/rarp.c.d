@@ -4,8 +4,8 @@ rarp_DEPS += net/rarp.c include/compiler.h arch/i386/include/bits/compiler.h \
  arch/i386/include/bits/byteswap.h include/little_bswap.h \
  include/ipxe/netdevice.h include/ipxe/list.h include/stddef.h \
  include/assert.h include/ipxe/tables.h include/ipxe/refcnt.h \
- include/ipxe/settings.h include/ipxe/iobuf.h include/ipxe/if_ether.h \
- include/ipxe/rarp.h
+ include/ipxe/settings.h include/ipxe/interface.h include/ipxe/iobuf.h \
+ include/ipxe/if_ether.h include/ipxe/rarp.h
 
 include/compiler.h:
 
@@ -38,6 +38,8 @@ include/ipxe/tables.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/iobuf.h:
 

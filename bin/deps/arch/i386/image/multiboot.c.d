@@ -17,8 +17,9 @@ multiboot_DEPS += arch/i386/image/multiboot.c include/compiler.h \
  include/ipxe/in.h include/ipxe/socket.h include/ipxe/uuid.h \
  include/byteswap.h include/endian.h arch/i386/include/bits/endian.h \
  arch/i386/include/bits/byteswap.h include/little_bswap.h \
- include/ipxe/netdevice.h include/ipxe/settings.h include/ipxe/uri.h \
- include/stdlib.h include/ipxe/version.h
+ include/ipxe/netdevice.h include/ipxe/settings.h \
+ include/ipxe/interface.h include/ipxe/uri.h include/stdlib.h \
+ include/ipxe/version.h
 
 include/compiler.h:
 
@@ -121,6 +122,8 @@ include/little_bswap.h:
 include/ipxe/netdevice.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/uri.h:
 

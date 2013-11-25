@@ -19,11 +19,12 @@ epic100_DEPS += drivers/net/epic100.c include/compiler.h \
  arch/i386/include/librm.h arch/x86/include/bits/io.h \
  arch/x86/include/ipxe/x86_io.h include/ipxe/pci_ids.h \
  include/ipxe/ethernet.h include/ipxe/netdevice.h include/ipxe/refcnt.h \
- include/ipxe/settings.h include/ipxe/iobuf.h include/nic.h \
- include/byteswap.h include/endian.h arch/i386/include/bits/endian.h \
- arch/i386/include/bits/byteswap.h include/little_bswap.h \
- include/ipxe/isapnp.h include/ipxe/isa_ids.h include/ipxe/isa.h \
- include/ipxe/eisa.h include/ipxe/mca.h drivers/net/epic100.h
+ include/ipxe/settings.h include/ipxe/interface.h include/ipxe/iobuf.h \
+ include/nic.h include/byteswap.h include/endian.h \
+ arch/i386/include/bits/endian.h arch/i386/include/bits/byteswap.h \
+ include/little_bswap.h include/ipxe/isapnp.h include/ipxe/isa_ids.h \
+ include/ipxe/isa.h include/ipxe/eisa.h include/ipxe/mca.h \
+ drivers/net/epic100.h
 
 include/compiler.h:
 
@@ -132,6 +133,8 @@ include/ipxe/netdevice.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/iobuf.h:
 

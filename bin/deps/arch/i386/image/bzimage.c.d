@@ -17,7 +17,8 @@ bzimage_DEPS += arch/i386/image/bzimage.c include/compiler.h \
  include/ipxe/socket.h include/ipxe/uuid.h include/byteswap.h \
  include/endian.h arch/i386/include/bits/endian.h \
  arch/i386/include/bits/byteswap.h include/little_bswap.h \
- include/ipxe/netdevice.h include/ipxe/settings.h
+ include/ipxe/netdevice.h include/ipxe/settings.h \
+ include/ipxe/interface.h
 
 include/compiler.h:
 
@@ -114,3 +115,5 @@ include/little_bswap.h:
 include/ipxe/netdevice.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:

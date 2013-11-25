@@ -9,8 +9,8 @@ dhcp_DEPS += net/udp/dhcp.c include/compiler.h \
  arch/i386/include/bits/byteswap.h include/little_bswap.h \
  include/ipxe/if_ether.h include/ipxe/iobuf.h include/ipxe/list.h \
  include/ipxe/netdevice.h include/ipxe/tables.h include/ipxe/refcnt.h \
- include/ipxe/settings.h include/ipxe/device.h include/ipxe/xfer.h \
- include/ipxe/interface.h include/ipxe/open.h include/ipxe/socket.h \
+ include/ipxe/settings.h include/ipxe/interface.h include/ipxe/device.h \
+ include/ipxe/xfer.h include/ipxe/open.h include/ipxe/socket.h \
  include/ipxe/job.h include/ipxe/retry.h include/ipxe/tcpip.h \
  include/ipxe/in.h arch/x86/include/bits/tcpip.h include/ipxe/ip.h \
  include/ipxe/uuid.h include/ipxe/timer.h include/ipxe/api.h \
@@ -83,11 +83,11 @@ include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
 
+include/ipxe/interface.h:
+
 include/ipxe/device.h:
 
 include/ipxe/xfer.h:
-
-include/ipxe/interface.h:
 
 include/ipxe/open.h:
 

@@ -10,13 +10,13 @@ slam_DEPS += net/udp/slam.c include/compiler.h \
  include/ipxe/features.h include/ipxe/tables.h include/ipxe/dhcp.h \
  include/stdarg.h include/ipxe/in.h include/ipxe/socket.h \
  include/ipxe/list.h include/ipxe/refcnt.h include/ipxe/uuid.h \
- include/ipxe/netdevice.h include/ipxe/settings.h include/ipxe/uaccess.h \
- include/ipxe/api.h config/ioapi.h config/defaults.h \
- config/defaults/pcbios.h config/local/ioapi.h \
- include/ipxe/efi/efi_uaccess.h include/ipxe/linux/linux_uaccess.h \
- arch/i386/include/bits/uaccess.h arch/i386/include/librm.h \
- include/ipxe/iobuf.h include/ipxe/bitmap.h include/ipxe/xfer.h \
- include/ipxe/interface.h include/ipxe/open.h include/ipxe/uri.h \
+ include/ipxe/netdevice.h include/ipxe/settings.h \
+ include/ipxe/interface.h include/ipxe/uaccess.h include/ipxe/api.h \
+ config/ioapi.h config/defaults.h config/defaults/pcbios.h \
+ config/local/ioapi.h include/ipxe/efi/efi_uaccess.h \
+ include/ipxe/linux/linux_uaccess.h arch/i386/include/bits/uaccess.h \
+ arch/i386/include/librm.h include/ipxe/iobuf.h include/ipxe/bitmap.h \
+ include/ipxe/xfer.h include/ipxe/open.h include/ipxe/uri.h \
  include/ipxe/tcpip.h arch/x86/include/bits/tcpip.h include/ipxe/timer.h \
  config/timer.h config/local/timer.h include/ipxe/efi/efi_timer.h \
  include/ipxe/linux/linux_timer.h arch/i386/include/bits/timer.h \
@@ -87,6 +87,8 @@ include/ipxe/netdevice.h:
 
 include/ipxe/settings.h:
 
+include/ipxe/interface.h:
+
 include/ipxe/uaccess.h:
 
 include/ipxe/api.h:
@@ -112,8 +114,6 @@ include/ipxe/iobuf.h:
 include/ipxe/bitmap.h:
 
 include/ipxe/xfer.h:
-
-include/ipxe/interface.h:
 
 include/ipxe/open.h:
 

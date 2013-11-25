@@ -25,7 +25,7 @@ ne2k_isa_DEPS += drivers/net/ne2k_isa.c include/compiler.h \
  include/ipxe/isapnp.h include/ipxe/isa_ids.h include/ipxe/isa.h \
  include/ipxe/eisa.h include/ipxe/mca.h include/ipxe/ethernet.h \
  include/ipxe/netdevice.h include/ipxe/refcnt.h include/ipxe/settings.h \
- include/ipxe/iobuf.h include/errno.h \
+ include/ipxe/interface.h include/ipxe/iobuf.h include/errno.h \
  arch/i386/include/ipxe/errno/pcbios.h arch/i386/include/pxe_error.h \
  include/ipxe/errfile.h arch/x86/include/bits/errfile.h
 
@@ -160,6 +160,8 @@ include/ipxe/netdevice.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/iobuf.h:
 

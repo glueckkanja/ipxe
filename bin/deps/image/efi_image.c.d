@@ -29,7 +29,7 @@ efi_image_DEPS += image/efi_image.c include/compiler.h \
  arch/i386/include/bits/endian.h arch/i386/include/bits/byteswap.h \
  include/little_bswap.h include/ipxe/efi/efi_snp.h include/ipxe/list.h \
  include/ipxe/netdevice.h include/ipxe/refcnt.h include/ipxe/settings.h \
- include/ipxe/efi/Protocol/SimpleNetwork.h \
+ include/ipxe/interface.h include/ipxe/efi/Protocol/SimpleNetwork.h \
  include/ipxe/efi/Protocol/NetworkInterfaceIdentifier.h \
  include/ipxe/efi/Protocol/ComponentName2.h \
  include/ipxe/efi/Protocol/HiiConfigAccess.h \
@@ -159,6 +159,8 @@ include/ipxe/netdevice.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/efi/Protocol/SimpleNetwork.h:
 

@@ -17,9 +17,10 @@ ipoib_DEPS += drivers/net/ipoib.c include/compiler.h \
  arch/x86/include/valgrind/valgrind.h include/ipxe/if_arp.h \
  include/ipxe/if_ether.h include/ipxe/ethernet.h include/ipxe/netdevice.h \
  include/ipxe/list.h include/ipxe/refcnt.h include/ipxe/settings.h \
- include/ipxe/iobuf.h include/ipxe/infiniband.h include/ipxe/device.h \
- include/ipxe/ib_packet.h include/ipxe/ib_mad.h include/ipxe/ib_pathrec.h \
- include/ipxe/ib_mcast.h include/ipxe/retry.h include/ipxe/ipoib.h
+ include/ipxe/interface.h include/ipxe/iobuf.h include/ipxe/infiniband.h \
+ include/ipxe/device.h include/ipxe/ib_packet.h include/ipxe/ib_mad.h \
+ include/ipxe/ib_pathrec.h include/ipxe/ib_mcast.h include/ipxe/retry.h \
+ include/ipxe/ipoib.h
 
 include/compiler.h:
 
@@ -112,6 +113,8 @@ include/ipxe/list.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/iobuf.h:
 

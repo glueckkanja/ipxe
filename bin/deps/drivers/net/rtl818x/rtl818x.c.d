@@ -26,10 +26,11 @@ rtl818x_DEPS += drivers/net/rtl818x/rtl818x.c include/compiler.h \
  arch/x86/include/ipxe/x86_io.h include/ipxe/pci_ids.h \
  include/ipxe/net80211.h include/ipxe/process.h include/ipxe/refcnt.h \
  include/ipxe/ieee80211.h include/ipxe/if_ether.h include/endian.h \
- include/ipxe/netdevice.h include/ipxe/settings.h include/ipxe/rc80211.h \
- include/ipxe/threewire.h include/ipxe/spi.h include/ipxe/nvs.h \
- arch/i386/include/limits.h drivers/net/rtl818x/rtl818x.h \
- include/ipxe/spi_bit.h include/ipxe/bitbash.h
+ include/ipxe/netdevice.h include/ipxe/settings.h \
+ include/ipxe/interface.h include/ipxe/rc80211.h include/ipxe/threewire.h \
+ include/ipxe/spi.h include/ipxe/nvs.h arch/i386/include/limits.h \
+ drivers/net/rtl818x/rtl818x.h include/ipxe/spi_bit.h \
+ include/ipxe/bitbash.h
 
 include/compiler.h:
 
@@ -164,6 +165,8 @@ include/endian.h:
 include/ipxe/netdevice.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/rc80211.h:
 

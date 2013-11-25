@@ -9,8 +9,8 @@ lotest_DEPS += usr/lotest.c include/compiler.h \
  arch/i386/include/bits/byteswap.h include/little_bswap.h \
  include/ipxe/iobuf.h include/ipxe/list.h include/ipxe/netdevice.h \
  include/ipxe/tables.h include/ipxe/refcnt.h include/ipxe/settings.h \
- include/ipxe/if_ether.h include/ipxe/keys.h include/ipxe/console.h \
- include/usr/ifmgmt.h include/usr/lotest.h
+ include/ipxe/interface.h include/ipxe/if_ether.h include/ipxe/keys.h \
+ include/ipxe/console.h include/usr/ifmgmt.h include/usr/lotest.h
 
 include/compiler.h:
 
@@ -65,6 +65,8 @@ include/ipxe/tables.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/if_ether.h:
 

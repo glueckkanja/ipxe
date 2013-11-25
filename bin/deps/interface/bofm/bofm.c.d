@@ -10,13 +10,14 @@ bofm_DEPS += interface/bofm/bofm.c include/compiler.h \
  arch/i386/include/bits/uaccess.h arch/i386/include/librm.h \
  include/ipxe/list.h include/assert.h include/ipxe/ethernet.h \
  include/ipxe/netdevice.h include/ipxe/tables.h include/ipxe/refcnt.h \
- include/ipxe/settings.h include/ipxe/iobuf.h include/ipxe/bofm.h \
- include/ipxe/pci.h include/ipxe/device.h include/ipxe/pci_io.h \
- include/ipxe/efi/efi_pci_api.h include/ipxe/linux/linux_pci.h \
- arch/x86/include/bits/pci_io.h arch/x86/include/ipxe/pcibios.h \
- arch/x86/include/ipxe/pcidirect.h include/ipxe/io.h \
- arch/x86/include/bits/io.h arch/x86/include/ipxe/x86_io.h \
- include/ipxe/pci_ids.h config/sideband.h config/local/sideband.h
+ include/ipxe/settings.h include/ipxe/interface.h include/ipxe/iobuf.h \
+ include/ipxe/bofm.h include/ipxe/pci.h include/ipxe/device.h \
+ include/ipxe/pci_io.h include/ipxe/efi/efi_pci_api.h \
+ include/ipxe/linux/linux_pci.h arch/x86/include/bits/pci_io.h \
+ arch/x86/include/ipxe/pcibios.h arch/x86/include/ipxe/pcidirect.h \
+ include/ipxe/io.h arch/x86/include/bits/io.h \
+ arch/x86/include/ipxe/x86_io.h include/ipxe/pci_ids.h config/sideband.h \
+ config/local/sideband.h
 
 include/compiler.h:
 
@@ -75,6 +76,8 @@ include/ipxe/tables.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/iobuf.h:
 

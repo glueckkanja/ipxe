@@ -14,10 +14,10 @@ infiniband_DEPS += net/infiniband.c include/compiler.h \
  include/ipxe/errfile.h arch/x86/include/bits/errfile.h \
  include/ipxe/list.h include/ipxe/errortab.h include/ipxe/tables.h \
  include/ipxe/if_arp.h include/ipxe/netdevice.h include/ipxe/refcnt.h \
- include/ipxe/settings.h include/ipxe/iobuf.h include/ipxe/process.h \
- include/ipxe/infiniband.h include/ipxe/device.h include/ipxe/ib_packet.h \
- include/ipxe/ib_mad.h include/ipxe/ib_mi.h include/ipxe/retry.h \
- include/ipxe/ib_sma.h
+ include/ipxe/settings.h include/ipxe/interface.h include/ipxe/iobuf.h \
+ include/ipxe/process.h include/ipxe/infiniband.h include/ipxe/device.h \
+ include/ipxe/ib_packet.h include/ipxe/ib_mad.h include/ipxe/ib_mi.h \
+ include/ipxe/retry.h include/ipxe/ib_sma.h
 
 include/compiler.h:
 
@@ -100,6 +100,8 @@ include/ipxe/netdevice.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/iobuf.h:
 

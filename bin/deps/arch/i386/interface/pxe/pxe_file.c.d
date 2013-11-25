@@ -14,7 +14,7 @@ pxe_file_DEPS += arch/i386/interface/pxe/pxe_file.c include/compiler.h \
  include/ipxe/features.h include/ipxe/tables.h include/ipxe/dhcp.h \
  include/ipxe/in.h include/ipxe/socket.h include/ipxe/list.h \
  include/ipxe/refcnt.h include/ipxe/uuid.h include/ipxe/netdevice.h \
- include/ipxe/settings.h arch/i386/include/pxe.h \
+ include/ipxe/settings.h include/ipxe/interface.h arch/i386/include/pxe.h \
  arch/i386/include/pxe_types.h arch/i386/include/pxe_error.h \
  arch/i386/include/pxe_api.h include/ipxe/device.h \
  arch/i386/include/realmode.h arch/i386/include/registers.h
@@ -102,6 +102,8 @@ include/ipxe/uuid.h:
 include/ipxe/netdevice.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 arch/i386/include/pxe.h:
 

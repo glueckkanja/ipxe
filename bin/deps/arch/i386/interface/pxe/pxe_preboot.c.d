@@ -12,11 +12,12 @@ pxe_preboot_DEPS += arch/i386/interface/pxe/pxe_preboot.c include/compiler.h \
  include/ipxe/list.h include/ipxe/refcnt.h include/ipxe/uuid.h \
  include/byteswap.h include/endian.h arch/i386/include/bits/endian.h \
  arch/i386/include/bits/byteswap.h include/little_bswap.h \
- include/ipxe/netdevice.h include/ipxe/settings.h include/ipxe/fakedhcp.h \
- include/ipxe/device.h include/ipxe/isapnp.h include/ipxe/isa_ids.h \
- include/ipxe/init.h include/ipxe/if_ether.h \
- arch/i386/include/basemem_packet.h arch/i386/include/biosint.h \
- arch/i386/include/pxe.h arch/i386/include/pxe_types.h include/errno.h \
+ include/ipxe/netdevice.h include/ipxe/settings.h \
+ include/ipxe/interface.h include/ipxe/fakedhcp.h include/ipxe/device.h \
+ include/ipxe/isapnp.h include/ipxe/isa_ids.h include/ipxe/init.h \
+ include/ipxe/if_ether.h arch/i386/include/basemem_packet.h \
+ arch/i386/include/biosint.h arch/i386/include/pxe.h \
+ arch/i386/include/pxe_types.h include/errno.h \
  arch/i386/include/ipxe/errno/pcbios.h arch/i386/include/pxe_error.h \
  include/ipxe/errfile.h arch/x86/include/bits/errfile.h \
  arch/i386/include/pxe_error.h arch/i386/include/pxe_api.h \
@@ -95,6 +96,8 @@ include/little_bswap.h:
 include/ipxe/netdevice.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/fakedhcp.h:
 

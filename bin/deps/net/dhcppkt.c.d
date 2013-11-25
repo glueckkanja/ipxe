@@ -6,9 +6,9 @@ dhcppkt_DEPS += net/dhcppkt.c include/compiler.h \
  include/ipxe/errfile.h arch/x86/include/bits/errfile.h include/string.h \
  include/stddef.h arch/x86/include/bits/string.h include/ipxe/netdevice.h \
  include/ipxe/list.h include/ipxe/tables.h include/ipxe/refcnt.h \
- include/ipxe/settings.h include/ipxe/dhcp.h include/ipxe/in.h \
- include/ipxe/socket.h include/ipxe/uuid.h include/byteswap.h \
- include/endian.h arch/i386/include/bits/endian.h \
+ include/ipxe/settings.h include/ipxe/interface.h include/ipxe/dhcp.h \
+ include/ipxe/in.h include/ipxe/socket.h include/ipxe/uuid.h \
+ include/byteswap.h include/endian.h arch/i386/include/bits/endian.h \
  arch/i386/include/bits/byteswap.h include/little_bswap.h \
  include/ipxe/uaccess.h include/ipxe/api.h config/ioapi.h \
  config/defaults.h config/defaults/pcbios.h config/local/ioapi.h \
@@ -57,6 +57,8 @@ include/ipxe/tables.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/dhcp.h:
 

@@ -8,8 +8,9 @@ iwmgmt_DEPS += usr/iwmgmt.c include/compiler.h \
  include/assert.h include/ipxe/refcnt.h include/ipxe/tables.h \
  include/ipxe/ieee80211.h include/ipxe/if_ether.h include/endian.h \
  arch/i386/include/bits/endian.h include/ipxe/iobuf.h \
- include/ipxe/netdevice.h include/ipxe/settings.h include/ipxe/rc80211.h \
- include/ipxe/ethernet.h include/usr/ifmgmt.h include/usr/iwmgmt.h
+ include/ipxe/netdevice.h include/ipxe/settings.h \
+ include/ipxe/interface.h include/ipxe/rc80211.h include/ipxe/ethernet.h \
+ include/usr/ifmgmt.h include/usr/iwmgmt.h
 
 include/compiler.h:
 
@@ -64,6 +65,8 @@ include/ipxe/iobuf.h:
 include/ipxe/netdevice.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/rc80211.h:
 

@@ -7,7 +7,8 @@ guestinfo_DEPS += arch/i386/interface/vmware/guestinfo.c include/compiler.h \
  include/ipxe/errfile.h arch/x86/include/bits/errfile.h \
  include/ipxe/init.h include/ipxe/tables.h include/ipxe/settings.h \
  include/ipxe/list.h include/ipxe/refcnt.h include/ipxe/netdevice.h \
- arch/i386/include/ipxe/guestrpc.h arch/i386/include/ipxe/vmware.h
+ include/ipxe/interface.h arch/i386/include/ipxe/guestrpc.h \
+ arch/i386/include/ipxe/vmware.h
 
 include/compiler.h:
 
@@ -52,6 +53,8 @@ include/ipxe/list.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/netdevice.h:
+
+include/ipxe/interface.h:
 
 arch/i386/include/ipxe/guestrpc.h:
 

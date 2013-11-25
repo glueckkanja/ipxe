@@ -8,8 +8,8 @@ arp_DEPS += net/arp.c include/compiler.h arch/i386/include/bits/compiler.h \
  include/ipxe/errfile.h arch/x86/include/bits/errfile.h \
  include/ipxe/if_ether.h include/ipxe/if_arp.h include/ipxe/iobuf.h \
  include/ipxe/list.h include/ipxe/netdevice.h include/ipxe/tables.h \
- include/ipxe/refcnt.h include/ipxe/settings.h include/ipxe/neighbour.h \
- include/ipxe/retry.h include/ipxe/arp.h
+ include/ipxe/refcnt.h include/ipxe/settings.h include/ipxe/interface.h \
+ include/ipxe/neighbour.h include/ipxe/retry.h include/ipxe/arp.h
 
 include/compiler.h:
 
@@ -64,6 +64,8 @@ include/ipxe/tables.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/neighbour.h:
 

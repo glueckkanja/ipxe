@@ -6,9 +6,9 @@ dhcp_cmd_DEPS += hci/commands/dhcp_cmd.c include/compiler.h \
  arch/x86/include/bits/errfile.h include/stddef.h include/string.h \
  arch/x86/include/bits/string.h include/getopt.h include/ipxe/netdevice.h \
  include/ipxe/list.h include/ipxe/tables.h include/ipxe/refcnt.h \
- include/ipxe/settings.h include/ipxe/in.h include/ipxe/socket.h \
- include/ipxe/command.h include/ipxe/parseopt.h include/usr/dhcpmgmt.h \
- include/hci/ifmgmt_cmd.h
+ include/ipxe/settings.h include/ipxe/interface.h include/ipxe/in.h \
+ include/ipxe/socket.h include/ipxe/command.h include/ipxe/parseopt.h \
+ include/usr/dhcpmgmt.h include/hci/ifmgmt_cmd.h
 
 include/compiler.h:
 
@@ -53,6 +53,8 @@ include/ipxe/tables.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/in.h:
 

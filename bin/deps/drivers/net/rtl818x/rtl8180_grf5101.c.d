@@ -19,7 +19,8 @@ rtl8180_grf5101_DEPS += drivers/net/rtl818x/rtl8180_grf5101.c \
  include/ipxe/net80211.h include/ipxe/process.h include/ipxe/refcnt.h \
  include/ipxe/ieee80211.h include/ipxe/if_ether.h include/endian.h \
  arch/i386/include/bits/endian.h include/ipxe/iobuf.h \
- include/ipxe/netdevice.h include/ipxe/settings.h include/ipxe/rc80211.h \
+ include/ipxe/netdevice.h include/ipxe/settings.h \
+ include/ipxe/interface.h include/ipxe/rc80211.h \
  drivers/net/rtl818x/rtl818x.h include/ipxe/spi_bit.h include/ipxe/spi.h \
  include/ipxe/nvs.h include/ipxe/bitbash.h
 
@@ -128,6 +129,8 @@ include/ipxe/iobuf.h:
 include/ipxe/netdevice.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/rc80211.h:
 

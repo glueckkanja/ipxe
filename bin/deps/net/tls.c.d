@@ -10,13 +10,13 @@ tls_DEPS += net/tls.c include/compiler.h arch/i386/include/bits/compiler.h \
  include/ipxe/errfile.h arch/x86/include/bits/errfile.h \
  include/byteswap.h include/endian.h arch/i386/include/bits/endian.h \
  arch/i386/include/bits/byteswap.h include/little_bswap.h \
- include/ipxe/pending.h include/ipxe/list.h include/ipxe/hmac.h \
- include/ipxe/crypto.h include/ipxe/md5.h include/ipxe/sha1.h \
- include/ipxe/sha256.h include/ipxe/aes.h crypto/axtls/crypto.h \
- crypto/axtls/config.h crypto/axtls/bigint_impl.h crypto/axtls/bigint.h \
- crypto/axtls/crypto.h include/ipxe/rsa.h include/ipxe/bigint.h \
- arch/x86/include/bits/bigint.h include/ipxe/asn1.h include/ipxe/tables.h \
- include/ipxe/iobuf.h include/ipxe/xfer.h include/ipxe/interface.h \
+ include/ipxe/pending.h include/ipxe/hmac.h include/ipxe/crypto.h \
+ include/ipxe/md5.h include/ipxe/sha1.h include/ipxe/sha256.h \
+ include/ipxe/aes.h crypto/axtls/crypto.h crypto/axtls/config.h \
+ crypto/axtls/bigint_impl.h crypto/axtls/bigint.h crypto/axtls/crypto.h \
+ include/ipxe/rsa.h include/ipxe/bigint.h arch/x86/include/bits/bigint.h \
+ include/ipxe/asn1.h include/ipxe/tables.h include/ipxe/iobuf.h \
+ include/ipxe/list.h include/ipxe/xfer.h include/ipxe/interface.h \
  include/ipxe/refcnt.h include/ipxe/open.h include/ipxe/socket.h \
  include/ipxe/x509.h include/ipxe/clientcert.h include/ipxe/rbg.h \
  include/ipxe/drbg.h include/ipxe/hmac_drbg.h include/ipxe/validator.h \
@@ -88,8 +88,6 @@ include/little_bswap.h:
 
 include/ipxe/pending.h:
 
-include/ipxe/list.h:
-
 include/ipxe/hmac.h:
 
 include/ipxe/crypto.h:
@@ -123,6 +121,8 @@ include/ipxe/asn1.h:
 include/ipxe/tables.h:
 
 include/ipxe/iobuf.h:
+
+include/ipxe/list.h:
 
 include/ipxe/xfer.h:
 

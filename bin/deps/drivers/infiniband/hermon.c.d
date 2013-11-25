@@ -30,14 +30,14 @@ hermon_DEPS += drivers/infiniband/hermon.c include/compiler.h \
  include/ipxe/linux/linux_umalloc.h arch/i386/include/bits/umalloc.h \
  arch/i386/include/ipxe/memtop_umalloc.h include/ipxe/iobuf.h \
  include/ipxe/netdevice.h include/ipxe/refcnt.h include/ipxe/settings.h \
- include/ipxe/infiniband.h include/ipxe/ib_packet.h include/ipxe/ib_mad.h \
- include/ipxe/ib_smc.h include/ipxe/if_ether.h include/ipxe/ethernet.h \
- include/ipxe/fcoe.h include/ipxe/fc.h include/ipxe/interface.h \
- include/ipxe/retry.h include/ipxe/socket.h include/ipxe/vlan.h \
- include/ipxe/bofm.h config/sideband.h config/local/sideband.h \
- include/ipxe/nvsvpd.h include/ipxe/nvs.h include/ipxe/pcivpd.h \
- include/ipxe/isapnp.h include/ipxe/isa_ids.h include/ipxe/nvo.h \
- include/ipxe/dhcpopts.h drivers/infiniband/hermon.h \
+ include/ipxe/interface.h include/ipxe/infiniband.h \
+ include/ipxe/ib_packet.h include/ipxe/ib_mad.h include/ipxe/ib_smc.h \
+ include/ipxe/if_ether.h include/ipxe/ethernet.h include/ipxe/fcoe.h \
+ include/ipxe/fc.h include/ipxe/retry.h include/ipxe/socket.h \
+ include/ipxe/vlan.h include/ipxe/bofm.h config/sideband.h \
+ config/local/sideband.h include/ipxe/nvsvpd.h include/ipxe/nvs.h \
+ include/ipxe/pcivpd.h include/ipxe/isapnp.h include/ipxe/isa_ids.h \
+ include/ipxe/nvo.h include/ipxe/dhcpopts.h drivers/infiniband/hermon.h \
  drivers/infiniband/mlx_bitops.h drivers/infiniband/MT25408_PRM.h
 
 include/compiler.h:
@@ -184,6 +184,8 @@ include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
 
+include/ipxe/interface.h:
+
 include/ipxe/infiniband.h:
 
 include/ipxe/ib_packet.h:
@@ -199,8 +201,6 @@ include/ipxe/ethernet.h:
 include/ipxe/fcoe.h:
 
 include/ipxe/fc.h:
-
-include/ipxe/interface.h:
 
 include/ipxe/retry.h:
 

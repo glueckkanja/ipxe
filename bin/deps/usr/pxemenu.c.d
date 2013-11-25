@@ -11,15 +11,16 @@ pxemenu_DEPS += usr/pxemenu.c include/compiler.h \
  include/ipxe/tables.h include/ipxe/dhcp.h include/ipxe/in.h \
  include/ipxe/socket.h include/ipxe/list.h include/ipxe/refcnt.h \
  include/ipxe/uuid.h include/ipxe/netdevice.h include/ipxe/settings.h \
- include/ipxe/uaccess.h include/ipxe/api.h config/ioapi.h \
- config/defaults.h config/defaults/pcbios.h config/local/ioapi.h \
- include/ipxe/efi/efi_uaccess.h include/ipxe/linux/linux_uaccess.h \
- arch/i386/include/bits/uaccess.h arch/i386/include/librm.h \
- include/ipxe/timer.h config/timer.h config/local/timer.h \
- include/ipxe/efi/efi_timer.h include/ipxe/linux/linux_timer.h \
- arch/i386/include/bits/timer.h arch/i386/include/ipxe/bios_timer.h \
- arch/i386/include/ipxe/timer2.h arch/i386/include/ipxe/rdtsc_timer.h \
- include/ipxe/uri.h include/usr/dhcpmgmt.h include/usr/autoboot.h
+ include/ipxe/interface.h include/ipxe/uaccess.h include/ipxe/api.h \
+ config/ioapi.h config/defaults.h config/defaults/pcbios.h \
+ config/local/ioapi.h include/ipxe/efi/efi_uaccess.h \
+ include/ipxe/linux/linux_uaccess.h arch/i386/include/bits/uaccess.h \
+ arch/i386/include/librm.h include/ipxe/timer.h config/timer.h \
+ config/local/timer.h include/ipxe/efi/efi_timer.h \
+ include/ipxe/linux/linux_timer.h arch/i386/include/bits/timer.h \
+ arch/i386/include/ipxe/bios_timer.h arch/i386/include/ipxe/timer2.h \
+ arch/i386/include/ipxe/rdtsc_timer.h include/ipxe/uri.h \
+ include/usr/dhcpmgmt.h include/usr/autoboot.h
 
 include/compiler.h:
 
@@ -88,6 +89,8 @@ include/ipxe/uuid.h:
 include/ipxe/netdevice.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/uaccess.h:
 

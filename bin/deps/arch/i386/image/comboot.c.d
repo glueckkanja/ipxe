@@ -17,7 +17,8 @@ comboot_DEPS += arch/i386/image/comboot.c include/compiler.h \
  include/ipxe/init.h include/ipxe/features.h include/ipxe/dhcp.h \
  include/stdarg.h include/ipxe/uuid.h include/byteswap.h include/endian.h \
  arch/i386/include/bits/endian.h arch/i386/include/bits/byteswap.h \
- include/little_bswap.h include/ipxe/netdevice.h include/ipxe/settings.h
+ include/little_bswap.h include/ipxe/netdevice.h include/ipxe/settings.h \
+ include/ipxe/interface.h
 
 include/compiler.h:
 
@@ -120,3 +121,5 @@ include/little_bswap.h:
 include/ipxe/netdevice.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:

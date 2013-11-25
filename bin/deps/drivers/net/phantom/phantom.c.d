@@ -24,8 +24,8 @@ phantom_DEPS += drivers/net/phantom/phantom.c include/compiler.h \
  include/ipxe/malloc.h arch/x86/include/valgrind/memcheck.h \
  arch/x86/include/valgrind/valgrind.h include/ipxe/iobuf.h \
  include/ipxe/netdevice.h include/ipxe/refcnt.h include/ipxe/settings.h \
- include/ipxe/if_ether.h include/ipxe/ethernet.h include/ipxe/spi.h \
- include/ipxe/nvs.h drivers/net/phantom/phantom.h \
+ include/ipxe/interface.h include/ipxe/if_ether.h include/ipxe/ethernet.h \
+ include/ipxe/spi.h include/ipxe/nvs.h drivers/net/phantom/phantom.h \
  drivers/net/phantom/nx_bitops.h drivers/net/phantom/phantom_hw.h \
  drivers/net/phantom/nxhal_nic_interface.h
 
@@ -150,6 +150,8 @@ include/ipxe/netdevice.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/if_ether.h:
 

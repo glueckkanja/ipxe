@@ -30,9 +30,10 @@ arbel_DEPS += drivers/infiniband/arbel.c include/compiler.h \
  include/ipxe/linux/linux_umalloc.h arch/i386/include/bits/umalloc.h \
  arch/i386/include/ipxe/memtop_umalloc.h include/ipxe/iobuf.h \
  include/ipxe/netdevice.h include/ipxe/refcnt.h include/ipxe/settings.h \
- include/ipxe/infiniband.h include/ipxe/ib_packet.h include/ipxe/ib_mad.h \
- include/ipxe/ib_smc.h drivers/infiniband/arbel.h \
- drivers/infiniband/mlx_bitops.h drivers/infiniband/MT25218_PRM.h
+ include/ipxe/interface.h include/ipxe/infiniband.h \
+ include/ipxe/ib_packet.h include/ipxe/ib_mad.h include/ipxe/ib_smc.h \
+ drivers/infiniband/arbel.h drivers/infiniband/mlx_bitops.h \
+ drivers/infiniband/MT25218_PRM.h
 
 include/compiler.h:
 
@@ -177,6 +178,8 @@ include/ipxe/netdevice.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/infiniband.h:
 

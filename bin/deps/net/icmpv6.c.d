@@ -10,7 +10,7 @@ icmpv6_DEPS += net/icmpv6.c include/compiler.h \
  include/ipxe/iobuf.h include/assert.h include/ipxe/list.h \
  include/ipxe/tcpip.h arch/x86/include/bits/tcpip.h include/ipxe/ping.h \
  include/ipxe/icmpv6.h include/ipxe/netdevice.h include/ipxe/refcnt.h \
- include/ipxe/settings.h include/ipxe/icmp.h
+ include/ipxe/settings.h include/ipxe/interface.h include/ipxe/icmp.h
 
 include/compiler.h:
 
@@ -71,5 +71,7 @@ include/ipxe/netdevice.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/icmp.h:

@@ -11,12 +11,12 @@ settings_DEPS += core/settings.c include/compiler.h \
  include/ipxe/socket.h include/ipxe/tables.h include/ipxe/vsprintf.h \
  include/ipxe/dhcp.h include/ipxe/list.h include/ipxe/refcnt.h \
  include/ipxe/uuid.h include/ipxe/netdevice.h include/ipxe/settings.h \
- include/ipxe/uaccess.h include/ipxe/api.h config/ioapi.h \
- config/defaults.h config/defaults/pcbios.h config/local/ioapi.h \
- include/ipxe/efi/efi_uaccess.h include/ipxe/linux/linux_uaccess.h \
- arch/i386/include/bits/uaccess.h arch/i386/include/librm.h \
- include/ipxe/uri.h include/ipxe/base16.h include/ipxe/pci.h \
- include/ipxe/device.h include/ipxe/pci_io.h \
+ include/ipxe/interface.h include/ipxe/uaccess.h include/ipxe/api.h \
+ config/ioapi.h config/defaults.h config/defaults/pcbios.h \
+ config/local/ioapi.h include/ipxe/efi/efi_uaccess.h \
+ include/ipxe/linux/linux_uaccess.h arch/i386/include/bits/uaccess.h \
+ arch/i386/include/librm.h include/ipxe/uri.h include/ipxe/base16.h \
+ include/ipxe/pci.h include/ipxe/device.h include/ipxe/pci_io.h \
  include/ipxe/efi/efi_pci_api.h include/ipxe/linux/linux_pci.h \
  arch/x86/include/bits/pci_io.h arch/x86/include/ipxe/pcibios.h \
  arch/x86/include/ipxe/pcidirect.h include/ipxe/io.h \
@@ -88,6 +88,8 @@ include/ipxe/uuid.h:
 include/ipxe/netdevice.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/uaccess.h:
 

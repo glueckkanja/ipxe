@@ -7,9 +7,9 @@ myri10ge_DEPS += drivers/net/myri10ge.c include/compiler.h \
  include/ipxe/errfile.h arch/x86/include/bits/errfile.h \
  include/ipxe/ethernet.h include/ipxe/netdevice.h include/ipxe/list.h \
  include/stddef.h include/assert.h include/ipxe/tables.h \
- include/ipxe/refcnt.h include/ipxe/settings.h include/ipxe/iobuf.h \
- include/ipxe/if_ether.h include/ipxe/malloc.h include/stdlib.h \
- arch/x86/include/valgrind/memcheck.h \
+ include/ipxe/refcnt.h include/ipxe/settings.h include/ipxe/interface.h \
+ include/ipxe/iobuf.h include/ipxe/if_ether.h include/ipxe/malloc.h \
+ include/stdlib.h arch/x86/include/valgrind/memcheck.h \
  arch/x86/include/valgrind/valgrind.h include/stdarg.h include/ipxe/nvo.h \
  include/ipxe/dhcpopts.h include/ipxe/nvs.h include/ipxe/pci.h \
  include/ipxe/device.h include/ipxe/pci_io.h include/ipxe/api.h \
@@ -71,6 +71,8 @@ include/ipxe/tables.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/iobuf.h:
 

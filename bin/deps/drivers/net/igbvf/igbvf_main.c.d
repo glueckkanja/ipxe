@@ -25,7 +25,7 @@ igbvf_main_DEPS += drivers/net/igbvf/igbvf_main.c include/compiler.h \
  include/ipxe/malloc.h arch/x86/include/valgrind/memcheck.h \
  arch/x86/include/valgrind/valgrind.h include/ipxe/if_ether.h \
  include/ipxe/ethernet.h include/ipxe/netdevice.h include/ipxe/refcnt.h \
- include/ipxe/settings.h include/ipxe/iobuf.h \
+ include/ipxe/settings.h include/ipxe/interface.h include/ipxe/iobuf.h \
  drivers/net/igbvf/igbvf_osdep.h drivers/net/igbvf/igbvf_regs.h \
  drivers/net/igbvf/igbvf_defines.h drivers/net/igbvf/igbvf_mbx.h
 
@@ -158,6 +158,8 @@ include/ipxe/netdevice.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/iobuf.h:
 

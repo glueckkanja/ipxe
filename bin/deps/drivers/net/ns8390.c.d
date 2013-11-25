@@ -24,7 +24,7 @@ ns8390_DEPS += drivers/net/ns8390.c include/compiler.h \
  include/ipxe/isapnp.h include/ipxe/isa_ids.h include/ipxe/isa.h \
  include/ipxe/eisa.h include/ipxe/mca.h drivers/net/ns8390.h \
  include/ipxe/ethernet.h include/ipxe/netdevice.h include/ipxe/refcnt.h \
- include/ipxe/settings.h include/ipxe/iobuf.h
+ include/ipxe/settings.h include/ipxe/interface.h include/ipxe/iobuf.h
 
 include/compiler.h:
 
@@ -157,6 +157,8 @@ include/ipxe/netdevice.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/iobuf.h:
 

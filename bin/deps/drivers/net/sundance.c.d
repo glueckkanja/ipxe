@@ -23,7 +23,8 @@ sundance_DEPS += drivers/net/sundance.c include/compiler.h \
  arch/x86/include/ipxe/x86_io.h include/ipxe/pci_ids.h \
  include/ipxe/isapnp.h include/ipxe/isa_ids.h include/ipxe/isa.h \
  include/ipxe/eisa.h include/ipxe/mca.h include/mii.h \
- include/ipxe/netdevice.h include/ipxe/refcnt.h include/ipxe/settings.h
+ include/ipxe/netdevice.h include/ipxe/refcnt.h include/ipxe/settings.h \
+ include/ipxe/interface.h
 
 include/compiler.h:
 
@@ -154,6 +155,8 @@ include/ipxe/netdevice.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 # NIC	
 # NIC	family	drivers/net/sundance

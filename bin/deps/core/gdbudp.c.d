@@ -8,10 +8,10 @@ gdbudp_DEPS += core/gdbudp.c include/compiler.h \
  include/ipxe/in.h include/ipxe/socket.h include/ipxe/tables.h \
  include/ipxe/if_arp.h include/ipxe/if_ether.h include/ipxe/ip.h \
  include/ipxe/retry.h include/ipxe/netdevice.h include/ipxe/refcnt.h \
- include/ipxe/settings.h include/ipxe/udp.h include/ipxe/tcpip.h \
- arch/x86/include/bits/tcpip.h include/ipxe/nap.h include/ipxe/api.h \
- config/nap.h config/defaults.h config/defaults/pcbios.h \
- config/local/nap.h include/ipxe/null_nap.h \
+ include/ipxe/settings.h include/ipxe/interface.h include/ipxe/udp.h \
+ include/ipxe/tcpip.h arch/x86/include/bits/tcpip.h include/ipxe/nap.h \
+ include/ipxe/api.h config/nap.h config/defaults.h \
+ config/defaults/pcbios.h config/local/nap.h include/ipxe/null_nap.h \
  include/ipxe/linux/linux_nap.h arch/i386/include/bits/nap.h \
  arch/i386/include/ipxe/bios_nap.h arch/x86/include/ipxe/efi/efix86_nap.h \
  include/ipxe/gdbstub.h arch/i386/include/gdbmach.h include/ipxe/gdbudp.h
@@ -69,6 +69,8 @@ include/ipxe/netdevice.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/udp.h:
 

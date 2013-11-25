@@ -2,8 +2,8 @@ pxe_cmd_DEPS += arch/i386/hci/commands/pxe_cmd.c include/compiler.h \
  arch/i386/include/bits/compiler.h include/ipxe/netdevice.h \
  include/stdint.h arch/i386/include/bits/stdint.h include/ipxe/list.h \
  include/stddef.h include/assert.h include/ipxe/tables.h \
- include/ipxe/refcnt.h include/ipxe/settings.h include/ipxe/command.h \
- include/ipxe/parseopt.h include/hci/ifmgmt_cmd.h \
+ include/ipxe/refcnt.h include/ipxe/settings.h include/ipxe/interface.h \
+ include/ipxe/command.h include/ipxe/parseopt.h include/hci/ifmgmt_cmd.h \
  arch/i386/include/pxe_call.h arch/i386/include/pxe_api.h \
  arch/i386/include/pxe_types.h include/errno.h \
  arch/i386/include/ipxe/errno/pcbios.h arch/i386/include/pxe_error.h \
@@ -37,6 +37,8 @@ include/ipxe/tables.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/command.h:
 

@@ -15,10 +15,10 @@ nfs_DEPS += net/oncrpc/nfs.c include/compiler.h \
  include/ipxe/tables.h include/ipxe/socket.h include/ipxe/features.h \
  include/ipxe/dhcp.h include/ipxe/in.h include/ipxe/refcnt.h \
  include/ipxe/uuid.h include/ipxe/netdevice.h include/ipxe/settings.h \
- include/ipxe/uaccess.h config/ioapi.h config/local/ioapi.h \
- include/ipxe/efi/efi_uaccess.h include/ipxe/linux/linux_uaccess.h \
- arch/i386/include/bits/uaccess.h arch/i386/include/librm.h \
- include/ipxe/nfs.h include/ipxe/oncrpc.h include/ipxe/interface.h \
+ include/ipxe/interface.h include/ipxe/uaccess.h config/ioapi.h \
+ config/local/ioapi.h include/ipxe/efi/efi_uaccess.h \
+ include/ipxe/linux/linux_uaccess.h arch/i386/include/bits/uaccess.h \
+ arch/i386/include/librm.h include/ipxe/nfs.h include/ipxe/oncrpc.h \
  include/ipxe/oncrpc_iob.h include/ipxe/portmap.h include/ipxe/mount.h
 
 include/compiler.h:
@@ -111,6 +111,8 @@ include/ipxe/netdevice.h:
 
 include/ipxe/settings.h:
 
+include/ipxe/interface.h:
+
 include/ipxe/uaccess.h:
 
 config/ioapi.h:
@@ -128,8 +130,6 @@ arch/i386/include/librm.h:
 include/ipxe/nfs.h:
 
 include/ipxe/oncrpc.h:
-
-include/ipxe/interface.h:
 
 include/ipxe/oncrpc_iob.h:
 

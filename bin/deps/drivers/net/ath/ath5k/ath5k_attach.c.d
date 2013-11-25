@@ -20,13 +20,14 @@ ath5k_attach_DEPS += drivers/net/ath/ath5k/ath5k_attach.c include/compiler.h \
  drivers/net/ath/ath5k/ath5k.h include/byteswap.h include/endian.h \
  arch/i386/include/bits/endian.h arch/i386/include/bits/byteswap.h \
  include/little_bswap.h include/ipxe/netdevice.h include/ipxe/refcnt.h \
- include/ipxe/settings.h include/ipxe/net80211.h include/ipxe/process.h \
- include/ipxe/ieee80211.h include/ipxe/if_ether.h include/endian.h \
- include/ipxe/iobuf.h include/ipxe/rc80211.h include/errno.h \
- arch/i386/include/ipxe/errno/pcbios.h arch/i386/include/pxe_error.h \
- include/ipxe/errfile.h arch/x86/include/bits/errfile.h \
- drivers/net/ath/ath5k/desc.h drivers/net/ath/ath5k/eeprom.h \
- drivers/net/ath/ath5k/reg.h drivers/net/ath/ath5k/base.h
+ include/ipxe/settings.h include/ipxe/interface.h include/ipxe/net80211.h \
+ include/ipxe/process.h include/ipxe/ieee80211.h include/ipxe/if_ether.h \
+ include/endian.h include/ipxe/iobuf.h include/ipxe/rc80211.h \
+ include/errno.h arch/i386/include/ipxe/errno/pcbios.h \
+ arch/i386/include/pxe_error.h include/ipxe/errfile.h \
+ arch/x86/include/bits/errfile.h drivers/net/ath/ath5k/desc.h \
+ drivers/net/ath/ath5k/eeprom.h drivers/net/ath/ath5k/reg.h \
+ drivers/net/ath/ath5k/base.h
 
 include/compiler.h:
 
@@ -133,6 +134,8 @@ include/ipxe/netdevice.h:
 include/ipxe/refcnt.h:
 
 include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/net80211.h:
 
