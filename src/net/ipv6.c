@@ -68,6 +68,24 @@ static uint32_t ipv6col ( struct in6_addr *in ) {
 }
 
 /**
+ * Dump IPv6 routing table entry
+ *
+ * @v miniroute		Routing table entry
+ */
+static inline __attribute__ (( always_inline )) void
+ipv6_dump_miniroute ( struct ipv6_miniroute *miniroute ) {
+	struct net_device *netdev = miniroute->netdev;
+
+	DBGC ( netdev, "IPv6 %s has %s %s/%d", netdev->name,
+	       ( ( miniroute->flags & IPV6_HAS_ADDRESS ) ?
+		 "address" : "prefix" ),
+	       inet6_ntoa ( &miniroute->address ), miniroute->prefix_len );
+	if ( miniroute->flags & IPV6_HAS_ROUTER )
+		DBGC ( netdev, " router %s", inet6_ntoa ( &miniroute->router ));
+	DBGC ( netdev, "\n" );
+}
+
+/**
  * Check if network device has a specific IPv6 address
  *
  * @v netdev		Network device
@@ -79,6 +97,7 @@ int ipv6_has_addr ( struct net_device *netdev, struct in6_addr *addr ) {
 
 	list_for_each_entry ( miniroute, &ipv6_miniroutes, list ) {
 		if ( ( miniroute->netdev == netdev ) &&
+		     ( miniroute->flags & IPV6_HAS_ADDRESS ) &&
 		     ( memcmp ( &miniroute->address, addr,
 				sizeof ( miniroute->address ) ) == 0 ) ) {
 			/* Found matching address */
@@ -109,31 +128,45 @@ static int ipv6_is_on_link ( struct ipv6_miniroute *miniroute,
 }
 
 /**
- * Add IPv6 minirouting table entry
+ * Find IPv6 routing table entry for a given address
  *
  * @v netdev		Network device
  * @v address		IPv6 address
+ * @ret miniroute	Routing table entry, or NULL if not found
+ */
+static struct ipv6_miniroute * ipv6_miniroute ( struct net_device *netdev,
+						struct in6_addr *address ) {
+	struct ipv6_miniroute *miniroute;
+
+	list_for_each_entry ( miniroute, &ipv6_miniroutes, list ) {
+		if ( ( miniroute->netdev == netdev ) &&
+		     ipv6_is_on_link ( miniroute, address ) ) {
+			return miniroute;
+		}
+	}
+	return NULL;
+}
+
+/**
+ * Add IPv6 routing table entry
+ *
+ * @v netdev		Network device
+ * @v address		IPv6 address (or prefix)
  * @v prefix_len	Prefix length
- * @v router		Router address (or NULL)
+ * @v flags		Flags
  * @ret miniroute	Routing table entry, or NULL on failure
  */
-static struct ipv6_miniroute * __malloc
-add_ipv6_miniroute ( struct net_device *netdev, struct in6_addr *address,
-		     unsigned int prefix_len, struct in6_addr *router ) {
+static struct ipv6_miniroute * ipv6_add_miniroute ( struct net_device *netdev,
+						    struct in6_addr *address,
+						    unsigned int prefix_len,
+						    unsigned int flags ) {
 	struct ipv6_miniroute *miniroute;
 	uint8_t *prefix_mask;
 
-	DBGC ( netdev, "IPv6 add %s/%d ", inet6_ntoa ( address ), prefix_len );
-	if ( router )
-		DBGC ( netdev, "router %s ", inet6_ntoa ( router ) );
-	DBGC ( netdev, "via %s\n", netdev->name );
-
-	/* Allocate and populate miniroute structure */
+	/* Create routing table entry */
 	miniroute = zalloc ( sizeof ( *miniroute ) );
 	if ( ! miniroute )
 		return NULL;
-
-	/* Record routing information */
 	miniroute->netdev = netdev_get ( netdev );
 	memcpy ( &miniroute->address, address, sizeof ( miniroute->address ) );
 	miniroute->prefix_len = prefix_len;
@@ -144,41 +177,83 @@ add_ipv6_miniroute ( struct net_device *netdev, struct in6_addr *address,
 	}
 	if ( prefix_len )
 		*prefix_mask <<= ( 8 - prefix_len );
-	if ( router ) {
-		miniroute->has_router = 1;
-		memcpy ( &miniroute->router, router,
-			 sizeof ( miniroute->router ) );
-	}
-
-	/* Add to end of list if we have a gateway, otherwise to start
-	 * of list.
-	 */
-	if ( router ) {
-		list_add_tail ( &miniroute->list, &ipv6_miniroutes );
-	} else {
-		list_add ( &miniroute->list, &ipv6_miniroutes );
-	}
+	miniroute->flags = flags;
+	list_add ( &miniroute->list, &ipv6_miniroutes );
+	ipv6_dump_miniroute ( miniroute );
 
 	return miniroute;
 }
 
 /**
- * Delete IPv6 minirouting table entry
+ * Define IPv6 on-link prefix
  *
- * @v miniroute		Routing table entry
+ * @v netdev		Network device
+ * @v prefix		IPv6 address prefix
+ * @v prefix_len	Prefix length
+ * @v router		Router address (or NULL)
+ * @ret rc		Return status code
  */
-static void del_ipv6_miniroute ( struct ipv6_miniroute *miniroute ) {
-	struct net_device *netdev = miniroute->netdev;
+int ipv6_set_prefix ( struct net_device *netdev, struct in6_addr *prefix,
+		      unsigned int prefix_len, struct in6_addr *router ) {
+	struct ipv6_miniroute *miniroute;
+	int changed;
 
-	DBGC ( netdev, "IPv6 del %s/%d ", inet6_ntoa ( &miniroute->address ),
-	       miniroute->prefix_len );
-	if ( miniroute->has_router )
-		DBGC ( netdev, "router %s ", inet6_ntoa ( &miniroute->router ));
-	DBGC ( netdev, "via %s\n", netdev->name );
+	/* Find or create routing table entry */
+	miniroute = ipv6_miniroute ( netdev, prefix );
+	if ( ! miniroute )
+		miniroute = ipv6_add_miniroute ( netdev, prefix, prefix_len, 0);
+	if ( ! miniroute )
+		return -ENOMEM;
 
-	netdev_put ( miniroute->netdev );
+	/* Record router and add to start or end of list as appropriate */
 	list_del ( &miniroute->list );
-	free ( miniroute );
+	if ( router ) {
+		changed = ( ( ! ( miniroute->flags & IPV6_HAS_ROUTER ) ) ||
+			    ( memcmp ( &miniroute->router, router,
+				       sizeof ( miniroute->router ) ) != 0 ) );
+		miniroute->flags |= IPV6_HAS_ROUTER;
+		memcpy ( &miniroute->router, router,
+			 sizeof ( miniroute->router ) );
+		list_add_tail ( &miniroute->list, &ipv6_miniroutes );
+	} else {
+		changed = ( miniroute->flags & IPV6_HAS_ROUTER );
+		miniroute->flags &= ~IPV6_HAS_ROUTER;
+		list_add ( &miniroute->list, &ipv6_miniroutes );
+	}
+	if ( changed )
+		ipv6_dump_miniroute ( miniroute );
+
+	return 0;
+}
+
+/**
+ * Add IPv6 on-link address
+ *
+ * @v netdev		Network device
+ * @v address		IPv6 address
+ * @ret rc		Return status code
+ *
+ * An on-link prefix for the address must already exist.
+ */
+int ipv6_set_address ( struct net_device *netdev, struct in6_addr *address ) {
+	struct ipv6_miniroute *miniroute;
+	int changed;
+
+	/* Find routing table entry */
+	miniroute = ipv6_miniroute ( netdev, address );
+	if ( ! miniroute )
+		return -EADDRNOTAVAIL;
+
+	/* Record address */
+	changed = ( ( ! ( miniroute->flags & IPV6_HAS_ADDRESS ) ) ||
+		    ( memcmp ( &miniroute->address, address,
+			       sizeof ( miniroute->address ) ) != 0 ) );
+	memcpy ( &miniroute->address, address, sizeof ( miniroute->address ) );
+	miniroute->flags |= IPV6_HAS_ADDRESS;
+	if ( changed )
+		ipv6_dump_miniroute ( miniroute );
+
+	return 0;
 }
 
 /**
@@ -198,6 +273,10 @@ static struct ipv6_miniroute * ipv6_route ( unsigned int scope_id,
 
 		/* Skip closed network devices */
 		if ( ! netdev_is_open ( miniroute->netdev ) )
+			continue;
+
+		/* Skip routing table entries with no usable source address */
+		if ( ! ( miniroute->flags & IPV6_HAS_ADDRESS ) )
 			continue;
 
 		if ( IN6_IS_ADDR_LINKLOCAL ( *dest ) ||
@@ -221,7 +300,7 @@ static struct ipv6_miniroute * ipv6_route ( unsigned int scope_id,
 			 * address, and we have a default gateway,
 			 * then use this route.
 			 */
-			if ( miniroute->has_router ) {
+			if ( miniroute->flags & IPV6_HAS_ROUTER ) {
 				*dest = &miniroute->router;
 				return miniroute;
 			}
@@ -399,7 +478,7 @@ static int ipv6_tx ( struct io_buffer *iobuf,
 		rc = -ENETUNREACH;
 		goto err;
 	}
-	if ( sin6_src )
+	if ( sin6_src && ! IN6_IS_ADDR_UNSPECIFIED ( &sin6_src->sin6_addr ) )
 		src = &sin6_src->sin6_addr;
 	memcpy ( &iphdr->src, src, sizeof ( iphdr->src ) );
 
@@ -867,51 +946,57 @@ struct sockaddr_converter ipv6_sockaddr_converter __sockaddr_converter = {
 };
 
 /**
- * Perform IPv6 stateless address autoconfiguration (SLAAC)
+ * Parse IPv6 address setting value
  *
- * @v netdev		Network device
- * @v prefix		Prefix
- * @v prefix_len	Prefix length
- * @v router		Router address (or NULL)
- * @ret rc		Return status code
+ * @v type		Setting type
+ * @v value		Formatted setting value
+ * @v buf		Buffer to contain raw value
+ * @v len		Length of buffer
+ * @ret len		Length of raw value, or negative error
  */
-int ipv6_slaac ( struct net_device *netdev, struct in6_addr *prefix,
-		 unsigned int prefix_len, struct in6_addr *router ) {
-	struct ipv6_miniroute *miniroute;
-	struct ipv6_miniroute *tmp;
-	struct in6_addr address;
-	int check_prefix_len;
+static int parse_ipv6_setting ( struct setting_type *type __unused,
+				const char *value, void *buf, size_t len ) {
+	struct in6_addr ipv6;
 	int rc;
 
-	/* Construct local address */
-	memcpy ( &address, prefix, sizeof ( address ) );
-	check_prefix_len = ipv6_eui64 ( &address, netdev );
-	if ( check_prefix_len < 0 ) {
-		rc = check_prefix_len;
-		DBGC ( netdev, "IPv6 %s could not construct SLAAC address: "
-		       "%s\n", netdev->name, strerror ( rc ) );
+	/* Parse IPv6 address */
+	if ( ( rc = inet6_aton ( value, &ipv6 ) ) != 0 )
 		return rc;
-	}
-	if ( check_prefix_len != ( int ) prefix_len ) {
-		DBGC ( netdev, "IPv6 %s incorrect SLAAC prefix length %d "
-		       "(expected %d)\n", netdev->name, prefix_len,
-		       check_prefix_len );
-		return -EINVAL;
-	}
 
-	/* Delete any existing SLAAC miniroutes for this prefix */
-	list_for_each_entry_safe ( miniroute, tmp, &ipv6_miniroutes, list ) {
-		if ( ipv6_is_on_link ( miniroute, &address ) )
-			del_ipv6_miniroute ( miniroute );
-	}
+	/* Copy to buffer */
+	if ( len > sizeof ( ipv6 ) )
+		len = sizeof ( ipv6 );
+	memcpy ( buf, &ipv6, len );
 
-	/* Add miniroute */
-	miniroute = add_ipv6_miniroute ( netdev, &address, prefix_len, router );
-	if ( ! miniroute )
-		return -ENOMEM;
-
-	return 0;
+	return ( sizeof ( ipv6 ) );
 }
+
+/**
+ * Format IPv6 address setting value
+ *
+ * @v type		Setting type
+ * @v raw		Raw setting value
+ * @v raw_len		Length of raw setting value
+ * @v buf		Buffer to contain formatted value
+ * @v len		Length of buffer
+ * @ret len		Length of formatted value, or negative error
+ */
+static int format_ipv6_setting ( struct setting_type *type __unused,
+				 const void *raw, size_t raw_len, char *buf,
+				 size_t len ) {
+	const struct in6_addr *ipv6 = raw;
+
+	if ( raw_len < sizeof ( *ipv6 ) )
+		return -EINVAL;
+	return snprintf ( buf, len, "%s", inet6_ntoa ( ipv6 ) );
+}
+
+/** An IPv6 address setting type */
+struct setting_type setting_type_ipv6 __setting_type = {
+	.name = "ipv6",
+	.parse = parse_ipv6_setting,
+	.format = format_ipv6_setting,
+};
 
 /**
  * Create IPv6 network device
@@ -926,6 +1011,7 @@ static int ipv6_probe ( struct net_device *netdev ) {
 	int rc;
 
 	/* Construct link-local address from EUI-64 as per RFC 2464 */
+	memset ( &address, 0, sizeof ( address ) );
 	prefix_len = ipv6_link_local ( &address, netdev );
 	if ( prefix_len < 0 ) {
 		rc = prefix_len;
@@ -935,21 +1021,12 @@ static int ipv6_probe ( struct net_device *netdev ) {
 	}
 
 	/* Create link-local address for this network device */
-	miniroute = add_ipv6_miniroute ( netdev, &address, prefix_len, NULL );
+	miniroute = ipv6_add_miniroute ( netdev, &address, prefix_len,
+					 IPV6_HAS_ADDRESS );
 	if ( ! miniroute )
 		return -ENOMEM;
 
 	return 0;
-}
-
-/**
- * Handle IPv6 network device or link state change
- *
- * @v netdev		Network device
- */
-static void ipv6_notify ( struct net_device *netdev __unused ) {
-
-	/* Nothing to do */
 }
 
 /**
@@ -963,8 +1040,11 @@ static void ipv6_remove ( struct net_device *netdev ) {
 
 	/* Delete all miniroutes for this network device */
 	list_for_each_entry_safe ( miniroute, tmp, &ipv6_miniroutes, list ) {
-		if ( miniroute->netdev == netdev )
-			del_ipv6_miniroute ( miniroute );
+		if ( miniroute->netdev == netdev ) {
+			netdev_put ( miniroute->netdev );
+			list_del ( &miniroute->list );
+			free ( miniroute );
+		}
 	}
 }
 
@@ -972,7 +1052,6 @@ static void ipv6_remove ( struct net_device *netdev ) {
 struct net_driver ipv6_driver __net_driver = {
 	.name = "IPv6",
 	.probe = ipv6_probe,
-	.notify = ipv6_notify,
 	.remove = ipv6_remove,
 };
 

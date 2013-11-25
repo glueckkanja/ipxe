@@ -124,12 +124,24 @@ struct ndp_router_advertisement_header {
 /** NDP other configuration */
 #define NDP_ROUTER_OTHER 0x40
 
+/** An NDP router solicitation header */
+struct ndp_router_solicitation_header {
+	/** ICMPv6 header */
+	struct icmp_header icmp;
+	/** Reserved */
+	uint32_t reserved;
+	/** Options */
+	union ndp_option option[0];
+} __attribute__ (( packed ));
+
 /** An NDP header */
 union ndp_header {
 	/** ICMPv6 header */
 	struct icmp_header icmp;
 	/** Neighbour solicitation or advertisement header */
 	struct ndp_neighbour_header neigh;
+	/** Router solicitation header */
+	struct ndp_router_solicitation_header rsol;
 	/** Router advertisement header */
 	struct ndp_router_advertisement_header radv;
 } __attribute__ (( packed ));

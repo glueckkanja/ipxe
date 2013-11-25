@@ -377,6 +377,7 @@ extern char * expand_settings ( const char *string );
 extern struct setting_type setting_type_string __setting_type;
 extern struct setting_type setting_type_uristring __setting_type;
 extern struct setting_type setting_type_ipv4 __setting_type;
+extern struct setting_type setting_type_ipv6 __setting_type;
 extern struct setting_type setting_type_int8 __setting_type;
 extern struct setting_type setting_type_int16 __setting_type;
 extern struct setting_type setting_type_int32 __setting_type;
@@ -404,6 +405,7 @@ extern struct setting uuid_setting __setting ( SETTING_HOST );
 extern struct setting next_server_setting __setting ( SETTING_BOOT );
 extern struct setting mac_setting __setting ( SETTING_NETDEV );
 extern struct setting busid_setting __setting ( SETTING_NETDEV );
+extern struct setting user_class_setting __setting ( SETTING_HOST_EXTRA );
 
 /**
  * Initialise a settings block

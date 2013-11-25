@@ -35,9 +35,9 @@ FILE_LICENCE ( GPL2_OR_LATER );
 #include <ipxe/shell.h>
 #include <ipxe/features.h>
 #include <ipxe/image.h>
+#include <ipxe/timer.h>
 #include <usr/ifmgmt.h>
 #include <usr/route.h>
-#include <usr/dhcpmgmt.h>
 #include <usr/imgmgmt.h>
 #include <usr/prompt.h>
 #include <usr/autoboot.h>
@@ -365,8 +365,8 @@ int netboot ( struct net_device *netdev ) {
 		goto err_ifopen;
 	ifstat ( netdev );
 
-	/* Configure device via DHCP */
-	if ( ( rc = dhcp ( netdev ) ) != 0 )
+	/* Configure device */
+	if ( ( rc = ifconf ( netdev, NULL ) ) != 0 )
 		goto err_dhcp;
 	route();
 
@@ -469,7 +469,8 @@ static int shell_banner ( void ) {
 	/* Prompt user */
 	printf ( "\n" );
 	return ( prompt ( "Press Ctrl-B for the iPXE command line...",
-			  ( BANNER_TIMEOUT * 100 ), CTRL_B ) == 0 );
+			  ( ( BANNER_TIMEOUT * TICKS_PER_SEC ) / 10 ),
+			  CTRL_B ) == 0 );
 }
 
 /**

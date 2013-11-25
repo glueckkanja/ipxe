@@ -160,16 +160,24 @@ struct ipv6_miniroute {
 	/** Network device */
 	struct net_device *netdev;
 
-	/** IPv6 address */
+	/** IPv6 address (or prefix if no address is defined) */
 	struct in6_addr address;
 	/** Prefix length */
 	unsigned int prefix_len;
 	/** IPv6 prefix mask (derived from prefix length) */
 	struct in6_addr prefix_mask;
-	/** Router address is present */
-	int has_router;
 	/** Router address */
 	struct in6_addr router;
+	/** Flags */
+	unsigned int flags;
+};
+
+/** IPv6 address/routing table entry flags */
+enum ipv6_miniroute_flags {
+	/** Routing table entry address is valid */
+	IPV6_HAS_ADDRESS = 0x0001,
+	/** Routing table entry router address is valid */
+	IPV6_HAS_ROUTER = 0x0002,
 };
 
 /**
@@ -194,14 +202,13 @@ static inline int ipv6_eui64 ( struct in6_addr *addr,
 /**
  * Construct link-local address via EUI-64
  *
- * @v addr		Address to construct
+ * @v addr		Zeroed address to construct
  * @v netdev		Network device
  * @ret prefix_len	Prefix length, or negative error
  */
 static inline int ipv6_link_local ( struct in6_addr *addr,
 				    struct net_device *netdev ) {
 
-	memset ( addr, 0, sizeof ( *addr ) );
 	addr->s6_addr16[0] = htons ( 0xfe80 );
 	return ipv6_eui64 ( addr, netdev );
 }
@@ -209,17 +216,26 @@ static inline int ipv6_link_local ( struct in6_addr *addr,
 /**
  * Construct solicited-node multicast address
  *
- * @v addr		Address to construct
+ * @v addr		Zeroed address to construct
  * @v unicast		Unicast address
  */
 static inline void ipv6_solicited_node ( struct in6_addr *addr,
 					 const struct in6_addr *unicast ) {
 
-	memset ( addr, 0, sizeof ( *addr ) );
 	addr->s6_addr16[0] = htons ( 0xff02 );
 	addr->s6_addr[11] = 1;
 	addr->s6_addr[12] = 0xff;
 	memcpy ( &addr->s6_addr[13], &unicast->s6_addr[13], 3 );
+}
+
+/**
+ * Construct all-routers multicast address
+ *
+ * @v addr		Zeroed address to construct
+ */
+static inline void ipv6_all_routers ( struct in6_addr *addr ) {
+	addr->s6_addr16[0] = htons ( 0xff02 );
+	addr->s6_addr[15] = 2;
 }
 
 extern struct list_head ipv6_miniroutes;
@@ -227,7 +243,9 @@ extern struct list_head ipv6_miniroutes;
 extern struct net_protocol ipv6_protocol __net_protocol;
 
 extern int ipv6_has_addr ( struct net_device *netdev, struct in6_addr *addr );
-extern int ipv6_slaac ( struct net_device *netdev, struct in6_addr *prefix,
-			unsigned int prefix_len, struct in6_addr *router );
+extern int ipv6_set_prefix ( struct net_device *netdev, struct in6_addr *prefix,
+			     unsigned int prefix_len, struct in6_addr *router );
+extern int ipv6_set_address ( struct net_device *netdev,
+			      struct in6_addr *address );
 
 #endif /* _IPXE_IPV6_H */
