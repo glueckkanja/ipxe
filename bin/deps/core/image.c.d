@@ -14,7 +14,8 @@ image_DEPS += core/image.c include/compiler.h \
  arch/i386/include/librm.h include/ipxe/efi/efi_umalloc.h \
  include/ipxe/linux/linux_umalloc.h arch/i386/include/bits/umalloc.h \
  arch/i386/include/ipxe/memtop_umalloc.h include/ipxe/uri.h \
- include/ipxe/refcnt.h include/ipxe/image.h include/ipxe/tables.h
+ include/ipxe/refcnt.h include/ipxe/in.h include/ipxe/socket.h \
+ include/ipxe/tables.h include/ipxe/image.h
 
 include/compiler.h:
 
@@ -98,6 +99,10 @@ include/ipxe/uri.h:
 
 include/ipxe/refcnt.h:
 
-include/ipxe/image.h:
+include/ipxe/in.h:
+
+include/ipxe/socket.h:
 
 include/ipxe/tables.h:
+
+include/ipxe/image.h:

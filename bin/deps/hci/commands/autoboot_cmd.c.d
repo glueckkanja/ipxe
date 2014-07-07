@@ -5,7 +5,7 @@ autoboot_cmd_DEPS += hci/commands/autoboot_cmd.c include/compiler.h \
  include/ipxe/parseopt.h include/ipxe/settings.h include/ipxe/list.h \
  include/assert.h include/ipxe/refcnt.h include/ipxe/netdevice.h \
  include/ipxe/interface.h include/hci/ifmgmt_cmd.h include/usr/autoboot.h \
- include/ipxe/in.h include/ipxe/socket.h
+ include/ipxe/in.h include/ipxe/socket.h include/ipxe/device.h
 
 include/compiler.h:
 
@@ -48,3 +48,5 @@ include/usr/autoboot.h:
 include/ipxe/in.h:
 
 include/ipxe/socket.h:
+
+include/ipxe/device.h:

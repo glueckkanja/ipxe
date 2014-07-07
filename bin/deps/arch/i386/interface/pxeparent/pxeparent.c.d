@@ -11,6 +11,7 @@ pxeparent_DEPS += arch/i386/interface/pxeparent/pxeparent.c include/compiler.h \
  config/defaults.h config/defaults/pcbios.h config/local/ioapi.h \
  include/ipxe/efi/efi_uaccess.h include/ipxe/linux/linux_uaccess.h \
  arch/i386/include/bits/uaccess.h arch/i386/include/librm.h \
+ include/ipxe/profile.h arch/i386/include/bits/profile.h \
  arch/i386/include/pxeparent.h arch/i386/include/pxe_types.h \
  include/errno.h arch/i386/include/ipxe/errno/pcbios.h \
  arch/i386/include/pxe_error.h include/ipxe/errfile.h \
@@ -86,6 +87,10 @@ include/ipxe/linux/linux_uaccess.h:
 arch/i386/include/bits/uaccess.h:
 
 arch/i386/include/librm.h:
+
+include/ipxe/profile.h:
+
+arch/i386/include/bits/profile.h:
 
 arch/i386/include/pxeparent.h:
 

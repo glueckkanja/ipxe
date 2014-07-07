@@ -2,7 +2,8 @@ slam_DEPS += net/udp/slam.c include/compiler.h \
  arch/i386/include/bits/compiler.h include/stdint.h \
  arch/i386/include/bits/stdint.h include/stdlib.h include/assert.h \
  include/string.h include/stddef.h arch/x86/include/bits/string.h \
- include/strings.h arch/i386/include/limits.h include/errno.h \
+ include/strings.h arch/i386/include/limits.h \
+ arch/i386/include/bits/strings.h include/errno.h \
  arch/i386/include/ipxe/errno/pcbios.h arch/i386/include/pxe_error.h \
  include/ipxe/errfile.h arch/x86/include/bits/errfile.h \
  include/byteswap.h include/endian.h arch/i386/include/bits/endian.h \
@@ -44,6 +45,8 @@ arch/x86/include/bits/string.h:
 include/strings.h:
 
 arch/i386/include/limits.h:
+
+arch/i386/include/bits/strings.h:
 
 include/errno.h:
 

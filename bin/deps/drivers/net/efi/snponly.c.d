@@ -30,8 +30,7 @@ snponly_DEPS += drivers/net/efi/snponly.c include/compiler.h \
  include/byteswap.h include/endian.h arch/i386/include/bits/endian.h \
  arch/i386/include/bits/byteswap.h include/little_bswap.h \
  include/ipxe/efi/Protocol/SimpleNetwork.h drivers/net/efi/snp.h \
- include/ipxe/netdevice.h include/ipxe/refcnt.h include/ipxe/settings.h \
- include/ipxe/interface.h drivers/net/efi/snpnet.h
+ drivers/net/efi/snpnet.h
 
 include/compiler.h:
 
@@ -144,13 +143,5 @@ include/little_bswap.h:
 include/ipxe/efi/Protocol/SimpleNetwork.h:
 
 drivers/net/efi/snp.h:
-
-include/ipxe/netdevice.h:
-
-include/ipxe/refcnt.h:
-
-include/ipxe/settings.h:
-
-include/ipxe/interface.h:
 
 drivers/net/efi/snpnet.h:

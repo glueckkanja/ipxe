@@ -12,7 +12,7 @@ ndp_DEPS += net/ndp.c include/compiler.h arch/i386/include/bits/compiler.h \
  include/ipxe/netdevice.h include/ipxe/refcnt.h include/ipxe/settings.h \
  include/ipxe/interface.h include/ipxe/icmpv6.h include/ipxe/icmp.h \
  include/ipxe/neighbour.h include/ipxe/retry.h include/ipxe/dhcpv6.h \
- include/ipxe/ndp.h
+ include/ipxe/uuid.h include/ipxe/ndp.h
 
 include/compiler.h:
 
@@ -85,5 +85,7 @@ include/ipxe/neighbour.h:
 include/ipxe/retry.h:
 
 include/ipxe/dhcpv6.h:
+
+include/ipxe/uuid.h:
 
 include/ipxe/ndp.h:

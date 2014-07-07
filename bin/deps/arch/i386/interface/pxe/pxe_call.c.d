@@ -6,6 +6,7 @@ pxe_call_DEPS += arch/i386/interface/pxe/pxe_call.c include/compiler.h \
  config/local/ioapi.h include/ipxe/efi/efi_uaccess.h \
  include/ipxe/linux/linux_uaccess.h arch/i386/include/bits/uaccess.h \
  arch/i386/include/librm.h include/ipxe/init.h include/ipxe/tables.h \
+ include/ipxe/profile.h arch/i386/include/bits/profile.h \
  arch/i386/include/setjmp.h arch/i386/include/realmode.h \
  arch/i386/include/registers.h arch/i386/include/biosint.h \
  arch/i386/include/pxe.h arch/i386/include/pxe_types.h include/errno.h \
@@ -52,6 +53,10 @@ arch/i386/include/librm.h:
 include/ipxe/init.h:
 
 include/ipxe/tables.h:
+
+include/ipxe/profile.h:
+
+arch/i386/include/bits/profile.h:
 
 arch/i386/include/setjmp.h:
 

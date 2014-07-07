@@ -7,10 +7,10 @@ settings_ui_DEPS += hci/tui/settings_ui.c include/compiler.h \
  arch/i386/include/bits/timer.h arch/i386/include/ipxe/bios_timer.h \
  arch/i386/include/ipxe/timer2.h arch/i386/include/ipxe/rdtsc_timer.h \
  include/string.h arch/x86/include/bits/string.h include/curses.h \
- include/ipxe/keys.h include/ipxe/console.h include/ipxe/tables.h \
+ include/ipxe/console.h include/ipxe/tables.h include/ipxe/keys.h \
  include/ipxe/settings.h include/ipxe/list.h include/assert.h \
  include/ipxe/refcnt.h include/ipxe/editbox.h include/ipxe/editstring.h \
- include/ipxe/settings_ui.h config/colour.h config/local/colour.h
+ include/ipxe/ansicol.h include/ipxe/settings_ui.h
 
 include/compiler.h:
 
@@ -58,11 +58,11 @@ arch/x86/include/bits/string.h:
 
 include/curses.h:
 
-include/ipxe/keys.h:
-
 include/ipxe/console.h:
 
 include/ipxe/tables.h:
+
+include/ipxe/keys.h:
 
 include/ipxe/settings.h:
 
@@ -76,8 +76,6 @@ include/ipxe/editbox.h:
 
 include/ipxe/editstring.h:
 
+include/ipxe/ansicol.h:
+
 include/ipxe/settings_ui.h:
-
-config/colour.h:
-
-config/local/colour.h:

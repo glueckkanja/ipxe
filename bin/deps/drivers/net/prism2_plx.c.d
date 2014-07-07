@@ -22,13 +22,13 @@ prism2_plx_DEPS += drivers/net/prism2_plx.c include/compiler.h \
  include/ipxe/linux/linux_timer.h arch/i386/include/bits/timer.h \
  arch/i386/include/ipxe/bios_timer.h arch/i386/include/ipxe/timer2.h \
  arch/i386/include/ipxe/rdtsc_timer.h include/strings.h \
- arch/i386/include/limits.h include/ipxe/if_arp.h include/ipxe/if_ether.h \
- include/ipxe/ethernet.h include/ipxe/netdevice.h include/ipxe/refcnt.h \
- include/ipxe/settings.h include/ipxe/interface.h include/ipxe/iobuf.h \
- drivers/net/wlan_compat.h drivers/net/p80211hdr.h drivers/net/hfa384x.h \
- include/errno.h arch/i386/include/ipxe/errno/pcbios.h \
- arch/i386/include/pxe_error.h include/ipxe/errfile.h \
- arch/x86/include/bits/errfile.h
+ arch/i386/include/limits.h arch/i386/include/bits/strings.h \
+ include/ipxe/if_arp.h include/ipxe/if_ether.h include/ipxe/ethernet.h \
+ include/ipxe/netdevice.h include/ipxe/refcnt.h include/ipxe/settings.h \
+ include/ipxe/interface.h include/ipxe/iobuf.h drivers/net/wlan_compat.h \
+ drivers/net/p80211hdr.h drivers/net/hfa384x.h include/errno.h \
+ arch/i386/include/ipxe/errno/pcbios.h arch/i386/include/pxe_error.h \
+ include/ipxe/errfile.h arch/x86/include/bits/errfile.h
 
 include/compiler.h:
 
@@ -149,6 +149,8 @@ arch/i386/include/ipxe/rdtsc_timer.h:
 include/strings.h:
 
 arch/i386/include/limits.h:
+
+arch/i386/include/bits/strings.h:
 
 include/ipxe/if_arp.h:
 

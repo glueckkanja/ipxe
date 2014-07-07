@@ -8,8 +8,8 @@ eepro_DEPS += drivers/net/eepro.c include/compiler.h \
  arch/i386/include/bits/timer.h arch/i386/include/ipxe/bios_timer.h \
  arch/i386/include/ipxe/timer2.h arch/i386/include/ipxe/rdtsc_timer.h \
  include/strings.h arch/i386/include/limits.h include/string.h \
- arch/x86/include/bits/string.h include/ipxe/if_arp.h \
- include/ipxe/if_ether.h include/errno.h \
+ arch/x86/include/bits/string.h arch/i386/include/bits/strings.h \
+ include/ipxe/if_arp.h include/ipxe/if_ether.h include/errno.h \
  arch/i386/include/ipxe/errno/pcbios.h arch/i386/include/pxe_error.h \
  include/ipxe/errfile.h arch/x86/include/bits/errfile.h include/nic.h \
  include/byteswap.h include/endian.h arch/i386/include/bits/endian.h \
@@ -81,6 +81,8 @@ arch/i386/include/limits.h:
 include/string.h:
 
 arch/x86/include/bits/string.h:
+
+arch/i386/include/bits/strings.h:
 
 include/ipxe/if_arp.h:
 

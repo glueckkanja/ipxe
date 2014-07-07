@@ -23,7 +23,17 @@ efidrvprefix_DEPS += arch/x86/prefix/efidrvprefix.c include/compiler.h \
  include/ipxe/efi/Pi/PiS3BootScript.h \
  include/ipxe/efi/Protocol/LoadedImage.h include/ipxe/uuid.h \
  include/byteswap.h include/endian.h arch/i386/include/bits/endian.h \
- arch/i386/include/bits/byteswap.h include/little_bswap.h
+ arch/i386/include/bits/byteswap.h include/little_bswap.h \
+ include/ipxe/efi/efi_snp.h include/ipxe/list.h include/stddef.h \
+ include/ipxe/netdevice.h include/ipxe/refcnt.h include/ipxe/settings.h \
+ include/ipxe/interface.h include/ipxe/efi/Protocol/SimpleNetwork.h \
+ include/ipxe/efi/Protocol/NetworkInterfaceIdentifier.h \
+ include/ipxe/efi/Protocol/ComponentName2.h \
+ include/ipxe/efi/Protocol/HiiConfigAccess.h \
+ include/ipxe/efi/Protocol/FormBrowser2.h \
+ include/ipxe/efi/Guid/HiiPlatformSetupFormset.h \
+ include/ipxe/efi/Protocol/HiiDatabase.h \
+ include/ipxe/efi/Protocol/LoadFile.h
 
 include/compiler.h:
 
@@ -114,3 +124,33 @@ arch/i386/include/bits/endian.h:
 arch/i386/include/bits/byteswap.h:
 
 include/little_bswap.h:
+
+include/ipxe/efi/efi_snp.h:
+
+include/ipxe/list.h:
+
+include/stddef.h:
+
+include/ipxe/netdevice.h:
+
+include/ipxe/refcnt.h:
+
+include/ipxe/settings.h:
+
+include/ipxe/interface.h:
+
+include/ipxe/efi/Protocol/SimpleNetwork.h:
+
+include/ipxe/efi/Protocol/NetworkInterfaceIdentifier.h:
+
+include/ipxe/efi/Protocol/ComponentName2.h:
+
+include/ipxe/efi/Protocol/HiiConfigAccess.h:
+
+include/ipxe/efi/Protocol/FormBrowser2.h:
+
+include/ipxe/efi/Guid/HiiPlatformSetupFormset.h:
+
+include/ipxe/efi/Protocol/HiiDatabase.h:
+
+include/ipxe/efi/Protocol/LoadFile.h:

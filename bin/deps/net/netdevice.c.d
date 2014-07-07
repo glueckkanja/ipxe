@@ -13,8 +13,10 @@ netdevice_DEPS += net/netdevice.c include/compiler.h \
  include/ipxe/init.h include/ipxe/malloc.h \
  arch/x86/include/valgrind/memcheck.h \
  arch/x86/include/valgrind/valgrind.h include/ipxe/device.h \
- include/ipxe/errortab.h include/ipxe/vlan.h include/ipxe/netdevice.h \
- include/ipxe/settings.h include/ipxe/interface.h
+ include/ipxe/errortab.h include/ipxe/profile.h \
+ arch/i386/include/bits/profile.h include/ipxe/vlan.h \
+ include/ipxe/netdevice.h include/ipxe/settings.h \
+ include/ipxe/interface.h
 
 include/compiler.h:
 
@@ -89,6 +91,10 @@ arch/x86/include/valgrind/valgrind.h:
 include/ipxe/device.h:
 
 include/ipxe/errortab.h:
+
+include/ipxe/profile.h:
+
+arch/i386/include/bits/profile.h:
 
 include/ipxe/vlan.h:
 

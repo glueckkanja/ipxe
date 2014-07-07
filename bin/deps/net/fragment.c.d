@@ -8,7 +8,8 @@ fragment_DEPS += net/fragment.c include/compiler.h \
  include/ipxe/efi/efi_timer.h include/ipxe/linux/linux_timer.h \
  arch/i386/include/bits/timer.h arch/i386/include/ipxe/bios_timer.h \
  arch/i386/include/ipxe/timer2.h arch/i386/include/ipxe/rdtsc_timer.h \
- include/ipxe/fragment.h include/ipxe/iobuf.h
+ include/ipxe/ipstat.h include/ipxe/tables.h include/ipxe/fragment.h \
+ include/ipxe/iobuf.h
 
 include/compiler.h:
 
@@ -55,6 +56,10 @@ arch/i386/include/ipxe/bios_timer.h:
 arch/i386/include/ipxe/timer2.h:
 
 arch/i386/include/ipxe/rdtsc_timer.h:
+
+include/ipxe/ipstat.h:
+
+include/ipxe/tables.h:
 
 include/ipxe/fragment.h:
 

@@ -17,8 +17,9 @@ comboot_call_DEPS += arch/i386/interface/syslinux/comboot_call.c \
  arch/i386/include/pxe_types.h include/ipxe/posix_io.h \
  include/ipxe/process.h include/ipxe/list.h include/ipxe/refcnt.h \
  include/ipxe/serial.h include/ipxe/init.h include/ipxe/image.h \
- include/ipxe/version.h include/usr/imgmgmt.h config/console.h \
- config/local/console.h config/serial.h config/local/serial.h
+ include/ipxe/version.h include/wchar.h include/usr/imgmgmt.h \
+ config/console.h config/local/console.h config/serial.h \
+ config/local/serial.h
 
 include/compiler.h:
 
@@ -113,6 +114,8 @@ include/ipxe/init.h:
 include/ipxe/image.h:
 
 include/ipxe/version.h:
+
+include/wchar.h:
 
 include/usr/imgmgmt.h:
 

@@ -25,6 +25,7 @@ intel_DEPS += drivers/net/intel.c include/compiler.h \
  include/ipxe/linux/linux_uaccess.h arch/i386/include/bits/uaccess.h \
  arch/i386/include/librm.h arch/x86/include/bits/io.h \
  arch/x86/include/ipxe/x86_io.h include/ipxe/pci_ids.h \
+ include/ipxe/profile.h arch/i386/include/bits/profile.h \
  drivers/net/intel.h include/ipxe/nvs.h
 
 include/compiler.h:
@@ -154,6 +155,10 @@ arch/x86/include/bits/io.h:
 arch/x86/include/ipxe/x86_io.h:
 
 include/ipxe/pci_ids.h:
+
+include/ipxe/profile.h:
+
+arch/i386/include/bits/profile.h:
 
 drivers/net/intel.h:
 

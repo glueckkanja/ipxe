@@ -9,7 +9,7 @@ test_DEPS += tests/test.c include/compiler.h arch/i386/include/bits/compiler.h \
  config/ioapi.h config/defaults.h config/defaults/pcbios.h \
  config/local/ioapi.h include/ipxe/efi/efi_uaccess.h \
  include/ipxe/linux/linux_uaccess.h arch/i386/include/bits/uaccess.h \
- arch/i386/include/librm.h include/ipxe/refcnt.h
+ arch/i386/include/librm.h include/ipxe/refcnt.h include/usr/profstat.h
 
 include/compiler.h:
 
@@ -72,3 +72,5 @@ arch/i386/include/bits/uaccess.h:
 arch/i386/include/librm.h:
 
 include/ipxe/refcnt.h:
+
+include/usr/profstat.h:

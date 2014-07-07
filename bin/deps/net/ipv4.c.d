@@ -16,7 +16,8 @@ ipv4_DEPS += net/ipv4.c include/compiler.h arch/i386/include/bits/compiler.h \
  config/ioapi.h config/defaults.h config/defaults/pcbios.h \
  config/local/ioapi.h include/ipxe/efi/efi_uaccess.h \
  include/ipxe/linux/linux_uaccess.h arch/i386/include/bits/uaccess.h \
- arch/i386/include/librm.h include/ipxe/fragment.h
+ arch/i386/include/librm.h include/ipxe/fragment.h include/ipxe/ipstat.h \
+ include/ipxe/profile.h arch/i386/include/bits/profile.h
 
 include/compiler.h:
 
@@ -117,3 +118,9 @@ arch/i386/include/bits/uaccess.h:
 arch/i386/include/librm.h:
 
 include/ipxe/fragment.h:
+
+include/ipxe/ipstat.h:
+
+include/ipxe/profile.h:
+
+arch/i386/include/bits/profile.h:

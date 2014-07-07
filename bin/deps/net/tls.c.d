@@ -18,9 +18,9 @@ tls_DEPS += net/tls.c include/compiler.h arch/i386/include/bits/compiler.h \
  include/ipxe/asn1.h include/ipxe/tables.h include/ipxe/iobuf.h \
  include/ipxe/list.h include/ipxe/xfer.h include/ipxe/interface.h \
  include/ipxe/refcnt.h include/ipxe/open.h include/ipxe/socket.h \
- include/ipxe/x509.h include/ipxe/clientcert.h include/ipxe/rbg.h \
- include/ipxe/drbg.h include/ipxe/hmac_drbg.h include/ipxe/validator.h \
- include/ipxe/tls.h include/ipxe/process.h
+ include/ipxe/x509.h include/ipxe/privkey.h include/ipxe/certstore.h \
+ include/ipxe/rbg.h include/ipxe/drbg.h include/ipxe/hmac_drbg.h \
+ include/ipxe/validator.h include/ipxe/tls.h include/ipxe/process.h
 
 include/compiler.h:
 
@@ -136,7 +136,9 @@ include/ipxe/socket.h:
 
 include/ipxe/x509.h:
 
-include/ipxe/clientcert.h:
+include/ipxe/privkey.h:
+
+include/ipxe/certstore.h:
 
 include/ipxe/rbg.h:
 

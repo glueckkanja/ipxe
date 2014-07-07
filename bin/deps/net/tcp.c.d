@@ -17,9 +17,10 @@ tcp_DEPS += net/tcp.c include/compiler.h arch/i386/include/bits/compiler.h \
  arch/x86/include/valgrind/valgrind.h include/ipxe/init.h \
  include/ipxe/retry.h include/ipxe/refcnt.h include/ipxe/pending.h \
  include/ipxe/xfer.h include/ipxe/interface.h include/ipxe/open.h \
- include/ipxe/socket.h include/ipxe/uri.h include/ipxe/netdevice.h \
- include/ipxe/settings.h include/ipxe/tcpip.h include/ipxe/in.h \
- arch/x86/include/bits/tcpip.h include/ipxe/tcp.h
+ include/ipxe/socket.h include/ipxe/uri.h include/ipxe/in.h \
+ include/ipxe/netdevice.h include/ipxe/settings.h include/ipxe/profile.h \
+ arch/i386/include/bits/profile.h include/ipxe/process.h \
+ include/ipxe/tcpip.h arch/x86/include/bits/tcpip.h include/ipxe/tcp.h
 
 include/compiler.h:
 
@@ -117,13 +118,19 @@ include/ipxe/socket.h:
 
 include/ipxe/uri.h:
 
+include/ipxe/in.h:
+
 include/ipxe/netdevice.h:
 
 include/ipxe/settings.h:
 
-include/ipxe/tcpip.h:
+include/ipxe/profile.h:
 
-include/ipxe/in.h:
+arch/i386/include/bits/profile.h:
+
+include/ipxe/process.h:
+
+include/ipxe/tcpip.h:
 
 arch/x86/include/bits/tcpip.h:
 

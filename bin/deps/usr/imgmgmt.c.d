@@ -12,7 +12,7 @@ imgmgmt_DEPS += usr/imgmgmt.c include/compiler.h \
  arch/i386/include/bits/uaccess.h arch/i386/include/librm.h \
  include/ipxe/refcnt.h include/ipxe/downloader.h include/ipxe/monojob.h \
  include/ipxe/open.h include/ipxe/socket.h include/ipxe/uri.h \
- include/usr/imgmgmt.h
+ include/ipxe/in.h include/usr/imgmgmt.h
 
 include/compiler.h:
 
@@ -83,5 +83,7 @@ include/ipxe/open.h:
 include/ipxe/socket.h:
 
 include/ipxe/uri.h:
+
+include/ipxe/in.h:
 
 include/usr/imgmgmt.h:

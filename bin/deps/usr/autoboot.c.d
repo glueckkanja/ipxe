@@ -19,13 +19,14 @@ autoboot_DEPS += usr/autoboot.c include/compiler.h \
  arch/i386/include/bits/sanboot.h arch/i386/include/ipxe/bios_sanboot.h \
  include/ipxe/uri.h include/stdlib.h include/ipxe/open.h \
  include/ipxe/init.h include/ipxe/keys.h include/ipxe/version.h \
- include/ipxe/shell.h include/ipxe/features.h include/ipxe/timer.h \
- config/timer.h config/local/timer.h include/ipxe/efi/efi_timer.h \
- include/ipxe/linux/linux_timer.h arch/i386/include/bits/timer.h \
- arch/i386/include/ipxe/bios_timer.h arch/i386/include/ipxe/timer2.h \
- arch/i386/include/ipxe/rdtsc_timer.h include/usr/ifmgmt.h \
- include/usr/route.h include/usr/imgmgmt.h include/usr/prompt.h \
- include/usr/autoboot.h config/general.h config/local/general.h
+ include/wchar.h include/ipxe/shell.h include/ipxe/features.h \
+ include/ipxe/timer.h config/timer.h config/local/timer.h \
+ include/ipxe/efi/efi_timer.h include/ipxe/linux/linux_timer.h \
+ arch/i386/include/bits/timer.h arch/i386/include/ipxe/bios_timer.h \
+ arch/i386/include/ipxe/timer2.h arch/i386/include/ipxe/rdtsc_timer.h \
+ include/usr/ifmgmt.h include/usr/route.h include/usr/imgmgmt.h \
+ include/usr/prompt.h include/usr/autoboot.h include/ipxe/device.h \
+ config/general.h config/local/general.h
 
 include/compiler.h:
 
@@ -133,6 +134,8 @@ include/ipxe/keys.h:
 
 include/ipxe/version.h:
 
+include/wchar.h:
+
 include/ipxe/shell.h:
 
 include/ipxe/features.h:
@@ -164,6 +167,8 @@ include/usr/imgmgmt.h:
 include/usr/prompt.h:
 
 include/usr/autoboot.h:
+
+include/ipxe/device.h:
 
 config/general.h:
 

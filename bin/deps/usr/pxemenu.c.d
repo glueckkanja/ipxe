@@ -7,8 +7,8 @@ pxemenu_DEPS += usr/pxemenu.c include/compiler.h \
  include/ipxe/errfile.h arch/x86/include/bits/errfile.h include/ctype.h \
  include/byteswap.h include/endian.h arch/i386/include/bits/endian.h \
  arch/i386/include/bits/byteswap.h include/little_bswap.h \
- include/curses.h include/ipxe/keys.h include/ipxe/console.h \
- include/ipxe/tables.h include/ipxe/dhcp.h include/ipxe/in.h \
+ include/curses.h include/ipxe/console.h include/ipxe/tables.h \
+ include/ipxe/keys.h include/ipxe/dhcp.h include/ipxe/in.h \
  include/ipxe/socket.h include/ipxe/list.h include/ipxe/refcnt.h \
  include/ipxe/uuid.h include/ipxe/netdevice.h include/ipxe/settings.h \
  include/ipxe/interface.h include/ipxe/uaccess.h include/ipxe/api.h \
@@ -20,7 +20,8 @@ pxemenu_DEPS += usr/pxemenu.c include/compiler.h \
  include/ipxe/linux/linux_timer.h arch/i386/include/bits/timer.h \
  arch/i386/include/ipxe/bios_timer.h arch/i386/include/ipxe/timer2.h \
  arch/i386/include/ipxe/rdtsc_timer.h include/ipxe/uri.h \
- include/usr/dhcpmgmt.h include/usr/autoboot.h
+ include/ipxe/ansicol.h include/usr/dhcpmgmt.h include/usr/autoboot.h \
+ include/ipxe/device.h
 
 include/compiler.h:
 
@@ -68,11 +69,11 @@ include/little_bswap.h:
 
 include/curses.h:
 
-include/ipxe/keys.h:
-
 include/ipxe/console.h:
 
 include/ipxe/tables.h:
+
+include/ipxe/keys.h:
 
 include/ipxe/dhcp.h:
 
@@ -132,6 +133,10 @@ arch/i386/include/ipxe/rdtsc_timer.h:
 
 include/ipxe/uri.h:
 
+include/ipxe/ansicol.h:
+
 include/usr/dhcpmgmt.h:
 
 include/usr/autoboot.h:
+
+include/ipxe/device.h:

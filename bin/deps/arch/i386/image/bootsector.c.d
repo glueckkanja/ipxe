@@ -9,7 +9,9 @@ bootsector_DEPS += arch/i386/image/bootsector.c include/compiler.h \
  config/defaults.h config/defaults/pcbios.h config/local/ioapi.h \
  include/ipxe/efi/efi_uaccess.h include/ipxe/linux/linux_uaccess.h \
  arch/i386/include/bits/uaccess.h arch/i386/include/librm.h \
- arch/i386/include/biosint.h arch/i386/include/bootsector.h
+ arch/i386/include/biosint.h arch/i386/include/bootsector.h \
+ include/ipxe/console.h include/stdio.h include/stdarg.h \
+ include/ipxe/tables.h
 
 include/compiler.h:
 
@@ -62,3 +64,11 @@ arch/i386/include/librm.h:
 arch/i386/include/biosint.h:
 
 arch/i386/include/bootsector.h:
+
+include/ipxe/console.h:
+
+include/stdio.h:
+
+include/stdarg.h:
+
+include/ipxe/tables.h:

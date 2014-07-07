@@ -27,9 +27,8 @@ efi_debug_DEPS += interface/efi/efi_debug.c include/compiler.h \
  include/ipxe/efi/IndustryStandard/PeImage.h \
  include/ipxe/efi/Pi/PiS3BootScript.h \
  include/ipxe/efi/Protocol/LoadedImage.h include/ipxe/tables.h \
- include/ipxe/efi/efi_driver.h include/ipxe/efi/Protocol/DriverBinding.h \
- include/ipxe/efi/Protocol/ComponentName2.h \
- include/ipxe/efi/Protocol/DevicePathToText.h
+ include/ipxe/efi/efi_driver.h include/ipxe/device.h include/ipxe/list.h \
+ include/assert.h include/ipxe/efi/Protocol/DevicePathToText.h
 
 include/compiler.h:
 
@@ -137,8 +136,10 @@ include/ipxe/tables.h:
 
 include/ipxe/efi/efi_driver.h:
 
-include/ipxe/efi/Protocol/DriverBinding.h:
+include/ipxe/device.h:
 
-include/ipxe/efi/Protocol/ComponentName2.h:
+include/ipxe/list.h:
+
+include/assert.h:
 
 include/ipxe/efi/Protocol/DevicePathToText.h:

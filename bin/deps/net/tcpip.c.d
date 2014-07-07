@@ -7,8 +7,9 @@ tcpip_DEPS += net/tcpip.c include/compiler.h arch/i386/include/bits/compiler.h \
  include/byteswap.h include/endian.h arch/i386/include/bits/endian.h \
  arch/i386/include/bits/byteswap.h include/little_bswap.h \
  include/ipxe/iobuf.h include/ipxe/list.h include/ipxe/tables.h \
- include/ipxe/tcpip.h include/ipxe/socket.h include/ipxe/in.h \
- arch/x86/include/bits/tcpip.h
+ include/ipxe/ipstat.h include/ipxe/netdevice.h include/ipxe/refcnt.h \
+ include/ipxe/settings.h include/ipxe/interface.h include/ipxe/tcpip.h \
+ include/ipxe/socket.h include/ipxe/in.h arch/x86/include/bits/tcpip.h
 
 include/compiler.h:
 
@@ -53,6 +54,16 @@ include/ipxe/iobuf.h:
 include/ipxe/list.h:
 
 include/ipxe/tables.h:
+
+include/ipxe/ipstat.h:
+
+include/ipxe/netdevice.h:
+
+include/ipxe/refcnt.h:
+
+include/ipxe/settings.h:
+
+include/ipxe/interface.h:
 
 include/ipxe/tcpip.h:
 

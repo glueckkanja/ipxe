@@ -38,15 +38,14 @@ efi_image_DEPS += image/efi_image.c include/compiler.h \
  include/ipxe/efi/Protocol/HiiDatabase.h \
  include/ipxe/efi/Protocol/LoadFile.h include/ipxe/efi/efi_download.h \
  include/ipxe/efi/efi_file.h include/ipxe/efi/efi_driver.h \
- include/ipxe/efi/Protocol/DriverBinding.h include/ipxe/efi/efi_strings.h \
- include/stdarg.h include/ipxe/image.h include/ipxe/uaccess.h \
- include/string.h arch/x86/include/bits/string.h include/ipxe/api.h \
- config/ioapi.h config/defaults.h config/defaults/pcbios.h \
- config/local/ioapi.h include/ipxe/efi/efi_uaccess.h \
- include/ipxe/linux/linux_uaccess.h arch/i386/include/bits/uaccess.h \
- arch/i386/include/librm.h include/ipxe/init.h include/ipxe/features.h \
- include/ipxe/dhcp.h include/ipxe/in.h include/ipxe/socket.h \
- include/ipxe/uri.h
+ include/ipxe/device.h include/ipxe/efi/efi_strings.h include/stdarg.h \
+ include/ipxe/image.h include/ipxe/uaccess.h include/string.h \
+ arch/x86/include/bits/string.h include/ipxe/api.h config/ioapi.h \
+ config/defaults.h config/defaults/pcbios.h config/local/ioapi.h \
+ include/ipxe/efi/efi_uaccess.h include/ipxe/linux/linux_uaccess.h \
+ arch/i386/include/bits/uaccess.h arch/i386/include/librm.h \
+ include/ipxe/init.h include/ipxe/features.h include/ipxe/dhcp.h \
+ include/ipxe/in.h include/ipxe/socket.h include/ipxe/uri.h
 
 include/compiler.h:
 
@@ -184,7 +183,7 @@ include/ipxe/efi/efi_file.h:
 
 include/ipxe/efi/efi_driver.h:
 
-include/ipxe/efi/Protocol/DriverBinding.h:
+include/ipxe/device.h:
 
 include/ipxe/efi/efi_strings.h:
 

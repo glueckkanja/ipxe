@@ -15,19 +15,20 @@ int13_DEPS += arch/i386/interface/pcbios/int13.c include/compiler.h \
  include/ipxe/interface.h include/ipxe/refcnt.h include/ipxe/io.h \
  arch/x86/include/bits/io.h arch/x86/include/ipxe/x86_io.h \
  include/ipxe/open.h include/stdarg.h include/ipxe/tables.h \
- include/ipxe/socket.h include/ipxe/uri.h include/ipxe/process.h \
- include/ipxe/xfer.h include/ipxe/retry.h include/ipxe/timer.h \
- config/timer.h config/local/timer.h include/ipxe/efi/efi_timer.h \
- include/ipxe/linux/linux_timer.h arch/i386/include/bits/timer.h \
- arch/i386/include/ipxe/bios_timer.h arch/i386/include/ipxe/timer2.h \
- arch/i386/include/ipxe/rdtsc_timer.h include/ipxe/acpi.h \
- include/ipxe/sanboot.h config/sanboot.h config/local/sanboot.h \
- include/ipxe/null_sanboot.h arch/i386/include/bits/sanboot.h \
- arch/i386/include/ipxe/bios_sanboot.h include/ipxe/device.h \
- include/ipxe/pci.h include/ipxe/pci_io.h include/ipxe/efi/efi_pci_api.h \
- include/ipxe/linux/linux_pci.h arch/x86/include/bits/pci_io.h \
- arch/x86/include/ipxe/pcibios.h arch/x86/include/ipxe/pcidirect.h \
- include/ipxe/pci_ids.h include/ipxe/iso9660.h include/ipxe/eltorito.h \
+ include/ipxe/socket.h include/ipxe/uri.h include/ipxe/in.h \
+ include/ipxe/process.h include/ipxe/xfer.h include/ipxe/retry.h \
+ include/ipxe/timer.h config/timer.h config/local/timer.h \
+ include/ipxe/efi/efi_timer.h include/ipxe/linux/linux_timer.h \
+ arch/i386/include/bits/timer.h arch/i386/include/ipxe/bios_timer.h \
+ arch/i386/include/ipxe/timer2.h arch/i386/include/ipxe/rdtsc_timer.h \
+ include/ipxe/acpi.h include/ipxe/sanboot.h config/sanboot.h \
+ config/local/sanboot.h include/ipxe/null_sanboot.h \
+ arch/i386/include/bits/sanboot.h arch/i386/include/ipxe/bios_sanboot.h \
+ include/ipxe/device.h include/ipxe/pci.h include/ipxe/pci_io.h \
+ include/ipxe/efi/efi_pci_api.h include/ipxe/linux/linux_pci.h \
+ arch/x86/include/bits/pci_io.h arch/x86/include/ipxe/pcibios.h \
+ arch/x86/include/ipxe/pcidirect.h include/ipxe/pci_ids.h \
+ include/ipxe/iso9660.h include/ipxe/eltorito.h \
  arch/i386/include/realmode.h arch/i386/include/registers.h \
  arch/i386/include/bios.h arch/i386/include/biosint.h \
  arch/i386/include/bootsector.h arch/i386/include/int13.h \
@@ -116,6 +117,8 @@ include/ipxe/tables.h:
 include/ipxe/socket.h:
 
 include/ipxe/uri.h:
+
+include/ipxe/in.h:
 
 include/ipxe/process.h:
 

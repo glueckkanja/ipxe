@@ -17,8 +17,8 @@ oncrpc_DEPS += net/tcp/oncrpc.c include/compiler.h \
  include/ipxe/linux/linux_uaccess.h arch/i386/include/bits/uaccess.h \
  arch/i386/include/librm.h include/ipxe/xfer.h include/ipxe/open.h \
  include/ipxe/uri.h include/ipxe/features.h include/ipxe/oncrpc.h \
- include/ipxe/oncrpc_iob.h include/ipxe/init.h config/general.h \
- config/local/general.h
+ include/ipxe/oncrpc_iob.h include/ipxe/init.h include/ipxe/version.h \
+ include/wchar.h
 
 include/compiler.h:
 
@@ -122,6 +122,6 @@ include/ipxe/oncrpc_iob.h:
 
 include/ipxe/init.h:
 
-config/general.h:
+include/ipxe/version.h:
 
-config/local/general.h:
+include/wchar.h:

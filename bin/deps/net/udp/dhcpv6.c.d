@@ -17,7 +17,7 @@ dhcpv6_DEPS += net/udp/dhcpv6.c include/compiler.h \
  arch/i386/include/bits/timer.h arch/i386/include/ipxe/bios_timer.h \
  arch/i386/include/ipxe/timer2.h arch/i386/include/ipxe/rdtsc_timer.h \
  include/ipxe/in.h include/ipxe/crc32.h include/ipxe/errortab.h \
- include/ipxe/ipv6.h include/ipxe/dhcpv6.h
+ include/ipxe/ipv6.h include/ipxe/dhcpv6.h include/ipxe/uuid.h
 
 include/compiler.h:
 
@@ -116,3 +116,5 @@ include/ipxe/errortab.h:
 include/ipxe/ipv6.h:
 
 include/ipxe/dhcpv6.h:
+
+include/ipxe/uuid.h:

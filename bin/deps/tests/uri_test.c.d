@@ -1,39 +1,36 @@
 uri_test_DEPS += tests/uri_test.c include/compiler.h \
- arch/i386/include/bits/compiler.h include/stdint.h \
- arch/i386/include/bits/stdint.h include/stddef.h include/stdio.h \
- include/stdarg.h include/string.h arch/x86/include/bits/string.h \
- include/errno.h arch/i386/include/ipxe/errno/pcbios.h \
- arch/i386/include/pxe_error.h include/ipxe/errfile.h \
- arch/x86/include/bits/errfile.h include/ipxe/uri.h include/stdlib.h \
- include/assert.h include/ipxe/refcnt.h
+ arch/i386/include/bits/compiler.h include/string.h include/stddef.h \
+ include/stdint.h arch/i386/include/bits/stdint.h \
+ arch/x86/include/bits/string.h include/byteswap.h include/endian.h \
+ arch/i386/include/bits/endian.h arch/i386/include/bits/byteswap.h \
+ include/little_bswap.h include/ipxe/uri.h include/stdlib.h \
+ include/assert.h include/ipxe/refcnt.h include/ipxe/in.h \
+ include/ipxe/socket.h include/ipxe/tables.h include/ipxe/params.h \
+ include/ipxe/list.h include/ipxe/test.h
 
 include/compiler.h:
 
 arch/i386/include/bits/compiler.h:
 
+include/string.h:
+
+include/stddef.h:
+
 include/stdint.h:
 
 arch/i386/include/bits/stdint.h:
 
-include/stddef.h:
-
-include/stdio.h:
-
-include/stdarg.h:
-
-include/string.h:
-
 arch/x86/include/bits/string.h:
 
-include/errno.h:
+include/byteswap.h:
 
-arch/i386/include/ipxe/errno/pcbios.h:
+include/endian.h:
 
-arch/i386/include/pxe_error.h:
+arch/i386/include/bits/endian.h:
 
-include/ipxe/errfile.h:
+arch/i386/include/bits/byteswap.h:
 
-arch/x86/include/bits/errfile.h:
+include/little_bswap.h:
 
 include/ipxe/uri.h:
 
@@ -42,3 +39,15 @@ include/stdlib.h:
 include/assert.h:
 
 include/ipxe/refcnt.h:
+
+include/ipxe/in.h:
+
+include/ipxe/socket.h:
+
+include/ipxe/tables.h:
+
+include/ipxe/params.h:
+
+include/ipxe/list.h:
+
+include/ipxe/test.h:

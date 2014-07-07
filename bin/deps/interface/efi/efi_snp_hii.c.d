@@ -2,14 +2,15 @@ efi_snp_hii_DEPS += interface/efi/efi_snp_hii.c include/compiler.h \
  arch/i386/include/bits/compiler.h include/string.h include/stddef.h \
  include/stdint.h arch/i386/include/bits/stdint.h \
  arch/x86/include/bits/string.h include/strings.h \
- arch/i386/include/limits.h include/stdlib.h include/assert.h \
- include/stdio.h include/stdarg.h include/wchar.h include/errno.h \
- arch/i386/include/ipxe/errno/pcbios.h arch/i386/include/pxe_error.h \
- include/ipxe/errfile.h arch/x86/include/bits/errfile.h \
- include/ipxe/settings.h include/ipxe/tables.h include/ipxe/list.h \
- include/ipxe/refcnt.h include/ipxe/nvo.h include/ipxe/dhcpopts.h \
- include/ipxe/device.h include/ipxe/netdevice.h include/ipxe/interface.h \
- include/ipxe/version.h include/ipxe/efi/efi.h include/ipxe/efi/Uefi.h \
+ arch/i386/include/limits.h arch/i386/include/bits/strings.h \
+ include/stdlib.h include/assert.h include/stdio.h include/stdarg.h \
+ include/wchar.h include/errno.h arch/i386/include/ipxe/errno/pcbios.h \
+ arch/i386/include/pxe_error.h include/ipxe/errfile.h \
+ arch/x86/include/bits/errfile.h include/ipxe/settings.h \
+ include/ipxe/tables.h include/ipxe/list.h include/ipxe/refcnt.h \
+ include/ipxe/nvo.h include/ipxe/dhcpopts.h include/ipxe/device.h \
+ include/ipxe/netdevice.h include/ipxe/interface.h include/ipxe/version.h \
+ include/ipxe/efi/efi.h include/ipxe/efi/Uefi.h \
  include/ipxe/efi/Uefi/UefiBaseType.h include/ipxe/efi/Base.h \
  include/ipxe/efi/ProcessorBind.h include/ipxe/efi/Ia32/ProcessorBind.h \
  include/ipxe/efi/Uefi/UefiSpec.h include/ipxe/efi/Uefi/UefiMultiPhase.h \
@@ -40,9 +41,7 @@ efi_snp_hii_DEPS += interface/efi/efi_snp_hii.c include/compiler.h \
  include/ipxe/efi/Protocol/FormBrowser2.h \
  include/ipxe/efi/Guid/HiiPlatformSetupFormset.h \
  include/ipxe/efi/Protocol/HiiDatabase.h \
- include/ipxe/efi/Protocol/LoadFile.h include/ipxe/efi/efi_strings.h \
- config/general.h config/defaults.h config/defaults/pcbios.h \
- config/local/general.h
+ include/ipxe/efi/Protocol/LoadFile.h include/ipxe/efi/efi_strings.h
 
 include/compiler.h:
 
@@ -61,6 +60,8 @@ arch/x86/include/bits/string.h:
 include/strings.h:
 
 arch/i386/include/limits.h:
+
+arch/i386/include/bits/strings.h:
 
 include/stdlib.h:
 
@@ -199,11 +200,3 @@ include/ipxe/efi/Protocol/HiiDatabase.h:
 include/ipxe/efi/Protocol/LoadFile.h:
 
 include/ipxe/efi/efi_strings.h:
-
-config/general.h:
-
-config/defaults.h:
-
-config/defaults/pcbios.h:
-
-config/local/general.h:

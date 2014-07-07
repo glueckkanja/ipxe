@@ -21,7 +21,7 @@ nfs_open_DEPS += net/oncrpc/nfs_open.c include/compiler.h \
  include/ipxe/linux/linux_uaccess.h arch/i386/include/bits/uaccess.h \
  arch/i386/include/librm.h include/ipxe/nfs.h include/ipxe/oncrpc.h \
  include/ipxe/nfs_open.h include/ipxe/oncrpc_iob.h include/ipxe/portmap.h \
- include/ipxe/mount.h
+ include/ipxe/mount.h include/ipxe/nfs_uri.h
 
 include/compiler.h:
 
@@ -148,3 +148,5 @@ include/ipxe/oncrpc_iob.h:
 include/ipxe/portmap.h:
 
 include/ipxe/mount.h:
+
+include/ipxe/nfs_uri.h:

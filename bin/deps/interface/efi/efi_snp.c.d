@@ -9,20 +9,11 @@ efi_snp_DEPS += interface/efi/efi_snp.c include/compiler.h \
  include/ipxe/netdevice.h include/ipxe/list.h include/ipxe/tables.h \
  include/ipxe/refcnt.h include/ipxe/settings.h include/ipxe/interface.h \
  include/ipxe/iobuf.h include/ipxe/in.h include/ipxe/socket.h \
- include/ipxe/pci.h include/ipxe/device.h include/ipxe/pci_io.h \
- include/ipxe/api.h config/ioapi.h config/defaults.h \
- config/defaults/pcbios.h config/local/ioapi.h \
- include/ipxe/efi/efi_pci_api.h include/ipxe/linux/linux_pci.h \
- arch/x86/include/bits/pci_io.h arch/x86/include/ipxe/pcibios.h \
- arch/x86/include/ipxe/pcidirect.h include/ipxe/io.h \
- include/ipxe/uaccess.h include/ipxe/efi/efi_uaccess.h \
- include/ipxe/linux/linux_uaccess.h arch/i386/include/bits/uaccess.h \
- arch/i386/include/librm.h arch/x86/include/bits/io.h \
- arch/x86/include/ipxe/x86_io.h include/ipxe/pci_ids.h \
- include/ipxe/efi/efi.h include/ipxe/efi/Uefi.h \
- include/ipxe/efi/Uefi/UefiBaseType.h include/ipxe/efi/Base.h \
- include/ipxe/efi/ProcessorBind.h include/ipxe/efi/Ia32/ProcessorBind.h \
- include/ipxe/efi/Uefi/UefiSpec.h include/ipxe/efi/Uefi/UefiMultiPhase.h \
+ include/ipxe/version.h include/wchar.h include/ipxe/efi/efi.h \
+ include/ipxe/efi/Uefi.h include/ipxe/efi/Uefi/UefiBaseType.h \
+ include/ipxe/efi/Base.h include/ipxe/efi/ProcessorBind.h \
+ include/ipxe/efi/Ia32/ProcessorBind.h include/ipxe/efi/Uefi/UefiSpec.h \
+ include/ipxe/efi/Uefi/UefiMultiPhase.h \
  include/ipxe/efi/Guid/WinCertificate.h \
  include/ipxe/efi/Protocol/DevicePath.h include/ipxe/efi/Guid/PcAnsi.h \
  include/ipxe/efi/Protocol/SimpleTextIn.h \
@@ -40,18 +31,16 @@ efi_snp_DEPS += interface/efi/efi_snp.c include/compiler.h \
  include/ipxe/efi/IndustryStandard/PeImage.h \
  include/ipxe/efi/Pi/PiS3BootScript.h \
  include/ipxe/efi/Protocol/LoadedImage.h include/ipxe/uuid.h \
- include/ipxe/efi/efi_pci.h include/ipxe/efi/Protocol/PciIo.h \
- include/ipxe/efi/efi_driver.h include/ipxe/efi/Protocol/DriverBinding.h \
- include/ipxe/efi/Protocol/ComponentName2.h \
+ include/ipxe/efi/efi_driver.h include/ipxe/device.h \
  include/ipxe/efi/efi_strings.h include/stdarg.h \
  include/ipxe/efi/efi_snp.h include/ipxe/efi/Protocol/SimpleNetwork.h \
  include/ipxe/efi/Protocol/NetworkInterfaceIdentifier.h \
+ include/ipxe/efi/Protocol/ComponentName2.h \
  include/ipxe/efi/Protocol/HiiConfigAccess.h \
  include/ipxe/efi/Protocol/FormBrowser2.h \
  include/ipxe/efi/Guid/HiiPlatformSetupFormset.h \
  include/ipxe/efi/Protocol/HiiDatabase.h \
- include/ipxe/efi/Protocol/LoadFile.h config/general.h \
- config/local/general.h include/usr/autoboot.h
+ include/ipxe/efi/Protocol/LoadFile.h include/usr/autoboot.h
 
 include/compiler.h:
 
@@ -109,49 +98,9 @@ include/ipxe/in.h:
 
 include/ipxe/socket.h:
 
-include/ipxe/pci.h:
+include/ipxe/version.h:
 
-include/ipxe/device.h:
-
-include/ipxe/pci_io.h:
-
-include/ipxe/api.h:
-
-config/ioapi.h:
-
-config/defaults.h:
-
-config/defaults/pcbios.h:
-
-config/local/ioapi.h:
-
-include/ipxe/efi/efi_pci_api.h:
-
-include/ipxe/linux/linux_pci.h:
-
-arch/x86/include/bits/pci_io.h:
-
-arch/x86/include/ipxe/pcibios.h:
-
-arch/x86/include/ipxe/pcidirect.h:
-
-include/ipxe/io.h:
-
-include/ipxe/uaccess.h:
-
-include/ipxe/efi/efi_uaccess.h:
-
-include/ipxe/linux/linux_uaccess.h:
-
-arch/i386/include/bits/uaccess.h:
-
-arch/i386/include/librm.h:
-
-arch/x86/include/bits/io.h:
-
-arch/x86/include/ipxe/x86_io.h:
-
-include/ipxe/pci_ids.h:
+include/wchar.h:
 
 include/ipxe/efi/efi.h:
 
@@ -217,15 +166,9 @@ include/ipxe/efi/Protocol/LoadedImage.h:
 
 include/ipxe/uuid.h:
 
-include/ipxe/efi/efi_pci.h:
-
-include/ipxe/efi/Protocol/PciIo.h:
-
 include/ipxe/efi/efi_driver.h:
 
-include/ipxe/efi/Protocol/DriverBinding.h:
-
-include/ipxe/efi/Protocol/ComponentName2.h:
+include/ipxe/device.h:
 
 include/ipxe/efi/efi_strings.h:
 
@@ -237,6 +180,8 @@ include/ipxe/efi/Protocol/SimpleNetwork.h:
 
 include/ipxe/efi/Protocol/NetworkInterfaceIdentifier.h:
 
+include/ipxe/efi/Protocol/ComponentName2.h:
+
 include/ipxe/efi/Protocol/HiiConfigAccess.h:
 
 include/ipxe/efi/Protocol/FormBrowser2.h:
@@ -246,9 +191,5 @@ include/ipxe/efi/Guid/HiiPlatformSetupFormset.h:
 include/ipxe/efi/Protocol/HiiDatabase.h:
 
 include/ipxe/efi/Protocol/LoadFile.h:
-
-config/general.h:
-
-config/local/general.h:
 
 include/usr/autoboot.h:

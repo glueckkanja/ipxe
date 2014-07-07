@@ -19,7 +19,7 @@ pxe_image_DEPS += arch/i386/image/pxe_image.c include/compiler.h \
  include/stdarg.h include/ipxe/in.h include/ipxe/socket.h \
  include/ipxe/uuid.h include/byteswap.h include/endian.h \
  arch/i386/include/bits/endian.h arch/i386/include/bits/byteswap.h \
- include/little_bswap.h
+ include/little_bswap.h include/ipxe/console.h include/stdio.h
 
 include/compiler.h:
 
@@ -124,3 +124,7 @@ arch/i386/include/bits/endian.h:
 arch/i386/include/bits/byteswap.h:
 
 include/little_bswap.h:
+
+include/ipxe/console.h:
+
+include/stdio.h:
