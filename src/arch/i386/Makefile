@@ -69,6 +69,10 @@ CFLAGS		+= -fshort-wchar
 #
 CFLAGS			+= -Ui386
 
+# Define version string for lkrnprefix.S
+#
+CFLAGS_lkrnprefix	+= -DVERSION="\"$(VERSION)\""
+
 # Locations of utilities
 #
 ISOLINUX_BIN_LIST	:= \
@@ -78,7 +82,8 @@ ISOLINUX_BIN_LIST	:= \
 	/usr/share/syslinux/isolinux.bin \
 	/usr/share/syslinux/bios/isolinux.bin \
 	/usr/local/share/syslinux/isolinux.bin \
-	/usr/local/share/syslinux/bios/isolinux.bin
+	/usr/local/share/syslinux/bios/isolinux.bin \
+	/usr/lib/ISOLINUX/isolinux.bin
 ISOLINUX_BIN	= $(firstword $(wildcard $(ISOLINUX_BIN_LIST)))
 
 # i386-specific directories containing source files
