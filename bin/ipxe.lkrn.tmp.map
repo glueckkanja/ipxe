@@ -14609,7 +14609,7 @@ Linker script and memory map
                 0x0000000000000000                pci_vendor_id = 0x0
                 0x0000000000000000                pci_device_id = 0x0
 LOAD bin/blib.a
-                0x0000000075b9bb06                _build_id = 0x75b9bb06
+                0x000000007cf05169                _build_id = 0x7cf05169
 OUTPUT(bin/ipxe.lkrn.tmp elf32-i386)
 
 .debug_frame    0x0000000000000000    0x225dc
@@ -18429,7 +18429,7 @@ SYMBOL TABLE:
 000bc450 g       *ABS*	00000000 _end_lma
 0015e030 g       *ABS*	00000000 _textdata_memsz
 0015e030 g       *ABS*	00000000 _pprefix_memsz
-75b9bb06 g       *ABS*	00000000 _build_id
+7cf05169 g       *ABS*	00000000 _build_id
 00000000 l    d  .prefix	00000000 .prefix
 00000000 l       .prefix	00000000 bootsector
 00000000 g       .prefix	00000000 _lkrn_start
