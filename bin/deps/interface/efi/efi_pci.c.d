@@ -14,10 +14,11 @@ efi_pci_DEPS += interface/efi/efi_pci.c include/compiler.h \
  include/ipxe/efi/efi_uaccess.h include/ipxe/linux/linux_uaccess.h \
  arch/i386/include/bits/uaccess.h arch/i386/include/librm.h \
  arch/x86/include/bits/io.h arch/x86/include/ipxe/x86_io.h \
- include/ipxe/pci_ids.h include/ipxe/efi/efi.h include/ipxe/efi/Uefi.h \
+ include/ipxe/pci_ids.h include/ipxe/efi/efi.h \
  include/ipxe/efi/Uefi/UefiBaseType.h include/ipxe/efi/Base.h \
  include/ipxe/efi/ProcessorBind.h include/ipxe/efi/Ia32/ProcessorBind.h \
- include/ipxe/efi/Uefi/UefiSpec.h include/ipxe/efi/Uefi/UefiMultiPhase.h \
+ include/ipxe/efi/Uefi.h include/ipxe/efi/Uefi/UefiSpec.h \
+ include/ipxe/efi/Uefi/UefiMultiPhase.h \
  include/ipxe/efi/Guid/WinCertificate.h \
  include/ipxe/efi/Protocol/DevicePath.h include/ipxe/efi/Guid/PcAnsi.h \
  include/ipxe/efi/Protocol/SimpleTextIn.h \
@@ -120,8 +121,6 @@ include/ipxe/pci_ids.h:
 
 include/ipxe/efi/efi.h:
 
-include/ipxe/efi/Uefi.h:
-
 include/ipxe/efi/Uefi/UefiBaseType.h:
 
 include/ipxe/efi/Base.h:
@@ -129,6 +128,8 @@ include/ipxe/efi/Base.h:
 include/ipxe/efi/ProcessorBind.h:
 
 include/ipxe/efi/Ia32/ProcessorBind.h:
+
+include/ipxe/efi/Uefi.h:
 
 include/ipxe/efi/Uefi/UefiSpec.h:
 

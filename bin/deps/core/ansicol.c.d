@@ -5,7 +5,7 @@ ansicol_DEPS += core/ansicol.c include/compiler.h \
  include/ipxe/errfile.h arch/x86/include/bits/errfile.h include/assert.h \
  include/ipxe/ansiesc.h include/ipxe/ansicol.h include/curses.h \
  include/ipxe/console.h include/stddef.h include/ipxe/tables.h \
- include/ipxe/keys.h config/colour.h config/local/colour.h
+ include/ipxe/keys.h config/colour.h config/named.h config/local/colour.h
 
 include/compiler.h:
 
@@ -46,5 +46,7 @@ include/ipxe/tables.h:
 include/ipxe/keys.h:
 
 config/colour.h:
+
+config/named.h:
 
 config/local/colour.h:

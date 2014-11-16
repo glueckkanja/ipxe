@@ -4,17 +4,17 @@ efi_smbios_DEPS += interface/efi/efi_smbios.c include/compiler.h \
  include/ipxe/errfile.h arch/x86/include/bits/errfile.h \
  include/ipxe/smbios.h include/stdint.h arch/i386/include/bits/stdint.h \
  include/ipxe/api.h config/general.h config/defaults.h \
- config/defaults/pcbios.h config/local/general.h include/ipxe/uaccess.h \
- include/string.h include/stddef.h arch/x86/include/bits/string.h \
- config/ioapi.h config/local/ioapi.h include/ipxe/efi/efi_uaccess.h \
- include/ipxe/linux/linux_uaccess.h arch/i386/include/bits/uaccess.h \
- arch/i386/include/librm.h include/ipxe/efi/efi_smbios.h \
- include/ipxe/linux/linux_smbios.h arch/i386/include/bits/smbios.h \
- arch/i386/include/ipxe/bios_smbios.h include/ipxe/efi/efi.h \
- include/ipxe/efi/Uefi.h include/ipxe/efi/Uefi/UefiBaseType.h \
+ config/defaults/pcbios.h config/named.h config/local/general.h \
+ include/ipxe/uaccess.h include/string.h include/stddef.h \
+ arch/x86/include/bits/string.h config/ioapi.h config/local/ioapi.h \
+ include/ipxe/efi/efi_uaccess.h include/ipxe/linux/linux_uaccess.h \
+ arch/i386/include/bits/uaccess.h arch/i386/include/librm.h \
+ include/ipxe/efi/efi_smbios.h include/ipxe/linux/linux_smbios.h \
+ arch/i386/include/bits/smbios.h arch/i386/include/ipxe/bios_smbios.h \
+ include/ipxe/efi/efi.h include/ipxe/efi/Uefi/UefiBaseType.h \
  include/ipxe/efi/Base.h include/ipxe/efi/ProcessorBind.h \
- include/ipxe/efi/Ia32/ProcessorBind.h include/ipxe/efi/Uefi/UefiSpec.h \
- include/ipxe/efi/Uefi/UefiMultiPhase.h \
+ include/ipxe/efi/Ia32/ProcessorBind.h include/ipxe/efi/Uefi.h \
+ include/ipxe/efi/Uefi/UefiSpec.h include/ipxe/efi/Uefi/UefiMultiPhase.h \
  include/ipxe/efi/Guid/WinCertificate.h \
  include/ipxe/efi/Protocol/DevicePath.h include/ipxe/efi/Guid/PcAnsi.h \
  include/ipxe/efi/Protocol/SimpleTextIn.h \
@@ -64,6 +64,8 @@ config/defaults.h:
 
 config/defaults/pcbios.h:
 
+config/named.h:
+
 config/local/general.h:
 
 include/ipxe/uaccess.h:
@@ -96,8 +98,6 @@ arch/i386/include/ipxe/bios_smbios.h:
 
 include/ipxe/efi/efi.h:
 
-include/ipxe/efi/Uefi.h:
-
 include/ipxe/efi/Uefi/UefiBaseType.h:
 
 include/ipxe/efi/Base.h:
@@ -105,6 +105,8 @@ include/ipxe/efi/Base.h:
 include/ipxe/efi/ProcessorBind.h:
 
 include/ipxe/efi/Ia32/ProcessorBind.h:
+
+include/ipxe/efi/Uefi.h:
 
 include/ipxe/efi/Uefi/UefiSpec.h:
 

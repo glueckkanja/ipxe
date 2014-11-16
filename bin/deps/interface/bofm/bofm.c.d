@@ -17,7 +17,7 @@ bofm_DEPS += interface/bofm/bofm.c include/compiler.h \
  arch/x86/include/ipxe/pcibios.h arch/x86/include/ipxe/pcidirect.h \
  include/ipxe/io.h arch/x86/include/bits/io.h \
  arch/x86/include/ipxe/x86_io.h include/ipxe/pci_ids.h config/sideband.h \
- config/local/sideband.h
+ config/named.h config/local/sideband.h
 
 include/compiler.h:
 
@@ -108,5 +108,7 @@ arch/x86/include/ipxe/x86_io.h:
 include/ipxe/pci_ids.h:
 
 config/sideband.h:
+
+config/named.h:
 
 config/local/sideband.h:

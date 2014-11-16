@@ -10,9 +10,9 @@ efi_timer_DEPS += interface/efi/efi_timer.c include/compiler.h \
  include/ipxe/efi/efi_timer.h include/ipxe/linux/linux_timer.h \
  arch/i386/include/bits/timer.h arch/i386/include/ipxe/bios_timer.h \
  arch/i386/include/ipxe/timer2.h arch/i386/include/ipxe/rdtsc_timer.h \
- include/ipxe/efi/efi.h include/ipxe/efi/Uefi.h \
- include/ipxe/efi/Uefi/UefiBaseType.h include/ipxe/efi/Base.h \
- include/ipxe/efi/ProcessorBind.h include/ipxe/efi/Ia32/ProcessorBind.h \
+ include/ipxe/efi/efi.h include/ipxe/efi/Uefi/UefiBaseType.h \
+ include/ipxe/efi/Base.h include/ipxe/efi/ProcessorBind.h \
+ include/ipxe/efi/Ia32/ProcessorBind.h include/ipxe/efi/Uefi.h \
  include/ipxe/efi/Uefi/UefiSpec.h include/ipxe/efi/Uefi/UefiMultiPhase.h \
  include/ipxe/efi/Guid/WinCertificate.h \
  include/ipxe/efi/Protocol/DevicePath.h include/ipxe/efi/Guid/PcAnsi.h \
@@ -93,8 +93,6 @@ arch/i386/include/ipxe/rdtsc_timer.h:
 
 include/ipxe/efi/efi.h:
 
-include/ipxe/efi/Uefi.h:
-
 include/ipxe/efi/Uefi/UefiBaseType.h:
 
 include/ipxe/efi/Base.h:
@@ -102,6 +100,8 @@ include/ipxe/efi/Base.h:
 include/ipxe/efi/ProcessorBind.h:
 
 include/ipxe/efi/Ia32/ProcessorBind.h:
+
+include/ipxe/efi/Uefi.h:
 
 include/ipxe/efi/Uefi/UefiSpec.h:
 

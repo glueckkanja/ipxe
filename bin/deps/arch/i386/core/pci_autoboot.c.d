@@ -8,7 +8,7 @@ pci_autoboot_DEPS += arch/i386/core/pci_autoboot.c include/compiler.h \
  config/defaults.h config/defaults/pcbios.h config/local/ioapi.h \
  include/ipxe/efi/efi_uaccess.h include/ipxe/linux/linux_uaccess.h \
  arch/i386/include/bits/uaccess.h arch/i386/include/librm.h \
- include/usr/autoboot.h include/ipxe/in.h include/ipxe/socket.h
+ include/usr/autoboot.h
 
 include/compiler.h:
 
@@ -59,7 +59,3 @@ arch/i386/include/bits/uaccess.h:
 arch/i386/include/librm.h:
 
 include/usr/autoboot.h:
-
-include/ipxe/in.h:
-
-include/ipxe/socket.h:

@@ -26,7 +26,7 @@ autoboot_DEPS += usr/autoboot.c include/compiler.h \
  arch/i386/include/ipxe/timer2.h arch/i386/include/ipxe/rdtsc_timer.h \
  include/usr/ifmgmt.h include/usr/route.h include/usr/imgmgmt.h \
  include/usr/prompt.h include/usr/autoboot.h include/ipxe/device.h \
- config/general.h config/local/general.h
+ config/general.h config/named.h config/local/general.h
 
 include/compiler.h:
 
@@ -171,5 +171,7 @@ include/usr/autoboot.h:
 include/ipxe/device.h:
 
 config/general.h:
+
+config/named.h:
 
 config/local/general.h:

@@ -13,7 +13,7 @@ ocsp_DEPS += crypto/ocsp.c include/compiler.h \
  include/ipxe/x509.h include/ipxe/refcnt.h include/ipxe/list.h \
  include/ipxe/sha1.h include/ipxe/crypto.h include/ipxe/base64.h \
  include/ipxe/uri.h include/ipxe/in.h include/ipxe/socket.h \
- include/ipxe/ocsp.h config/crypto.h config/local/crypto.h
+ include/ipxe/ocsp.h config/crypto.h config/named.h config/local/crypto.h
 
 include/compiler.h:
 
@@ -96,5 +96,7 @@ include/ipxe/socket.h:
 include/ipxe/ocsp.h:
 
 config/crypto.h:
+
+config/named.h:
 
 config/local/crypto.h:

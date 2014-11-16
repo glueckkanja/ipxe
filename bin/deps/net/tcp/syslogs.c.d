@@ -21,7 +21,7 @@ syslogs_DEPS += net/tcp/syslogs.c include/compiler.h \
  include/ipxe/null_time.h include/ipxe/linux/linux_time.h \
  arch/i386/include/bits/time.h arch/i386/include/ipxe/rtc_time.h \
  include/ipxe/asn1.h include/ipxe/pending.h include/ipxe/iobuf.h \
- include/ipxe/syslog.h include/syslog.h config/console.h \
+ include/ipxe/syslog.h include/syslog.h config/console.h config/named.h \
  config/local/console.h
 
 include/compiler.h:
@@ -153,5 +153,7 @@ include/ipxe/syslog.h:
 include/syslog.h:
 
 config/console.h:
+
+config/named.h:
 
 config/local/console.h:

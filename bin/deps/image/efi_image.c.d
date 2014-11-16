@@ -4,9 +4,9 @@ efi_image_DEPS += image/efi_image.c include/compiler.h \
  include/ipxe/errfile.h arch/x86/include/bits/errfile.h include/stdlib.h \
  include/stdint.h arch/i386/include/bits/stdint.h include/assert.h \
  include/wchar.h include/stddef.h include/ipxe/efi/efi.h \
- include/ipxe/efi/Uefi.h include/ipxe/efi/Uefi/UefiBaseType.h \
- include/ipxe/efi/Base.h include/ipxe/efi/ProcessorBind.h \
- include/ipxe/efi/Ia32/ProcessorBind.h include/ipxe/efi/Uefi/UefiSpec.h \
+ include/ipxe/efi/Uefi/UefiBaseType.h include/ipxe/efi/Base.h \
+ include/ipxe/efi/ProcessorBind.h include/ipxe/efi/Ia32/ProcessorBind.h \
+ include/ipxe/efi/Uefi.h include/ipxe/efi/Uefi/UefiSpec.h \
  include/ipxe/efi/Uefi/UefiMultiPhase.h \
  include/ipxe/efi/Guid/WinCertificate.h \
  include/ipxe/efi/Protocol/DevicePath.h include/ipxe/efi/Guid/PcAnsi.h \
@@ -37,15 +37,16 @@ efi_image_DEPS += image/efi_image.c include/compiler.h \
  include/ipxe/efi/Guid/HiiPlatformSetupFormset.h \
  include/ipxe/efi/Protocol/HiiDatabase.h \
  include/ipxe/efi/Protocol/LoadFile.h include/ipxe/efi/efi_download.h \
- include/ipxe/efi/efi_file.h include/ipxe/efi/efi_driver.h \
- include/ipxe/device.h include/ipxe/efi/efi_strings.h include/stdarg.h \
- include/ipxe/image.h include/ipxe/uaccess.h include/string.h \
- arch/x86/include/bits/string.h include/ipxe/api.h config/ioapi.h \
- config/defaults.h config/defaults/pcbios.h config/local/ioapi.h \
- include/ipxe/efi/efi_uaccess.h include/ipxe/linux/linux_uaccess.h \
- arch/i386/include/bits/uaccess.h arch/i386/include/librm.h \
- include/ipxe/init.h include/ipxe/features.h include/ipxe/dhcp.h \
- include/ipxe/in.h include/ipxe/socket.h include/ipxe/uri.h
+ include/ipxe/efi/efi_file.h include/ipxe/efi/efi_utils.h \
+ include/ipxe/efi/efi_strings.h include/stdarg.h \
+ include/ipxe/efi/efi_wrap.h include/ipxe/image.h include/ipxe/uaccess.h \
+ include/string.h arch/x86/include/bits/string.h include/ipxe/api.h \
+ config/ioapi.h config/defaults.h config/defaults/pcbios.h \
+ config/local/ioapi.h include/ipxe/efi/efi_uaccess.h \
+ include/ipxe/linux/linux_uaccess.h arch/i386/include/bits/uaccess.h \
+ arch/i386/include/librm.h include/ipxe/init.h include/ipxe/features.h \
+ include/ipxe/dhcp.h include/ipxe/in.h include/ipxe/socket.h \
+ include/ipxe/uri.h
 
 include/compiler.h:
 
@@ -75,8 +76,6 @@ include/stddef.h:
 
 include/ipxe/efi/efi.h:
 
-include/ipxe/efi/Uefi.h:
-
 include/ipxe/efi/Uefi/UefiBaseType.h:
 
 include/ipxe/efi/Base.h:
@@ -84,6 +83,8 @@ include/ipxe/efi/Base.h:
 include/ipxe/efi/ProcessorBind.h:
 
 include/ipxe/efi/Ia32/ProcessorBind.h:
+
+include/ipxe/efi/Uefi.h:
 
 include/ipxe/efi/Uefi/UefiSpec.h:
 
@@ -181,13 +182,13 @@ include/ipxe/efi/efi_download.h:
 
 include/ipxe/efi/efi_file.h:
 
-include/ipxe/efi/efi_driver.h:
-
-include/ipxe/device.h:
+include/ipxe/efi/efi_utils.h:
 
 include/ipxe/efi/efi_strings.h:
 
 include/stdarg.h:
+
+include/ipxe/efi/efi_wrap.h:
 
 include/ipxe/image.h:
 

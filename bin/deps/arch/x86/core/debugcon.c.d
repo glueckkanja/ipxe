@@ -9,7 +9,7 @@ debugcon_DEPS += arch/x86/core/debugcon.c include/compiler.h \
  arch/x86/include/bits/io.h arch/x86/include/ipxe/x86_io.h \
  include/ipxe/console.h include/stdio.h include/stdarg.h \
  include/ipxe/tables.h include/ipxe/init.h config/console.h \
- config/local/console.h
+ config/named.h config/local/console.h
 
 include/compiler.h:
 
@@ -62,5 +62,7 @@ include/ipxe/tables.h:
 include/ipxe/init.h:
 
 config/console.h:
+
+config/named.h:
 
 config/local/console.h:

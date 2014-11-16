@@ -1,20 +1,16 @@
 snpnet_DEPS += drivers/net/efi/snpnet.c include/compiler.h \
- arch/i386/include/bits/compiler.h include/errno.h \
+ arch/i386/include/bits/compiler.h include/stdlib.h include/stdint.h \
+ arch/i386/include/bits/stdint.h include/assert.h include/stdio.h \
+ include/stdarg.h include/string.h include/stddef.h \
+ arch/x86/include/bits/string.h include/errno.h \
  arch/i386/include/ipxe/errno/pcbios.h arch/i386/include/pxe_error.h \
- include/ipxe/errfile.h arch/x86/include/bits/errfile.h include/string.h \
- include/stddef.h include/stdint.h arch/i386/include/bits/stdint.h \
- arch/x86/include/bits/string.h include/ipxe/io.h include/ipxe/api.h \
- config/ioapi.h config/defaults.h config/defaults/pcbios.h \
- config/local/ioapi.h include/ipxe/uaccess.h \
- include/ipxe/efi/efi_uaccess.h include/ipxe/linux/linux_uaccess.h \
- arch/i386/include/bits/uaccess.h arch/i386/include/librm.h \
- arch/x86/include/bits/io.h arch/x86/include/ipxe/x86_io.h \
- include/ipxe/iobuf.h include/assert.h include/ipxe/list.h \
- include/ipxe/netdevice.h include/ipxe/tables.h include/ipxe/refcnt.h \
- include/ipxe/settings.h include/ipxe/interface.h include/ipxe/if_ether.h \
- include/ipxe/ethernet.h include/ipxe/efi/efi.h include/ipxe/efi/Uefi.h \
- include/ipxe/efi/Uefi/UefiBaseType.h include/ipxe/efi/Base.h \
- include/ipxe/efi/ProcessorBind.h include/ipxe/efi/Ia32/ProcessorBind.h \
+ include/ipxe/errfile.h arch/x86/include/bits/errfile.h \
+ include/ipxe/iobuf.h include/ipxe/list.h include/ipxe/netdevice.h \
+ include/ipxe/tables.h include/ipxe/refcnt.h include/ipxe/settings.h \
+ include/ipxe/interface.h include/ipxe/ethernet.h include/ipxe/vsprintf.h \
+ include/ipxe/efi/efi.h include/ipxe/efi/Uefi/UefiBaseType.h \
+ include/ipxe/efi/Base.h include/ipxe/efi/ProcessorBind.h \
+ include/ipxe/efi/Ia32/ProcessorBind.h include/ipxe/efi/Uefi.h \
  include/ipxe/efi/Uefi/UefiSpec.h include/ipxe/efi/Uefi/UefiMultiPhase.h \
  include/ipxe/efi/Guid/WinCertificate.h \
  include/ipxe/efi/Protocol/DevicePath.h include/ipxe/efi/Guid/PcAnsi.h \
@@ -35,12 +31,31 @@ snpnet_DEPS += drivers/net/efi/snpnet.c include/compiler.h \
  include/ipxe/efi/Protocol/LoadedImage.h include/ipxe/uuid.h \
  include/byteswap.h include/endian.h arch/i386/include/bits/endian.h \
  arch/i386/include/bits/byteswap.h include/little_bswap.h \
- include/ipxe/efi/Protocol/SimpleNetwork.h drivers/net/efi/snp.h \
- include/ipxe/device.h drivers/net/efi/snpnet.h
+ include/ipxe/efi/Protocol/SimpleNetwork.h include/ipxe/efi/efi_driver.h \
+ include/ipxe/device.h include/ipxe/efi/efi_utils.h \
+ drivers/net/efi/snpnet.h
 
 include/compiler.h:
 
 arch/i386/include/bits/compiler.h:
+
+include/stdlib.h:
+
+include/stdint.h:
+
+arch/i386/include/bits/stdint.h:
+
+include/assert.h:
+
+include/stdio.h:
+
+include/stdarg.h:
+
+include/string.h:
+
+include/stddef.h:
+
+arch/x86/include/bits/string.h:
 
 include/errno.h:
 
@@ -52,45 +67,7 @@ include/ipxe/errfile.h:
 
 arch/x86/include/bits/errfile.h:
 
-include/string.h:
-
-include/stddef.h:
-
-include/stdint.h:
-
-arch/i386/include/bits/stdint.h:
-
-arch/x86/include/bits/string.h:
-
-include/ipxe/io.h:
-
-include/ipxe/api.h:
-
-config/ioapi.h:
-
-config/defaults.h:
-
-config/defaults/pcbios.h:
-
-config/local/ioapi.h:
-
-include/ipxe/uaccess.h:
-
-include/ipxe/efi/efi_uaccess.h:
-
-include/ipxe/linux/linux_uaccess.h:
-
-arch/i386/include/bits/uaccess.h:
-
-arch/i386/include/librm.h:
-
-arch/x86/include/bits/io.h:
-
-arch/x86/include/ipxe/x86_io.h:
-
 include/ipxe/iobuf.h:
-
-include/assert.h:
 
 include/ipxe/list.h:
 
@@ -104,13 +81,11 @@ include/ipxe/settings.h:
 
 include/ipxe/interface.h:
 
-include/ipxe/if_ether.h:
-
 include/ipxe/ethernet.h:
 
-include/ipxe/efi/efi.h:
+include/ipxe/vsprintf.h:
 
-include/ipxe/efi/Uefi.h:
+include/ipxe/efi/efi.h:
 
 include/ipxe/efi/Uefi/UefiBaseType.h:
 
@@ -119,6 +94,8 @@ include/ipxe/efi/Base.h:
 include/ipxe/efi/ProcessorBind.h:
 
 include/ipxe/efi/Ia32/ProcessorBind.h:
+
+include/ipxe/efi/Uefi.h:
 
 include/ipxe/efi/Uefi/UefiSpec.h:
 
@@ -184,8 +161,10 @@ include/little_bswap.h:
 
 include/ipxe/efi/Protocol/SimpleNetwork.h:
 
-drivers/net/efi/snp.h:
+include/ipxe/efi/efi_driver.h:
 
 include/ipxe/device.h:
+
+include/ipxe/efi/efi_utils.h:
 
 drivers/net/efi/snpnet.h:

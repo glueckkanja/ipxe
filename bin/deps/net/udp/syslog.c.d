@@ -15,7 +15,7 @@ syslog_DEPS += net/udp/syslog.c include/compiler.h \
  include/ipxe/linux/linux_uaccess.h arch/i386/include/bits/uaccess.h \
  arch/i386/include/librm.h include/ipxe/dhcpv6.h include/ipxe/console.h \
  include/stdio.h include/ipxe/lineconsole.h include/ipxe/ansiesc.h \
- include/ipxe/syslog.h include/syslog.h config/console.h \
+ include/ipxe/syslog.h include/syslog.h config/console.h config/named.h \
  config/local/console.h
 
 include/compiler.h:
@@ -113,5 +113,7 @@ include/ipxe/syslog.h:
 include/syslog.h:
 
 config/console.h:
+
+config/named.h:
 
 config/local/console.h:

@@ -14,7 +14,8 @@ x509_DEPS += crypto/x509.c include/compiler.h \
  include/ipxe/sha256.h include/ipxe/rsa.h include/ipxe/bigint.h \
  arch/x86/include/bits/bigint.h include/ipxe/rootcert.h \
  include/ipxe/x509.h include/ipxe/refcnt.h include/ipxe/certstore.h \
- config/crypto.h config/local/crypto.h
+ include/ipxe/socket.h include/ipxe/in.h config/crypto.h config/named.h \
+ config/local/crypto.h
 
 include/compiler.h:
 
@@ -98,6 +99,12 @@ include/ipxe/refcnt.h:
 
 include/ipxe/certstore.h:
 
+include/ipxe/socket.h:
+
+include/ipxe/in.h:
+
 config/crypto.h:
+
+config/named.h:
 
 config/local/crypto.h:

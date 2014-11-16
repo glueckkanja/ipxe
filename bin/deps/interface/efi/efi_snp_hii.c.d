@@ -10,9 +10,9 @@ efi_snp_hii_DEPS += interface/efi/efi_snp_hii.c include/compiler.h \
  include/ipxe/tables.h include/ipxe/list.h include/ipxe/refcnt.h \
  include/ipxe/nvo.h include/ipxe/dhcpopts.h include/ipxe/device.h \
  include/ipxe/netdevice.h include/ipxe/interface.h include/ipxe/version.h \
- include/ipxe/efi/efi.h include/ipxe/efi/Uefi.h \
- include/ipxe/efi/Uefi/UefiBaseType.h include/ipxe/efi/Base.h \
- include/ipxe/efi/ProcessorBind.h include/ipxe/efi/Ia32/ProcessorBind.h \
+ include/ipxe/efi/efi.h include/ipxe/efi/Uefi/UefiBaseType.h \
+ include/ipxe/efi/Base.h include/ipxe/efi/ProcessorBind.h \
+ include/ipxe/efi/Ia32/ProcessorBind.h include/ipxe/efi/Uefi.h \
  include/ipxe/efi/Uefi/UefiSpec.h include/ipxe/efi/Uefi/UefiMultiPhase.h \
  include/ipxe/efi/Guid/WinCertificate.h \
  include/ipxe/efi/Protocol/DevicePath.h include/ipxe/efi/Guid/PcAnsi.h \
@@ -105,8 +105,6 @@ include/ipxe/version.h:
 
 include/ipxe/efi/efi.h:
 
-include/ipxe/efi/Uefi.h:
-
 include/ipxe/efi/Uefi/UefiBaseType.h:
 
 include/ipxe/efi/Base.h:
@@ -114,6 +112,8 @@ include/ipxe/efi/Base.h:
 include/ipxe/efi/ProcessorBind.h:
 
 include/ipxe/efi/Ia32/ProcessorBind.h:
+
+include/ipxe/efi/Uefi.h:
 
 include/ipxe/efi/Uefi/UefiSpec.h:
 

@@ -14,7 +14,8 @@ vesafb_DEPS += arch/i386/interface/pcbios/vesafb.c include/compiler.h \
  arch/x86/include/bits/io.h arch/x86/include/ipxe/x86_io.h \
  include/ipxe/ansicol.h include/curses.h include/ipxe/keys.h \
  include/ipxe/fbcon.h include/ipxe/ansiesc.h \
- arch/i386/include/ipxe/vesafb.h config/console.h config/local/console.h
+ arch/i386/include/ipxe/vesafb.h config/console.h config/named.h \
+ config/local/console.h
 
 include/compiler.h:
 
@@ -97,5 +98,7 @@ include/ipxe/ansiesc.h:
 arch/i386/include/ipxe/vesafb.h:
 
 config/console.h:
+
+config/named.h:
 
 config/local/console.h:

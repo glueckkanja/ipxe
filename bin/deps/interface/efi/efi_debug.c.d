@@ -6,10 +6,11 @@ efi_debug_DEPS += interface/efi/efi_debug.c include/compiler.h \
  include/ipxe/errfile.h arch/x86/include/bits/errfile.h \
  include/ipxe/uuid.h include/byteswap.h include/endian.h \
  arch/i386/include/bits/endian.h arch/i386/include/bits/byteswap.h \
- include/little_bswap.h include/ipxe/efi/efi.h include/ipxe/efi/Uefi.h \
+ include/little_bswap.h include/ipxe/base16.h include/ipxe/efi/efi.h \
  include/ipxe/efi/Uefi/UefiBaseType.h include/ipxe/efi/Base.h \
  include/ipxe/efi/ProcessorBind.h include/ipxe/efi/Ia32/ProcessorBind.h \
- include/ipxe/efi/Uefi/UefiSpec.h include/ipxe/efi/Uefi/UefiMultiPhase.h \
+ include/ipxe/efi/Uefi.h include/ipxe/efi/Uefi/UefiSpec.h \
+ include/ipxe/efi/Uefi/UefiMultiPhase.h \
  include/ipxe/efi/Guid/WinCertificate.h \
  include/ipxe/efi/Protocol/DevicePath.h include/ipxe/efi/Guid/PcAnsi.h \
  include/ipxe/efi/Protocol/SimpleTextIn.h \
@@ -27,8 +28,9 @@ efi_debug_DEPS += interface/efi/efi_debug.c include/compiler.h \
  include/ipxe/efi/IndustryStandard/PeImage.h \
  include/ipxe/efi/Pi/PiS3BootScript.h \
  include/ipxe/efi/Protocol/LoadedImage.h include/ipxe/tables.h \
- include/ipxe/efi/efi_driver.h include/ipxe/device.h include/ipxe/list.h \
- include/assert.h include/ipxe/efi/Protocol/DevicePathToText.h
+ include/ipxe/efi/efi_utils.h include/ipxe/efi/Protocol/ComponentName.h \
+ include/ipxe/efi/Protocol/ComponentName2.h \
+ include/ipxe/efi/Protocol/DevicePathToText.h
 
 include/compiler.h:
 
@@ -70,9 +72,9 @@ arch/i386/include/bits/byteswap.h:
 
 include/little_bswap.h:
 
-include/ipxe/efi/efi.h:
+include/ipxe/base16.h:
 
-include/ipxe/efi/Uefi.h:
+include/ipxe/efi/efi.h:
 
 include/ipxe/efi/Uefi/UefiBaseType.h:
 
@@ -81,6 +83,8 @@ include/ipxe/efi/Base.h:
 include/ipxe/efi/ProcessorBind.h:
 
 include/ipxe/efi/Ia32/ProcessorBind.h:
+
+include/ipxe/efi/Uefi.h:
 
 include/ipxe/efi/Uefi/UefiSpec.h:
 
@@ -134,12 +138,10 @@ include/ipxe/efi/Protocol/LoadedImage.h:
 
 include/ipxe/tables.h:
 
-include/ipxe/efi/efi_driver.h:
+include/ipxe/efi/efi_utils.h:
 
-include/ipxe/device.h:
+include/ipxe/efi/Protocol/ComponentName.h:
 
-include/ipxe/list.h:
-
-include/assert.h:
+include/ipxe/efi/Protocol/ComponentName2.h:
 
 include/ipxe/efi/Protocol/DevicePathToText.h:

@@ -10,8 +10,8 @@ smbios_settings_DEPS += interface/smbios/smbios_settings.c include/compiler.h \
  arch/i386/include/bits/endian.h arch/i386/include/bits/byteswap.h \
  include/little_bswap.h include/ipxe/smbios.h include/ipxe/api.h \
  config/general.h config/defaults.h config/defaults/pcbios.h \
- config/local/general.h include/ipxe/uaccess.h config/ioapi.h \
- config/local/ioapi.h include/ipxe/efi/efi_uaccess.h \
+ config/named.h config/local/general.h include/ipxe/uaccess.h \
+ config/ioapi.h config/local/ioapi.h include/ipxe/efi/efi_uaccess.h \
  include/ipxe/linux/linux_uaccess.h arch/i386/include/bits/uaccess.h \
  arch/i386/include/librm.h include/ipxe/efi/efi_smbios.h \
  include/ipxe/linux/linux_smbios.h arch/i386/include/bits/smbios.h \
@@ -74,6 +74,8 @@ config/general.h:
 config/defaults.h:
 
 config/defaults/pcbios.h:
+
+config/named.h:
 
 config/local/general.h:
 

@@ -12,7 +12,8 @@ serial_DEPS += core/serial.c include/compiler.h \
  include/ipxe/efi/efi_timer.h include/ipxe/linux/linux_timer.h \
  arch/i386/include/bits/timer.h arch/i386/include/ipxe/bios_timer.h \
  arch/i386/include/ipxe/timer2.h arch/i386/include/ipxe/rdtsc_timer.h \
- include/ipxe/serial.h config/serial.h config/local/serial.h
+ include/ipxe/serial.h config/serial.h config/named.h \
+ config/local/serial.h
 
 include/compiler.h:
 
@@ -83,5 +84,7 @@ arch/i386/include/ipxe/rdtsc_timer.h:
 include/ipxe/serial.h:
 
 config/serial.h:
+
+config/named.h:
 
 config/local/serial.h:

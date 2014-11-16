@@ -34,7 +34,7 @@ hermon_DEPS += drivers/infiniband/hermon.c include/compiler.h \
  include/ipxe/ib_packet.h include/ipxe/ib_mad.h include/ipxe/ib_smc.h \
  include/ipxe/if_ether.h include/ipxe/ethernet.h include/ipxe/fcoe.h \
  include/ipxe/fc.h include/ipxe/retry.h include/ipxe/socket.h \
- include/ipxe/vlan.h include/ipxe/bofm.h config/sideband.h \
+ include/ipxe/vlan.h include/ipxe/bofm.h config/sideband.h config/named.h \
  config/local/sideband.h include/ipxe/nvsvpd.h include/ipxe/nvs.h \
  include/ipxe/pcivpd.h include/ipxe/isapnp.h include/ipxe/isa_ids.h \
  include/ipxe/nvo.h include/ipxe/dhcpopts.h drivers/infiniband/hermon.h \
@@ -213,6 +213,8 @@ include/ipxe/vlan.h:
 include/ipxe/bofm.h:
 
 config/sideband.h:
+
+config/named.h:
 
 config/local/sideband.h:
 

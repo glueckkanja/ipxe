@@ -4,10 +4,11 @@ efiprefix_DEPS += arch/x86/prefix/efiprefix.c include/compiler.h \
  arch/i386/include/ipxe/errno/pcbios.h arch/i386/include/pxe_error.h \
  include/ipxe/errfile.h arch/x86/include/bits/errfile.h \
  include/ipxe/device.h include/ipxe/list.h include/stddef.h \
- include/ipxe/tables.h include/ipxe/efi/efi.h include/ipxe/efi/Uefi.h \
+ include/ipxe/tables.h include/ipxe/efi/efi.h \
  include/ipxe/efi/Uefi/UefiBaseType.h include/ipxe/efi/Base.h \
  include/ipxe/efi/ProcessorBind.h include/ipxe/efi/Ia32/ProcessorBind.h \
- include/ipxe/efi/Uefi/UefiSpec.h include/ipxe/efi/Uefi/UefiMultiPhase.h \
+ include/ipxe/efi/Uefi.h include/ipxe/efi/Uefi/UefiSpec.h \
+ include/ipxe/efi/Uefi/UefiMultiPhase.h \
  include/ipxe/efi/Guid/WinCertificate.h \
  include/ipxe/efi/Protocol/DevicePath.h include/ipxe/efi/Guid/PcAnsi.h \
  include/ipxe/efi/Protocol/SimpleTextIn.h \
@@ -27,7 +28,16 @@ efiprefix_DEPS += arch/x86/prefix/efiprefix.c include/compiler.h \
  include/ipxe/efi/Protocol/LoadedImage.h include/ipxe/uuid.h \
  include/byteswap.h include/endian.h arch/i386/include/bits/endian.h \
  arch/i386/include/bits/byteswap.h include/little_bswap.h \
- include/ipxe/efi/efi_driver.h
+ include/ipxe/efi/efi_driver.h include/ipxe/efi/efi_snp.h \
+ include/ipxe/netdevice.h include/ipxe/refcnt.h include/ipxe/settings.h \
+ include/ipxe/interface.h include/ipxe/efi/Protocol/SimpleNetwork.h \
+ include/ipxe/efi/Protocol/NetworkInterfaceIdentifier.h \
+ include/ipxe/efi/Protocol/ComponentName2.h \
+ include/ipxe/efi/Protocol/HiiConfigAccess.h \
+ include/ipxe/efi/Protocol/FormBrowser2.h \
+ include/ipxe/efi/Guid/HiiPlatformSetupFormset.h \
+ include/ipxe/efi/Protocol/HiiDatabase.h \
+ include/ipxe/efi/Protocol/LoadFile.h include/ipxe/efi/efi_autoboot.h
 
 include/compiler.h:
 
@@ -61,8 +71,6 @@ include/ipxe/tables.h:
 
 include/ipxe/efi/efi.h:
 
-include/ipxe/efi/Uefi.h:
-
 include/ipxe/efi/Uefi/UefiBaseType.h:
 
 include/ipxe/efi/Base.h:
@@ -70,6 +78,8 @@ include/ipxe/efi/Base.h:
 include/ipxe/efi/ProcessorBind.h:
 
 include/ipxe/efi/Ia32/ProcessorBind.h:
+
+include/ipxe/efi/Uefi.h:
 
 include/ipxe/efi/Uefi/UefiSpec.h:
 
@@ -134,3 +144,31 @@ arch/i386/include/bits/byteswap.h:
 include/little_bswap.h:
 
 include/ipxe/efi/efi_driver.h:
+
+include/ipxe/efi/efi_snp.h:
+
+include/ipxe/netdevice.h:
+
+include/ipxe/refcnt.h:
+
+include/ipxe/settings.h:
+
+include/ipxe/interface.h:
+
+include/ipxe/efi/Protocol/SimpleNetwork.h:
+
+include/ipxe/efi/Protocol/NetworkInterfaceIdentifier.h:
+
+include/ipxe/efi/Protocol/ComponentName2.h:
+
+include/ipxe/efi/Protocol/HiiConfigAccess.h:
+
+include/ipxe/efi/Protocol/FormBrowser2.h:
+
+include/ipxe/efi/Guid/HiiPlatformSetupFormset.h:
+
+include/ipxe/efi/Protocol/HiiDatabase.h:
+
+include/ipxe/efi/Protocol/LoadFile.h:
+
+include/ipxe/efi/efi_autoboot.h:

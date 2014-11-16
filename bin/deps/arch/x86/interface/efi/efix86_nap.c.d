@@ -4,9 +4,9 @@ efix86_nap_DEPS += arch/x86/interface/efi/efix86_nap.c include/compiler.h \
  config/local/nap.h include/ipxe/null_nap.h \
  include/ipxe/linux/linux_nap.h arch/i386/include/bits/nap.h \
  arch/i386/include/ipxe/bios_nap.h arch/x86/include/ipxe/efi/efix86_nap.h \
- include/ipxe/efi/efi.h include/ipxe/efi/Uefi.h \
- include/ipxe/efi/Uefi/UefiBaseType.h include/ipxe/efi/Base.h \
- include/ipxe/efi/ProcessorBind.h include/ipxe/efi/Ia32/ProcessorBind.h \
+ include/ipxe/efi/efi.h include/ipxe/efi/Uefi/UefiBaseType.h \
+ include/ipxe/efi/Base.h include/ipxe/efi/ProcessorBind.h \
+ include/ipxe/efi/Ia32/ProcessorBind.h include/ipxe/efi/Uefi.h \
  include/ipxe/efi/Uefi/UefiSpec.h include/ipxe/efi/Uefi/UefiMultiPhase.h \
  include/ipxe/efi/Guid/WinCertificate.h \
  include/ipxe/efi/Protocol/DevicePath.h include/ipxe/efi/Guid/PcAnsi.h \
@@ -57,8 +57,6 @@ arch/x86/include/ipxe/efi/efix86_nap.h:
 
 include/ipxe/efi/efi.h:
 
-include/ipxe/efi/Uefi.h:
-
 include/ipxe/efi/Uefi/UefiBaseType.h:
 
 include/ipxe/efi/Base.h:
@@ -66,6 +64,8 @@ include/ipxe/efi/Base.h:
 include/ipxe/efi/ProcessorBind.h:
 
 include/ipxe/efi/Ia32/ProcessorBind.h:
+
+include/ipxe/efi/Uefi.h:
 
 include/ipxe/efi/Uefi/UefiSpec.h:
 

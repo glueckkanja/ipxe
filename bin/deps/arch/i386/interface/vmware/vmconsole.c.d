@@ -6,7 +6,7 @@ vmconsole_DEPS += arch/i386/interface/vmware/vmconsole.c include/compiler.h \
  include/ipxe/ansiesc.h include/ipxe/init.h \
  arch/i386/include/ipxe/guestrpc.h arch/i386/include/ipxe/vmware.h \
  config/console.h config/defaults.h config/defaults/pcbios.h \
- config/local/console.h
+ config/named.h config/local/console.h
 
 include/compiler.h:
 
@@ -45,5 +45,7 @@ config/console.h:
 config/defaults.h:
 
 config/defaults/pcbios.h:
+
+config/named.h:
 
 config/local/console.h:

@@ -7,9 +7,10 @@ bios_console_DEPS += arch/i386/firmware/pcbios/bios_console.c \
  config/defaults.h config/defaults/pcbios.h config/local/ioapi.h \
  include/ipxe/efi/efi_uaccess.h include/ipxe/linux/linux_uaccess.h \
  arch/i386/include/bits/uaccess.h arch/i386/include/librm.h \
- include/ipxe/console.h include/stdio.h include/stdarg.h \
- include/ipxe/tables.h include/ipxe/ansiesc.h include/ipxe/keymap.h \
- config/console.h config/local/console.h
+ arch/i386/include/bios.h include/ipxe/console.h include/stdio.h \
+ include/stdarg.h include/ipxe/tables.h include/ipxe/ansiesc.h \
+ include/ipxe/keymap.h config/console.h config/named.h \
+ config/local/console.h
 
 include/compiler.h:
 
@@ -51,6 +52,8 @@ arch/i386/include/bits/uaccess.h:
 
 arch/i386/include/librm.h:
 
+arch/i386/include/bios.h:
+
 include/ipxe/console.h:
 
 include/stdio.h:
@@ -64,5 +67,7 @@ include/ipxe/ansiesc.h:
 include/ipxe/keymap.h:
 
 config/console.h:
+
+config/named.h:
 
 config/local/console.h:

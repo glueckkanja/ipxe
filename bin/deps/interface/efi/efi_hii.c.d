@@ -2,9 +2,9 @@ efi_hii_DEPS += interface/efi/efi_hii.c include/compiler.h \
  arch/i386/include/bits/compiler.h include/stdlib.h include/stdint.h \
  arch/i386/include/bits/stdint.h include/assert.h include/stddef.h \
  include/stdarg.h include/string.h arch/x86/include/bits/string.h \
- include/ipxe/efi/efi.h include/ipxe/efi/Uefi.h \
- include/ipxe/efi/Uefi/UefiBaseType.h include/ipxe/efi/Base.h \
- include/ipxe/efi/ProcessorBind.h include/ipxe/efi/Ia32/ProcessorBind.h \
+ include/ipxe/efi/efi.h include/ipxe/efi/Uefi/UefiBaseType.h \
+ include/ipxe/efi/Base.h include/ipxe/efi/ProcessorBind.h \
+ include/ipxe/efi/Ia32/ProcessorBind.h include/ipxe/efi/Uefi.h \
  include/ipxe/efi/Uefi/UefiSpec.h include/ipxe/efi/Uefi/UefiMultiPhase.h \
  include/ipxe/efi/Guid/WinCertificate.h \
  include/ipxe/efi/Protocol/DevicePath.h include/ipxe/efi/Guid/PcAnsi.h \
@@ -50,8 +50,6 @@ arch/x86/include/bits/string.h:
 
 include/ipxe/efi/efi.h:
 
-include/ipxe/efi/Uefi.h:
-
 include/ipxe/efi/Uefi/UefiBaseType.h:
 
 include/ipxe/efi/Base.h:
@@ -59,6 +57,8 @@ include/ipxe/efi/Base.h:
 include/ipxe/efi/ProcessorBind.h:
 
 include/ipxe/efi/Ia32/ProcessorBind.h:
+
+include/ipxe/efi/Uefi.h:
 
 include/ipxe/efi/Uefi/UefiSpec.h:
 

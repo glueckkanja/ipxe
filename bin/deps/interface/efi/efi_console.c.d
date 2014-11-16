@@ -4,9 +4,9 @@ efi_console_DEPS += interface/efi/efi_console.c include/compiler.h \
  arch/x86/include/bits/string.h include/errno.h \
  arch/i386/include/ipxe/errno/pcbios.h arch/i386/include/pxe_error.h \
  include/ipxe/errfile.h arch/x86/include/bits/errfile.h include/assert.h \
- include/ipxe/efi/efi.h include/ipxe/efi/Uefi.h \
- include/ipxe/efi/Uefi/UefiBaseType.h include/ipxe/efi/Base.h \
- include/ipxe/efi/ProcessorBind.h include/ipxe/efi/Ia32/ProcessorBind.h \
+ include/ipxe/efi/efi.h include/ipxe/efi/Uefi/UefiBaseType.h \
+ include/ipxe/efi/Base.h include/ipxe/efi/ProcessorBind.h \
+ include/ipxe/efi/Ia32/ProcessorBind.h include/ipxe/efi/Uefi.h \
  include/ipxe/efi/Uefi/UefiSpec.h include/ipxe/efi/Uefi/UefiMultiPhase.h \
  include/ipxe/efi/Guid/WinCertificate.h \
  include/ipxe/efi/Protocol/DevicePath.h include/ipxe/efi/Guid/PcAnsi.h \
@@ -27,9 +27,11 @@ efi_console_DEPS += interface/efi/efi_console.c include/compiler.h \
  include/ipxe/efi/Protocol/LoadedImage.h include/ipxe/tables.h \
  include/ipxe/uuid.h include/byteswap.h include/endian.h \
  arch/i386/include/bits/endian.h arch/i386/include/bits/byteswap.h \
- include/little_bswap.h include/ipxe/ansiesc.h include/ipxe/console.h \
- include/stdio.h include/stdarg.h config/console.h config/defaults.h \
- config/defaults/pcbios.h config/local/console.h
+ include/little_bswap.h \
+ include/ipxe/efi/Protocol/ConsoleControl/ConsoleControl.h \
+ include/ipxe/ansiesc.h include/ipxe/console.h include/stdio.h \
+ include/stdarg.h include/ipxe/init.h config/console.h config/defaults.h \
+ config/defaults/pcbios.h config/named.h config/local/console.h
 
 include/compiler.h:
 
@@ -59,8 +61,6 @@ include/assert.h:
 
 include/ipxe/efi/efi.h:
 
-include/ipxe/efi/Uefi.h:
-
 include/ipxe/efi/Uefi/UefiBaseType.h:
 
 include/ipxe/efi/Base.h:
@@ -68,6 +68,8 @@ include/ipxe/efi/Base.h:
 include/ipxe/efi/ProcessorBind.h:
 
 include/ipxe/efi/Ia32/ProcessorBind.h:
+
+include/ipxe/efi/Uefi.h:
 
 include/ipxe/efi/Uefi/UefiSpec.h:
 
@@ -133,6 +135,8 @@ arch/i386/include/bits/byteswap.h:
 
 include/little_bswap.h:
 
+include/ipxe/efi/Protocol/ConsoleControl/ConsoleControl.h:
+
 include/ipxe/ansiesc.h:
 
 include/ipxe/console.h:
@@ -141,10 +145,14 @@ include/stdio.h:
 
 include/stdarg.h:
 
+include/ipxe/init.h:
+
 config/console.h:
 
 config/defaults.h:
 
 config/defaults/pcbios.h:
+
+config/named.h:
 
 config/local/console.h:

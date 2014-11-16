@@ -8,9 +8,10 @@ smbios_DEPS += interface/smbios/smbios.c include/compiler.h \
  config/defaults.h config/defaults/pcbios.h config/local/ioapi.h \
  include/ipxe/efi/efi_uaccess.h include/ipxe/linux/linux_uaccess.h \
  arch/i386/include/bits/uaccess.h arch/i386/include/librm.h \
- include/ipxe/smbios.h config/general.h config/local/general.h \
- include/ipxe/efi/efi_smbios.h include/ipxe/linux/linux_smbios.h \
- arch/i386/include/bits/smbios.h arch/i386/include/ipxe/bios_smbios.h
+ include/ipxe/smbios.h config/general.h config/named.h \
+ config/local/general.h include/ipxe/efi/efi_smbios.h \
+ include/ipxe/linux/linux_smbios.h arch/i386/include/bits/smbios.h \
+ arch/i386/include/ipxe/bios_smbios.h
 
 include/compiler.h:
 
@@ -61,6 +62,8 @@ arch/i386/include/librm.h:
 include/ipxe/smbios.h:
 
 config/general.h:
+
+config/named.h:
 
 config/local/general.h:
 

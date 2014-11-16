@@ -15,7 +15,8 @@ bofm_test_DEPS += tests/bofm_test.c include/compiler.h \
  arch/x86/include/ipxe/x86_io.h include/ipxe/pci_ids.h \
  include/ipxe/ethernet.h include/ipxe/netdevice.h include/ipxe/refcnt.h \
  include/ipxe/settings.h include/ipxe/interface.h include/ipxe/iobuf.h \
- include/ipxe/bofm.h config/sideband.h config/local/sideband.h
+ include/ipxe/bofm.h config/sideband.h config/named.h \
+ config/local/sideband.h
 
 include/compiler.h:
 
@@ -102,5 +103,7 @@ include/ipxe/iobuf.h:
 include/ipxe/bofm.h:
 
 config/sideband.h:
+
+config/named.h:
 
 config/local/sideband.h:

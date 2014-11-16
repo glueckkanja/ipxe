@@ -10,9 +10,9 @@ efi_snp_DEPS += interface/efi/efi_snp.c include/compiler.h \
  include/ipxe/refcnt.h include/ipxe/settings.h include/ipxe/interface.h \
  include/ipxe/iobuf.h include/ipxe/in.h include/ipxe/socket.h \
  include/ipxe/version.h include/wchar.h include/ipxe/efi/efi.h \
- include/ipxe/efi/Uefi.h include/ipxe/efi/Uefi/UefiBaseType.h \
- include/ipxe/efi/Base.h include/ipxe/efi/ProcessorBind.h \
- include/ipxe/efi/Ia32/ProcessorBind.h include/ipxe/efi/Uefi/UefiSpec.h \
+ include/ipxe/efi/Uefi/UefiBaseType.h include/ipxe/efi/Base.h \
+ include/ipxe/efi/ProcessorBind.h include/ipxe/efi/Ia32/ProcessorBind.h \
+ include/ipxe/efi/Uefi.h include/ipxe/efi/Uefi/UefiSpec.h \
  include/ipxe/efi/Uefi/UefiMultiPhase.h \
  include/ipxe/efi/Guid/WinCertificate.h \
  include/ipxe/efi/Protocol/DevicePath.h include/ipxe/efi/Guid/PcAnsi.h \
@@ -33,7 +33,8 @@ efi_snp_DEPS += interface/efi/efi_snp.c include/compiler.h \
  include/ipxe/efi/Protocol/LoadedImage.h include/ipxe/uuid.h \
  include/ipxe/efi/efi_driver.h include/ipxe/device.h \
  include/ipxe/efi/efi_strings.h include/stdarg.h \
- include/ipxe/efi/efi_snp.h include/ipxe/efi/Protocol/SimpleNetwork.h \
+ include/ipxe/efi/efi_utils.h include/ipxe/efi/efi_snp.h \
+ include/ipxe/efi/Protocol/SimpleNetwork.h \
  include/ipxe/efi/Protocol/NetworkInterfaceIdentifier.h \
  include/ipxe/efi/Protocol/ComponentName2.h \
  include/ipxe/efi/Protocol/HiiConfigAccess.h \
@@ -104,8 +105,6 @@ include/wchar.h:
 
 include/ipxe/efi/efi.h:
 
-include/ipxe/efi/Uefi.h:
-
 include/ipxe/efi/Uefi/UefiBaseType.h:
 
 include/ipxe/efi/Base.h:
@@ -113,6 +112,8 @@ include/ipxe/efi/Base.h:
 include/ipxe/efi/ProcessorBind.h:
 
 include/ipxe/efi/Ia32/ProcessorBind.h:
+
+include/ipxe/efi/Uefi.h:
 
 include/ipxe/efi/Uefi/UefiSpec.h:
 
@@ -173,6 +174,8 @@ include/ipxe/device.h:
 include/ipxe/efi/efi_strings.h:
 
 include/stdarg.h:
+
+include/ipxe/efi/efi_utils.h:
 
 include/ipxe/efi/efi_snp.h:
 

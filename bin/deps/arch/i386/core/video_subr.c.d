@@ -9,7 +9,7 @@ video_subr_DEPS += arch/i386/core/video_subr.c include/compiler.h \
  arch/x86/include/bits/io.h arch/x86/include/ipxe/x86_io.h \
  include/ipxe/console.h include/stdio.h include/stdarg.h \
  include/ipxe/tables.h include/ipxe/init.h arch/i386/include/vga.h \
- config/console.h config/local/console.h
+ config/console.h config/named.h config/local/console.h
 
 include/compiler.h:
 
@@ -64,5 +64,7 @@ include/ipxe/init.h:
 arch/i386/include/vga.h:
 
 config/console.h:
+
+config/named.h:
 
 config/local/console.h:
