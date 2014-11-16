@@ -6210,8 +6210,8 @@ Linker script and memory map
                 0x0000000000001000                pci_device_id = 0x1000
 LOAD bin/version.1af41000.rom.o
 LOAD bin/blib.a
-                0x00000000785f63ef                _build_id = 0x785f63ef
-                0x00000000546898ff                _build_timestamp = 0x546898ff
+                0x000000006aba3f96                _build_id = 0x6aba3f96
+                0x000000005468b4f8                _build_timestamp = 0x5468b4f8
 OUTPUT(bin/1af41000.rom.tmp elf32-i386)
 
 .debug_info     0x0000000000000000    0x8c10b
@@ -8094,8 +8094,8 @@ SYMBOL TABLE:
 0001a2c0 g       *ABS*	00000000 _end_lma
 0009b338 g       *ABS*	00000000 _textdata_memsz
 0009b338 g       *ABS*	00000000 _pprefix_memsz
-546898ff g       *ABS*	00000000 .hidden _build_timestamp
-785f63ef g       *ABS*	00000000 .hidden _build_id
+5468b4f8 g       *ABS*	00000000 .hidden _build_timestamp
+6aba3f96 g       *ABS*	00000000 .hidden _build_id
 00000000 l    d  .prefix	00000000 .prefix
 00000000 g       .prefix	00000000 check__pcirom_start
 00000000 g       .prefix	00000000 _prefix
