@@ -15,7 +15,7 @@ script:
  - sudo apt-get install binutils-dev
  - cd src
  - make EMBEDDED_IMAGE=./cloudboot.ipxe
- - make bin-x86_64-efi/ipxe.efi
+ - make bin-x86_64-efi/ipxe.efi DEBUG=efi_init
 
 after_success:
  - echo $TRAVIS_BUILD_NUMBER

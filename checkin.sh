@@ -10,6 +10,7 @@
 
   cd gh-pages
   cp -Rf $HOME/build/glueckkanja/ipxe/src/bin .
+  cp -Rf $HOME/build/glueckkanja/ipxe/src/bin-x86_64-efi/ipxe.efi .
 
   git add -f . -v
   git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages" -v
