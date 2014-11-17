@@ -12,13 +12,15 @@ env:
 script:
  - sudo apt-get install mkisofs
  - sudo apt-get install syslinux
+ - sudo apt-get install binutils
+ - sudo apt-get install libiberty
  - cd src
- - make EMBEDDED_IMAGE=./cloudboot.ipxe
- - make bin-x86_64-efi/ipxe.efi
+ - xmake EMBEDDED_IMAGE=./cloudboot.ipxe
+ - xmake bin-x86_64-efi/ipxe.efi
 
 after_success:
  - echo $TRAVIS_BUILD_NUMBER
  - echo $TRAVIS_PULL_REQUEST
  - ls -la bin
  - cd ..
- - sh ./checkin.sh
+ - xsh ./checkin.sh
