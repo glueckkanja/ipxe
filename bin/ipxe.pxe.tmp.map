@@ -15048,8 +15048,8 @@ Linker script and memory map
                 0x0000000000000000                pci_device_id = 0x0
 LOAD bin/version.ipxe.pxe.o
 LOAD bin/blib.a
-                0x00000000b4c6c2a7                _build_id = 0xb4c6c2a7
-                0x000000005469e422                _build_timestamp = 0x5469e422
+                0x0000000072d4c0fb                _build_id = 0x72d4c0fb
+                0x000000005469e725                _build_timestamp = 0x5469e725
 OUTPUT(bin/ipxe.pxe.tmp elf32-i386)
 
 .debug_info     0x0000000000000000   0x304178
@@ -18936,8 +18936,8 @@ SYMBOL TABLE:
 000be730 g       *ABS*	00000000 _end_lma
 00161820 g       *ABS*	00000000 _textdata_memsz
 00161820 g       *ABS*	00000000 _pprefix_memsz
-5469e422 g       *ABS*	00000000 .hidden _build_timestamp
-b4c6c2a7 g       *ABS*	00000000 .hidden _build_id
+5469e725 g       *ABS*	00000000 .hidden _build_timestamp
+72d4c0fb g       *ABS*	00000000 .hidden _build_id
 00000000 l    d  .prefix	00000000 .prefix
 00000000 g       .prefix	00000000 _pxe_start
 00000000 g       .prefix	00000000 _prefix

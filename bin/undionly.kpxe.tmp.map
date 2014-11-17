@@ -6260,8 +6260,8 @@ Linker script and memory map
                 0x0000000000000000                pci_device_id = 0x0
 LOAD bin/version.undionly.kpxe.o
 LOAD bin/blib.a
-                0x00000000fa58dd48                _build_id = 0xfa58dd48
-                0x000000005469e422                _build_timestamp = 0x5469e422
+                0x00000000eaccf0bb                _build_id = 0xeaccf0bb
+                0x000000005469e725                _build_timestamp = 0x5469e725
 OUTPUT(bin/undionly.kpxe.tmp elf32-i386)
 
 .debug_info     0x0000000000000000    0x90294
@@ -8170,8 +8170,8 @@ SYMBOL TABLE:
 0001a720 g       *ABS*	00000000 _end_lma
 0009b568 g       *ABS*	00000000 _textdata_memsz
 0009b568 g       *ABS*	00000000 _pprefix_memsz
-5469e422 g       *ABS*	00000000 .hidden _build_timestamp
-fa58dd48 g       *ABS*	00000000 .hidden _build_id
+5469e725 g       *ABS*	00000000 .hidden _build_timestamp
+eaccf0bb g       *ABS*	00000000 .hidden _build_id
 00000000 l    d  .prefix	00000000 .prefix
 00000000 g       .prefix	00000000 _kpxe_start
 00000000 g       .prefix	00000000 check__kpxe_start

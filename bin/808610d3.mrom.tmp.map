@@ -6208,8 +6208,8 @@ Linker script and memory map
                 0x00000000000010d3                pci_device_id = 0x10d3
 LOAD bin/version.808610d3.mrom.o
 LOAD bin/blib.a
-                0x00000000e0657b26                _build_id = 0xe0657b26
-                0x000000005469e422                _build_timestamp = 0x5469e422
+                0x00000000af3676d4                _build_id = 0xaf3676d4
+                0x000000005469e725                _build_timestamp = 0x5469e725
 OUTPUT(bin/808610d3.mrom.tmp elf32-i386)
 
 .debug_info     0x0000000000000000    0x8ca91
@@ -8084,8 +8084,8 @@ SYMBOL TABLE:
 0001ae10 g       *ABS*	00000000 _zinfo_lma
 0001aef0 g       *ABS*	00000000 _end_lma
 0009bc48 g       *ABS*	00000000 _textdata_memsz
-5469e422 g       *ABS*	00000000 .hidden _build_timestamp
-e0657b26 g       *ABS*	00000000 .hidden _build_id
+5469e725 g       *ABS*	00000000 .hidden _build_timestamp
+af3676d4 g       *ABS*	00000000 .hidden _build_id
 00000000 l    d  .prefix	00000000 .prefix
 00000000 g       .prefix	00000000 check__mrom_start
 00000000 g       .prefix	00000000 _prefix
