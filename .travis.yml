@@ -4,7 +4,7 @@ compiler: gcc
 branches:
   only:
     - master
-    
+
 env:
   global:
     - secure: "5br6qJiVMExRflJlkb0pdHgN/9EC909mG50ssE28HX8Ujv7PHSvd071Z+wBz\nQQrq5Lit/JHfDLJ0Kb17nLgpXN6mte4Y03gzkNrf7XjWY0PR9ZOqjZtnxl1l\nGKnlb9pCTyeI0YsfDLQjmN6eKtJBNzyBW6sqa9R1Nu4JQNQ6npg="
@@ -14,8 +14,8 @@ script:
  - sudo apt-get install syslinux
  - cd src
  - make EMBEDDED_IMAGE=./cloudboot.ipxe
- 
- 
+ - make bin-x86_64-efi/ipxe.efi
+
 after_success:
  - echo $TRAVIS_BUILD_NUMBER
  - echo $TRAVIS_PULL_REQUEST
