@@ -14982,8 +14982,8 @@ Linker script and memory map
                 0x0000000000000000                pci_device_id = 0x0
 LOAD bin/version.ipxe.dsk.o
 LOAD bin/blib.a
-                0x00000000ec04819b                _build_id = 0xec04819b
-                0x000000005468b4f8                _build_timestamp = 0x5468b4f8
+                0x00000000403049db                _build_id = 0x403049db
+                0x000000005469e422                _build_timestamp = 0x5469e422
 OUTPUT(bin/ipxe.dsk.tmp elf32-i386)
 
 .debug_info     0x0000000000000000   0x301fbf
@@ -18849,8 +18849,8 @@ SYMBOL TABLE:
 000be070 g       *ABS*	00000000 _end_lma
 00161510 g       *ABS*	00000000 _textdata_memsz
 00161510 g       *ABS*	00000000 _pprefix_memsz
-5468b4f8 g       *ABS*	00000000 .hidden _build_timestamp
-ec04819b g       *ABS*	00000000 .hidden _build_id
+403049db g       *ABS*	00000000 .hidden _build_id
+5469e422 g       *ABS*	00000000 .hidden _build_timestamp
 00000000 l    d  .prefix	00000000 .prefix
 00000000 g       .prefix	00000000 check__dsk_start
 00000000 g       .prefix	00000000 _dsk_start
