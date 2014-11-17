@@ -12,8 +12,8 @@ env:
 script:
  - sudo apt-get install mkisofs
  - sudo apt-get install syslinux
- - sudo apt-get install binutils
- - sudo apt-get install libiberty-dev
+ - sudo apt-get install binutils-dev
+ - sudo apt-get install gcc-dev
  - cd src
  - xmake EMBEDDED_IMAGE=./cloudboot.ipxe
  - xmake bin-x86_64-efi/ipxe.efi
