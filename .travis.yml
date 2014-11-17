@@ -22,4 +22,4 @@ after_success:
  - echo $TRAVIS_PULL_REQUEST
  - ls -la bin
  - cd ..
- - xsh ./checkin.sh
+ - sh ./checkin.sh
