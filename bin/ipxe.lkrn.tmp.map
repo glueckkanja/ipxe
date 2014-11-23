@@ -9757,7 +9757,8 @@ Linker script and memory map
  .rodata        0x000000000007739c       0x10 bin/blib.a(3c515.o)
  .rodata        0x00000000000773ac       0x54 bin/blib.a(sis190.o)
  .rodata        0x0000000000077400        0xc bin/blib.a(xfer.o)
- .rodata        0x000000000007740c       0xc4 bin/blib.a(embedded.o)
+ .rodata        0x000000000007740c       0xc2 bin/blib.a(embedded.o)
+ *fill*         0x00000000000774ce        0x2 00
  .rodata        0x00000000000774d0       0x78 bin/blib.a(ath9k_ar9002_calib.o)
  .rodata        0x0000000000077548       0x18 bin/blib.a(ath9k_ar9003_calib.o)
  .rodata        0x0000000000077560        0xc bin/blib.a(ath9k_ar9003_eeprom.o)
@@ -15014,8 +15015,8 @@ Linker script and memory map
                 0x0000000000000000                pci_device_id = 0x0
 LOAD bin/version.ipxe.lkrn.o
 LOAD bin/blib.a
-                0x0000000012905db4                _build_id = 0x12905db4
-                0x000000005469e725                _build_timestamp = 0x5469e725
+                0x000000005695e18f                _build_id = 0x5695e18f
+                0x000000005471aeaf                _build_timestamp = 0x5471aeaf
 OUTPUT(bin/ipxe.lkrn.tmp elf32-i386)
 
 .debug_info     0x0000000000000000   0x302cc8
@@ -18864,7 +18865,7 @@ SYMBOL TABLE:
 00000088 g       *ABS*	00000000 _text16_memsz_pgh
 00000090 g       *ABS*	00000000 _zinfo_filesz
 00000090 g       *ABS*	00000000 _zinfo_memsz
-000000c4 l       *ABS*	00000000 .hidden embedded_image_1_len
+000000c2 l       *ABS*	00000000 .hidden embedded_image_1_len
 000000f8 g       *ABS*	00000000 _text16_early_memsz
 000000f8 g       *ABS*	00000000 _text16_early_filesz
 00000192 g       *ABS*	00000000 _data16_filesz
@@ -18890,8 +18891,8 @@ SYMBOL TABLE:
 000be3b0 g       *ABS*	00000000 _end_lma
 001616a0 g       *ABS*	00000000 _textdata_memsz
 001616a0 g       *ABS*	00000000 _pprefix_memsz
-12905db4 g       *ABS*	00000000 .hidden _build_id
-5469e725 g       *ABS*	00000000 .hidden _build_timestamp
+5471aeaf g       *ABS*	00000000 .hidden _build_timestamp
+5695e18f g       *ABS*	00000000 .hidden _build_id
 00000000 l    d  .prefix	00000000 .prefix
 00000000 g       .prefix	00000000 check__lkrn_start
 00000000 g       .prefix	00000000 _lkrn_start
@@ -21995,7 +21996,7 @@ SYMBOL TABLE:
 00077295 g     F .textdata	000000ce .hidden ib_create_conn
 00077363 g     F .textdata	00000039 .hidden ib_destroy_conn
 0007740c l       .textdata	00000000 .hidden embedded_image_1_data
-000774d0 l       .textdata	00000000 embedded_image_1_end
+000774ce l       .textdata	00000000 embedded_image_1_end
 0007756c g     O .textdata	00000005 .hidden product_short_name
 00077574 g     O .textdata	0000000e .hidden product_version
 000776ec l     O .textdata	0000006c media_tbl

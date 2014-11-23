@@ -9739,7 +9739,8 @@ Linker script and memory map
  .rodata        0x0000000000077214       0x10 bin/blib.a(3c515.o)
  .rodata        0x0000000000077224       0x54 bin/blib.a(sis190.o)
  .rodata        0x0000000000077278        0xc bin/blib.a(xfer.o)
- .rodata        0x0000000000077284       0xc4 bin/blib.a(embedded.o)
+ .rodata        0x0000000000077284       0xc2 bin/blib.a(embedded.o)
+ *fill*         0x0000000000077346        0x2 00
  .rodata        0x0000000000077348       0x78 bin/blib.a(ath9k_ar9002_calib.o)
  .rodata        0x00000000000773c0       0x18 bin/blib.a(ath9k_ar9003_calib.o)
  .rodata        0x00000000000773d8        0xc bin/blib.a(ath9k_ar9003_eeprom.o)
@@ -14981,8 +14982,8 @@ Linker script and memory map
                 0x0000000000000000                pci_device_id = 0x0
 LOAD bin/version.ipxe.hd.o
 LOAD bin/blib.a
-                0x000000007878c8ee                _build_id = 0x7878c8ee
-                0x000000005469e725                _build_timestamp = 0x5469e725
+                0x00000000f0331246                _build_id = 0xf0331246
+                0x000000005471aeaf                _build_timestamp = 0x5471aeaf
 OUTPUT(bin/ipxe.hd.tmp elf32-i386)
 
 .debug_info     0x0000000000000000   0x301fbf
@@ -18821,7 +18822,7 @@ SYMBOL TABLE:
 00000080 g       *ABS*	00000000 _zinfo_filesz
 00000080 g       *ABS*	00000000 _zinfo_memsz
 00000086 g       *ABS*	00000000 _text16_memsz_pgh
-000000c4 l       *ABS*	00000000 .hidden embedded_image_1_len
+000000c2 l       *ABS*	00000000 .hidden embedded_image_1_len
 000000ee g       *ABS*	00000000 _text16_early_memsz
 000000ee g       *ABS*	00000000 _text16_early_filesz
 00000192 g       *ABS*	00000000 _data16_filesz
@@ -18846,8 +18847,8 @@ SYMBOL TABLE:
 000be070 g       *ABS*	00000000 _end_lma
 00161510 g       *ABS*	00000000 _textdata_memsz
 00161510 g       *ABS*	00000000 _pprefix_memsz
-5469e725 g       *ABS*	00000000 .hidden _build_timestamp
-7878c8ee g       *ABS*	00000000 .hidden _build_id
+5471aeaf g       *ABS*	00000000 .hidden _build_timestamp
+f0331246 g       *ABS*	00000000 .hidden _build_id
 00000000 l    d  .prefix	00000000 .prefix
 00000000 g       .prefix	00000000 check__hd_start
 00000000 g       .prefix	00000000 _hd_start
@@ -21925,7 +21926,7 @@ SYMBOL TABLE:
 0007710b g     F .textdata	000000ce .hidden ib_create_conn
 000771d9 g     F .textdata	00000039 .hidden ib_destroy_conn
 00077284 l       .textdata	00000000 .hidden embedded_image_1_data
-00077348 l       .textdata	00000000 embedded_image_1_end
+00077346 l       .textdata	00000000 embedded_image_1_end
 000773e4 g     O .textdata	00000005 .hidden product_short_name
 000773ec g     O .textdata	0000000e .hidden product_version
 00077564 l     O .textdata	0000006c media_tbl

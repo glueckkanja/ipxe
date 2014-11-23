@@ -9774,7 +9774,8 @@ Linker script and memory map
  .rodata        0x00000000000774a4       0x10 bin/blib.a(3c515.o)
  .rodata        0x00000000000774b4       0x54 bin/blib.a(sis190.o)
  .rodata        0x0000000000077508        0xc bin/blib.a(xfer.o)
- .rodata        0x0000000000077514       0xc4 bin/blib.a(embedded.o)
+ .rodata        0x0000000000077514       0xc2 bin/blib.a(embedded.o)
+ *fill*         0x00000000000775d6        0x2 00
  .rodata        0x00000000000775d8       0x78 bin/blib.a(ath9k_ar9002_calib.o)
  .rodata        0x0000000000077650       0x18 bin/blib.a(ath9k_ar9003_calib.o)
  .rodata        0x0000000000077668        0xc bin/blib.a(ath9k_ar9003_eeprom.o)
@@ -15048,8 +15049,8 @@ Linker script and memory map
                 0x0000000000000000                pci_device_id = 0x0
 LOAD bin/version.ipxe.pxe.o
 LOAD bin/blib.a
-                0x0000000072d4c0fb                _build_id = 0x72d4c0fb
-                0x000000005469e725                _build_timestamp = 0x5469e725
+                0x000000003eb42c51                _build_id = 0x3eb42c51
+                0x000000005471aeaf                _build_timestamp = 0x5471aeaf
 OUTPUT(bin/ipxe.pxe.tmp elf32-i386)
 
 .debug_info     0x0000000000000000   0x304178
@@ -18911,7 +18912,7 @@ SYMBOL TABLE:
 00000080 g       *ABS*	00000000 _zinfo_filesz
 00000080 g       *ABS*	00000000 _zinfo_memsz
 00000089 g       *ABS*	00000000 _text16_memsz_pgh
-000000c4 l       *ABS*	00000000 .hidden embedded_image_1_len
+000000c2 l       *ABS*	00000000 .hidden embedded_image_1_len
 000000ee g       *ABS*	00000000 _text16_early_memsz
 000000ee g       *ABS*	00000000 _text16_early_filesz
 00000192 g       *ABS*	00000000 _data16_filesz
@@ -18936,8 +18937,8 @@ SYMBOL TABLE:
 000be730 g       *ABS*	00000000 _end_lma
 00161820 g       *ABS*	00000000 _textdata_memsz
 00161820 g       *ABS*	00000000 _pprefix_memsz
-5469e725 g       *ABS*	00000000 .hidden _build_timestamp
-72d4c0fb g       *ABS*	00000000 .hidden _build_id
+3eb42c51 g       *ABS*	00000000 .hidden _build_id
+5471aeaf g       *ABS*	00000000 .hidden _build_timestamp
 00000000 l    d  .prefix	00000000 .prefix
 00000000 g       .prefix	00000000 _pxe_start
 00000000 g       .prefix	00000000 _prefix
@@ -22074,7 +22075,7 @@ SYMBOL TABLE:
 0007739d g     F .textdata	000000ce .hidden ib_create_conn
 0007746b g     F .textdata	00000039 .hidden ib_destroy_conn
 00077514 l       .textdata	00000000 .hidden embedded_image_1_data
-000775d8 l       .textdata	00000000 embedded_image_1_end
+000775d6 l       .textdata	00000000 embedded_image_1_end
 00077674 g     O .textdata	00000005 .hidden product_short_name
 0007767c g     O .textdata	0000000e .hidden product_version
 000777f4 l     O .textdata	0000006c media_tbl

@@ -3979,8 +3979,9 @@ Linker script and memory map
                 0x0000000000016105                icmp_rx_echo_reply
  *(.rodata)
  .rodata        0x0000000000016120        0xc bin/blib.a(xfer.o)
- .rodata        0x000000000001612c       0xc4 bin/blib.a(embedded.o)
+ .rodata        0x000000000001612c       0xc2 bin/blib.a(embedded.o)
  *(.rodata.*)
+ *fill*         0x00000000000161ee        0x2 00
  .rodata.product_short_name
                 0x00000000000161f0        0x5 bin/version.10ec8139.rom.o
                 0x00000000000161f0                product_short_name
@@ -6330,8 +6331,8 @@ Linker script and memory map
                 0x0000000000008139                pci_device_id = 0x8139
 LOAD bin/version.10ec8139.rom.o
 LOAD bin/blib.a
-                0x00000000583afc22                _build_id = 0x583afc22
-                0x000000005469e725                _build_timestamp = 0x5469e725
+                0x00000000a3b8e911                _build_id = 0xa3b8e911
+                0x000000005471aeaf                _build_timestamp = 0x5471aeaf
 OUTPUT(bin/10ec8139.rom.tmp elf32-i386)
 
 .debug_info     0x0000000000000000    0x90e27
@@ -8242,8 +8243,8 @@ SYMBOL TABLE:
 0000007b g       *ABS*	00000000 _text16_memsz_pgh
 000000b0 g       *ABS*	00000000 _zinfo_memsz
 000000b0 g       *ABS*	00000000 _zinfo_filesz
+000000c2 l       *ABS*	00000000 .hidden embedded_image_1_len
 000000c2 g       *ABS*	00000000 _data16_filesz
-000000c4 l       *ABS*	00000000 .hidden embedded_image_1_len
 000000ee g       *ABS*	00000000 _text16_early_filesz
 000000ee g       *ABS*	00000000 _text16_early_memsz
 00000270 g       *ABS*	00000000 _textdata_memsz_kb
@@ -8269,8 +8270,8 @@ SYMBOL TABLE:
 0001ae60 g       *ABS*	00000000 _end_lma
 0009bed8 g       *ABS*	00000000 _textdata_memsz
 0009bed8 g       *ABS*	00000000 _pprefix_memsz
-5469e725 g       *ABS*	00000000 .hidden _build_timestamp
-583afc22 g       *ABS*	00000000 .hidden _build_id
+5471aeaf g       *ABS*	00000000 .hidden _build_timestamp
+a3b8e911 g       *ABS*	00000000 .hidden _build_id
 00000000 l    d  .prefix	00000000 .prefix
 00000000 g       .prefix	00000000 check__pcirom_start
 00000000 g       .prefix	00000000 _prefix
@@ -9481,7 +9482,7 @@ SYMBOL TABLE:
 000160fd  w    F .textdata	00000008 .hidden ping_rx
 00016105 g     F .textdata	0000001b .hidden icmp_rx_echo_reply
 0001612c l       .textdata	00000000 .hidden embedded_image_1_data
-000161f0 l       .textdata	00000000 embedded_image_1_end
+000161ee l       .textdata	00000000 embedded_image_1_end
 000161f0 g     O .textdata	00000005 .hidden product_short_name
 000161f8 g     O .textdata	0000000e .hidden product_version
 00016208 l     O .textdata	00000004 realtek_eeprom_bits

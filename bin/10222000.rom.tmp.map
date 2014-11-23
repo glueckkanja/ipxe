@@ -3878,8 +3878,9 @@ Linker script and memory map
                 0x0000000000015ca9                icmp_rx_echo_reply
  *(.rodata)
  .rodata        0x0000000000015cc4        0xc bin/blib.a(xfer.o)
- .rodata        0x0000000000015cd0       0xc4 bin/blib.a(embedded.o)
+ .rodata        0x0000000000015cd0       0xc2 bin/blib.a(embedded.o)
  *(.rodata.*)
+ *fill*         0x0000000000015d92        0x2 00
  .rodata.product_short_name
                 0x0000000000015d94        0x5 bin/version.10222000.rom.o
                 0x0000000000015d94                product_short_name
@@ -6195,8 +6196,8 @@ Linker script and memory map
                 0x0000000000002000                pci_device_id = 0x2000
 LOAD bin/version.10222000.rom.o
 LOAD bin/blib.a
-                0x00000000b7bc5f03                _build_id = 0xb7bc5f03
-                0x000000005469e725                _build_timestamp = 0x5469e725
+                0x00000000729e4169                _build_id = 0x729e4169
+                0x000000005471aeaf                _build_timestamp = 0x5471aeaf
 OUTPUT(bin/10222000.rom.tmp elf32-i386)
 
 .debug_info     0x0000000000000000    0x8cb70
@@ -8030,8 +8031,8 @@ SYMBOL TABLE:
 0000007b g       *ABS*	00000000 _text16_memsz_pgh
 000000b0 g       *ABS*	00000000 _zinfo_memsz
 000000b0 g       *ABS*	00000000 _zinfo_filesz
+000000c2 l       *ABS*	00000000 .hidden embedded_image_1_len
 000000c2 g       *ABS*	00000000 _data16_filesz
-000000c4 l       *ABS*	00000000 .hidden embedded_image_1_len
 000000ee g       *ABS*	00000000 _text16_early_filesz
 000000ee g       *ABS*	00000000 _text16_early_memsz
 0000026f g       *ABS*	00000000 _textdata_memsz_kb
@@ -8057,8 +8058,8 @@ SYMBOL TABLE:
 0001a7c0 g       *ABS*	00000000 _end_lma
 0009b838 g       *ABS*	00000000 _textdata_memsz
 0009b838 g       *ABS*	00000000 _pprefix_memsz
-5469e725 g       *ABS*	00000000 .hidden _build_timestamp
-b7bc5f03 g       *ABS*	00000000 .hidden _build_id
+5471aeaf g       *ABS*	00000000 .hidden _build_timestamp
+729e4169 g       *ABS*	00000000 .hidden _build_id
 00000000 l    d  .prefix	00000000 .prefix
 00000000 g       .prefix	00000000 check__pcirom_start
 00000000 g       .prefix	00000000 _prefix
@@ -9251,7 +9252,7 @@ b7bc5f03 g       *ABS*	00000000 .hidden _build_id
 00015ca1  w    F .textdata	00000008 .hidden ping_rx
 00015ca9 g     F .textdata	0000001b .hidden icmp_rx_echo_reply
 00015cd0 l       .textdata	00000000 .hidden embedded_image_1_data
-00015d94 l       .textdata	00000000 embedded_image_1_end
+00015d92 l       .textdata	00000000 embedded_image_1_end
 00015d94 g     O .textdata	00000005 .hidden product_short_name
 00015d9c g     O .textdata	0000000e .hidden product_version
 00015dcc l     O .textdata	00000058 ansi_sequences
