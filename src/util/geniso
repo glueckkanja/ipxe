@@ -60,7 +60,7 @@ mkisofs+=(-quiet -l -volid "iPXE" -preparer "iPXE build system"
 # generate the config
 cat > ${cfg} <<EOF
 # These default options can be changed in the geniso script
-SAY iPXE ISO boot image
+SAY CloudBoot iPXE ISO boot image
 TIMEOUT 30
 EOF
 for f; do

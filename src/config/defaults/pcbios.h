@@ -32,9 +32,9 @@ FILE_LICENCE ( GPL2_OR_LATER );
 #define PXE_MENU		/* PXE menu booting */
 
 #define	SANBOOT_PROTO_ISCSI	/* iSCSI protocol */
-#define	SANBOOT_PROTO_AOE	/* AoE protocol */
-#define	SANBOOT_PROTO_IB_SRP	/* Infiniband SCSI RDMA protocol */
-#define	SANBOOT_PROTO_FCP	/* Fibre Channel protocol */
+//#define	SANBOOT_PROTO_AOE	/* AoE protocol */
+//#define	SANBOOT_PROTO_IB_SRP	/* Infiniband SCSI RDMA protocol */
+//#define	SANBOOT_PROTO_FCP	/* Fibre Channel protocol */
 
 #define	REBOOT_CMD		/* Reboot command */
 #define	CPUID_CMD		/* x86 CPU feature detection command */

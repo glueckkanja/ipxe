@@ -24,7 +24,7 @@ FILE_LICENCE ( GPL2_OR_LATER );
 //#define	CONSOLE_DEBUGCON	/* Debug port console */
 //#define	CONSOLE_VESAFB		/* VESA framebuffer console */
 
-#define	KEYBOARD_MAP	us
+#define	KEYBOARD_MAP	de
 
 #define	LOG_LEVEL	LOG_NONE
 

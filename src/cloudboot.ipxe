@@ -1,6 +1,6 @@
 #!ipxe
 
-prompt --key 0x02 --timeout 2000 Press Ctrl-B for the iPXE command line... (v0.72) && shell ||
+prompt --key 0x02 --timeout 2000 Press Ctrl-B for the iPXE command line... (v1.0) && shell ||
 
 :retry_dhcp
 dhcp || goto retry_dhcp
