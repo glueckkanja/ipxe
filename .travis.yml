@@ -12,7 +12,7 @@ env:
 script:
  - sudo apt-get install mkisofs
  - sudo apt-get install syslinux
- - sudo apt-get install binutils-dev
+
  - cd src
  - make EMBEDDED_IMAGE=./cloudbootx.ipxe
  
